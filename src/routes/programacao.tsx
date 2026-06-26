@@ -305,12 +305,13 @@ function Programacao() {
             Programação · Edição 2026
           </p>
           <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] max-w-3xl">
-            Dois dias. Três trilhas.{" "}
+            Um dia. Nove painéis.{" "}
             <span className="text-primary">Uma agenda densa</span> sobre Governança de IA.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-            Painéis, keynotes e workshops com líderes, conselheiros, reguladores e especialistas
-            que estão definindo o padrão brasileiro de governança em Inteligência Artificial.
+            12 de novembro de 2026, presencial no Hotel Quality Salvador. Palestra magna, nove
+            painéis setoriais e keynote de encerramento com líderes, conselheiros, reguladores
+            e especialistas em Governança de Inteligência Artificial.
           </p>
 
           {/* Tracks legend */}
