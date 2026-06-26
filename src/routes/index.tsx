@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import logoAsset from "@/assets/logo.png.asset.json";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
 
@@ -26,7 +26,6 @@ const BRAND_GREEN = "#7AC143";
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
-  { href: "#programacao", label: "Programação" },
   { href: "#palestrantes", label: "Palestrantes" },
   { href: "#local", label: "Local" },
   { href: "#patrocinadores", label: "Patrocinadores" },
@@ -154,6 +153,12 @@ function Index() {
             />
           </a>
           <nav className="hidden lg:flex items-center gap-8 text-sm">
+            <Link
+              to="/programacao"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Programação
+            </Link>
             {navLinks.map((l) => (
               <a
                 key={l.href}
@@ -212,12 +217,12 @@ function Index() {
               >
                 Garantir meu ingresso
               </a>
-              <a
-                href="#programacao"
+              <Link
+                to="/programacao"
                 className="rounded-full border border-border bg-background/60 px-7 py-3.5 text-sm font-semibold hover:border-primary hover:text-primary transition"
               >
                 Ver programação
-              </a>
+              </Link>
             </div>
             <dl className="mt-12 grid grid-cols-3 gap-6 max-w-lg">
               {[
