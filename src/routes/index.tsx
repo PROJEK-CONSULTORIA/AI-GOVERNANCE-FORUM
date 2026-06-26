@@ -217,12 +217,12 @@ function Index() {
               >
                 Garantir meu ingresso
               </a>
-              <a
-                href="#programacao"
+              <Link
+                to="/programacao"
                 className="rounded-full border border-border bg-background/60 px-7 py-3.5 text-sm font-semibold hover:border-primary hover:text-primary transition"
               >
                 Ver programação
-              </a>
+              </Link>
             </div>
             <dl className="mt-12 grid grid-cols-3 gap-6 max-w-lg">
               {[
