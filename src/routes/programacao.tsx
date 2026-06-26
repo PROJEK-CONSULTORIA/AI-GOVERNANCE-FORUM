@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import logoAsset from "@/assets/logo.png.asset.json";
+import logoAsset from "@/assets/logo-dark.png.asset.json";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
 
 export const Route = createFileRoute("/programacao")({
@@ -250,12 +250,12 @@ function Programacao() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/60">
-        <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between gap-6">
+        <div className="mx-auto max-w-7xl px-6 h-32 flex items-center justify-between gap-6">
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <img
               src={logoAsset.url}
               alt="AI Governance Forum"
-              className="h-12 w-auto bg-white rounded-md p-1.5"
+              className="h-28 w-auto rounded-md"
             />
           </Link>
           <nav className="hidden lg:flex items-center gap-8 text-sm">
