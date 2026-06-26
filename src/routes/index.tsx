@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import logoAsset from "@/assets/logo.png.asset.json";
+import logoAsset from "@/assets/logo-dark.png.asset.json";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -33,51 +33,21 @@ const navLinks = [
 ];
 
 const schedule = [
-  {
-    time: "08:30",
-    title: "Credenciamento & Welcome Coffee",
-    desc: "Recepção dos participantes e networking inicial entre lideranças.",
-  },
-  {
-    time: "09:30",
-    title: "Abertura Oficial",
-    desc: "Boas-vindas e contexto estratégico do fórum de Governança em IA.",
-  },
-  {
-    time: "10:00",
-    title: "Keynote — Governança de IA como vantagem competitiva",
-    desc: "Por que governança será o principal diferenciador na próxima década.",
-  },
-  {
-    time: "11:15",
-    title: "Painel — Riscos, Compliance e Regulamentação",
-    desc: "LGPD, EU AI Act, frameworks NIST e ISO/IEC 42001 aplicados ao Brasil.",
-  },
-  {
-    time: "12:30",
-    title: "Almoço Executivo",
-    desc: "Mesas temáticas com troca de experiências entre setores público e privado.",
-  },
-  {
-    time: "14:00",
-    title: "Painel — Ética, Segurança da Informação e Qualidade de Dados",
-    desc: "Como construir confiança e responsabilidade no ciclo de vida da IA.",
-  },
-  {
-    time: "15:30",
-    title: "Cases — IA em organizações públicas e privadas",
-    desc: "Boas práticas, lições aprendidas e modelos de governança em operação.",
-  },
-  {
-    time: "16:45",
-    title: "Painel — Liderança, Inovação e o Futuro do Trabalho",
-    desc: "Preparando conselhos, executivos e equipes para a economia da IA.",
-  },
-  {
-    time: "18:00",
-    title: "Encerramento & Coquetel de Networking",
-    desc: "Conexões estratégicas entre líderes, conselheiros e especialistas.",
-  },
+  { time: "08h00", title: "Credenciamento & Welcome Coffee", desc: "Recepção dos participantes, networking e visita aos estandes dos patrocinadores." },
+  { time: "09h00", title: "Cerimônia de Abertura", desc: "Boas-vindas da organização e apresentação dos objetivos do AI Governance Forum." },
+  { time: "09h20", title: "Palestra Magna — Governança de IA: o principal desafio estratégico da próxima década", desc: "Visão executiva sobre impactos da IA, desafios da governança e tendências regulatórias nacionais e internacionais. (40 min)" },
+  { time: "10h00", title: "Painel 1 — Governança de IA na Indústria", desc: "Automação inteligente, segurança operacional, IA na cadeia produtiva, ESG e gestão de riscos industriais." },
+  { time: "10h30", title: "Painel 2 — Governança de IA em Serviços", desc: "Atendimento inteligente, experiência do cliente, automação de processos, IA aplicada aos negócios e qualidade dos serviços." },
+  { time: "11h00", title: "Painel 3 — Governança de IA na Saúde", desc: "IA no apoio ao diagnóstico, ética e responsabilidade clínica, segurança de dados, LGPD e medicina personalizada." },
+  { time: "11h30", title: "Painel 4 — Governança de IA no Agronegócio", desc: "Agricultura de precisão, monitoramento inteligente, IA aplicada ao campo, sustentabilidade e eficiência operacional." },
+  { time: "12h00", title: "Almoço & Networking", desc: "Relacionamento entre participantes, palestrantes, patrocinadores e visitas aos estandes (2 horas)." },
+  { time: "14h00", title: "Painel 5 — Governança de IA na Mineração", desc: "Segurança operacional, monitoramento ambiental, mineração inteligente, ESG e gestão de riscos." },
+  { time: "14h30", title: "Painel 6 — Governança de IA no Entretenimento e Economia Criativa", desc: "IA generativa, direitos autorais, conteúdo sintético, criatividade assistida e propriedade intelectual." },
+  { time: "15h00", title: "Painel 7 — Inovação, Startups e o Futuro da IA", desc: "Ecossistema de inovação, startups, novos modelos de negócio, venture capital e IA como diferencial competitivo." },
+  { time: "15h30", title: "Painel 8 — Governança de IA no Setor Público e Sistema de Justiça", desc: "Judiciário, Ministério Público, Executivo, transparência algorítmica e melhoria dos serviços públicos." },
+  { time: "16h00", title: "Painel 9 — O Futuro da Governança de IA", desc: "Regulamentação, soberania digital, liderança, competências do futuro e o papel dos conselhos." },
+  { time: "16h30", title: "Keynote de Encerramento — Liderando Organizações na Era da IA", desc: "Como executivos, conselheiros e gestores devem preparar organizações para um futuro orientado por IA, inovação e governança. (40 min)" },
+  { time: "17h10", title: "Encerramento Oficial", desc: "Síntese dos insights, agradecimentos e convite para a próxima edição do AI Governance Forum." },
 ];
 
 const speakers = [
@@ -144,12 +114,12 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Top Nav */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/60">
-        <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between gap-6">
+        <div className="mx-auto max-w-7xl px-6 h-32 flex items-center justify-between gap-6">
           <a href="#top" className="flex items-center gap-3 shrink-0">
             <img
               src={logoAsset.url}
               alt="AI Governance Forum"
-              className="h-12 w-auto bg-white rounded-md p-1.5"
+              className="h-28 w-auto rounded-md"
             />
           </a>
           <nav className="hidden lg:flex items-center gap-8 text-sm">
@@ -179,7 +149,7 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section id="top" className="relative min-h-screen flex items-end lg:items-center pt-24 overflow-hidden">
+      <section id="top" className="relative min-h-screen flex items-end lg:items-center pt-32 overflow-hidden">
         {/* background photo */}
         <div className="absolute inset-0 -z-10">
           <img
@@ -204,11 +174,15 @@ function Index() {
               Encontro Executivo · 2026
             </span>
             <h1 className="mt-6 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05]">
-              Governança em <span className="text-primary">Inteligência Artificial</span> para líderes.
+              AI Governance Forum <span className="text-primary">2026</span>
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-              O AI Governance Forum reúne executivos, conselheiros e especialistas para discutir como
-              adotar IA de forma segura, ética, responsável e alinhada à estratégia do negócio.
+            <p className="mt-6 text-xl text-foreground/90 max-w-xl font-medium">
+              Governança de Inteligência Artificial: Liderança, Estratégia e Transformação dos Negócios.
+            </p>
+            <p className="mt-4 text-base text-muted-foreground max-w-xl">
+              12 de novembro de 2026 · Presencial · Hotel Quality Salvador. Encontro executivo para
+              presidentes, diretores, conselheiros, gestores públicos e privados e especialistas em
+              inovação, tecnologia, riscos, compliance e transformação digital.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -362,21 +336,21 @@ function Index() {
                 <span className="h-10 w-10 rounded-full bg-primary/15 flex items-center justify-center text-primary">📍</span>
                 <div>
                   <dt className="text-sm uppercase tracking-wider text-muted-foreground">Endereço</dt>
-                  <dd className="font-semibold">São Paulo — SP · Local a confirmar</dd>
+                  <dd className="font-semibold">Hotel Quality Salvador · Salvador — BA</dd>
                 </div>
               </div>
               <div className="flex gap-4">
                 <span className="h-10 w-10 rounded-full bg-primary/15 flex items-center justify-center text-primary">📅</span>
                 <div>
                   <dt className="text-sm uppercase tracking-wider text-muted-foreground">Data</dt>
-                  <dd className="font-semibold">2026 · Data oficial em breve</dd>
+                  <dd className="font-semibold">12 de novembro de 2026</dd>
                 </div>
               </div>
               <div className="flex gap-4">
                 <span className="h-10 w-10 rounded-full bg-primary/15 flex items-center justify-center text-primary">⏱</span>
                 <div>
-                  <dt className="text-sm uppercase tracking-wider text-muted-foreground">Duração</dt>
-                  <dd className="font-semibold">1 dia · 08h30 às 19h30</dd>
+                  <dt className="text-sm uppercase tracking-wider text-muted-foreground">Formato</dt>
+                  <dd className="font-semibold">Presencial · 08h00 às 17h10</dd>
                 </div>
               </div>
             </dl>
@@ -384,7 +358,7 @@ function Index() {
           <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-border">
             <iframe
               title="Mapa"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-46.66%2C-23.57%2C-46.62%2C-23.55&layer=mapnik"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-38.49%2C-12.99%2C-38.45%2C-12.97&layer=mapnik&marker=-12.98%2C-38.47"
               className="w-full h-full grayscale contrast-125"
               loading="lazy"
             />
@@ -549,7 +523,7 @@ function Index() {
       <footer className="border-t border-border py-10">
         <div className="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="AI Governance Forum" className="h-9 w-auto bg-white rounded p-1" />
+            <img src={logoAsset.url} alt="AI Governance Forum" className="h-16 w-auto rounded" />
           </div>
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} AI Governance Forum. Todos os direitos reservados.

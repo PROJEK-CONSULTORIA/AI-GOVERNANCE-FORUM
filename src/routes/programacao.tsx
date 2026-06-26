@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import logoAsset from "@/assets/logo.png.asset.json";
+import logoAsset from "@/assets/logo-dark.png.asset.json";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
 
 export const Route = createFileRoute("/programacao")({
@@ -55,178 +55,22 @@ const tracks: Record<TrackKey, { label: string; tag: string; color: string; desc
   },
 };
 
-const day1: Session[] = [
-  {
-    time: "08:30",
-    type: "break",
-    title: "Credenciamento & Welcome Coffee",
-    desc: "Recepção dos participantes e networking inicial entre lideranças.",
-    speakers: [],
-    track: "all",
-  },
-  {
-    time: "09:30",
-    type: "abertura",
-    title: "Abertura Oficial — A década da Governança de IA",
-    desc: "Boas-vindas e contexto estratégico do fórum. Por que governança será o principal diferenciador competitivo das organizações.",
-    speakers: [
-      { name: "Fábio Martins", role: "Anfitrião & Keynote Speaker" },
-    ],
-    track: "all",
-  },
-  {
-    time: "10:00",
-    type: "keynote",
-    title: "Keynote — IA Generativa, Agentes Autônomos e o novo papel do líder",
-    desc: "Como a próxima onda de IA redefine modelos de negócio, decisões executivas e a responsabilidade dos conselhos.",
-    speakers: [{ name: "Fábio Martins", role: "Especialista em Governança & Transformação Digital" }],
-    track: "estrategia",
-  },
-  {
-    time: "11:15",
-    type: "painel",
-    title: "Painel — LGPD, EU AI Act e o cenário regulatório brasileiro",
-    desc: "Mapeamento das principais regulamentações em vigor e em formação, com foco em conformidade prática para o Brasil.",
-    speakers: [
-      { name: "Convidado(a) a confirmar", role: "ANPD / Especialista em Privacidade" },
-      { name: "Convidado(a) a confirmar", role: "Compliance Officer · Setor Financeiro" },
-      { name: "Convidado(a) a confirmar", role: "Advogado(a) — Direito Digital" },
-    ],
-    track: "riscos",
-  },
-  {
-    time: "12:30",
-    type: "break",
-    title: "Almoço Executivo",
-    desc: "Mesas temáticas com troca de experiências entre setores público e privado.",
-    speakers: [],
-    track: "all",
-  },
-  {
-    time: "14:00",
-    type: "painel",
-    title: "Painel — Ética, vieses e responsabilidade algorítmica",
-    desc: "Como construir confiança e responsabilidade no ciclo de vida da IA, da concepção ao monitoramento contínuo.",
-    speakers: [
-      { name: "Convidado(a) a confirmar", role: "Pesquisador(a) em IA Responsável" },
-      { name: "Convidado(a) a confirmar", role: "Head de Data Science · Indústria" },
-      { name: "Convidado(a) a confirmar", role: "Líder de Diversidade & Inclusão" },
-    ],
-    track: "etica",
-  },
-  {
-    time: "15:30",
-    type: "painel",
-    title: "Painel — ISO/IEC 42001 e NIST AI RMF na prática",
-    desc: "Implementação dos frameworks internacionais de gestão de risco de IA em organizações brasileiras.",
-    speakers: [
-      { name: "Convidado(a) a confirmar", role: "CISO · Setor Bancário" },
-      { name: "Convidado(a) a confirmar", role: "Consultoria Big Four — Risco & GRC" },
-    ],
-    track: "riscos",
-  },
-  {
-    time: "17:00",
-    type: "keynote",
-    title: "Keynote — IA no setor público: governança, transparência e impacto social",
-    desc: "Casos brasileiros de adoção responsável de IA em governo e organizações de interesse público.",
-    speakers: [{ name: "Convidado(a) a confirmar", role: "Secretário(a) de Inovação" }],
-    track: "estrategia",
-  },
-  {
-    time: "18:30",
-    type: "break",
-    title: "Coquetel de Networking",
-    desc: "Conexões estratégicas entre líderes, conselheiros e especialistas.",
-    speakers: [],
-    track: "all",
-  },
-];
-
-const day2: Session[] = [
-  {
-    time: "08:30",
-    type: "break",
-    title: "Welcome Coffee",
-    desc: "Reconexão e networking matinal.",
-    speakers: [],
-    track: "all",
-  },
-  {
-    time: "09:00",
-    type: "keynote",
-    title: "Keynote — O Conselho diante da IA: novas competências para o board",
-    desc: "Como conselheiros devem supervisionar estratégia, risco e ética em IA sem virar especialistas técnicos.",
-    speakers: [{ name: "Convidado(a) a confirmar", role: "Conselheiro(a) de Administração" }],
-    track: "estrategia",
-  },
-  {
-    time: "10:15",
-    type: "painel",
-    title: "Painel — Segurança da Informação e ataques a sistemas de IA",
-    desc: "Prompt injection, model poisoning, shadow AI e o que CISOs precisam priorizar agora.",
-    speakers: [
-      { name: "Convidado(a) a confirmar", role: "CISO · Big Tech" },
-      { name: "Convidado(a) a confirmar", role: "Red Team — Pesquisa em IA Adversarial" },
-      { name: "Convidado(a) a confirmar", role: "DPO — Saúde" },
-    ],
-    track: "riscos",
-  },
-  {
-    time: "11:30",
-    type: "workshop",
-    title: "Workshop — Construindo seu Comitê de Governança de IA",
-    desc: "Sessão prática (limitada a 40 participantes): papéis, ritos, indicadores e modelo de carta executiva.",
-    speakers: [{ name: "Fábio Martins", role: "Facilitador" }],
-    track: "estrategia",
-  },
-  {
-    time: "12:30",
-    type: "break",
-    title: "Almoço Executivo",
-    desc: "Mesas temáticas por setor: Financeiro, Saúde, Indústria, Varejo e Setor Público.",
-    speakers: [],
-    track: "all",
-  },
-  {
-    time: "14:00",
-    type: "painel",
-    title: "Painel — Qualidade de dados, MLOps e auditoria contínua",
-    desc: "A base técnica que sustenta qualquer programa sério de governança de IA.",
-    speakers: [
-      { name: "Convidado(a) a confirmar", role: "Chief Data Officer · Telecom" },
-      { name: "Convidado(a) a confirmar", role: "Líder de MLOps · Fintech" },
-    ],
-    track: "etica",
-  },
-  {
-    time: "15:30",
-    type: "painel",
-    title: "Painel — Futuro do trabalho e impacto organizacional da IA",
-    desc: "Reorganização de times, novas carreiras, requalificação e o papel do RH na era dos agentes.",
-    speakers: [
-      { name: "Convidado(a) a confirmar", role: "CHRO · Multinacional" },
-      { name: "Convidado(a) a confirmar", role: "Futurista do Trabalho" },
-      { name: "Convidado(a) a confirmar", role: "Líder Sindical" },
-    ],
-    track: "etica",
-  },
-  {
-    time: "17:00",
-    type: "keynote",
-    title: "Keynote de Encerramento — Liderar na incerteza",
-    desc: "Síntese dos dois dias e um chamado à ação para os líderes que estão construindo o próximo capítulo da economia digital.",
-    speakers: [{ name: "Fábio Martins", role: "Encerramento" }],
-    track: "all",
-  },
-  {
-    time: "18:00",
-    type: "break",
-    title: "Encerramento & Brinde Executivo",
-    desc: "Confraternização final e entrega de certificados.",
-    speakers: [],
-    track: "all",
-  },
+const agenda: Session[] = [
+  { time: "08h00", type: "break", title: "Credenciamento & Welcome Coffee", desc: "Recepção dos participantes, networking e visita aos estandes dos patrocinadores.", speakers: [], track: "all" },
+  { time: "09h00", type: "abertura", title: "Cerimônia de Abertura", desc: "Boas-vindas da organização e apresentação dos objetivos do AI Governance Forum.", speakers: [], track: "all" },
+  { time: "09h20", type: "keynote", title: "Palestra Magna — Governança de IA: o principal desafio estratégico da próxima década", desc: "Visão executiva sobre os impactos da IA nas organizações, os desafios da governança e as tendências regulatórias nacionais e internacionais. Duração: 40 minutos.", speakers: [{ name: "Fábio Martins", role: "Keynote Speaker · Governança & Transformação Digital" }], track: "estrategia" },
+  { time: "10h00", type: "painel", title: "Painel 1 — Governança de IA na Indústria", desc: "Automação inteligente e produtividade · Segurança operacional · IA na cadeia produtiva · ESG e sustentabilidade · Gestão de riscos industriais. Duração: 30 minutos.", speakers: [{ name: "Painelistas a confirmar", role: "Lideranças do setor industrial" }], track: "estrategia" },
+  { time: "10h30", type: "painel", title: "Painel 2 — Governança de IA em Serviços", desc: "Atendimento inteligente · Experiência do cliente · Automação de processos · IA aplicada aos negócios · Governança e qualidade dos serviços. Duração: 30 minutos.", speakers: [{ name: "Painelistas a confirmar", role: "Lideranças de serviços e CX" }], track: "estrategia" },
+  { time: "11h00", type: "painel", title: "Painel 3 — Governança de IA na Saúde", desc: "IA no apoio ao diagnóstico · Ética e responsabilidade clínica · Segurança de dados · LGPD · IA e medicina personalizada. Duração: 30 minutos.", speakers: [{ name: "Painelistas a confirmar", role: "Lideranças da saúde, DPOs e médicos" }], track: "riscos" },
+  { time: "11h30", type: "painel", title: "Painel 4 — Governança de IA no Agronegócio", desc: "Agricultura de precisão · Monitoramento inteligente · IA aplicada ao campo · Sustentabilidade · Eficiência operacional. Duração: 30 minutos.", speakers: [{ name: "Painelistas a confirmar", role: "Executivos do agronegócio" }], track: "estrategia" },
+  { time: "12h00", type: "break", title: "Almoço & Networking", desc: "Momento dedicado ao relacionamento entre participantes, palestrantes, patrocinadores e convidados, com visitas aos estandes e demonstrações de soluções em IA. Duração: 2 horas.", speakers: [], track: "all" },
+  { time: "14h00", type: "painel", title: "Painel 5 — Governança de IA na Mineração", desc: "Segurança operacional · Monitoramento ambiental · IA para mineração inteligente · ESG · Gestão de riscos. Duração: 30 minutos.", speakers: [{ name: "Painelistas a confirmar", role: "Lideranças da mineração" }], track: "riscos" },
+  { time: "14h30", type: "painel", title: "Painel 6 — Governança de IA no Entretenimento e Economia Criativa", desc: "IA generativa · Direitos autorais · Conteúdo sintético · Criatividade assistida por IA · Ética e propriedade intelectual. Duração: 30 minutos.", speakers: [{ name: "Painelistas a confirmar", role: "Lideranças criativas e jurídicas" }], track: "etica" },
+  { time: "15h00", type: "painel", title: "Painel 7 — Inovação, Startups e o Futuro da Inteligência Artificial", desc: "Ecossistema de inovação · Startups de IA · Novos modelos de negócio · Venture Capital · IA como diferencial competitivo. Duração: 30 minutos.", speakers: [{ name: "Painelistas a confirmar", role: "Founders, investidores e hubs de inovação" }], track: "etica" },
+  { time: "15h30", type: "painel", title: "Painel 8 — Governança de IA no Setor Público e Sistema de Justiça", desc: "Poder Judiciário · Ministério Público · Executivo · Transparência algorítmica · IA para melhoria dos serviços públicos. Duração: 30 minutos.", speakers: [{ name: "Painelistas a confirmar", role: "Magistrados, MP e gestores públicos" }], track: "riscos" },
+  { time: "16h00", type: "painel", title: "Painel 9 — O Futuro da Governança de Inteligência Artificial", desc: "Regulamentação da IA · Soberania Digital · Liderança na Era da IA · Competências do futuro · Papel dos conselhos e da alta administração. Duração: 30 minutos.", speakers: [{ name: "Painelistas a confirmar", role: "Conselheiros e especialistas em regulação" }], track: "estrategia" },
+  { time: "16h30", type: "keynote", title: "Keynote de Encerramento — Liderando Organizações na Era da Inteligência Artificial", desc: "Uma reflexão sobre como executivos, conselheiros e gestores devem preparar suas organizações para um futuro orientado por Inteligência Artificial, inovação e governança. Duração: 40 minutos.", speakers: [{ name: "Fábio Martins", role: "Encerramento" }], track: "all" },
+  { time: "17h10", type: "break", title: "Encerramento Oficial", desc: "Síntese dos principais insights do Fórum · Agradecimentos aos palestrantes, patrocinadores e participantes · Convite para a próxima edição do AI Governance Forum.", speakers: [], track: "all" },
 ];
 
 const typeStyle: Record<Session["type"], { label: string; bg: string }> = {
@@ -238,11 +82,9 @@ const typeStyle: Record<Session["type"], { label: string; bg: string }> = {
 };
 
 function Programacao() {
-  const [day, setDay] = useState<1 | 2>(1);
   const [activeTrack, setActiveTrack] = useState<TrackKey | "all">("all");
 
-  const sessions = day === 1 ? day1 : day2;
-  const filtered = sessions.filter(
+  const filtered = agenda.filter(
     (s) => activeTrack === "all" || s.track === activeTrack || s.track === "all"
   );
 
@@ -250,12 +92,12 @@ function Programacao() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/60">
-        <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between gap-6">
+        <div className="mx-auto max-w-7xl px-6 h-32 flex items-center justify-between gap-6">
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <img
               src={logoAsset.url}
               alt="AI Governance Forum"
-              className="h-12 w-auto bg-white rounded-md p-1.5"
+              className="h-28 w-auto rounded-md"
             />
           </Link>
           <nav className="hidden lg:flex items-center gap-8 text-sm">
@@ -305,12 +147,13 @@ function Programacao() {
             Programação · Edição 2026
           </p>
           <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] max-w-3xl">
-            Dois dias. Três trilhas.{" "}
+            Um dia. Nove painéis.{" "}
             <span className="text-primary">Uma agenda densa</span> sobre Governança de IA.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-            Painéis, keynotes e workshops com líderes, conselheiros, reguladores e especialistas
-            que estão definindo o padrão brasileiro de governança em Inteligência Artificial.
+            12 de novembro de 2026, presencial no Hotel Quality Salvador. Palestra magna, nove
+            painéis setoriais e keynote de encerramento com líderes, conselheiros, reguladores
+            e especialistas em Governança de Inteligência Artificial.
           </p>
 
           {/* Tracks legend */}
@@ -340,23 +183,11 @@ function Programacao() {
       </section>
 
       {/* Controls */}
-      <section className="sticky top-20 z-40 backdrop-blur-xl bg-background/85 border-b border-border">
+      <section className="sticky top-32 z-40 backdrop-blur-xl bg-background/85 border-b border-border">
         <div className="mx-auto max-w-6xl px-6 py-5 flex flex-wrap items-center justify-between gap-4">
-          <div className="inline-flex rounded-full border border-border bg-card p-1">
-            {[1, 2].map((d) => (
-              <button
-                key={d}
-                onClick={() => setDay(d as 1 | 2)}
-                className={[
-                  "px-5 py-2 rounded-full text-sm font-semibold transition",
-                  day === d
-                    ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground",
-                ].join(" ")}
-              >
-                Dia {d} <span className="opacity-60 ml-1">· {d === 1 ? "Qua" : "Qui"}</span>
-              </button>
-            ))}
+          <div className="inline-flex items-center gap-3 rounded-full border border-border bg-card px-5 py-2">
+            <span className="h-2 w-2 rounded-full bg-primary" />
+            <span className="text-sm font-semibold">12 de novembro de 2026 · Hotel Quality Salvador</span>
           </div>
 
           <div className="flex flex-wrap gap-2">
@@ -399,12 +230,10 @@ function Programacao() {
           <div className="flex items-baseline justify-between mb-10">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-                Dia {day}
+                Agenda do dia
               </p>
               <h2 className="mt-3 text-3xl lg:text-4xl font-bold">
-                {day === 1
-                  ? "Fundamentos, regulamentação e visão executiva"
-                  : "Operação, segurança e o futuro do trabalho"}
+                Nove painéis setoriais, duas keynotes e networking executivo.
               </h2>
             </div>
             <p className="text-xs text-muted-foreground hidden sm:block">
