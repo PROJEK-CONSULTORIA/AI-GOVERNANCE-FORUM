@@ -481,40 +481,42 @@ function Index() {
                 </li>
               </ul>
             </div>
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="rounded-3xl border border-border bg-card p-6 lg:p-8 space-y-4"
-            >
-              <div>
-                <label className="text-xs uppercase tracking-wider text-muted-foreground">Nome</label>
-                <input
-                  className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 outline-none focus:border-primary"
-                  placeholder="Seu nome"
-                />
-              </div>
-              <div>
-                <label className="text-xs uppercase tracking-wider text-muted-foreground">E-mail corporativo</label>
-                <input
-                  type="email"
-                  className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 outline-none focus:border-primary"
-                  placeholder="voce@empresa.com"
-                />
-              </div>
-              <div>
-                <label className="text-xs uppercase tracking-wider text-muted-foreground">Mensagem</label>
-                <textarea
-                  rows={4}
-                  className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 outline-none focus:border-primary resize-none"
-                  placeholder="Como podemos ajudar?"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
+            <ClientOnly fallback={<div className="rounded-3xl border border-border bg-card p-6 lg:p-8 h-48 animate-pulse" aria-hidden />}>
+              <form
+                onSubmit={(e) => e.preventDefault()}
+                className="rounded-3xl border border-border bg-card p-6 lg:p-8 space-y-4"
               >
-                Enviar mensagem
-              </button>
-            </form>
+                <div>
+                  <label className="text-xs uppercase tracking-wider text-muted-foreground">Nome</label>
+                  <input
+                    className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 outline-none focus:border-primary"
+                    placeholder="Seu nome"
+                  />
+                </div>
+                <div>
+                  <label className="text-xs uppercase tracking-wider text-muted-foreground">E-mail corporativo</label>
+                  <input
+                    type="email"
+                    className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 outline-none focus:border-primary"
+                    placeholder="voce@empresa.com"
+                  />
+                </div>
+                <div>
+                  <label className="text-xs uppercase tracking-wider text-muted-foreground">Mensagem</label>
+                  <textarea
+                    rows={4}
+                    className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 outline-none focus:border-primary resize-none"
+                    placeholder="Como podemos ajudar?"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
+                >
+                  Enviar mensagem
+                </button>
+              </form>
+            </ClientOnly>
           </div>
         </div>
       </section>
