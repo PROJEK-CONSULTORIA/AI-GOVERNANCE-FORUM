@@ -96,6 +96,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@AIGovernanceForum" },
+      { property: "og:title", content: "AI Governance Forum 2026 — Governança de Inteligência Artificial" },
+      { name: "twitter:title", content: "AI Governance Forum 2026 — Governança de Inteligência Artificial" },
+      { name: "description", content: "AI Governance Hub is a website for the AI Governance Forum, detailing its program, speakers, and registration." },
+      { property: "og:description", content: "AI Governance Hub is a website for the AI Governance Forum, detailing its program, speakers, and registration." },
+      { name: "twitter:description", content: "AI Governance Hub is a website for the AI Governance Forum, detailing its program, speakers, and registration." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd063125-b058-4869-9365-4ab20759e83d/id-preview-bbf07dd3--6fcedb66-336b-4416-af01-f9c1a5f8a27e.lovable.app-1782744495386.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd063125-b058-4869-9365-4ab20759e83d/id-preview-bbf07dd3--6fcedb66-336b-4416-af01-f9c1a5f8a27e.lovable.app-1782744495386.png" },
     ],
     links: [
       {
