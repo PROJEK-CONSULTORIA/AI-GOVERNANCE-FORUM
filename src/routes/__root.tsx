@@ -77,14 +77,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "AI Governance Forum 2026 — Governança de Inteligência Artificial" },
+      {
+        name: "description",
+        content:
+          "AI Governance Forum 2026: encontro executivo presencial em Salvador sobre Governança de Inteligência Artificial, liderança, estratégia, riscos, compliance, ética e transformação dos negócios.",
+      },
+      { name: "author", content: "AI Governance Forum" },
+      {
+        property: "og:title",
+        content: "AI Governance Forum 2026 — Governança de Inteligência Artificial",
+      },
+      {
+        property: "og:description",
+        content:
+          "Encontro executivo presencial em Salvador sobre Governança de IA, estratégia, riscos, compliance, ética e transformação dos negócios.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@AIGovernanceForum" },
     ],
     links: [
       {
