@@ -150,6 +150,12 @@ const speakers = [
     bio: "Especialista em Cultura Organizacional, Gestão de Comunidade e Conexões Estratégicas. Co-Fundador da Philos e Presidente da ABRH Bahia. TEDx Speaker.",
   },
   {
+    name: "Danilo Andrade",
+    role: "Diretor da horus CDA",
+    img: daniloUrl,
+    bio: "Diretor da horus CDA e especialista em tecnologia, inovação e ciência de dados, com atuação voltada à transformação digital e ao uso estratégico de dados para tomada de decisão. Integra a liderança da horus CDA, contribuindo para soluções em analytics, inteligência artificial e modernização de processos em organizações públicas e privadas. Formado em Ciência da Computação, com especializações em gestão empresarial e estatística, atua também na disseminação de conhecimento e no fortalecimento do ecossistema de tecnologia na Bahia.",
+  },
+  {
     name: "A confirmar",
     role: "Compliance & Regulamentação de IA",
     img: null,
