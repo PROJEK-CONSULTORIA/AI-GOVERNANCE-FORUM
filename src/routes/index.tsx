@@ -6,12 +6,14 @@ import logoAsset from "@/assets/logo-dark.png.asset.json";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
 import darzeAsset from "@/assets/alexandre-darze.jpg.asset.json";
 import vitorAsset from "@/assets/vitor-igdal.jpg.asset.json";
+import daniloAsset from "@/assets/danilo-andrade.jpg.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
 const fabioUrl = assetUrl(fabioAsset.url);
 const darzeUrl = assetUrl(darzeAsset.url);
 const vitorUrl = assetUrl(vitorAsset.url);
+const daniloUrl = assetUrl(daniloAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -146,6 +148,12 @@ const speakers = [
     role: "Co-Fundador da Philos e Presidente da ABRH Bahia",
     img: vitorUrl,
     bio: "Especialista em Cultura Organizacional, Gestão de Comunidade e Conexões Estratégicas. Co-Fundador da Philos e Presidente da ABRH Bahia. TEDx Speaker.",
+  },
+  {
+    name: "Danilo Andrade",
+    role: "Diretor da horus CDA",
+    img: daniloUrl,
+    bio: "Diretor da horus CDA e especialista em tecnologia, inovação e ciência de dados, com atuação voltada à transformação digital e ao uso estratégico de dados para tomada de decisão. Integra a liderança da horus CDA, contribuindo para soluções em analytics, inteligência artificial e modernização de processos em organizações públicas e privadas. Formado em Ciência da Computação, com especializações em gestão empresarial e estatística, atua também na disseminação de conhecimento e no fortalecimento do ecossistema de tecnologia na Bahia.",
   },
   {
     name: "A confirmar",
