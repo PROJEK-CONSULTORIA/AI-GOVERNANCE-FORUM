@@ -1,4 +1,7 @@
 import { createFileRoute, Link, ClientOnly } from "@tanstack/react-router";
+import { useState } from "react";
+import { toast } from "sonner";
+import { z } from "zod";
 import logoAsset from "@/assets/logo-dark.png.asset.json";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
 import { assetUrl } from "@/lib/asset-url";
@@ -27,6 +30,73 @@ export const Route = createFileRoute("/")({
 });
 
 const BRAND_GREEN = "#7AC143";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Informe seu nome").max(100),
+  email: z.string().trim().email("E-mail inválido").max(255),
+  subject: z.string().trim().min(1, "Informe o assunto").max(150),
+  message: z.string().trim().min(1, "Escreva sua mensagem").max(1000),
+});
+
+function ContactForm() {
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [submitting, setSubmitting] = useState(false);
+
+  function update<K extends keyof typeof form>(key: K, value: string) {
+    setForm((f) => ({ ...f, [key]: value }));
+  }
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    const result = contactSchema.safeParse(form);
+    if (!result.success) {
+      toast.error(result.error.issues[0]?.message ?? "Verifique os campos");
+      return;
+    }
+    setSubmitting(true);
+    const { name, email, subject, message } = result.data;
+    const body = `Nome: ${name}%0AE-mail: ${email}%0A%0A${encodeURIComponent(message)}`;
+    window.location.href = `mailto:fabio.martins@igovia.com.br?subject=${encodeURIComponent(
+      subject,
+    )}&body=${body}`;
+    toast.success("Abrindo seu cliente de e-mail…");
+    setForm({ name: "", email: "", subject: "", message: "" });
+    setSubmitting(false);
+  }
+
+  const inputCls =
+    "mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 outline-none focus:border-primary";
+
+  return (
+    <form onSubmit={handleSubmit} className="rounded-3xl border border-border bg-card p-6 lg:p-8 space-y-4">
+      <div>
+        <label htmlFor="cf-name" className="text-xs uppercase tracking-wider text-muted-foreground">Nome</label>
+        <input id="cf-name" className={inputCls} placeholder="Seu nome" maxLength={100}
+          value={form.name} onChange={(e) => update("name", e.target.value)} />
+      </div>
+      <div>
+        <label htmlFor="cf-email" className="text-xs uppercase tracking-wider text-muted-foreground">E-mail</label>
+        <input id="cf-email" type="email" className={inputCls} placeholder="voce@empresa.com" maxLength={255}
+          value={form.email} onChange={(e) => update("email", e.target.value)} />
+      </div>
+      <div>
+        <label htmlFor="cf-subject" className="text-xs uppercase tracking-wider text-muted-foreground">Assunto</label>
+        <input id="cf-subject" className={inputCls} placeholder="Qual o tema do seu contato?" maxLength={150}
+          value={form.subject} onChange={(e) => update("subject", e.target.value)} />
+      </div>
+      <div>
+        <label htmlFor="cf-message" className="text-xs uppercase tracking-wider text-muted-foreground">Mensagem</label>
+        <textarea id="cf-message" rows={4} maxLength={1000}
+          className={`${inputCls} resize-none`} placeholder="Como podemos ajudar?"
+          value={form.message} onChange={(e) => update("message", e.target.value)} />
+      </div>
+      <button type="submit" disabled={submitting}
+        className="w-full rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold hover:opacity-90 transition disabled:opacity-60">
+        {submitting ? "Enviando…" : "Enviar mensagem"}
+      </button>
+    </form>
+  );
+}
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
@@ -486,40 +556,7 @@ function Index() {
               </ul>
             </div>
             <ClientOnly fallback={<div className="rounded-3xl border border-border bg-card p-6 lg:p-8 h-48 animate-pulse" aria-hidden />}>
-              <form
-                onSubmit={(e) => e.preventDefault()}
-                className="rounded-3xl border border-border bg-card p-6 lg:p-8 space-y-4"
-              >
-                <div>
-                  <label className="text-xs uppercase tracking-wider text-muted-foreground">Nome</label>
-                  <input
-                    className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 outline-none focus:border-primary"
-                    placeholder="Seu nome"
-                  />
-                </div>
-                <div>
-                  <label className="text-xs uppercase tracking-wider text-muted-foreground">E-mail corporativo</label>
-                  <input
-                    type="email"
-                    className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 outline-none focus:border-primary"
-                    placeholder="voce@empresa.com"
-                  />
-                </div>
-                <div>
-                  <label className="text-xs uppercase tracking-wider text-muted-foreground">Mensagem</label>
-                  <textarea
-                    rows={4}
-                    className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 outline-none focus:border-primary resize-none"
-                    placeholder="Como podemos ajudar?"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
-                >
-                  Enviar mensagem
-                </button>
-              </form>
+              <ContactForm />
             </ClientOnly>
           </div>
         </div>
