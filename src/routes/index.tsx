@@ -156,34 +156,12 @@ const speakers = [
 const tickets = [
   {
     name: "Profissional",
-    price: "R$ 490,00",
+    price: "490,00",
     perks: [
       "Acesso integral ao fórum",
       "Coffee breaks e almoço executivo",
       "Certificado de participação",
       "Material digital exclusivo",
-    ],
-    highlight: false,
-  },
-  {
-    name: "Executivo",
-    price: "R$ 2.490",
-    perks: [
-      "Tudo do Profissional",
-      "Assento preferencial",
-      "Acesso ao coquetel de networking VIP",
-      "Reunião privada com palestrantes",
-    ],
-    highlight: true,
-  },
-  {
-    name: "Corporativo (5+)",
-    price: "Sob consulta",
-    perks: [
-      "Pacote para times de liderança",
-      "Branding institucional opcional",
-      "Sessão de mentoria privativa",
-      "Condições especiais para grupos",
     ],
     highlight: false,
   },
