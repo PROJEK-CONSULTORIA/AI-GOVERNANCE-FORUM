@@ -4,10 +4,12 @@ import { toast } from "sonner";
 import { z } from "zod";
 import logoAsset from "@/assets/logo-dark.png.asset.json";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
+import darzeAsset from "@/assets/alexandre-darze.jpg.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
 const fabioUrl = assetUrl(fabioAsset.url);
+const darzeUrl = assetUrl(darzeAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -129,21 +131,25 @@ const speakers = [
     name: "Fábio Martins",
     role: "Keynote Speaker — Governança & Transformação Digital",
     img: fabioUrl,
+    bio: null,
+  },
+  {
+    name: "Alexandre Darzé",
+    role: "Managing Partner — LH Invest & Lucen Capital",
+    img: darzeUrl,
+    bio: "Engenheiro civil pela UFBA e mestre em Finanças pelo COPPEAD/UFRJ, com mais de 25 anos de experiência em investimentos, finanças estruturadas e desenvolvimento de empresas. Ex-executivo da IFC (Grupo Banco Mundial), liderou investimentos em Itaú, Nubank, Mercado Livre e Creditas. Hoje é investidor em cerca de 30 empresas e conselheiro de organizações de tecnologia, engenharia e inovação — referência em venture capital, private equity e mercados de capitais na América Latina.",
   },
   {
     name: "A confirmar",
     role: "Compliance & Regulamentação de IA",
     img: null,
+    bio: null,
   },
   {
     name: "A confirmar",
     role: "Segurança da Informação & Riscos",
     img: null,
-  },
-  {
-    name: "A confirmar",
-    role: "Ética e Responsabilidade Algorítmica",
-    img: null,
+    bio: null,
   },
 ];
 
@@ -388,6 +394,9 @@ function Index() {
                 <div className="p-5">
                   <h3 className="font-semibold">{s.name}</h3>
                   <p className="text-xs text-muted-foreground mt-1">{s.role}</p>
+                  {s.bio && (
+                    <p className="text-xs text-muted-foreground/90 mt-3 leading-relaxed">{s.bio}</p>
+                  )}
                 </div>
               </article>
             ))}
