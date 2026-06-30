@@ -7,6 +7,7 @@ import fabioAsset from "@/assets/fabio-martins.png.asset.json";
 import darzeAsset from "@/assets/alexandre-darze.jpg.asset.json";
 import vitorAsset from "@/assets/vitor-igdal.jpg.asset.json";
 import daniloAsset from "@/assets/danilo-andrade.jpg.asset.json";
+import rodrigoAsset from "@/assets/rodrigo-britto.jpg.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
@@ -14,6 +15,7 @@ const fabioUrl = assetUrl(fabioAsset.url);
 const darzeUrl = assetUrl(darzeAsset.url);
 const vitorUrl = assetUrl(vitorAsset.url);
 const daniloUrl = assetUrl(daniloAsset.url);
+const rodrigoUrl = assetUrl(rodrigoAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -154,6 +156,12 @@ const speakers = [
     role: "Diretor da horus CDA",
     img: daniloUrl,
     bio: "Diretor da horus CDA e especialista em tecnologia, inovação e ciência de dados, com atuação voltada à transformação digital e ao uso estratégico de dados para tomada de decisão. Integra a liderança da horus CDA, contribuindo para soluções em analytics, inteligência artificial e modernização de processos em organizações públicas e privadas. Formado em Ciência da Computação, com especializações em gestão empresarial e estatística, atua também na disseminação de conhecimento e no fortalecimento do ecossistema de tecnologia na Bahia.",
+  },
+  {
+    name: "Dr. Rodrigo Britto",
+    role: "Juiz de Direito do TJBA — Assessor Especial de Tecnologia, Informação e Dados",
+    img: rodrigoUrl,
+    bio: "Dr. Rodrigo Souza Britto é Juiz de Direito do Tribunal de Justiça do Estado da Bahia (TJBA), titular da 5ª Vara Cível e Comercial de Vitória da Conquista. Atua como Assessor Especial da Presidência no eixo de Tecnologia, Informação e Dados, liderando comissões estratégicas como a implantação do sistema Processo Eletrônico (EPROC) e a disseminação de soluções baseadas em Inteligência Artificial no Judiciário. Graduado em Direito pela UNIFACS e especialista em Direito Tributário pela UFBA, é professor da UNICORP, palestrante e especialista na interseção entre Direito, inovação tecnológica, produtividade e Justiça Restaurativa.",
   },
   {
     name: "A confirmar",
