@@ -142,6 +142,12 @@ const speakers = [
     bio: "Engenheiro civil pela UFBA e mestre em Finanças pelo COPPEAD/UFRJ, com mais de 25 anos de experiência em investimentos, finanças estruturadas e desenvolvimento de empresas. Ex-executivo da IFC (Grupo Banco Mundial), liderou investimentos em Itaú, Nubank, Mercado Livre e Creditas. Hoje é investidor em cerca de 30 empresas e conselheiro de organizações de tecnologia, engenharia e inovação — referência em venture capital, private equity e mercados de capitais na América Latina.",
   },
   {
+    name: "Vitor Igdal",
+    role: "Co-Fundador da Philos e Presidente da ABRH Bahia",
+    img: vitorUrl,
+    bio: "Especialista em Cultura Organizacional, Gestão de Comunidade e Conexões Estratégicas. Co-Fundador da Philos e Presidente da ABRH Bahia. TEDx Speaker.",
+  },
+  {
     name: "A confirmar",
     role: "Compliance & Regulamentação de IA",
     img: null,
