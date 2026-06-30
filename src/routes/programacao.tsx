@@ -96,12 +96,12 @@ function Programacao() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/60">
-        <div className="mx-auto max-w-7xl px-6 h-32 flex items-center justify-between gap-6">
+        <div className="mx-auto max-w-7xl px-6 h-44 flex items-center justify-between gap-6">
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <img
               src={logoUrl}
               alt="AI Governance Forum"
-              className="h-28 w-auto rounded-md"
+              className="h-56 w-auto rounded-md"
             />
           </Link>
           <nav className="hidden lg:flex items-center gap-8 text-sm">
@@ -132,7 +132,7 @@ function Programacao() {
       </header>
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 lg:pb-20 overflow-hidden border-b border-border">
+      <section className="relative pt-44 pb-16 lg:pb-20 overflow-hidden border-b border-border">
         <div className="absolute inset-0 -z-10">
           <img
             src={fabioUrl}
@@ -187,7 +187,7 @@ function Programacao() {
       </section>
 
       {/* Controls */}
-      <section className="sticky top-32 z-40 backdrop-blur-xl bg-background/85 border-b border-border">
+      <section className="sticky top-44 z-40 backdrop-blur-xl bg-background/85 border-b border-border">
         <div className="mx-auto max-w-6xl px-6 py-5 flex flex-wrap items-center justify-between gap-4">
           <div className="inline-flex items-center gap-3 rounded-full border border-border bg-card px-5 py-2">
             <span className="h-2 w-2 rounded-full bg-primary" />
