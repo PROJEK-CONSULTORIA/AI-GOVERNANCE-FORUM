@@ -187,7 +187,7 @@ function Programacao() {
       </section>
 
       {/* Controls */}
-      <section className="sticky top-32 z-40 backdrop-blur-xl bg-background/85 border-b border-border">
+      <section className="sticky top-44 z-40 backdrop-blur-xl bg-background/85 border-b border-border">
         <div className="mx-auto max-w-6xl px-6 py-5 flex flex-wrap items-center justify-between gap-4">
           <div className="inline-flex items-center gap-3 rounded-full border border-border bg-card px-5 py-2">
             <span className="h-2 w-2 rounded-full bg-primary" />
