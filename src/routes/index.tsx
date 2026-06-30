@@ -153,7 +153,7 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section id="top" className="relative min-h-screen flex items-end lg:items-center pt-32 overflow-hidden">
+      <section id="top" className="relative min-h-screen flex items-end lg:items-center pt-44 overflow-hidden">
         {/* background photo */}
         <div className="absolute inset-0 -z-10">
           <img
