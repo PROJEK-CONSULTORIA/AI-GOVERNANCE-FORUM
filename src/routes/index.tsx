@@ -156,7 +156,7 @@ const speakers = [
 const tickets = [
   {
     name: "Profissional",
-    price: "R$ 1.490",
+    price: "R$ 490,00",
     perks: [
       "Acesso integral ao fórum",
       "Coffee breaks e almoço executivo",
