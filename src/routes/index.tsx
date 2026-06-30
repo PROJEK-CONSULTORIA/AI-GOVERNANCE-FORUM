@@ -342,7 +342,7 @@ function Index() {
           <div className="flex items-end justify-between flex-wrap gap-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Programação</p>
-              <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Um dia denso, do board ao operacional.</h2>
+              <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Um dia intenso, com conteúdo de alto nível.</h2>
             </div>
             <p className="text-sm text-muted-foreground">Programação preliminar · sujeita a ajustes.</p>
           </div>
