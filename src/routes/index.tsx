@@ -458,7 +458,7 @@ function Index() {
                 {/* badge */}
                 <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 mb-6">
                   <span className="text-[10px] font-extrabold uppercase tracking-widest text-primary">
-                    Lote Exclusivo
+                    PRIMEIRO LOTE - ATÉ 30/07
                   </span>
                 </div>
 
