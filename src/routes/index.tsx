@@ -156,34 +156,12 @@ const speakers = [
 const tickets = [
   {
     name: "Profissional",
-    price: "R$ 490,00",
+    price: "490,00",
     perks: [
       "Acesso integral ao fórum",
       "Coffee breaks e almoço executivo",
       "Certificado de participação",
       "Material digital exclusivo",
-    ],
-    highlight: false,
-  },
-  {
-    name: "Executivo",
-    price: "R$ 2.490",
-    perks: [
-      "Tudo do Profissional",
-      "Assento preferencial",
-      "Acesso ao coquetel de networking VIP",
-      "Reunião privada com palestrantes",
-    ],
-    highlight: true,
-  },
-  {
-    name: "Corporativo (5+)",
-    price: "Sob consulta",
-    perks: [
-      "Pacote para times de liderança",
-      "Branding institucional opcional",
-      "Sessão de mentoria privativa",
-      "Condições especiais para grupos",
     ],
     highlight: false,
   },
@@ -451,54 +429,95 @@ function Index() {
       </section>
 
       {/* Ingressos */}
-      <section id="ingressos" className="py-24 lg:py-32">
-        <div className="mx-auto max-w-6xl px-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Ingressos</p>
-          <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Garanta seu lugar.</h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl">
-            Vagas limitadas para preservar o caráter executivo do encontro.
-          </p>
+      <section id="ingressos" className="py-24 lg:py-32 relative overflow-hidden">
+        {/* ambient glow */}
+        <div
+          className="absolute -top-32 left-1/4 h-72 w-72 rounded-full blur-[120px] opacity-20 pointer-events-none"
+          style={{ background: BRAND_GREEN }}
+        />
+        <div
+          className="absolute -bottom-32 right-1/4 h-72 w-72 rounded-full blur-[120px] opacity-10 pointer-events-none"
+          style={{ background: BRAND_GREEN }}
+        />
 
-          <div className="mt-14 grid lg:grid-cols-3 gap-6">
+        <div className="relative mx-auto max-w-6xl px-6">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Ingressos</p>
+            <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Garanta seu lugar.</h2>
+            <p className="mt-4 text-muted-foreground">
+              Vagas limitadas para preservar o caráter executivo do encontro.
+            </p>
+          </div>
+
+          <div className="mt-14 flex justify-center">
             {tickets.map((t) => (
               <div
                 key={t.name}
-                className={[
-                  "relative rounded-3xl p-8 border transition",
-                  t.highlight
-                    ? "bg-primary text-primary-foreground border-primary shadow-2xl shadow-primary/20 lg:-translate-y-4"
-                    : "bg-card border-border hover:border-primary/60",
-                ].join(" ")}
+                className="relative w-full max-w-md overflow-hidden rounded-[32px] border border-foreground/10 bg-card/40 p-8 backdrop-blur-xl shadow-2xl"
               >
-                {t.highlight && (
-                  <span className="absolute top-5 right-5 text-[10px] font-bold uppercase tracking-widest bg-primary-foreground/15 px-3 py-1 rounded-full">
-                    Mais procurado
+                {/* badge */}
+                <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 mb-6">
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-primary">
+                    Lote Exclusivo
                   </span>
-                )}
-                <h3 className="text-xl font-bold">{t.name}</h3>
-                <p className="mt-4 text-4xl font-bold">{t.price}</p>
-                <ul className="mt-6 space-y-3 text-sm">
+                </div>
+
+                {/* header */}
+                <h3 className="text-3xl font-bold leading-tight">
+                  Passaporte <span className="text-primary">{t.name}</span>
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground italic">AI Governance Forum 2026</p>
+
+                {/* price */}
+                <div className="mt-8">
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-lg font-medium text-muted-foreground">R$</span>
+                    <span className="text-5xl font-extrabold tracking-tighter text-foreground">{t.price}</span>
+                  </div>
+                  <p className="mt-1 text-[11px] text-muted-foreground">Pagamento único com acesso imediato</p>
+                </div>
+
+                {/* features */}
+                <ul className="mt-8 space-y-4">
                   {t.perks.map((p) => (
-                    <li key={p} className="flex gap-3">
-                      <span className={t.highlight ? "text-primary-foreground" : "text-primary"}>✓</span>
-                      <span className={t.highlight ? "" : "text-muted-foreground"}>{p}</span>
+                    <li key={p} className="flex items-start gap-3">
+                      <span className="mt-0.5 shrink-0 text-primary">
+                        <svg
+                          className="h-5 w-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          strokeWidth={2.5}
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                      <span className="text-sm leading-snug text-foreground/80">{p}</span>
                     </li>
                   ))}
                 </ul>
+
+                {/* cta */}
                 <a
                   href="#contato"
-                  className={[
-                    "mt-8 inline-flex w-full justify-center rounded-full px-6 py-3 text-sm font-semibold transition",
-                    t.highlight
-                      ? "bg-primary-foreground text-primary hover:opacity-90"
-                      : "bg-primary text-primary-foreground hover:opacity-90",
-                  ].join(" ")}
+                  className="mt-10 flex w-full items-center justify-center rounded-2xl bg-primary px-6 py-4 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition hover:opacity-90 active:scale-[0.98]"
                 >
-                  Quero participar
+                  Garantir minha vaga
                 </a>
+
+                {/* visual accent */}
+                <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
+                  <svg className="h-24 w-24" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z" />
+                  </svg>
+                </div>
               </div>
             ))}
           </div>
+
+          <p className="mt-8 text-center text-[10px] uppercase tracking-wide text-muted-foreground/70">
+            Vagas limitadas • Ambiente seguro • 12 de novembro de 2026
+          </p>
         </div>
       </section>
 
