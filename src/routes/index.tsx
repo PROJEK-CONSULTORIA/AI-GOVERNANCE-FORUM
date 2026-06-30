@@ -168,6 +168,12 @@ const speakers = [
     bio: "Dr. Rodrigo Souza Britto é Juiz de Direito do Tribunal de Justiça do Estado da Bahia (TJBA), titular da 5ª Vara Cível e Comercial de Vitória da Conquista. Atua como Assessor Especial da Presidência no eixo de Tecnologia, Informação e Dados, liderando comissões estratégicas como a implantação do sistema Processo Eletrônico (EPROC) e a disseminação de soluções baseadas em Inteligência Artificial no Judiciário. Graduado em Direito pela UNIFACS e especialista em Direito Tributário pela UFBA, é professor da UNICORP, palestrante e especialista na interseção entre Direito, inovação tecnológica, produtividade e Justiça Restaurativa.",
   },
   {
+    name: "Nélio Castro",
+    role: "Especialista em Digital e IA na Rede Bahia",
+    img: nelioUrl,
+    bio: "Especialista em Digital e IA na Rede Bahia. Com 30 anos de experiência em tecnologia e inovação e passagens por startups de destaque como JusBrasil e Agilize, Nélio lidera o desenvolvimento de produtos e projetos estratégicos que transformam ideias em soluções digitais de sucesso através de dados e IA.",
+  },
+  {
     name: "A confirmar",
     role: "Compliance & Regulamentação de IA",
     img: null,
