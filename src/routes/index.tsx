@@ -8,6 +8,8 @@ import darzeAsset from "@/assets/alexandre-darze.jpg.asset.json";
 import vitorAsset from "@/assets/vitor-igdal.jpg.asset.json";
 import daniloAsset from "@/assets/danilo-andrade.jpg.asset.json";
 import rodrigoAsset from "@/assets/rodrigo-britto.jpg.asset.json";
+import igoviaAsset from "@/assets/igovia.png.asset.json";
+import horusAsset from "@/assets/horus.png.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
@@ -555,15 +557,21 @@ function Index() {
             inovação.
           </p>
 
-          <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div
-                key={i}
-                className="h-24 rounded-xl border border-dashed border-border bg-background/40 flex items-center justify-center text-xs uppercase tracking-widest text-muted-foreground/60"
-              >
-                Sua marca
-              </div>
-            ))}
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="rounded-xl border border-border bg-black flex items-center justify-center p-8">
+              <img
+                src={assetUrl(igoviaAsset.url)}
+                alt="IGOV.IA — Instituto de Governança em Inteligência Artificial"
+                className="h-48 lg:h-56 w-auto object-contain"
+              />
+            </div>
+            <div className="rounded-xl border border-border bg-black flex items-center justify-center p-8">
+              <img
+                src={assetUrl(horusAsset.url)}
+                alt="Horus CDA — Decisões mais conscientes"
+                className="h-48 lg:h-56 w-auto object-contain"
+              />
+            </div>
           </div>
 
           <div className="mt-12 rounded-3xl border border-primary/40 bg-primary/5 p-8 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
