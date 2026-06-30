@@ -1,6 +1,10 @@
 import { createFileRoute, Link, ClientOnly } from "@tanstack/react-router";
 import logoAsset from "@/assets/logo-dark.png.asset.json";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
+import { assetUrl } from "@/lib/asset-url";
+
+const logoUrl = assetUrl(logoAsset.url);
+const fabioUrl = assetUrl(fabioAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -54,7 +58,7 @@ const speakers = [
   {
     name: "Fábio Martins",
     role: "Keynote Speaker — Governança & Transformação Digital",
-    img: fabioAsset.url,
+    img: fabioUrl,
   },
   {
     name: "A confirmar",
@@ -117,7 +121,7 @@ function Index() {
         <div className="mx-auto max-w-7xl px-6 h-32 flex items-center justify-between gap-6">
           <a href="#top" className="flex items-center gap-3 shrink-0">
             <img
-              src={logoAsset.url}
+              src={logoUrl}
               alt="AI Governance Forum"
               className="h-28 w-auto rounded-md"
             />
@@ -153,7 +157,7 @@ function Index() {
         {/* background photo */}
         <div className="absolute inset-0 -z-10">
           <img
-            src={fabioAsset.url}
+            src={fabioUrl}
             alt="Fábio Martins, palestrante"
             className="absolute right-0 bottom-0 h-[95%] lg:h-[110%] w-auto object-contain object-bottom opacity-90"
           />
@@ -525,7 +529,7 @@ function Index() {
       <footer className="border-t border-border py-10">
         <div className="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="AI Governance Forum" className="h-16 w-auto rounded" />
+            <img src={logoUrl} alt="AI Governance Forum" className="h-16 w-auto rounded" />
           </div>
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} AI Governance Forum. Todos os direitos reservados.

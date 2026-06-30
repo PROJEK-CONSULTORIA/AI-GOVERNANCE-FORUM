@@ -2,6 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import logoAsset from "@/assets/logo-dark.png.asset.json";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
+import { assetUrl } from "@/lib/asset-url";
+
+const logoUrl = assetUrl(logoAsset.url);
+const fabioUrl = assetUrl(fabioAsset.url);
 
 export const Route = createFileRoute("/programacao")({
   head: () => ({
@@ -95,7 +99,7 @@ function Programacao() {
         <div className="mx-auto max-w-7xl px-6 h-32 flex items-center justify-between gap-6">
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <img
-              src={logoAsset.url}
+              src={logoUrl}
               alt="AI Governance Forum"
               className="h-28 w-auto rounded-md"
             />
@@ -131,7 +135,7 @@ function Programacao() {
       <section className="relative pt-32 pb-16 lg:pb-20 overflow-hidden border-b border-border">
         <div className="absolute inset-0 -z-10">
           <img
-            src={fabioAsset.url}
+            src={fabioUrl}
             alt=""
             aria-hidden
             className="absolute right-0 bottom-0 h-full w-auto object-contain object-bottom opacity-20"
