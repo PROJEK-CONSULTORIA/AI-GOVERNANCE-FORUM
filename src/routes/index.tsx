@@ -157,13 +157,13 @@ const speakers = [
   },
   {
     name: "Danilo Andrade",
-    role: "Diretor da horus CDA",
+    role: "Diretor da Horus CDA",
     img: daniloUrl,
     bio: "Diretor da horus CDA e especialista em tecnologia, inovação e ciência de dados, com atuação voltada à transformação digital e ao uso estratégico de dados para tomada de decisão. Integra a liderança da horus CDA, contribuindo para soluções em analytics, inteligência artificial e modernização de processos em organizações públicas e privadas. Formado em Ciência da Computação, com especializações em gestão empresarial e estatística, atua também na disseminação de conhecimento e no fortalecimento do ecossistema de tecnologia na Bahia.",
   },
   {
     name: "Dr. Rodrigo Britto",
-    role: "Juiz de Direito do TJBA — Assessor Especial de Tecnologia, Informação e Dados",
+    role: "Juiz de Direito do TJBA — Especialista em Inteligência Artificial",
     img: rodrigoUrl,
     bio: "Dr. Rodrigo Souza Britto é Juiz de Direito do Tribunal de Justiça do Estado da Bahia (TJBA), titular da 5ª Vara Cível e Comercial de Vitória da Conquista. Atua como Assessor Especial da Presidência no eixo de Tecnologia, Informação e Dados, liderando comissões estratégicas como a implantação do sistema Processo Eletrônico (EPROC) e a disseminação de soluções baseadas em Inteligência Artificial no Judiciário. Graduado em Direito pela UNIFACS e especialista em Direito Tributário pela UFBA, é professor da UNICORP, palestrante e especialista na interseção entre Direito, inovação tecnológica, produtividade e Justiça Restaurativa.",
   },
