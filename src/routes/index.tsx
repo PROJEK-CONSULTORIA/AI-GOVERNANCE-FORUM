@@ -475,13 +475,13 @@ function Index() {
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
                   <span className="block text-muted-foreground text-xs uppercase tracking-wider">E-mail</span>
-                  <a href="mailto:contato@aigovernanceforum.com.br" className="font-semibold text-foreground hover:text-primary">
-                    contato@aigovernanceforum.com.br
+                  <a href="mailto:fabio.martins@igovia.com.br" className="font-semibold text-foreground hover:text-primary">
+                    fabio.martins@igovia.com.br
                   </a>
                 </li>
                 <li>
                   <span className="block text-muted-foreground text-xs uppercase tracking-wider">WhatsApp</span>
-                  <span className="font-semibold">+55 (11) 0000-0000</span>
+                  <span className="font-semibold">+55 (71) 9.8841.9093</span>
                 </li>
               </ul>
             </div>
