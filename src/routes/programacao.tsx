@@ -132,7 +132,7 @@ function Programacao() {
       </header>
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 lg:pb-20 overflow-hidden border-b border-border">
+      <section className="relative pt-44 pb-16 lg:pb-20 overflow-hidden border-b border-border">
         <div className="absolute inset-0 -z-10">
           <img
             src={fabioUrl}
