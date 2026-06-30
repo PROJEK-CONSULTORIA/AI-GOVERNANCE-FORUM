@@ -11,20 +11,11 @@ const isVercel = process.env.VERCEL === "1";
 export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
     server: { entry: "server" },
-    prerender: {
-      enabled: isVercel,
-      autoStaticPathsDiscovery: true,
-      crawlLinks: true,
-      failOnError: true,
-      pages: [
-        { path: "/" },
-        { path: "/programacao" },
-      ],
-    },
   },
   nitro: {
-    preset: isVercel ? "static" : undefined,
+    // On Vercel, build as a serverless function (official TanStack Start path).
+    // In the Lovable sandbox, leave undefined so the default Cloudflare preset is used.
+    preset: isVercel ? "vercel" : undefined,
   },
 });
