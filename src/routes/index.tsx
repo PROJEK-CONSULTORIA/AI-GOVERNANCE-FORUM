@@ -5,11 +5,13 @@ import { z } from "zod";
 import logoAsset from "@/assets/logo-dark.png.asset.json";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
 import darzeAsset from "@/assets/alexandre-darze.jpg.asset.json";
+import vitorAsset from "@/assets/vitor-igdal.jpg.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
 const fabioUrl = assetUrl(fabioAsset.url);
 const darzeUrl = assetUrl(darzeAsset.url);
+const vitorUrl = assetUrl(vitorAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
