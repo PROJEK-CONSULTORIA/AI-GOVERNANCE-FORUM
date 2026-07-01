@@ -572,7 +572,7 @@ function Index() {
               <img
                 src={assetUrl(igoviaAsset.url)}
                 alt="IGOV.IA — Instituto de Governança em Inteligência Artificial"
-                className="h-48 lg:h-56 w-auto object-contain"
+                className="h-24 lg:h-28 w-auto object-contain"
               />
             </div>
             <div className="rounded-xl border border-border bg-black flex items-center justify-center p-8">
