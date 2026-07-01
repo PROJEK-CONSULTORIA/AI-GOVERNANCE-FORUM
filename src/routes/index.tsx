@@ -423,7 +423,7 @@ function Index() {
         <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Local & Data</p>
-            <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Um ambiente à altura de quem decide.</h2>
+            <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Um ambiente colaborativo.</h2>
             <p className="mt-6 text-muted-foreground">
               O fórum acontece em espaço executivo selecionado, com infraestrutura completa para
               painéis, networking estratégico e reuniões privativas entre lideranças.
