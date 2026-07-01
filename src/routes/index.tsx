@@ -139,7 +139,7 @@ const schedule = [
 const speakers = [
   {
     name: "Fábio Martins",
-    role: "Keynote Speaker — Governança & Transformação Digital",
+    role: "Keynote Speaker — Governança & Transformação Digital\n\n\n\n\n\n\n",
     img: fabioUrl,
     bio: "Founder do IGOV.IA - Instituto de Governança em Inteligência Artificial, Head de IA, executivo, escritor, consultor, professor e palestrante, autor dos livros Governança em Inteligência Artificial: as 10 dimensões da jornada de adoção tecnológica e Inteligência Artificial: Os Desafios do Mundo Exponencial. Graduado em Ciência da Computação e Ciências Contábeis, especialista em Gestão de Projetos, Mestre em Administração Estratégica e Doutorando em Modelagem Computacional e Tecnologia Industrial. Possui mais de 30 anos de experiência em projetos de alta complexidade nos setores público e privado, liderando equipes de alta performance.",
   },
