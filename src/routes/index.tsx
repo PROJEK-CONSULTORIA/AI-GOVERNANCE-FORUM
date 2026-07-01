@@ -129,7 +129,7 @@ const schedule = [
   { time: "09h20", title: "Palestra Magna — Governança de IA: o principal desafio estratégico da próxima década.", desc: "Visão executiva sobre impactos da IA, desafios da governança e tendências regulatórias nacionais e internacionais. Fábio Martins" },
   { time: "10h00", title: "Painel 1 — Indústria Inteligente: pessoas, dados e Inteligência Artificial.", desc: "Como estruturar a governança da Inteligência Artificial para aumentar a produtividade, otimizar operações, fortalecer a gestão de riscos e impulsionar a competitividade da indústria com segurança e responsabilidade." },
   { time: "10h30", title: "Painel 2 —\u00a0Governança, Ética e IA: os novos desafios da Justiça.", desc: "Como o Poder Judiciário pode adotar a Inteligência Artificial de forma segura, transparente e responsável, conciliando inovação, eficiência operacional, conformidade regulatória, gestão de riscos e preservação dos direitos fundamentais.\u00a0\u00a0 \u00a0\n\n\nDr. Rodrigo Britto - TJBA e Yuri Araújo - MPBA" },
-  { time: "11h00", title: "Painel 3 — Governança de IA para Cidades e Estados Inteligentes: inovação com responsabilidade.", desc: "Como utilizar a Inteligência Artificial para tornar as cidades e estados mais eficientes, sustentáveis e centradas no cidadão, com governança, transparência, segurança, gestão de dados e decisões orientadas por evidências.     " },
+  { time: "11h00", title: "Painel 3 — Governança de IA para Cidades e Estados Inteligentes: inovação com responsabilidade.", desc: "Como utilizar a Inteligência Artificial para tornar as cidades e estados mais eficientes, sustentáveis e centradas no cidadão, com governança, transparência, segurança, gestão de dados e decisões orientadas por evidências. Danilo Andrade - Horus CDA e Luis Henrique de Magalhães Gaban - SEMIT/Prefeitura de Salvador." },
   { time: "11h30", title: "Painel 4 — Cibersegurança e Governança de IA: desafios para organizações inteligentes.", desc: "Como proteger dados, modelos e sistemas de IA por meio da governança, gestão de riscos, conformidade e cibersegurança, garantindo inovação com confiança e resiliência.\n\n\nAndréa Campelo — tecnoAtiva" },
   { time: "12h00", title: "Almoço & Networking", desc: "Relacionamento entre participantes, palestrantes e patrocinadores\u00a0" },
   { time: "14h00", title: "Painel 5 —\u00a0IA no Digital e Entretenimento: criatividade, inovação e governança.", desc: "Como a Inteligência Artificial está redefinindo a criação de conteúdo, a experiência do público e os modelos de negócio, exigindo uma governança que equilibre inovação, ética, proteção da propriedade intelectual e confiança no ecossistema digital." },
@@ -189,6 +189,12 @@ const speakers = [
     role: "Founder e CEO da tecnoAtiva",
     img: andreaUrl,
     bio: "Fundadora e CEO da tecnoAtiva, conceituada empresa especializada em segurança cibernética e resiliência digital sediada em Salvador, Bahia. Com mais de 25 anos de atuação consolidada no mercado, é uma das principais lideranças e referências técnicas em segurança da informação na região Nordeste.",
+  },
+  {
+    name: "Luis Henrique de Magalhães Gaban",
+    role: "Diretor de Inovação de TIC da SEMIT — Prefeitura de Salvador",
+    img: null,
+    bio: "Atual Diretor de Inovação de TIC na Secretaria Municipal de Inovação e Tecnologia (SEMIT) da Prefeitura de Salvador, onde lidera a transformação digital e a implementação de políticas de smart city na capital baiana. Com formação em Direito e sólida experiência no setor público, já exerceu mandatos como vereador de Salvador e deputado estadual pela Bahia, consolidando sua trajetória na interseção entre governança, política e tecnologia. Reconhecido por sua atuação no ecossistema de inovação, destaca-se pelo fomento a projetos de inclusão digital, desburocratização de serviços municipais e capacitação tecnológica para jovens.",
   },
   {
     name: "A confirmar",
