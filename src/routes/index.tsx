@@ -191,6 +191,12 @@ const speakers = [
     bio: "Fundadora e CEO da tecnoAtiva, conceituada empresa especializada em segurança cibernética e resiliência digital sediada em Salvador, Bahia. Com mais de 25 anos de atuação consolidada no mercado, é uma das principais lideranças e referências técnicas em segurança da informação na região Nordeste.",
   },
   {
+    name: "Luis Henrique de Magalhães Gaban",
+    role: "Diretor de Inovação de TIC da SEMIT — Prefeitura de Salvador",
+    img: null,
+    bio: "Atual Diretor de Inovação de TIC na Secretaria Municipal de Inovação e Tecnologia (SEMIT) da Prefeitura de Salvador, onde lidera a transformação digital e a implementação de políticas de smart city na capital baiana. Com formação em Direito e sólida experiência no setor público, já exerceu mandatos como vereador de Salvador e deputado estadual pela Bahia, consolidando sua trajetória na interseção entre governança, política e tecnologia. Reconhecido por sua atuação no ecossistema de inovação, destaca-se pelo fomento a projetos de inclusão digital, desburocratização de serviços municipais e capacitação tecnológica para jovens.",
+  },
+  {
     name: "A confirmar",
     role: "Compliance & Regulamentação de IA",
     img: null,
