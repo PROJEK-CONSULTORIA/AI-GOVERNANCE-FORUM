@@ -12,6 +12,7 @@ import nelioAsset from "@/assets/nelio-castro.jpg.asset.json";
 import yuriAsset from "@/assets/yuri-araujo.png.asset.json";
 import andreaAsset from "@/assets/andrea-campelo.jpg.asset.json";
 import gabanAsset from "@/assets/luis-gaban.png.asset.json";
+import mariaAsset from "@/assets/maria-clara-seixas.png.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -27,6 +28,7 @@ const nelioUrl = assetUrl(nelioAsset.url);
 const yuriUrl = assetUrl(yuriAsset.url);
 const andreaUrl = assetUrl(andreaAsset.url);
 const gabanUrl = assetUrl(gabanAsset.url);
+const mariaUrl = assetUrl(mariaAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -197,6 +199,12 @@ const speakers = [
     role: "Diretor de Inovação de TIC da SEMIT — Prefeitura de Salvador",
     img: gabanUrl,
     bio: "Atual Diretor de Inovação de TIC na Secretaria Municipal de Inovação e Tecnologia (SEMIT) da Prefeitura de Salvador, onde lidera a transformação digital e a implementação de políticas de smart city na capital baiana. Com formação em Direito e sólida experiência no setor público, já exerceu mandatos como vereador de Salvador e deputado estadual pela Bahia, consolidando sua trajetória na interseção entre governança, política e tecnologia. Reconhecido por sua atuação no ecossistema de inovação, destaca-se pelo fomento a projetos de inclusão digital, desburocratização de serviços municipais e capacitação tecnológica para jovens.",
+  },
+  {
+    name: "Maria Clara Seixas",
+    role: "Sócia do 4S Advogados — Compliance, Riscos, Proteção de Dados e Direito Digital",
+    img: mariaUrl,
+    bio: "Sócia do 4S Advogados, responsável pela atuação nas áreas de Compliance, Riscos, Proteção de Dados, Societária e M&A. Possui ampla experiência com direito corporativo e consultoria jurídica para projetos empresariais, adequações de LGPD, elaboração contratual e planejamentos societários, com uma atuação legal estratégica, em negociação e advocacia preventiva. Premiada nas últimas edições do anuário Análise-500 e Análise-Advogadas Mais Admiradas, em 4 diferentes categorias, entre elas nas categorias nacionais de Compliance e Direito Digital.",
   },
   {
     name: "A confirmar",
