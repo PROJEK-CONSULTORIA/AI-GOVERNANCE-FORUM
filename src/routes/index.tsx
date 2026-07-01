@@ -124,10 +124,10 @@ const navLinks = [
 const schedule = [
   { time: "08h00", title: "Credenciamento & Welcome Coffee", desc: "Recepção dos participantes, networking e visita aos estandes dos patrocinadores." },
   { time: "09h00", title: "Cerimônia de Abertura", desc: "Boas-vindas da organização e apresentação dos objetivos do AI Governance Forum." },
-  { time: "09h20", title: "Palestra Magna — Governança de IA: o principal desafio estratégico da próxima década", desc: "Visão executiva sobre impactos da IA, desafios da governança e tendências regulatórias nacionais e internacionais. (40 min)" },
-  { time: "10h00", title: "Painel 1 — Indústria Inteligente: pessoas, dados e Inteligência Artificial", desc: "Como estruturar a governança da Inteligência Artificial para aumentar a produtividade, otimizar operações, fortalecer a gestão de riscos e impulsionar a competitividade da indústria com segurança e responsabilidade." },
-  { time: "10h30", title: "Painel 2 —\u00a0Governança, Ética e IA: os novos desafios da Justiça", desc: "Como o Poder Judiciário pode adotar a Inteligência Artificial de forma segura, transparente e responsável, conciliando inovação, eficiência operacional, conformidade regulatória, gestão de riscos e preservação dos direitos fundamentais.\u00a0\n\n\nDr. Rodrigo Britto - TJBA e Yuri Araújo - MP-BA" },
-  { time: "11h00", title: "Painel 3 — Governança de IA para Cidades Inteligentes: inovação com responsabilidade", desc: "Como utilizar a Inteligência Artificial para tornar as cidades mais eficientes, sustentáveis e centradas no cidadão, com governança, transparência, segurança, gestão de dados e decisões orientadas por evidências." },
+  { time: "09h20", title: "Palestra Magna — Governança de IA: o principal desafio estratégico da próxima década.", desc: "Visão executiva sobre impactos da IA, desafios da governança e tendências regulatórias nacionais e internacionais. (40 min)" },
+  { time: "10h00", title: "Painel 1 — Indústria Inteligente: pessoas, dados e Inteligência Artificial.", desc: "Como estruturar a governança da Inteligência Artificial para aumentar a produtividade, otimizar operações, fortalecer a gestão de riscos e impulsionar a competitividade da indústria com segurança e responsabilidade." },
+  { time: "10h30", title: "Painel 2 —\u00a0Governança, Ética e IA: os novos desafios da Justiça.", desc: "Como o Poder Judiciário pode adotar a Inteligência Artificial de forma segura, transparente e responsável, conciliando inovação, eficiência operacional, conformidade regulatória, gestão de riscos e preservação dos direitos fundamentais.\u00a0\n\n\nDr. Rodrigo Britto - TJBA e Yuri Araújo - MP-BA" },
+  { time: "11h00", title: "Painel 3 — Governança de IA para Cidades Inteligentes: inovação com responsabilidade.", desc: "Como utilizar a Inteligência Artificial para tornar as cidades mais eficientes, sustentáveis e centradas no cidadão, com governança, transparência, segurança, gestão de dados e decisões orientadas por evidências." },
   { time: "11h30", title: "Painel 4 — Cibersegurança e Governança de IA: desafios para organizações inteligentes.", desc: "Como proteger dados, modelos e sistemas de IA por meio da governança, gestão de riscos, conformidade e cibersegurança, garantindo inovação com confiança e resiliência." },
   { time: "12h00", title: "Almoço & Networking", desc: "Relacionamento entre participantes, palestrantes, patrocinadores e visitas aos estandes (2 horas)." },
   { time: "14h00", title: "Painel 5 — Tendências e Mercados", desc: "Ecossistema de inovação, startups, novos modelos de negócio, venture capital e IA como diferencial competitivo.\n\n\nAlexandre Darzé\u00a0" },
@@ -380,7 +380,7 @@ function Index() {
       {/* Palestrantes */}
       <section id="palestrantes" className="py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Palestrantes</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">PAINELISTAS</p>
           <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Quem conduz a conversa.</h2>
           <p className="mt-4 text-muted-foreground max-w-2xl">
             Especialistas e executivos que já implementam governança de IA em organizações públicas
