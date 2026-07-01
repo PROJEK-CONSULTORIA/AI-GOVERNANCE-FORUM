@@ -167,7 +167,7 @@ const speakers = [
     name: "Dr. Rodrigo Britto",
     role: "Juiz de Direito do TJBA — Especialista em Inteligência Artificial",
     img: rodrigoUrl,
-    bio: "Dr. Rodrigo Souza Britto é Juiz de Direito do Tribunal de Justiça do Estado da Bahia (TJBA), titular da 5ª Vara Cível e Comercial de Vitória da Conquista. Atua como Assessor Especial da Presidência no eixo de Tecnologia, Informação e Dados, liderando comissões estratégicas como a implantação do sistema Processo Eletrônico (EPROC) e a disseminação de soluções baseadas em Inteligência Artificial no Judiciário. Graduado em Direito pela UNIFACS e especialista em Direito Tributário pela UFBA, é professor da UNICORP, palestrante e especialista na interseção entre Direito, inovação tecnológica, produtividade e Justiça Restaurativa.",
+    bio: "Dr. Rodrigo Souza Britto é Juiz de Direito do Tribunal de Justiça do Estado da Bahia (TJBA), titular da 5ª Vara Cível e Comercial de Vitória da Conquista e foi Assessor Especial da Presidência nas áreas de Tecnologia, Informação e Dados. Liderou projetos estratégicos, como a implantação do EPROC e a adoção de soluções de Inteligência Artificial no Judiciário. Graduado em Direito pela UNIFACS, especialista em Direito Tributário pela UFBA, é professor da UNICORP, palestrante e especialista em Direito, inovação tecnológica, produtividade e Justiça Restaurativa.",
   },
   {
     name: "Nélio Castro",
