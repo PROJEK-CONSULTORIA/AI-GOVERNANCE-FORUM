@@ -10,6 +10,7 @@ import daniloAsset from "@/assets/danilo-andrade.jpg.asset.json";
 import rodrigoAsset from "@/assets/rodrigo-britto.jpg.asset.json";
 import nelioAsset from "@/assets/nelio-castro.jpg.asset.json";
 import yuriAsset from "@/assets/yuri-araujo.png.asset.json";
+import andreaAsset from "@/assets/andrea-campelo.jpg.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -23,6 +24,7 @@ const daniloUrl = assetUrl(daniloAsset.url);
 const rodrigoUrl = assetUrl(rodrigoAsset.url);
 const nelioUrl = assetUrl(nelioAsset.url);
 const yuriUrl = assetUrl(yuriAsset.url);
+const andreaUrl = assetUrl(andreaAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
