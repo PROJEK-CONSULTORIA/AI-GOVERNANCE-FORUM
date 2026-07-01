@@ -155,7 +155,7 @@ const speakers = [
     name: "Vitor Igdal",
     role: "Co-Fundador da Philos e Presidente da ABRH Bahia",
     img: vitorUrl,
-    bio: "Especialista em Cultura Organizacional, Gestão de Comunidade e Conexões Estratégicas. Co-Fundador da Philos e Presidente da ABRH Bahia. TEDx Speaker.",
+    bio: "Especialista em Cultura Organizacional, Gestão de Comunidades e Conexões Estratégicas, Vitor Igdal é cofundador da Philos e Presidente da ABRH Bahia. Atua no desenvolvimento de lideranças, fortalecimento da cultura organizacional, engajamento de pessoas e construção de ecossistemas colaborativos que impulsionam inovação e resultados. É TEDx Speaker, palestrante e referência em estratégias para conectar pessoas, organizações e comunidades por meio de relações de confiança e propósito.",
   },
   {
     name: "Danilo Andrade",
