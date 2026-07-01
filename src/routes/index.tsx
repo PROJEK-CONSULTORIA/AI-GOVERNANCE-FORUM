@@ -185,6 +185,12 @@ const speakers = [
     bio: "Atual Diretor de Tecnologia da Informação do Ministério Público do Estado da Bahia (MP-BA) e Presidente Executivo da SUCESU Nacional. Com mais de 20 anos de experiência no setor de Tecnologia da Informação e Comunicação (TIC), destaca-se nacionalmente como uma liderança voltada à transformação digital, governança de TI e inovação no setor público.",
   },
   {
+    name: "Andréa Campelo",
+    role: "Founder e CEO da tecnoAtiva",
+    img: andreaUrl,
+    bio: "Fundadora e CEO da tecnoAtiva, conceituada empresa especializada em segurança cibernética e resiliência digital sediada em Salvador, Bahia. Com mais de 25 anos de atuação consolidada no mercado, é uma das principais lideranças e referências técnicas em segurança da informação na região Nordeste.",
+  },
+  {
     name: "A confirmar",
     role: "Compliance & Regulamentação de IA",
     img: null,
