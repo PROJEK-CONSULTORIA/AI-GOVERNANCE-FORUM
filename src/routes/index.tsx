@@ -12,6 +12,7 @@ import nelioAsset from "@/assets/nelio-castro.jpg.asset.json";
 import yuriAsset from "@/assets/yuri-araujo.png.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
+import excellenceAsset from "@/assets/excellence.png.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
@@ -567,7 +568,7 @@ function Index() {
             inovação.
           </p>
 
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="rounded-xl border border-border bg-black flex items-center justify-center p-8">
               <img
                 src={assetUrl(igoviaAsset.url)}
@@ -580,6 +581,13 @@ function Index() {
                 src={assetUrl(horusAsset.url)}
                 alt="Horus CDA — Decisões mais conscientes"
                 className="h-48 lg:h-56 w-auto object-contain"
+              />
+            </div>
+            <div className="rounded-xl border border-border bg-black flex items-center justify-center p-8">
+              <img
+                src={assetUrl(excellenceAsset.url)}
+                alt="Excellence"
+                className="h-24 lg:h-28 w-auto object-contain"
               />
             </div>
           </div>
