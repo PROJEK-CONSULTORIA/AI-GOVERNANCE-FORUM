@@ -564,7 +564,9 @@ function Index() {
 
                 {/* cta */}
                 <a
-                  href="#contato"
+                  href="https://www.sympla.com.br/evento/ai-governance-forum/3469406"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-10 flex w-full items-center justify-center rounded-2xl bg-primary px-6 py-4 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition hover:opacity-90 active:scale-[0.98]"
                 >
                   Garantir minha vaga
