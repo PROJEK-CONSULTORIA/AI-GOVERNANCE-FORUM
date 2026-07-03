@@ -259,7 +259,9 @@ function Index() {
             ))}
           </nav>
           <a
-            href="#ingressos"
+            href="https://www.sympla.com.br/evento/ai-governance-forum/3469406"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition"
           >
             Garantir ingresso
@@ -305,7 +307,9 @@ function Index() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="#ingressos"
+                href="https://www.sympla.com.br/evento/ai-governance-forum/3469406"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-primary text-primary-foreground px-7 py-3.5 text-sm font-semibold hover:opacity-90 transition"
               >
                 Garantir meu ingresso
