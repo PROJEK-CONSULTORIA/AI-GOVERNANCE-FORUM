@@ -13,6 +13,7 @@ import yuriAsset from "@/assets/yuri-araujo.png.asset.json";
 import andreaAsset from "@/assets/andrea-campelo.jpg.asset.json";
 import gabanAsset from "@/assets/luis-gaban.png.asset.json";
 import mariaAsset from "@/assets/maria-clara-seixas.png.asset.json";
+import anaLuizaAsset from "@/assets/ana-luiza.png.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -29,6 +30,7 @@ const yuriUrl = assetUrl(yuriAsset.url);
 const andreaUrl = assetUrl(andreaAsset.url);
 const gabanUrl = assetUrl(gabanAsset.url);
 const mariaUrl = assetUrl(mariaAsset.url);
+const anaLuizaUrl = assetUrl(anaLuizaAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -207,10 +209,10 @@ const speakers = [
     bio: "Sócia do 4S Advogados, responsável pela atuação nas áreas de Compliance, Riscos, Proteção de Dados, Societária e M&A. Possui ampla experiência com direito corporativo e consultoria jurídica para projetos empresariais, adequações de LGPD, elaboração contratual e planejamentos societários, com uma atuação legal estratégica, em negociação e advocacia preventiva. Premiada nas últimas edições do anuário Análise-500 e Análise-Advogadas Mais Admiradas, em 4 diferentes categorias, entre elas nas categorias nacionais de Compliance e Direito Digital.",
   },
   {
-    name: "A confirmar",
-    role: "Compliance & Regulamentação de IA",
-    img: null,
-    bio: null,
+    name: "Ana Luiza",
+    role: "Braskem — Gerente SR de Pessoas & Organização | Região Nordeste",
+    img: anaLuizaUrl,
+    bio: "Líder com ampla experiência na área de Relações Humanas atuando na área de Gestão e Desenvolvimento de Pessoas em empresas de grande porte nos segmentos de bebidas e químico/petroquímico.",
   },
 ];
 
