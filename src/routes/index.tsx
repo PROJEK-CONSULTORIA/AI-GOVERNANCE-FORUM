@@ -14,6 +14,7 @@ import andreaAsset from "@/assets/andrea-campelo.jpg.asset.json";
 import gabanAsset from "@/assets/luis-gaban.jpg.asset.json";
 import mariaAsset from "@/assets/maria-clara-seixas.png.asset.json";
 import anaLuizaAsset from "@/assets/ana-luiza.png.asset.json";
+import adilsonAsset from "@/assets/adilson-pize.png.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -31,6 +32,7 @@ const andreaUrl = assetUrl(andreaAsset.url);
 const gabanUrl = assetUrl(gabanAsset.url);
 const mariaUrl = assetUrl(mariaAsset.url);
 const anaLuizaUrl = assetUrl(anaLuizaAsset.url);
+const adilsonUrl = assetUrl(adilsonAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
