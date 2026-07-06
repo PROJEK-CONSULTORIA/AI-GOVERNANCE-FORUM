@@ -649,28 +649,34 @@ function Index() {
             inovação.
           </p>
 
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="rounded-xl border border-border bg-black flex items-center justify-center p-8">
-              <img
-                src={assetUrl(igoviaAsset.url)}
-                alt="IGOV.IA — Instituto de Governança em Inteligência Artificial"
-                className="h-24 lg:h-28 w-auto object-contain"
-              />
-            </div>
-            <div className="rounded-xl border border-border bg-black flex items-center justify-center p-8">
-              <img
-                src={assetUrl(horusAsset.url)}
-                alt="Horus CDA — Decisões mais conscientes"
-                className="h-48 lg:h-56 w-auto object-contain"
-              />
-            </div>
-            <div className="rounded-xl border border-border bg-black flex items-center justify-center p-8">
-              <img
-                src={assetUrl(excellenceAsset.url)}
-                alt="Excellence"
-                className="h-24 lg:h-28 w-auto object-contain"
-              />
-            </div>
+          <div className="mt-14 space-y-12">
+            {sponsorCategories.map((category) => (
+              <div key={category.title}>
+                <h3 className="text-lg font-semibold uppercase tracking-wider text-foreground/80 mb-4">
+                  {category.title}
+                </h3>
+                {category.logos.length > 0 ? (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {category.logos.map((logo) => (
+                      <div
+                        key={logo.name}
+                        className="rounded-xl border border-border bg-black flex items-center justify-center p-8"
+                      >
+                        <img
+                          src={logo.src}
+                          alt={logo.alt}
+                          className={`${logo.height} w-auto object-contain`}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-sm text-muted-foreground italic">
+                    Vagas abertas para patrocinadores.
+                  </p>
+                )}
+              </div>
+            ))}
           </div>
 
           <div className="mt-12 rounded-3xl border border-primary/40 bg-primary/5 p-8 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
