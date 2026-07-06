@@ -241,6 +241,44 @@ const tickets = [
   },
 ];
 
+const sponsorCategories = [
+  { title: "Diamante", logos: [] as { name: string; src: string; alt: string; height: string }[] },
+  {
+    title: "Ouro",
+    logos: [
+      {
+        name: "Horus",
+        src: horusUrl,
+        alt: "Horus CDA — Decisões mais conscientes",
+        height: "h-48 lg:h-56",
+      },
+    ],
+  },
+  {
+    title: "Prata",
+    logos: [
+      {
+        name: "Excellence",
+        src: excellenceUrl,
+        alt: "Excellence",
+        height: "h-24 lg:h-28",
+      },
+    ],
+  },
+  { title: "Bronze", logos: [] as { name: string; src: string; alt: string; height: string }[] },
+  {
+    title: "Realização",
+    logos: [
+      {
+        name: "IGOV.IA",
+        src: igoviaUrl,
+        alt: "IGOV.IA — Instituto de Governança em Inteligência Artificial",
+        height: "h-24 lg:h-28",
+      },
+    ],
+  },
+];
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
