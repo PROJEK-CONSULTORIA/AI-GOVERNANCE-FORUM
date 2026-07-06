@@ -220,7 +220,7 @@ const speakers = [
     name: "Adilson Pize",
     role: "CEO e consultor da Excellence Consultants e Vice-Presidente de Governança, Gestão e Finanças do PMI Bahia",
     img: adilsonUrl,
-    bio: "CEO da Excellence Consultants, consultor, professor, escritor e palestrante, com mais de 30 anos de experiência em governança, gestão e tecnologia da informação. Especialista em governança corporativa e de TI, planejamento estratégico, PMOs, gestão de projetos, inovação e inteligência artificial, possui diversas certificações internacionais, entre elas PMP, DASSM, PMO-CC, CBPP, CSM e ITIL Foundations. É autor do livro Planejamento Estratégico e Alinhamento Estratégico de Projetos, coautor de obras nacionais e internacionais sobre gestão de projetos e, atualmente, exerce o cargo de Vice-Presidente de Governança, Gestão e Finanças do PMI Bahia.",
+    bio: "CEO da Excellence Consultants, professor, escritor e palestrante, com mais de 30 anos de experiência em governança, gestão e tecnologia da informação. Especialista em PMOs, planejamento estratégico, governança corporativa, inovação e IA. Autor de livros sobre gestão, possui certificações internacionais e atua como Vice-Presidente de Governança, Gestão e Finanças do PMI Bahia.",
   },
 ];
 
