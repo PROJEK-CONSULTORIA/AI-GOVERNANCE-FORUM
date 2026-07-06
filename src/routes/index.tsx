@@ -14,6 +14,7 @@ import andreaAsset from "@/assets/andrea-campelo.jpg.asset.json";
 import gabanAsset from "@/assets/luis-gaban.jpg.asset.json";
 import mariaAsset from "@/assets/maria-clara-seixas.png.asset.json";
 import anaLuizaAsset from "@/assets/ana-luiza.png.asset.json";
+import adilsonAsset from "@/assets/adilson-pize.png.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -31,6 +32,7 @@ const andreaUrl = assetUrl(andreaAsset.url);
 const gabanUrl = assetUrl(gabanAsset.url);
 const mariaUrl = assetUrl(mariaAsset.url);
 const anaLuizaUrl = assetUrl(anaLuizaAsset.url);
+const adilsonUrl = assetUrl(adilsonAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -213,6 +215,12 @@ const speakers = [
     role: "Braskem — Gerente SR de Pessoas & Organização | Região Nordeste",
     img: anaLuizaUrl,
     bio: "Líder com ampla experiência na área de Relações Humanas atuando na área de Gestão e Desenvolvimento de Pessoas em empresas de grande porte nos segmentos de bebidas e químico/petroquímico.",
+  },
+  {
+    name: "Adilson Pize",
+    role: "CEO e consultor da Excellence Consultants e Vice-Presidente de Governança, Gestão e Finanças do PMI Bahia",
+    img: adilsonUrl,
+    bio: "CEO e consultor da Excellence Consultants, professor, escritor e palestrante, com mais de 30 anos de experiência em governança, gestão e tecnologia da informação. É graduado em Processamento de Dados, pós-graduado em Qualidade Total e Reengenharia de Processos, possui certificações como PMP, DASSM, PMO-CC, CBPP, CSM e ITIL Foundations, e é formado pelo PMI Leadership Institute Master Class.\n\nAtua na implantação de metodologias, PMOs, governança corporativa e de TI, planejamento estratégico, gestão de desempenho (BSC e OKRs) e gestão de projetos, programas e portfólios, incluindo iniciativas de inovação e inteligência artificial. É criador dos modelos colaborativos SPCanvas e PSACanvas, voltados ao planejamento estratégico e ao alinhamento estratégico de projetos. Autor do livro Planejamento Estratégico e Alinhamento Estratégico de Projetos, é também coautor convidado de Gerenciamento de Projetos em Tirinhas e Say Yes to Project Success, obra internacional lançada na Índia.\n\nVoluntário do PMI desde 2003, ocupou posições de liderança no PMI-RS, PMI-RIO, PMI Bahia e em comitês globais do PMI. Atualmente é Vice-Presidente de Governança, Gestão e Finanças do PMI Bahia.",
   },
 ];
 
