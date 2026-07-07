@@ -231,7 +231,7 @@ const speakers = [
     name: "Frederico Soares",
     role: "CEO da Exponencial Consultoria",
     img: fredericoUrl,
-    bio: "CEO da Exponencial Consultoria, mestre em Administração e especialista em Gestão Governamental e Sistemas de Informação. Possui mais de 28 anos de experiência, sendo 20 dedicados à administração pública, com atuação em cargos de liderança em instituições como o Ministério Público da Bahia, SEFAZ, SEPLAN e PRODEB. Agraciado com a Comenda Tomé de Souza, destacou-se por sua contribuição à gestão pública, governança e transformação organizacional. Também atuou na iniciativa privada, em empresas como Atakarejo e Perini, além de exercer a docência no Instituto Baiano de Ensino Superior (IBES).",
+    bio: "Mestre em Administração e especialista em Gestão Governamental e Sistemas de Informação. Possui mais de 28 anos de experiência, sendo 20 dedicados à administração pública, com atuação em cargos de liderança em instituições como o Ministério Público da Bahia, SEFAZ, SEPLAN e PRODEB. Agraciado com a Comenda Tomé de Souza, destacou-se por sua contribuição à gestão pública, governança e transformação organizacional. Também atuou na iniciativa privada, em empresas como Atakarejo e Perini, além de exercer a docência no Instituto Baiano de Ensino Superior (IBES).",
   },
 ];
 
