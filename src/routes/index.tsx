@@ -15,6 +15,7 @@ import gabanAsset from "@/assets/luis-gaban.jpg.asset.json";
 import mariaAsset from "@/assets/maria-clara-seixas.png.asset.json";
 import anaLuizaAsset from "@/assets/ana-luiza.png.asset.json";
 import adilsonAsset from "@/assets/adilson-pize.png.asset.json";
+import fredericoAsset from "@/assets/frederico-soares.jpg.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -33,6 +34,7 @@ const gabanUrl = assetUrl(gabanAsset.url);
 const mariaUrl = assetUrl(mariaAsset.url);
 const anaLuizaUrl = assetUrl(anaLuizaAsset.url);
 const adilsonUrl = assetUrl(adilsonAsset.url);
+const fredericoUrl = assetUrl(fredericoAsset.url);
 const igoviaUrl = assetUrl(igoviaAsset.url);
 const horusUrl = assetUrl(horusAsset.url);
 const excellenceUrl = assetUrl(excellenceAsset.url);
@@ -224,6 +226,12 @@ const speakers = [
     role: "CEO e consultor da Excellence Consultants e Vice-Presidente de Governança, Gestão e Finanças do PMI Bahia",
     img: adilsonUrl,
     bio: "CEO da Excellence Consultants, professor, escritor e palestrante, com mais de 30 anos de experiência em governança, gestão e tecnologia da informação. Especialista em PMOs, planejamento estratégico, governança corporativa, inovação e IA. Autor de livros sobre gestão, possui certificações internacionais e atua como Vice-Presidente de Governança, Gestão e Finanças do PMI Bahia.",
+  },
+  {
+    name: "Frederico Soares",
+    role: "CEO da Exponencial Consultoria",
+    img: fredericoUrl,
+    bio: "CEO da Exponencial Consultoria, mestre em Administração e especialista em Gestão Governamental e Sistemas de Informação. Possui mais de 28 anos de experiência, sendo 20 dedicados à administração pública, com atuação em cargos de liderança em instituições como o Ministério Público da Bahia, SEFAZ, SEPLAN e PRODEB. Agraciado com a Comenda Tomé de Souza, destacou-se por sua contribuição à gestão pública, governança e transformação organizacional. Também atuou na iniciativa privada, em empresas como Atakarejo e Perini, além de exercer a docência no Instituto Baiano de Ensino Superior (IBES).",
   },
 ];
 
