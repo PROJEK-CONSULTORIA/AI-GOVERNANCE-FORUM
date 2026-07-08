@@ -16,6 +16,7 @@ import mariaAsset from "@/assets/maria-clara-seixas.png.asset.json";
 import anaLuizaAsset from "@/assets/ana-luiza.png.asset.json";
 import adilsonAsset from "@/assets/adilson-pize.png.asset.json";
 import fredericoAsset from "@/assets/frederico-soares.jpg.asset.json";
+import rodrigoPaoliloAsset from "@/assets/rodrigo-paolilo.jpg.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -35,6 +36,7 @@ const mariaUrl = assetUrl(mariaAsset.url);
 const anaLuizaUrl = assetUrl(anaLuizaAsset.url);
 const adilsonUrl = assetUrl(adilsonAsset.url);
 const fredericoUrl = assetUrl(fredericoAsset.url);
+const rodrigoPaoliloUrl = assetUrl(rodrigoPaoliloAsset.url);
 const igoviaUrl = assetUrl(igoviaAsset.url);
 const horusUrl = assetUrl(horusAsset.url);
 const excellenceUrl = assetUrl(excellenceAsset.url);
@@ -232,6 +234,12 @@ const speakers = [
     role: "CEO da Exponencial Consultoria",
     img: fredericoUrl,
     bio: "Mestre em Administração e especialista em Gestão Governamental e Sistemas de Informação. Possui mais de 28 anos de experiência, sendo 20 dedicados à administração pública, com atuação em cargos de liderança em instituições como o Ministério Público da Bahia, SEFAZ, SEPLAN e PRODEB. Agraciado com a Comenda Tomé de Souza, destacou-se por sua contribuição à gestão pública, governança e transformação organizacional. Também atuou na iniciativa privada, em empresas como Atakarejo e Perini, além de exercer a docência no Instituto Baiano de Ensino Superior (IBES).",
+  },
+  {
+    name: "Rodrigo Paolilo",
+    role: "Co-fundador e CEO do Grupo Rede+",
+    img: rodrigoPaoliloUrl,
+    bio: "Referência no ecossistema de empreendedorismo e inovação brasileiro com atuação há mais de 20 anos, Rodrigo Paolilo é Co-fundador e CEO do Grupo Rede+ e Presidente do Instituto Inova+. Foi líder do Founder Institute no Nordeste, da Anjos do Brasil na Bahia e Coordenador da Câmara de Inovação e da Fecomércio-BA. Atuou como Presidente da Confederação Nacional de Jovens Empresários (CONAJE) e da Junior Achievement Bahia (JABAHIA), foi co-fundador e líder na Brasil Júnior e de vários outros movimentos de empreendedorismo jovem. Mentor, Consultor e Palestrante, possui atuação global e empreende e investe em startups.",
   },
 ];
 
