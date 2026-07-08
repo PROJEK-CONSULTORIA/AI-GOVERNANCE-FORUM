@@ -36,6 +36,7 @@ const mariaUrl = assetUrl(mariaAsset.url);
 const anaLuizaUrl = assetUrl(anaLuizaAsset.url);
 const adilsonUrl = assetUrl(adilsonAsset.url);
 const fredericoUrl = assetUrl(fredericoAsset.url);
+const rodrigoPaoliloUrl = assetUrl(rodrigoPaoliloAsset.url);
 const igoviaUrl = assetUrl(igoviaAsset.url);
 const horusUrl = assetUrl(horusAsset.url);
 const excellenceUrl = assetUrl(excellenceAsset.url);
