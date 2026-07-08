@@ -15,7 +15,7 @@ import gabanAsset from "@/assets/luis-gaban.jpg.asset.json";
 import mariaAsset from "@/assets/maria-clara-seixas.png.asset.json";
 import anaLuizaAsset from "@/assets/ana-luiza.png.asset.json";
 import adilsonAsset from "@/assets/adilson-pize.png.asset.json";
-import fredericoAsset from "@/assets/frederico-soares.jpg.asset.json";
+import fredSoaresAsset from "@/assets/fred-soares.jpg.asset.json";
 import rodrigoPaoliloAsset from "@/assets/rodrigo-paolilo.jpg.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
@@ -35,7 +35,7 @@ const gabanUrl = assetUrl(gabanAsset.url);
 const mariaUrl = assetUrl(mariaAsset.url);
 const anaLuizaUrl = assetUrl(anaLuizaAsset.url);
 const adilsonUrl = assetUrl(adilsonAsset.url);
-const fredericoUrl = assetUrl(fredericoAsset.url);
+const fredSoaresUrl = assetUrl(fredSoaresAsset.url);
 const rodrigoPaoliloUrl = assetUrl(rodrigoPaoliloAsset.url);
 const igoviaUrl = assetUrl(igoviaAsset.url);
 const horusUrl = assetUrl(horusAsset.url);
@@ -230,10 +230,10 @@ const speakers = [
     bio: "CEO da Excellence Consultants, professor, escritor e palestrante, com mais de 30 anos de experiência em governança, gestão e tecnologia da informação. Especialista em PMOs, planejamento estratégico, governança corporativa, inovação e IA. Autor de livros sobre gestão, possui certificações internacionais e atua como Vice-Presidente de Governança, Gestão e Finanças do PMI Bahia.",
   },
   {
-    name: "Frederico Soares",
-    role: "CEO da Exponencial Consultoria",
-    img: fredericoUrl,
-    bio: "Mestre em Administração e especialista em Gestão Governamental e Sistemas de Informação. Possui mais de 28 anos de experiência, sendo 20 dedicados à administração pública, com atuação em cargos de liderança em instituições como o Ministério Público da Bahia, SEFAZ, SEPLAN e PRODEB. Agraciado com a Comenda Tomé de Souza, destacou-se por sua contribuição à gestão pública, governança e transformação organizacional. Também atuou na iniciativa privada, em empresas como Atakarejo e Perini, além de exercer a docência no Instituto Baiano de Ensino Superior (IBES).",
+    name: "Fred Soares",
+    role: "Fundador e CEO da Exponencial Consultoria e Tecnologia",
+    img: fredSoaresUrl,
+    bio: "É CEO e fundador da Exponencial Consultoria e Tecnologia, empresa especializada em Inteligência Artificial aplicada ao setor público. Mestre em Administração, especialista em Planejamento e Gestão Estratégica e em Tecnologia da Informação, além de graduado em Processamento de Dados. Possui mais de 23 anos de experiência na administração pública, com atuação em instituições como Ministério Público da Bahia (MPBA), PRODEB, Secretaria da Fazenda da Bahia (SEFAZ) e Secretaria do Planejamento da Bahia (SEPLAN), liderando iniciativas de transformação digital, inovação e modernização da gestão pública. Atualmente, conduz projetos de IA para órgãos de governo e do sistema de Justiça, desenvolvendo soluções que tornam processos mais inteligentes, ágeis e eficientes. É palestrante e empreendedor, com atuação destacada em tecnologia, inteligência artificial, governança e inovação.",
   },
   {
     name: "Rodrigo Paolilo",
