@@ -16,6 +16,7 @@ import mariaAsset from "@/assets/maria-clara-seixas.png.asset.json";
 import anaLuizaAsset from "@/assets/ana-luiza.png.asset.json";
 import adilsonAsset from "@/assets/adilson-pize.png.asset.json";
 import fredericoAsset from "@/assets/frederico-soares.jpg.asset.json";
+import rodrigoPaoliloAsset from "@/assets/rodrigo-paolilo.jpg.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
