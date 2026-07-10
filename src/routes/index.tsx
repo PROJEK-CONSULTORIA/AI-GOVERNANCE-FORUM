@@ -17,6 +17,7 @@ import anaLuizaAsset from "@/assets/ana-luiza.png.asset.json";
 import adilsonAsset from "@/assets/adilson-pize.png.asset.json";
 import fredSoaresAsset from "@/assets/fred-soares.jpg.asset.json";
 import rodrigoPaoliloAsset from "@/assets/rodrigo-paolilo.jpg.asset.json";
+import francoBahiaAsset from "@/assets/franco-bahia.jpg.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -37,6 +38,7 @@ const anaLuizaUrl = assetUrl(anaLuizaAsset.url);
 const adilsonUrl = assetUrl(adilsonAsset.url);
 const fredSoaresUrl = assetUrl(fredSoaresAsset.url);
 const rodrigoPaoliloUrl = assetUrl(rodrigoPaoliloAsset.url);
+const francoBahiaUrl = assetUrl(francoBahiaAsset.url);
 const igoviaUrl = assetUrl(igoviaAsset.url);
 const horusUrl = assetUrl(horusAsset.url);
 const excellenceUrl = assetUrl(excellenceAsset.url);
@@ -240,6 +242,12 @@ const speakers = [
     role: "Co-fundador e CEO do Grupo Rede+",
     img: rodrigoPaoliloUrl,
     bio: "Referência no ecossistema de empreendedorismo e inovação brasileiro com atuação há mais de 20 anos, Rodrigo Paolilo é Co-fundador e CEO do Grupo Rede+ e Presidente do Instituto Inova+. Foi líder do Founder Institute no Nordeste, da Anjos do Brasil na Bahia e Coordenador da Câmara de Inovação e da Fecomércio-BA. Atuou como Presidente da Confederação Nacional de Jovens Empresários (CONAJE) e da Junior Achievement Bahia (JABAHIA), foi co-fundador e líder na Brasil Júnior e de vários outros movimentos de empreendedorismo jovem. Mentor, Consultor e Palestrante, possui atuação global e empreende e investe em startups.",
+  },
+  {
+    name: "Franco Bahia",
+    role: "Diretor-Geral e membro da Comissão Permanente de Tecnologia e Inovação da DPE/BA",
+    img: francoBahiaUrl,
+    bio: "Atual Diretor-Geral da Defensoria Pública do Estado da Bahia (DPE-BA). Formado pela Universidade Federal da Bahia (UFBA), sua carreira no serviço público inclui passagens de destaque como Secretário-Geral da Presidência e Diretor Geral do Tribunal de Justiça do Estado da Bahia (TJBA).",
   },
 ];
 
