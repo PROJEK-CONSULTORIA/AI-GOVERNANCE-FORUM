@@ -167,7 +167,7 @@ const speakers = [
   },
   {
     name: "Alexandre Darzé",
-    role: "Managing Partner — LH Invest & Lucen Capital",
+    role: "Sócio-Diretor da LightHouse (LH Invest)",
     img: darzeUrl,
     bio: "Engenheiro civil pela UFBA e mestre em Finanças pelo COPPEAD/UFRJ, com mais de 25 anos de experiência em investimentos, finanças estruturadas e desenvolvimento de empresas. Ex-executivo da IFC (Grupo Banco Mundial), liderou investimentos em Itaú, Nubank, Mercado Livre e Creditas. Hoje é investidor em cerca de 30 empresas e conselheiro de organizações de tecnologia, engenharia e inovação — referência em venture capital, private equity e mercados de capitais na América Latina.",
   },
