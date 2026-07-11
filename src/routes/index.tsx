@@ -18,6 +18,7 @@ import adilsonAsset from "@/assets/adilson-pize.png.asset.json";
 import fredSoaresAsset from "@/assets/fred-soares.jpg.asset.json";
 import rodrigoPaoliloAsset from "@/assets/rodrigo-paolilo.jpg.asset.json";
 import francoBahiaAsset from "@/assets/franco-bahia.jpg.asset.json";
+import muriloPlinioAsset from "@/assets/murilo-plinio.png.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -39,6 +40,7 @@ const adilsonUrl = assetUrl(adilsonAsset.url);
 const fredSoaresUrl = assetUrl(fredSoaresAsset.url);
 const rodrigoPaoliloUrl = assetUrl(rodrigoPaoliloAsset.url);
 const francoBahiaUrl = assetUrl(francoBahiaAsset.url);
+const muriloPlinioUrl = assetUrl(muriloPlinioAsset.url);
 const igoviaUrl = assetUrl(igoviaAsset.url);
 const horusUrl = assetUrl(horusAsset.url);
 const excellenceUrl = assetUrl(excellenceAsset.url);
@@ -248,6 +250,12 @@ const speakers = [
     role: "Diretor-Geral e membro da Comissão Permanente de Tecnologia e Inovação da DPE/BA",
     img: francoBahiaUrl,
     bio: "Atual Diretor-Geral da Defensoria Pública do Estado da Bahia (DPE-BA). Formado pela Universidade Federal da Bahia (UFBA), sua carreira no serviço público inclui passagens de destaque como Secretário-Geral da Presidência e Diretor Geral do Tribunal de Justiça do Estado da Bahia (TJBA).",
+  },
+  {
+    name: "Murilo Plínio",
+    role: "Gerente de Área Tecnológica do SENAI CIMATEC",
+    img: muriloPlinioUrl,
+    bio: "Gerente de Tecnologia liderando iniciativas de PD&I e a formação de competências em Inteligência Artificial e Engenharia de Software. Engenheiro de Automação, mestre em Mecatrônica e doutorando em IA, atua na criação de soluções que conectam educação, ciência, tecnologia, inovação e negócios para impulsionar a competitividade da indústria e gerar impacto para a sociedade.",
   },
 ];
 
