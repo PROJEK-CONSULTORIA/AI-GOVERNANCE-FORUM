@@ -149,7 +149,7 @@ const schedule = [
   { time: "10h00", title: "Painel 1 — Indústria Inteligente: pessoas, dados e Inteligência Artificial.", desc: "Como estruturar a governança da Inteligência Artificial para aumentar a produtividade, otimizar operações, fortalecer a gestão de riscos e impulsionar a competitividade da indústria com segurança e responsabilidade. Murilo Plínio - Gerente de Tecnologia - SENAI/CIMATEC e Adilson Pize - VP de Governança do PMI-BA e CEO da Excellence Consultants." },
   { time: "10h30", title: "Painel 2 —\u00a0Governança, Ética e IA: os novos desafios da Justiça.", desc: "Como o Poder Judiciário e o Ministério Público do Estado da Bahia podem adotar a Inteligência Artificial de forma segura, transparente e responsável, conciliando inovação, eficiência operacional, conformidade regulatória, gestão de riscos, proteção de dados e preservação dos direitos fundamentais, fortalecendo a prestação jurisdicional, a atuação ministerial e a confiança da sociedade nas instituições de Justiça. Dr. Rodrigo Britto - TJBA, Yuri Araújo - MPBA e Dr. Franco Bahia - DPE/BA" },
   { time: "11h00", title: "Painel 3 — Governança de IA para Cidades e Estados Inteligentes: inovação com responsabilidade.", desc: "Como utilizar a Inteligência Artificial para tornar as cidades e estados mais eficientes, sustentáveis e centradas no cidadão, com governança, transparência, segurança, gestão de dados e decisões orientadas por evidências. Luis Henrique de Magalhães Gaban - SEMIT/Prefeitura de Salvador." },
-  { time: "11h30", title: "Painel 4 — Cibersegurança e Governança de IA: desafios para organizações inteligentes.", desc: "Como proteger dados, modelos e sistemas de IA por meio da governança, gestão de riscos, conformidade e cibersegurança, garantindo inovação com confiança e resiliência.\n\n\nAndréa Campelo — tecnoAtiva" },
+  { time: "11h30", title: "Painel 4 — Cibersegurança e Governança de IA: desafios para organizações inteligentes.", desc: "Como proteger dados, modelos e sistemas de IA por meio da governança, gestão de riscos, conformidade e cibersegurança, garantindo inovação com confiança e resiliência. Andréa Campelo - Fundadora e CEO da TecnoAtiva." },
   { time: "12h00", title: "Almoço & Networking", desc: "Relacionamento entre participantes, palestrantes e patrocinadores\u00a0" },
   { time: "14h00", title: "Painel 5 —\u00a0IA no Digital e Entretenimento: criatividade, inovação e governança.", desc: "Como a Inteligência Artificial está redefinindo a criação de conteúdo, a experiência do público e os modelos de negócio, exigindo uma governança que equilibre inovação, ética, proteção da propriedade intelectual e confiança no ecossistema digital. Nélio Castro - Especialista em IA - Rede Bahia." },
   { time: "14h30", title: "Painel 6 — Novo marco regulatório da IA no Brasil", desc: "Como a nova legislação transformará a inovação, a governança, a responsabilidade e a conformidade nas organizações. Dr. Rodrigo Britto - TJBA e Dra. Maria Clara Seixas - 4S Advogados." },
@@ -205,9 +205,9 @@ const speakers = [
   },
   {
     name: "Andréa Campelo",
-    role: "Founder e CEO da tecnoAtiva",
+    role: "Fundadora e CEO da TecnoAtiva",
     img: andreaUrl,
-    bio: "Fundadora e CEO da tecnoAtiva, conceituada empresa especializada em segurança cibernética e resiliência digital sediada em Salvador, Bahia. Com mais de 25 anos de atuação consolidada no mercado, é uma das principais lideranças e referências técnicas em segurança da informação na região Nordeste.",
+    bio: "Fundadora e CEO da TecnoAtiva, conceituada empresa especializada em segurança cibernética e resiliência digital sediada em Salvador, Bahia. Com mais de 25 anos de atuação consolidada no mercado, é uma das principais lideranças e referências técnicas em segurança da informação na região Nordeste.",
   },
   {
     name: "Luis Henrique de Magalhães Gaban",
