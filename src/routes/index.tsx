@@ -151,7 +151,7 @@ const schedule = [
   { time: "11h00", title: "Painel 3 — Governança de IA para Cidades e Estados Inteligentes: inovação com responsabilidade.", desc: "Como utilizar a Inteligência Artificial para tornar as cidades e estados mais eficientes, sustentáveis e centradas no cidadão, com governança, transparência, segurança, gestão de dados e decisões orientadas por evidências. Luis Henrique de Magalhães Gaban - SEMIT/Prefeitura de Salvador." },
   { time: "11h30", title: "Painel 4 — Cibersegurança e Governança de IA: desafios para organizações inteligentes.", desc: "Como proteger dados, modelos e sistemas de IA por meio da governança, gestão de riscos, conformidade e cibersegurança, garantindo inovação com confiança e resiliência.\n\n\nAndréa Campelo — tecnoAtiva" },
   { time: "12h00", title: "Almoço & Networking", desc: "Relacionamento entre participantes, palestrantes e patrocinadores\u00a0" },
-  { time: "14h00", title: "Painel 5 —\u00a0IA no Digital e Entretenimento: criatividade, inovação e governança.", desc: "Como a Inteligência Artificial está redefinindo a criação de conteúdo, a experiência do público e os modelos de negócio, exigindo uma governança que equilibre inovação, ética, proteção da propriedade intelectual e confiança no ecossistema digital." },
+  { time: "14h00", title: "Painel 5 —\u00a0IA no Digital e Entretenimento: criatividade, inovação e governança.", desc: "Como a Inteligência Artificial está redefinindo a criação de conteúdo, a experiência do público e os modelos de negócio, exigindo uma governança que equilibre inovação, ética, proteção da propriedade intelectual e confiança no ecossistema digital. Nélio Castro - Especialista em IA - Rede Bahia." },
   { time: "14h30", title: "Painel 6 — Novo marco regulatório da IA no Brasil", desc: "Como a nova legislação transformará a inovação, a governança, a responsabilidade e a conformidade nas organizações. Dr. Rodrigo Britto - TJBA e Dra. Maria Clara Seixas - 4S Advogados." },
   { time: "15h00", title: "Painel 7 — Inovação, Startups e o Futuro da IA", desc: "Como a Inteligência Artificial está redefinindo a inovação, impulsionando startups e criando novos modelos de negócio, com a governança como base para um crescimento sustentável, competitivo e responsável. Alexandre Darzé - LH Investimentos e Rodrigo Paolilo - CEO do Grupo Rede Mais." },
   { time: "15h30", title: "Painel 8 — IA começa pelos Dados: qualidade, governança e inovação.", desc: "Como a qualidade e a governança dos dados sustentam o desenvolvimento de soluções de Inteligência Artificial confiáveis, impulsionando inovação, decisões estratégicas e geração de valor com segurança e responsabilidade.\n\n\n(Danilo Andrade - Horus CDA)" },
@@ -193,7 +193,7 @@ const speakers = [
   },
   {
     name: "Nélio Castro",
-    role: "Esp. em IA · Rede Bahia",
+    role: "Especialista em IA - Rede Bahia",
     img: nelioUrl,
     bio: "Especialista em IA na Rede Bahia. Com 30 anos de experiência em tecnologia e inovação e passagens por startups de destaque como JusBrasil e Agilize, Nélio lidera o desenvolvimento de produtos e projetos estratégicos que transformam ideias em soluções digitais de sucesso através de dados e IA.",
   },
