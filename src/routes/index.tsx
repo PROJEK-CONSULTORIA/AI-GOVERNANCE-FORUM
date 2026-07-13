@@ -154,7 +154,7 @@ const schedule = [
   { time: "14h00", title: "Painel 5 —\u00a0IA no Digital e Entretenimento: criatividade, inovação e governança.", desc: "Como a Inteligência Artificial está redefinindo a criação de conteúdo, a experiência do público e os modelos de negócio, exigindo uma governança que equilibre inovação, ética, proteção da propriedade intelectual e confiança no ecossistema digital. Nélio Castro - Especialista em IA - Rede Bahia." },
   { time: "14h30", title: "Painel 6 — Novo marco regulatório da IA no Brasil", desc: "Como a nova legislação transformará a inovação, a governança, a responsabilidade e a conformidade nas organizações. Dr. Rodrigo Britto - TJBA e Dra. Maria Clara Seixas - 4S Advogados." },
   { time: "15h00", title: "Painel 7 — Inovação, Startups e o Futuro da IA", desc: "Como a Inteligência Artificial está redefinindo a inovação, impulsionando startups e criando novos modelos de negócio, com a governança como base para um crescimento sustentável, competitivo e responsável. Alexandre Darzé - LH Investimentos e Rodrigo Paolilo - CEO do Grupo Rede Mais." },
-  { time: "15h30", title: "Painel 8 — IA começa pelos Dados: qualidade, governança e inovação.", desc: "Como a qualidade e a governança dos dados sustentam o desenvolvimento de soluções de Inteligência Artificial confiáveis, impulsionando inovação, decisões estratégicas e geração de valor com segurança e responsabilidade.\n\n\n(Danilo Andrade - Horus CDA)" },
+  { time: "15h30", title: "Painel 8 — IA começa pelos Dados: qualidade, governança e inovação.", desc: "Como a qualidade e a governança dos dados sustentam o desenvolvimento de soluções de Inteligência Artificial confiáveis, impulsionando inovação, decisões estratégicas e geração de valor com segurança e responsabilidade. Danilo Andrade - Fundador e CEO da Horus CDA." },
   { time: "16h00", title: "Painel 9 — A IA e o Futuro do Trabalho: pessoas, comunidades e culturas.", desc: "Como a Inteligência Artificial está transformando a gestão de pessoas, a cultura organizacional e as competências do futuro, exigindo uma governança que promova inovação, desenvolvimento humano e liderança responsável. Vitor Igdal - Presidente da ABRH-BA e Ana Luiza - Braskem - Gerente SR de Pessoas & Organização | Região Nordeste." },
   { time: "16h30", title: "Keynote de Encerramento — Liderando Organizações na Era da IA", desc: "Como executivos, conselheiros e gestores devem preparar organizações para um futuro orientado por IA, inovação e governança. (40 min)" },
   { time: "17h10", title: "Encerramento Oficial", desc: "Síntese dos insights, agradecimentos e convite para a próxima edição do AI Governance Forum." },
@@ -181,9 +181,9 @@ const speakers = [
   },
   {
     name: "Danilo Andrade",
-    role: "Diretor da Horus CDA",
+    role: "Fundador e CEO da Horus CDA",
     img: daniloUrl,
-    bio: "Diretor da horus CDA e especialista em tecnologia, inovação e ciência de dados, com atuação voltada à transformação digital e ao uso estratégico de dados para tomada de decisão. Integra a liderança da horus CDA, contribuindo para soluções em analytics, inteligência artificial e modernização de processos em organizações públicas e privadas. Formado em Ciência da Computação, com especializações em gestão empresarial e estatística, atua também na disseminação de conhecimento e no fortalecimento do ecossistema de tecnologia na Bahia.",
+    bio: "Fundador e CEO da Horus CDA e especialista em tecnologia, inovação e ciência de dados, com atuação voltada à transformação digital e ao uso estratégico de dados para tomada de decisão. Integra a liderança da Horus CDA, contribuindo para soluções em analytics, inteligência artificial e modernização de processos em organizações públicas e privadas. Formado em Ciência da Computação, com especializações em gestão empresarial e estatística, atua também na disseminação de conhecimento e no fortalecimento do ecossistema de tecnologia na Bahia.",
   },
   {
     name: "Dr. Rodrigo Britto",
