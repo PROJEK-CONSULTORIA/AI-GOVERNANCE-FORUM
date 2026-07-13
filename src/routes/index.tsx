@@ -193,9 +193,9 @@ const speakers = [
   },
   {
     name: "Nélio Castro",
-    role: "Especialista em Digital e IA na Rede Bahia",
+    role: "Esp. em IA · Rede Bahia",
     img: nelioUrl,
-    bio: "Especialista em Digital e IA na Rede Bahia. Com 30 anos de experiência em tecnologia e inovação e passagens por startups de destaque como JusBrasil e Agilize, Nélio lidera o desenvolvimento de produtos e projetos estratégicos que transformam ideias em soluções digitais de sucesso através de dados e IA.",
+    bio: "Especialista em IA na Rede Bahia. Com 30 anos de experiência em tecnologia e inovação e passagens por startups de destaque como JusBrasil e Agilize, Nélio lidera o desenvolvimento de produtos e projetos estratégicos que transformam ideias em soluções digitais de sucesso através de dados e IA.",
   },
   {
     name: "Yuri Gonzalez Araujo",
