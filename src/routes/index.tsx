@@ -263,7 +263,7 @@ const speakers = [
     name: "Thales Almeida",
     role: "Superintendente de Gestão e Inovação da SAEB — Secretaria de Administração do Estado da Bahia",
     img: thalesUrl,
-    bio: "Lidera iniciativas de modernização da gestão pública e transformação digital. Possui ampla experiência em gestão de tecnologia da informação, governança de TIC, gestão de pessoas e contratos de tecnologia, atuando na implementação de modelos inovadores de gestão, segurança da informação, automação com Inteligência Artificial (IA) e RPA. Sua atuação é voltada ao alinhamento entre tecnologia, estratégia e inovação, promovendo maior eficiência, governança e geração de valor para a administração pública.",
+    bio: "Especialista em Gestão de Tecnologia da Informação, com mais de 15 anos de atuação no setor público. Atualmente atua na Secretaria da Administração do Estado da Bahia (SAEB), liderando e apoiando iniciativas de transformação digital, inovação, automação e governo digital. É reconhecido por sua contribuição em projetos inovadores voltados à modernização dos serviços públicos e à geração de valor para a sociedade.",
   },
 ];
 
