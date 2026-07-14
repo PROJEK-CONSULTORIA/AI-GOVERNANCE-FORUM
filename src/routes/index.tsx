@@ -15,6 +15,7 @@ import gabanAsset from "@/assets/luis-gaban.jpg.asset.json";
 import mariaAsset from "@/assets/maria-clara-seixas.png.asset.json";
 import anaLuizaAsset from "@/assets/ana-luiza.png.asset.json";
 import adilsonAsset from "@/assets/adilson-pize.png.asset.json";
+import thalesAsset from "@/assets/thales-almeida.png.asset.json";
 import fredSoaresAsset from "@/assets/fred-soares.jpg.asset.json";
 import rodrigoPaoliloAsset from "@/assets/rodrigo-paolilo.jpg.asset.json";
 import francoBahiaAsset from "@/assets/franco-bahia.jpg.asset.json";
@@ -37,6 +38,7 @@ const gabanUrl = assetUrl(gabanAsset.url);
 const mariaUrl = assetUrl(mariaAsset.url);
 const anaLuizaUrl = assetUrl(anaLuizaAsset.url);
 const adilsonUrl = assetUrl(adilsonAsset.url);
+const thalesUrl = assetUrl(thalesAsset.url);
 const fredSoaresUrl = assetUrl(fredSoaresAsset.url);
 const rodrigoPaoliloUrl = assetUrl(rodrigoPaoliloAsset.url);
 const francoBahiaUrl = assetUrl(francoBahiaAsset.url);
@@ -256,6 +258,12 @@ const speakers = [
     role: "Gerente de Tecnologia - SENAI/CIMATEC",
     img: muriloPlinioUrl,
     bio: "Gerente de Tecnologia liderando iniciativas de PD&I e a formação de competências em Inteligência Artificial e Engenharia de Software. Engenheiro de Automação, mestre em Mecatrônica e doutorando em IA, atua na criação de soluções que conectam educação, ciência, tecnologia, inovação e negócios para impulsionar a competitividade da indústria e gerar impacto para a sociedade.",
+  },
+  {
+    name: "Thales Almeida",
+    role: "Superintendente de Gestão e Inovação da SAEB — Secretaria de Administração do Estado da Bahia",
+    img: thalesUrl,
+    bio: "Lidera iniciativas de modernização da gestão pública e transformação digital. Possui ampla experiência em gestão de tecnologia da informação, governança de TIC, gestão de pessoas e contratos de tecnologia, atuando na implementação de modelos inovadores de gestão, segurança da informação, automação com Inteligência Artificial (IA) e RPA. Sua atuação é voltada ao alinhamento entre tecnologia, estratégia e inovação, promovendo maior eficiência, governança e geração de valor para a administração pública.",
   },
 ];
 
