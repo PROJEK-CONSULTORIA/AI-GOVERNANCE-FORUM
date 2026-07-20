@@ -271,7 +271,7 @@ const speakers = [
     name: "Ricardo Fontoura",
     role: "CIO do DETRAN-BA",
     img: ricardoFontouraUrl,
-    bio: "Especialista em Governança de TI, Transformação Digital e Gestão de Projetos Estratégicos. Com sólida trajetória na liderança de iniciativas de modernização tecnológica no setor público, possui ampla experiência em computação em nuvem, segurança da informação, governança de dados, inteligência artificial, LGPD e governo digital. Ao longo de sua carreira, tem conduzido projetos de inovação, integração de plataformas e melhoria dos serviços públicos, consolidando-se como uma das principais referências em tecnologia e transformação digital na administração pública baiana.",
+    bio: "Especialista em Governança de TI, Transformação Digital e Gestão de Projetos Estratégicos e Mestre em Ciência da Informação. Com sólida trajetória na liderança de iniciativas de modernização tecnológica no setor público, possui ampla experiência em computação em nuvem, segurança da informação, governança de dados, inteligência artificial, LGPD e governo digital. Ao longo de sua carreira, tem conduzido projetos de inovação, integração de plataformas e melhoria dos serviços públicos, consolidando-se como uma das principais referências em tecnologia e transformação digital na administração pública baiana.",
   },
 ];
 
