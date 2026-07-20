@@ -20,6 +20,7 @@ import fredSoaresAsset from "@/assets/fred-soares.jpg.asset.json";
 import rodrigoPaoliloAsset from "@/assets/rodrigo-paolilo.jpg.asset.json";
 import francoBahiaAsset from "@/assets/franco-bahia.jpg.asset.json";
 import muriloPlinioAsset from "@/assets/murilo-plinio.png.asset.json";
+import ricardoFontouraAsset from "@/assets/ricardo-fontoura.png.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -43,6 +44,7 @@ const fredSoaresUrl = assetUrl(fredSoaresAsset.url);
 const rodrigoPaoliloUrl = assetUrl(rodrigoPaoliloAsset.url);
 const francoBahiaUrl = assetUrl(francoBahiaAsset.url);
 const muriloPlinioUrl = assetUrl(muriloPlinioAsset.url);
+const ricardoFontouraUrl = assetUrl(ricardoFontouraAsset.url);
 const igoviaUrl = assetUrl(igoviaAsset.url);
 const horusUrl = assetUrl(horusAsset.url);
 const excellenceUrl = assetUrl(excellenceAsset.url);
@@ -264,6 +266,12 @@ const speakers = [
     role: "Superintendente de Gestão e Inovação da SAEB — Secretaria de Administração do Estado da Bahia",
     img: thalesUrl,
     bio: "Lidera iniciativas de modernização da gestão pública e transformação digital. Possui ampla experiência em gestão de tecnologia da informação, governança de TIC, gestão de pessoas e contratos de tecnologia, atuando na implementação de modelos inovadores de gestão, segurança da informação, automação com Inteligência Artificial (IA) e RPA. Sua atuação é voltada ao alinhamento entre tecnologia, estratégia e inovação, promovendo maior eficiência, governança e geração de valor para a administração pública.",
+  },
+  {
+    name: "Ricardo Fontoura",
+    role: "CIO do DETRAN-BA",
+    img: ricardoFontouraUrl,
+    bio: "CIO do DETRAN-BA, com sólida trajetória em tecnologia, inovação e transformação digital no setor público e privado. Lidera iniciativas de modernização de serviços, governança de TIC e adoção de Inteligência Artificial aplicada à mobilidade e à segurança viária, promovendo eficiência operacional, integração de dados e melhor experiência para o cidadão.",
   },
 ];
 
