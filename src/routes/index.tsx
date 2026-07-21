@@ -277,9 +277,9 @@ const speakers = [
   },
   {
     name: "Marcos Rabelo",
-    role: "CEO — Chip&Cia",
+    role: "CEO — CHIP",
     img: marcosRabeloUrl,
-    bio: "Executivo com mais de 20 anos de experiência no setor de tecnologia e gestão empresarial, atuando na liderança de organizações, transformação digital e desenvolvimento de negócios. Graduado em Sistemas de Informação, possui MBA em Gestão Empresarial, Mestrado em Administração de Empresas e formação complementar em diversas áreas de liderança e gestão. Atualmente é CEO da CHIP & Cia, empresa com quase três décadas de atuação no mercado de tecnologia, onde lidera a estratégia de crescimento sustentável, inovação e governança, promovendo a geração de valor para clientes, parceiros, colaboradores e acionistas, sempre pautado pelos princípios de ética, compliance e excelência na gestão.",
+    bio: "Executivo com mais de 20 anos de experiência no setor de tecnologia e gestão empresarial, atuando na liderança de organizações, transformação digital e desenvolvimento de negócios. Graduado em Sistemas de Informação, possui MBA em Gestão Empresarial, Mestrado em Administração de Empresas e formação complementar em diversas áreas de liderança e gestão. Atualmente é CEO da CHIP, empresa com quase três décadas de atuação no mercado de tecnologia, onde lidera a estratégia de crescimento sustentável, inovação e governança, promovendo a geração de valor para clientes, parceiros, colaboradores e acionistas, sempre pautado pelos princípios de ética, compliance e excelência na gestão.",
   },
 ];
 
