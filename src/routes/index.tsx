@@ -21,6 +21,7 @@ import rodrigoPaoliloAsset from "@/assets/rodrigo-paolilo.jpg.asset.json";
 import francoBahiaAsset from "@/assets/franco-bahia.jpg.asset.json";
 import muriloPlinioAsset from "@/assets/murilo-plinio.png.asset.json";
 import ricardoFontouraAsset from "@/assets/ricardo-fontoura.png.asset.json";
+import marcosRabeloAsset from "@/assets/marcos-rabelo.png.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -45,6 +46,7 @@ const rodrigoPaoliloUrl = assetUrl(rodrigoPaoliloAsset.url);
 const francoBahiaUrl = assetUrl(francoBahiaAsset.url);
 const muriloPlinioUrl = assetUrl(muriloPlinioAsset.url);
 const ricardoFontouraUrl = assetUrl(ricardoFontouraAsset.url);
+const marcosRabeloUrl = assetUrl(marcosRabeloAsset.url);
 const igoviaUrl = assetUrl(igoviaAsset.url);
 const horusUrl = assetUrl(horusAsset.url);
 const excellenceUrl = assetUrl(excellenceAsset.url);
@@ -272,6 +274,12 @@ const speakers = [
     role: "CIO do DETRAN-BA",
     img: ricardoFontouraUrl,
     bio: "Especialista em Governança de TI, Transformação Digital e Gestão de Projetos Estratégicos e Mestre em Ciência da Informação. Com sólida trajetória na liderança de iniciativas de modernização tecnológica no setor público, possui ampla experiência em computação em nuvem, segurança da informação, governança de dados, inteligência artificial, LGPD e governo digital. Ao longo de sua carreira, tem conduzido projetos de inovação, integração de plataformas e melhoria dos serviços públicos, consolidando-se como uma das principais referências em tecnologia e transformação digital na administração pública baiana.",
+  },
+  {
+    name: "Marcos Rabelo",
+    role: "CEO — Chip&Cia",
+    img: marcosRabeloUrl,
+    bio: "Executivo com mais de 20 anos de experiência no setor de tecnologia e gestão empresarial, atuando na liderança de organizações, transformação digital e desenvolvimento de negócios. Graduado em Sistemas de Informação, possui MBA em Gestão Empresarial, Mestrado em Administração de Empresas e formação complementar em diversas áreas de liderança e gestão. Atualmente é CEO da CHIP & Cia, empresa com quase três décadas de atuação no mercado de tecnologia, onde lidera a estratégia de crescimento sustentável, inovação e governança, promovendo a geração de valor para clientes, parceiros, colaboradores e acionistas, sempre pautado pelos princípios de ética, compliance e excelência na gestão.",
   },
 ];
 
