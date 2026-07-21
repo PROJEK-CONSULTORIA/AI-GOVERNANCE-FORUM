@@ -21,6 +21,7 @@ import rodrigoPaoliloAsset from "@/assets/rodrigo-paolilo.jpg.asset.json";
 import francoBahiaAsset from "@/assets/franco-bahia.jpg.asset.json";
 import muriloPlinioAsset from "@/assets/murilo-plinio.png.asset.json";
 import ricardoFontouraAsset from "@/assets/ricardo-fontoura.png.asset.json";
+import marcosRabeloAsset from "@/assets/marcos-rabelo.png.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
