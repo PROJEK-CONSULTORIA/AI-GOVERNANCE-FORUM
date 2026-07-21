@@ -275,6 +275,12 @@ const speakers = [
     img: ricardoFontouraUrl,
     bio: "Especialista em Governança de TI, Transformação Digital e Gestão de Projetos Estratégicos e Mestre em Ciência da Informação. Com sólida trajetória na liderança de iniciativas de modernização tecnológica no setor público, possui ampla experiência em computação em nuvem, segurança da informação, governança de dados, inteligência artificial, LGPD e governo digital. Ao longo de sua carreira, tem conduzido projetos de inovação, integração de plataformas e melhoria dos serviços públicos, consolidando-se como uma das principais referências em tecnologia e transformação digital na administração pública baiana.",
   },
+  {
+    name: "Marcos Rabelo",
+    role: "CEO — Chip&Cia",
+    img: marcosRabeloUrl,
+    bio: "Executivo com mais de 20 anos de experiência no setor de tecnologia e gestão empresarial, atuando na liderança de organizações, transformação digital e desenvolvimento de negócios. Graduado em Sistemas de Informação, possui MBA em Gestão Empresarial, Mestrado em Administração de Empresas e formação complementar em diversas áreas de liderança e gestão. Atualmente é CEO da CHIP & Cia, empresa com quase três décadas de atuação no mercado de tecnologia, onde lidera a estratégia de crescimento sustentável, inovação e governança, promovendo a geração de valor para clientes, parceiros, colaboradores e acionistas, sempre pautado pelos princípios de ética, compliance e excelência na gestão.",
+  },
 ];
 
 const tickets = [
