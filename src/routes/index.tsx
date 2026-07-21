@@ -46,6 +46,7 @@ const rodrigoPaoliloUrl = assetUrl(rodrigoPaoliloAsset.url);
 const francoBahiaUrl = assetUrl(francoBahiaAsset.url);
 const muriloPlinioUrl = assetUrl(muriloPlinioAsset.url);
 const ricardoFontouraUrl = assetUrl(ricardoFontouraAsset.url);
+const marcosRabeloUrl = assetUrl(marcosRabeloAsset.url);
 const igoviaUrl = assetUrl(igoviaAsset.url);
 const horusUrl = assetUrl(horusAsset.url);
 const excellenceUrl = assetUrl(excellenceAsset.url);
