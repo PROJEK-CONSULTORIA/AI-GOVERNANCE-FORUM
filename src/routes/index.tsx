@@ -25,6 +25,7 @@ import marcosRabeloAsset from "@/assets/marcos-rabelo.png.asset.json";
 import andreCavalcanteAsset from "@/assets/andre-cavalcante.png.asset.json";
 import adhvanFurtadoAsset from "@/assets/adhvan-furtado.jpeg.asset.json";
 import leandroMagalhaesAsset from "@/assets/leandro-magalhaes.jpeg.asset.json";
+import carlosEduardoAsset from "@/assets/carlos-eduardo.png.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -53,6 +54,7 @@ const marcosRabeloUrl = assetUrl(marcosRabeloAsset.url);
 const andreCavalcanteUrl = assetUrl(andreCavalcanteAsset.url);
 const adhvanFurtadoUrl = assetUrl(adhvanFurtadoAsset.url);
 const leandroMagalhaesUrl = assetUrl(leandroMagalhaesAsset.url);
+const carlosEduardoUrl = assetUrl(carlosEduardoAsset.url);
 const igoviaUrl = assetUrl(igoviaAsset.url);
 const horusUrl = assetUrl(horusAsset.url);
 const excellenceUrl = assetUrl(excellenceAsset.url);
@@ -304,6 +306,12 @@ const speakers = [
     role: "Gerente de TI — EMBASA",
     img: leandroMagalhaesUrl,
     bio: "Graduado em Análise de Sistemas pela UNEB, pós-graduado em Gestão Pública pela UNIVASF e possui MBA Executivo em Gestão Empresarial pela FGV. Atua há mais de 20 anos na área de Tecnologia da Informação, com ampla experiência em gestão de tecnologia, transformação digital, governança de TI e administração pública. Na Embasa desde 2010, ocupa atualmente a Gerência de Tecnologia da Informação e Comunicação, após liderar áreas estratégicas como ERP Corporativo e Sistemas Corporativos. Sua atuação é marcada pela condução de iniciativas de inovação, modernização tecnológica e geração de valor para as organizações. Acredita que a tecnologia deve estar a serviço da transformação dos negócios, do desenvolvimento humano, da sustentabilidade e da inclusão.",
+  },
+  {
+    name: "Carlos Eduardo",
+    role: "Gerente Nacional do Jurídico de Direito do Trabalho da Petrobras",
+    img: carlosEduardoUrl,
+    bio: "Com 28 anos de experiência na advocacia empresarial nos setores de energia e corporativo. É especialista na gestão de grandes carteiras processuais e na condução de demandas de alta complexidade e relevância econômica e estratégica.",
   },
 ];
 
