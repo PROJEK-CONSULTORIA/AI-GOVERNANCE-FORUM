@@ -403,6 +403,17 @@ const sponsorCategories = [
       },
     ],
   },
+  {
+    title: "Apoio",
+    logos: [
+      {
+        name: "PMIBA",
+        src: pmibaUrl,
+        alt: "PMIBA — Project Management Institute Bahia",
+        height: "h-24 lg:h-28",
+      },
+    ],
+  },
 ];
 
 function Index() {
