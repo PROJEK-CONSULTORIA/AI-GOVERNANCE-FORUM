@@ -31,6 +31,7 @@ import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
 import tecnoativaAsset from "@/assets/tecnoativa.png.asset.json";
 import chipAsset from "@/assets/chip.png.asset.json";
+import scgovAsset from "@/assets/scgov.png.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
@@ -62,6 +63,7 @@ const horusUrl = assetUrl(horusAsset.url);
 const excellenceUrl = assetUrl(excellenceAsset.url);
 const tecnoativaUrl = assetUrl(tecnoativaAsset.url);
 const chipUrl = assetUrl(chipAsset.url);
+const scgovUrl = assetUrl(scgovAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -369,7 +371,17 @@ const sponsorCategories = [
       },
     ],
   },
-  { title: "Bronze", logos: [] as { name: string; src: string; alt: string; height: string }[] },
+  {
+    title: "Bronze",
+    logos: [
+      {
+        name: "SCGOV",
+        src: scgovUrl,
+        alt: "SCGOV — Sistema Integrado de Contratações Públicas",
+        height: "h-24 lg:h-28",
+      },
+    ],
+  },
   {
     title: "Realização",
     logos: [
