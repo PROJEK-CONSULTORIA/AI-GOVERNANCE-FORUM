@@ -65,6 +65,7 @@ const excellenceUrl = assetUrl(excellenceAsset.url);
 const tecnoativaUrl = assetUrl(tecnoativaAsset.url);
 const chipUrl = assetUrl(chipAsset.url);
 const scgovUrl = assetUrl(scgovAsset.url);
+const exponencialUrl = assetUrl(exponencialAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
