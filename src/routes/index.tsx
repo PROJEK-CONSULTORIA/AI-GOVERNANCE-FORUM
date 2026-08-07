@@ -32,6 +32,7 @@ import excellenceAsset from "@/assets/excellence.png.asset.json";
 import tecnoativaAsset from "@/assets/tecnoativa.png.asset.json";
 import chipAsset from "@/assets/chip.png.asset.json";
 import scgovAsset from "@/assets/scgov.png.asset.json";
+import exponencialAsset from "@/assets/exponencial.jpeg.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
@@ -64,6 +65,7 @@ const excellenceUrl = assetUrl(excellenceAsset.url);
 const tecnoativaUrl = assetUrl(tecnoativaAsset.url);
 const chipUrl = assetUrl(chipAsset.url);
 const scgovUrl = assetUrl(scgovAsset.url);
+const exponencialUrl = assetUrl(exponencialAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -378,6 +380,12 @@ const sponsorCategories = [
         name: "SCGOV",
         src: scgovUrl,
         alt: "SCGOV — Sistema Integrado de Contratações Públicas",
+        height: "h-24 lg:h-28",
+      },
+      {
+        name: "Exponencial",
+        src: exponencialUrl,
+        alt: "Exponencial Consultoria",
         height: "h-24 lg:h-28",
       },
     ],
