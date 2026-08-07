@@ -33,6 +33,7 @@ import tecnoativaAsset from "@/assets/tecnoativa.png.asset.json";
 import chipAsset from "@/assets/chip.png.asset.json";
 import scgovAsset from "@/assets/scgov.png.asset.json";
 import exponencialAsset from "@/assets/exponencial.png.asset.json";
+import pmibaAsset from "@/assets/pmiba.png.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
@@ -66,6 +67,7 @@ const tecnoativaUrl = assetUrl(tecnoativaAsset.url);
 const chipUrl = assetUrl(chipAsset.url);
 const scgovUrl = assetUrl(scgovAsset.url);
 const exponencialUrl = assetUrl(exponencialAsset.url);
+const pmibaUrl = assetUrl(pmibaAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -397,6 +399,17 @@ const sponsorCategories = [
         name: "IGOV.IA",
         src: igoviaUrl,
         alt: "IGOV.IA — Instituto de Governança em Inteligência Artificial",
+        height: "h-24 lg:h-28",
+      },
+    ],
+  },
+  {
+    title: "Apoio",
+    logos: [
+      {
+        name: "PMIBA",
+        src: pmibaUrl,
+        alt: "PMIBA — Project Management Institute Bahia",
         height: "h-24 lg:h-28",
       },
     ],
