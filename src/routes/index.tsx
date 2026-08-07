@@ -29,6 +29,7 @@ import carlosEduardoAsset from "@/assets/carlos-eduardo.png.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
+import tecnoativaAsset from "@/assets/tecnoativa.png.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
@@ -58,6 +59,7 @@ const carlosEduardoUrl = assetUrl(carlosEduardoAsset.url);
 const igoviaUrl = assetUrl(igoviaAsset.url);
 const horusUrl = assetUrl(horusAsset.url);
 const excellenceUrl = assetUrl(excellenceAsset.url);
+const tecnoativaUrl = assetUrl(tecnoativaAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -338,6 +340,12 @@ const sponsorCategories = [
         name: "Horus",
         src: horusUrl,
         alt: "Horus CDA — Decisões mais conscientes",
+        height: "h-48 lg:h-56",
+      },
+      {
+        name: "Tecnoativa",
+        src: tecnoativaUrl,
+        alt: "Tecnoativa — Segurança cibernética e resiliência digital",
         height: "h-48 lg:h-56",
       },
     ],
