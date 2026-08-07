@@ -30,6 +30,7 @@ import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
 import tecnoativaAsset from "@/assets/tecnoativa.png.asset.json";
+import chipAsset from "@/assets/chip.png.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
@@ -60,6 +61,7 @@ const igoviaUrl = assetUrl(igoviaAsset.url);
 const horusUrl = assetUrl(horusAsset.url);
 const excellenceUrl = assetUrl(excellenceAsset.url);
 const tecnoativaUrl = assetUrl(tecnoativaAsset.url);
+const chipUrl = assetUrl(chipAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -346,6 +348,12 @@ const sponsorCategories = [
         name: "Tecnoativa",
         src: tecnoativaUrl,
         alt: "Tecnoativa — Segurança cibernética e resiliência digital",
+        height: "h-48 lg:h-56",
+      },
+      {
+        name: "CHIP",
+        src: chipUrl,
+        alt: "CHIP",
         height: "h-48 lg:h-56",
       },
     ],
