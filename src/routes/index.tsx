@@ -32,7 +32,7 @@ import excellenceAsset from "@/assets/excellence.png.asset.json";
 import tecnoativaAsset from "@/assets/tecnoativa.png.asset.json";
 import chipAsset from "@/assets/chip.png.asset.json";
 import scgovAsset from "@/assets/scgov.png.asset.json";
-import exponencialAsset from "@/assets/exponencial.jpeg.asset.json";
+import exponencialAsset from "@/assets/exponencial.png.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
