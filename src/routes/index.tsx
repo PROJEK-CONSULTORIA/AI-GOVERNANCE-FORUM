@@ -257,9 +257,9 @@ const speakers = [
   },
   {
     name: "Adilson Pize",
-    role: "CEO e consultor da Excellence Consultants e Vice-Presidente de Governança, Gestão e Finanças do PMI Bahia",
+    role: "CEO e consultor da Excellence Consultants",
     img: adilsonUrl,
-    bio: "CEO da Excellence Consultants, professor, escritor e palestrante, com mais de 30 anos de experiência em governança, gestão e tecnologia da informação. Especialista em PMOs, planejamento estratégico, governança corporativa, inovação e IA. Autor de livros sobre gestão, possui certificações internacionais e atua como Vice-Presidente de Governança, Gestão e Finanças do PMI Bahia.",
+    bio: "CEO da Excellence Consultants, professor, escritor e palestrante, com mais de 30 anos de experiência em governança, gestão e tecnologia da informação. Especialista em PMOs, planejamento estratégico, governança corporativa, inovação e IA. Autor de livros sobre gestão e possui certificações internacionais.",
   },
   {
     name: "Fred Soares",
