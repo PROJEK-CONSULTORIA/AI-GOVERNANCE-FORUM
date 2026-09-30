@@ -86,6 +86,8 @@ export const Route = createFileRoute("/")({
         content:
           "Encontro executivo sobre Governança de Inteligência Artificial para líderes e tomadores de decisão.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
