@@ -20,8 +20,10 @@ export const Route = createFileRoute("/programacao")({
       {
         property: "og:description",
         content:
-          "Dois dias de imersão executiva em governança de IA, divididos em trilhas de Estratégia, Riscos & Compliance e Ética & Inovação.",
+          "Um dia de imersão executiva em governança de IA, com painéis sobre estratégia, riscos, compliance, ética e inovação.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Programacao,

@@ -86,6 +86,8 @@ export const Route = createFileRoute("/")({
         content:
           "Encontro executivo sobre Governança de Inteligência Artificial para líderes e tomadores de decisão.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
@@ -172,7 +174,7 @@ const schedule = [
   { time: "08h00", title: "Credenciamento & Welcome Coffee", desc: "Recepção dos participantes, networking e visita aos estandes dos patrocinadores." },
   { time: "09h00", title: "Cerimônia de Abertura", desc: "Boas-vindas da organização e apresentação dos objetivos do AI Governance Forum." },
   { time: "09h20", title: "Palestra Magna — Governança de IA: o principal desafio estratégico da próxima década.", desc: "Visão executiva sobre impactos da IA, desafios da governança e tendências regulatórias nacionais e internacionais. Fábio Martins" },
-  { time: "10h00", title: "Painel 1 — Indústria Inteligente: pessoas, dados e Inteligência Artificial.", desc: "Como estruturar a governança da Inteligência Artificial para aumentar a produtividade, otimizar operações, fortalecer a gestão de riscos e impulsionar a competitividade da indústria com segurança e responsabilidade. Murilo Plínio - Gerente de Tecnologia - SENAI/CIMATEC e Adilson Pize - VP de Governança do PMI-BA e CEO da Excellence Consultants." },
+  { time: "10h00", title: "Painel 1 — Indústria Inteligente: pessoas, dados e Inteligência Artificial.", desc: "Como estruturar a governança da Inteligência Artificial para aumentar a produtividade, otimizar operações, fortalecer a gestão de riscos e impulsionar a competitividade da indústria com segurança e responsabilidade. Murilo Plínio - Gerente de Tecnologia - SENAI/CIMATEC." },
   { time: "10h30", title: "Painel 2 —\u00a0Governança, Ética e IA: os novos desafios da Justiça.", desc: "Como o Poder Judiciário e o Ministério Público do Estado da Bahia podem adotar a Inteligência Artificial de forma segura, transparente e responsável, conciliando inovação, eficiência operacional, conformidade regulatória, gestão de riscos, proteção de dados e preservação dos direitos fundamentais, fortalecendo a prestação jurisdicional, a atuação ministerial e a confiança da sociedade nas instituições de Justiça. Dr. Rodrigo Britto - TJBA, Yuri Araújo - MPBA e Dr. Franco Bahia - DPE/BA" },
   { time: "11h00", title: "Painel 3 — Governança de IA para Cidades e Estados Inteligentes: inovação com responsabilidade.", desc: "Como utilizar a Inteligência Artificial para tornar as cidades e estados mais eficientes, sustentáveis e centradas no cidadão, com governança, transparência, segurança, gestão de dados e decisões orientadas por evidências. Luis Henrique de Magalhães Gaban - SEMIT/Prefeitura de Salvador, Ricardo Fontoura, CIO - DETRAN-BA e André Cavalcante - Secretário de Tecnologia do TRE-BA." },
   { time: "11h30", title: "Painel 4 — Cibersegurança e Governança de IA: desafios para organizações inteligentes.", desc: "Como proteger dados, modelos e sistemas de IA por meio da governança, gestão de riscos, conformidade e cibersegurança, garantindo inovação com confiança e resiliência. Andréa Campelo - Fundadora e CEO da TecnoAtiva, Leandro Magalhães - Gerente de TI da EMBASA e Bruno Pereira - Gerente de TI da UNEB." },
