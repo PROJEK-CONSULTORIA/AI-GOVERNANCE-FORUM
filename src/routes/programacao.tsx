@@ -75,6 +75,7 @@ const agenda: Session[] = [
   { time: "15h00", type: "painel", title: "Painel 7 — Inovação, Startups e o Futuro da IA", desc: "Como a Inteligência Artificial está redefinindo a inovação, impulsionando startups e criando novos modelos de negócio, com a governança como base para um crescimento sustentável, competitivo e responsável.", speakers: [{ name: "Alexandre Darzé", role: "Managing Partner · LH Invest & Lucen Capital" }, { name: "Rodrigo Paolilo", role: "CEO · Grupo Rede Mais" }, { name: "Gabriel Salgado", role: "Gerente Executivo do Hub de Inovação — Banco do Nordeste" }, { name: "Fred Soares", role: "CEO · Exponencial Consultoria" }], track: "etica" },
   { time: "15h30", type: "painel", title: "Painel 8 — IA começa pelos Dados: qualidade, governança e inovação", desc: "Como a qualidade e a governança dos dados sustentam o desenvolvimento de soluções de Inteligência Artificial confiáveis, impulsionando inovação, decisões estratégicas e geração de valor com segurança e responsabilidade. Danilo Andrade - Fundador e CEO da Horus CDA.", speakers: [{ name: "Danilo Andrade", role: "Fundador e CEO da Horus CDA" }, { name: "Thales Almeida", role: "Superintendente de Gestão e Inovação da SAEB — Secretaria de Administração do Estado da Bahia" }, { name: "Ricardo Menezes", role: "Gerente de TI - Bahiagás" }], track: "riscos" },
   { time: "16h00", type: "painel", title: "Painel 9 — A IA e o Futuro do Trabalho: pessoas, comunidades e culturas", desc: "Como a Inteligência Artificial está transformando a gestão de pessoas, a cultura organizacional e as competências do futuro, exigindo uma governança que promova inovação, desenvolvimento humano e liderança responsável. Vitor Igdal - Presidente da ABRH-BA e Ana Luiza - Braskem - Gerente SR de Pessoas & Organização | Região Nordeste.", speakers: [{ name: "Vitor Igdal", role: "Presidente · ABRH-BA · Co-Fundador Philos" }, { name: "Ana Luiza", role: "Braskem - Gerente SR de Pessoas & Organização | Região Nordeste" }, { name: "Carlos Eduardo", role: "Gerente Nacional do Jurídico de Direito do Trabalho da Petrobras" }], track: "estrategia" },
+  { time: "A definir", type: "painel", title: "Painel 10 - Inteligência Tributária na Era da IA: Eficiência, Conformidade e Governança Fiscal", desc: "", speakers: [], track: "riscos" },
   { time: "16h30", type: "keynote", title: "Keynote de Encerramento — Liderando Organizações na Era da IA", desc: "Como executivos, conselheiros e gestores devem preparar organizações para um futuro orientado por IA, inovação e governança.", speakers: [{ name: "Fábio Martins", role: "Encerramento" }], track: "all" },
   { time: "17h10", type: "break", title: "Encerramento Oficial", desc: "Síntese dos principais insights do Fórum · Agradecimentos aos palestrantes, patrocinadores e participantes · Convite para a próxima edição do AI Governance Forum.", speakers: [], track: "all" },
 ];
@@ -154,11 +155,11 @@ function Programacao() {
             Programação · Edição 2026
           </p>
           <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] max-w-3xl">
-            Um dia. Nove painéis.{" "}
+            Um dia. Dez painéis.{" "}
             <span className="text-primary">Uma agenda densa</span> sobre Governança de IA.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-            12 de novembro de 2026, presencial no Hotel Quality Salvador. Palestra magna, nove
+            12 de novembro de 2026, presencial no Hotel Quality Salvador. Palestra magna, dez
             painéis setoriais e keynote de encerramento com líderes, conselheiros, reguladores
             e especialistas em Governança de Inteligência Artificial.
           </p>
@@ -240,7 +241,7 @@ function Programacao() {
                 Agenda do dia
               </p>
               <h2 className="mt-3 text-3xl lg:text-4xl font-bold">
-                Nove painéis setoriais, duas keynotes e networking executivo.
+                Dez painéis setoriais, duas keynotes e networking executivo.
               </h2>
             </div>
             <p className="text-xs text-muted-foreground hidden sm:block">
