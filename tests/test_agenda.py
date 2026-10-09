@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 class AgendaRulesTest(unittest.TestCase):
     def panels(self, route):
         source = (ROOT / 'src/routes' / route).read_text()
-        return re.findall(r'time: "([^"]+)", (?:type: "painel", )?title: "Painel (\d+) [—-] ([^"]+)"', source)
+        return re.findall(r'time: "([^"]+)", (?:type: "painel", )?title: "Painel (\d+) [—-] (?:\\u00a0)?([^"]+)"', source)
 
     def test_tax_panel_occupies_previous_panel_five_slot(self):
         for route in ('index.tsx', 'programacao.tsx'):
