@@ -26,5 +26,12 @@ class AgendaRulesTest(unittest.TestCase):
                 self.assertTrue(panels[5][2].startswith('IA no Digital e Entretenimento'))
                 self.assertTrue(panels[9][2].startswith('A IA e o Futuro do Trabalho'))
 
+    def test_closing_keynote_features_jaime_gama(self):
+        source = (ROOT / 'src/routes' / 'programacao.tsx').read_text()
+        keynote = [line for line in source.splitlines() if 'Keynote de Encerramento' in line]
+        self.assertEqual(len(keynote), 1)
+        self.assertIn('Jaime Gama', keynote[0])
+        self.assertIn('Gartner', keynote[0])
+
 if __name__ == '__main__':
     unittest.main()

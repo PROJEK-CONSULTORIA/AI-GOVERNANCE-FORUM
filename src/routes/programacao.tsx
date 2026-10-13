@@ -2,10 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import logoAsset from "@/assets/logo-dark.png.asset.json";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
+import jaimeAsset from "@/assets/jaime-gama.jpg.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
 const fabioUrl = assetUrl(fabioAsset.url);
+const jaimeUrl = assetUrl(jaimeAsset.url);
 
 export const Route = createFileRoute("/programacao")({
   head: () => ({
@@ -36,6 +38,7 @@ type Session = {
   desc: string;
   speakers: { name: string; role: string }[];
   track: TrackKey | "all";
+  featured?: { name: string; role: string; img: string; bio: string };
 };
 
 type TrackKey = "estrategia" | "riscos" | "etica";
@@ -76,7 +79,7 @@ const agenda: Session[] = [
   { time: "15h30", type: "painel", title: "Painel 8 — Inovação, Startups e o Futuro da IA", desc: "Como a Inteligência Artificial está redefinindo a inovação, impulsionando startups e criando novos modelos de negócio, com a governança como base para um crescimento sustentável, competitivo e responsável.", speakers: [{ name: "Alexandre Darzé", role: "Managing Partner · LH Invest & Lucen Capital" }, { name: "Rodrigo Paolilo", role: "CEO · Grupo Rede Mais" }, { name: "Gabriel Salgado", role: "Gerente Executivo do Hub de Inovação — Banco do Nordeste" }, { name: "Fred Soares", role: "CEO · Exponencial Consultoria" }], track: "etica" },
   { time: "16h00", type: "painel", title: "Painel 9 — IA começa pelos Dados: qualidade, governança e inovação", desc: "Como a qualidade e a governança dos dados sustentam o desenvolvimento de soluções de Inteligência Artificial confiáveis, impulsionando inovação, decisões estratégicas e geração de valor com segurança e responsabilidade. Danilo Andrade - Fundador e CEO da Horus CDA.", speakers: [{ name: "Danilo Andrade", role: "Fundador e CEO da Horus CDA" }, { name: "Thales Almeida", role: "Superintendente de Gestão e Inovação da SAEB — Secretaria de Administração do Estado da Bahia" }, { name: "Ricardo Menezes", role: "Gerente de TI - Bahiagás" }], track: "riscos" },
   { time: "16h30", type: "painel", title: "Painel 10 — A IA e o Futuro do Trabalho: pessoas, comunidades e culturas", desc: "Como a Inteligência Artificial está transformando a gestão de pessoas, a cultura organizacional e as competências do futuro, exigindo uma governança que promova inovação, desenvolvimento humano e liderança responsável. Vitor Igdal - Presidente da ABRH-BA e Ana Luiza - Braskem - Gerente SR de Pessoas & Organização | Região Nordeste.", speakers: [{ name: "Vitor Igdal", role: "Presidente · ABRH-BA · Co-Fundador Philos" }, { name: "Ana Luiza", role: "Braskem - Gerente SR de Pessoas & Organização | Região Nordeste" }, { name: "Carlos Eduardo", role: "Gerente Nacional do Jurídico de Direito do Trabalho da Petrobras" }], track: "estrategia" },
-  { time: "17h00", type: "keynote", title: "Keynote de Encerramento — Liderando Organizações na Era da IA", desc: "Como executivos, conselheiros e gestores devem preparar organizações para um futuro orientado por IA, inovação e governança.", speakers: [{ name: "Fábio Martins", role: "Encerramento" }], track: "all" },
+  { time: "17h00", type: "keynote", title: "Keynote de Encerramento — Liderando Organizações na Era da IA", desc: "Como executivos, conselheiros e gestores devem preparar organizações para um futuro orientado por IA, inovação e governança.", speakers: [], track: "all", featured: { name: "Jaime Gama", role: "Consultor, conselheiro executivo, professor e palestrante · Ex-Executive Partner do Gartner", img: jaimeUrl, bio: "Consultor, conselheiro executivo, professor e palestrante, com mais de 40 anos de experiência em tecnologia e negócios. Ex-Executive Partner do Gartner, possui formação multidisciplinar e atuação nacional e internacional em diversos setores." } },
   { time: "17h40", type: "break", title: "Encerramento Oficial", desc: "Síntese dos principais insights do Fórum · Agradecimentos aos palestrantes, patrocinadores e participantes · Convite para a próxima edição do AI Governance Forum.", speakers: [], track: "all" },
 ];
 
@@ -311,6 +314,25 @@ function Programacao() {
                       <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-3xl">
                         {s.desc}
                       </p>
+
+                      {s.featured && (
+                        <div className="mt-6 flex flex-col sm:flex-row items-start gap-5 rounded-2xl border border-primary/30 bg-primary/5 p-5">
+                          <img
+                            src={s.featured.img}
+                            alt={s.featured.name}
+                            className="h-28 w-28 shrink-0 rounded-2xl object-cover object-top ring-2 ring-primary/40"
+                          />
+                          <div>
+                            <p className="text-base font-bold">{s.featured.name}</p>
+                            <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-primary">
+                              {s.featured.role}
+                            </p>
+                            <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                              {s.featured.bio}
+                            </p>
+                          </div>
+                        </div>
+                      )}
 
                       {s.speakers.length > 0 && (
                         <ul className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
