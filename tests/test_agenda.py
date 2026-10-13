@@ -26,6 +26,17 @@ class AgendaRulesTest(unittest.TestCase):
                 self.assertTrue(panels[5][2].startswith('IA no Digital e Entretenimento'))
                 self.assertTrue(panels[9][2].startswith('A IA e o Futuro do Trabalho'))
 
+    def test_panel_four_lists_tatyana_souza_and_no_bruno_pereira(self):
+        for route in ('index.tsx', 'programacao.tsx'):
+            with self.subTest(route=route):
+                source = (ROOT / 'src/routes' / route).read_text()
+                panel = [line for line in source.splitlines() if 'Painel 4' in line]
+                self.assertEqual(len(panel), 1)
+                self.assertIn('Tatyana Souza', panel[0])
+                self.assertIn('Santa Casa da Bahia', panel[0])
+                self.assertNotIn('Bruno Pereira', source)
+                self.assertNotIn('UNEB', source)
+
     def test_closing_keynote_features_jaime_gama(self):
         source = (ROOT / 'src/routes' / 'programacao.tsx').read_text()
         keynote = [line for line in source.splitlines() if 'Keynote de Encerramento' in line]
