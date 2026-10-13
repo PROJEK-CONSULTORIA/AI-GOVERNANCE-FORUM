@@ -7,7 +7,6 @@ import fabioAsset from "@/assets/fabio-martins.png.asset.json";
 import darzeAsset from "@/assets/alexandre-darze.jpg.asset.json";
 import vitorAsset from "@/assets/vitor-igdal.jpg.asset.json";
 import daniloAsset from "@/assets/danilo-andrade.jpg.asset.json";
-import rodrigoAsset from "@/assets/rodrigo-britto.jpg.asset.json";
 import nelioAsset from "@/assets/nelio-castro.jpg.asset.json";
 import yuriAsset from "@/assets/yuri-araujo.png.asset.json";
 import andreaAsset from "@/assets/andrea-campelo.jpg.asset.json";
@@ -42,7 +41,6 @@ const fabioUrl = assetUrl(fabioAsset.url);
 const darzeUrl = assetUrl(darzeAsset.url);
 const vitorUrl = assetUrl(vitorAsset.url);
 const daniloUrl = assetUrl(daniloAsset.url);
-const rodrigoUrl = assetUrl(rodrigoAsset.url);
 const nelioUrl = assetUrl(nelioAsset.url);
 const yuriUrl = assetUrl(yuriAsset.url);
 const andreaUrl = assetUrl(andreaAsset.url);
@@ -175,13 +173,13 @@ const schedule = [
   { time: "09h00", title: "Cerimônia de Abertura", desc: "Boas-vindas da organização e apresentação dos objetivos do AI Governance Forum." },
   { time: "09h20", title: "Palestra Magna — Governança de IA: o principal desafio estratégico da próxima década.", desc: "Visão executiva sobre impactos da IA, desafios da governança e tendências regulatórias nacionais e internacionais. Fábio Martins" },
   { time: "10h00", title: "Painel 1 — Indústria Inteligente: pessoas, dados e Inteligência Artificial.", desc: "Como estruturar a governança da Inteligência Artificial para aumentar a produtividade, otimizar operações, fortalecer a gestão de riscos e impulsionar a competitividade da indústria com segurança e responsabilidade. Murilo Plínio - Gerente de Tecnologia - SENAI/CIMATEC." },
-  { time: "10h30", title: "Painel 2 —\u00a0Governança, Ética e IA: os novos desafios da Justiça.", desc: "Como o Poder Judiciário e o Ministério Público do Estado da Bahia podem adotar a Inteligência Artificial de forma segura, transparente e responsável, conciliando inovação, eficiência operacional, conformidade regulatória, gestão de riscos, proteção de dados e preservação dos direitos fundamentais, fortalecendo a prestação jurisdicional, a atuação ministerial e a confiança da sociedade nas instituições de Justiça. Dr. Rodrigo Britto - TJBA, Yuri Araújo - MPBA e Dr. Franco Bahia - DPE/BA" },
+  { time: "10h30", title: "Painel 2 —\u00a0Governança, Ética e IA: os novos desafios da Justiça.", desc: "Como o Poder Judiciário e o Ministério Público do Estado da Bahia podem adotar a Inteligência Artificial de forma segura, transparente e responsável, conciliando inovação, eficiência operacional, conformidade regulatória, gestão de riscos, proteção de dados e preservação dos direitos fundamentais, fortalecendo a prestação jurisdicional, a atuação ministerial e a confiança da sociedade nas instituições de Justiça. Yuri Araújo - MPBA e Dr. Franco Bahia - DPE/BA" },
   { time: "11h00", title: "Painel 3 — Governança de IA para Cidades e Estados Inteligentes: inovação com responsabilidade.", desc: "Como utilizar a Inteligência Artificial para tornar as cidades e estados mais eficientes, sustentáveis e centradas no cidadão, com governança, transparência, segurança, gestão de dados e decisões orientadas por evidências. Luis Henrique de Magalhães Gaban - SEMIT/Prefeitura de Salvador, Ricardo Fontoura, CIO - DETRAN-BA e André Cavalcante - Secretário de Tecnologia do TRE-BA." },
   { time: "11h30", title: "Painel 4 — Cibersegurança e Governança de IA: desafios para organizações inteligentes.", desc: "Como proteger dados, modelos e sistemas de IA por meio da governança, gestão de riscos, conformidade e cibersegurança, garantindo inovação com confiança e resiliência. Andréa Campelo - Fundadora e CEO da TecnoAtiva, Leandro Magalhães - Gerente de TI da EMBASA e Bruno Pereira - Gerente de TI da UNEB." },
   { time: "12h00", title: "Almoço & Networking", desc: "Relacionamento entre participantes, palestrantes e patrocinadores\u00a0" },
   { time: "14h00", title: "Painel 5 — Inteligência Tributária na Era da IA: Eficiência, Conformidade e Governança Fiscal", desc: "Discutirá como a Inteligência Artificial está transformando a gestão tributária, ampliando a eficiência operacional, a precisão das análises fiscais e a identificação de oportunidades e riscos. Serão abordados os desafios da governança, da conformidade regulatória, da segurança de dados e do uso responsável da IA para uma gestão fiscal mais estratégica, transparente e inteligente." },
   { time: "14h30", title: "Painel 6 —\u00a0IA no Digital e Entretenimento: criatividade, inovação e governança.", desc: "Como a Inteligência Artificial está redefinindo a criação de conteúdo, a experiência do público e os modelos de negócio, exigindo uma governança que equilibre inovação, ética, proteção da propriedade intelectual e confiança no ecossistema digital. Nélio Castro - Especialista em IA - Rede Bahia." },
-  { time: "15h00", title: "Painel 7 — Novo marco regulatório da IA no Brasil", desc: "Como a nova legislação transformará a inovação, a governança, a responsabilidade e a conformidade nas organizações. Dr. Rodrigo Britto - TJBA e Dra. Maria Clara Seixas - 4S Advogados." },
+  { time: "15h00", title: "Painel 7 — Novo marco regulatório da IA no Brasil", desc: "Como a nova legislação transformará a inovação, a governança, a responsabilidade e a conformidade nas organizações. Dra. Maria Clara Seixas - 4S Advogados." },
   { time: "15h30", title: "Painel 8 — Inovação, Startups e o Futuro da IA", desc: "Como a Inteligência Artificial está redefinindo a inovação, impulsionando startups e criando novos modelos de negócio, com a governança como base para um crescimento sustentável, competitivo e responsável. Alexandre Darzé - LH Investimentos, Rodrigo Paolilo - CEO do Grupo Rede +, Gabriel Salgado - Executivo de Inovação do Banco do Nordeste e Fred Soares - CEO - Exponencial Consultoria." },
   { time: "16h00", title: "Painel 9 — IA começa pelos Dados: qualidade, governança e inovação.", desc: "Como a qualidade e a governança dos dados sustentam o desenvolvimento de soluções de Inteligência Artificial confiáveis, impulsionando inovação, decisões estratégicas e geração de valor com segurança e responsabilidade. Danilo Andrade - Fundador e CEO da Horus CDA, Thales Almeida - Superintendente de Inovação da SAEB e Ricardo Menezes - Gerente de TI - Bahiagás." },
   { time: "16h30", title: "Painel 10 — A IA e o Futuro do Trabalho: pessoas, comunidades e culturas.", desc: "Como a Inteligência Artificial está transformando a gestão de pessoas, a cultura organizacional e as competências do futuro, exigindo uma governança que promova inovação, desenvolvimento humano e liderança responsável. Vitor Igdal - Presidente da ABRH-BA, Ana Luiza - Gerente SR de Pessoas & Organização | Região Nordeste - BRASKEM e Carlos Eduardo - Gerente Nacional do Jurídico de Direito do Trabalho da Petrobras." },
@@ -213,12 +211,6 @@ const speakers = [
     role: "Fundador e CEO da Horus CDA",
     img: daniloUrl,
     bio: "Fundador e CEO da Horus CDA e especialista em tecnologia, inovação e ciência de dados, com atuação voltada à transformação digital e ao uso estratégico de dados para tomada de decisão. Integra a liderança da Horus CDA, contribuindo para soluções em analytics, inteligência artificial e modernização de processos em organizações públicas e privadas. Formado em Ciência da Computação, com especializações em gestão empresarial e estatística, atua também na disseminação de conhecimento e no fortalecimento do ecossistema de tecnologia na Bahia.",
-  },
-  {
-    name: "Dr. Rodrigo Britto",
-    role: "Juiz de Direito do TJBA — Especialista em Inteligência Artificial",
-    img: rodrigoUrl,
-    bio: "Dr. Rodrigo Souza Britto é Juiz de Direito do Tribunal de Justiça do Estado da Bahia (TJBA), titular da 5ª Vara Cível e Comercial de Vitória da Conquista e foi Assessor Especial da Presidência nas áreas de Tecnologia, Informação e Dados. Liderou projetos estratégicos, como a implantação do EPROC e a adoção de soluções de Inteligência Artificial no Judiciário. Graduado em Direito pela UNIFACS, especialista em Direito Tributário pela UFBA, é professor da UNICORP, palestrante e especialista em Direito, inovação tecnológica, produtividade e Justiça Restaurativa.",
   },
   {
     name: "Nélio Castro",
