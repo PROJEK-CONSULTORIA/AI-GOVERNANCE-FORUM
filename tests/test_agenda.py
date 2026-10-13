@@ -33,5 +33,13 @@ class AgendaRulesTest(unittest.TestCase):
         self.assertIn('Jaime Gama', keynote[0])
         self.assertIn('Gartner', keynote[0])
 
+    def test_jaime_gama_listed_as_speaker_on_home_page(self):
+        source = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        speakers = source.split('const speakers = [')[1].split('\n];')[0]
+        self.assertIn('Jaime Gama', speakers)
+        self.assertIn('Ex-Executive Partner do Gartner', speakers)
+        self.assertIn('mais de 40 anos de experiência em tecnologia e negócios', speakers)
+        self.assertIn('img: jaimeUrl', speakers)
+
 if __name__ == '__main__':
     unittest.main()

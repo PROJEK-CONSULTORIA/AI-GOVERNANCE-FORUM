@@ -26,6 +26,7 @@ import adhvanFurtadoAsset from "@/assets/adhvan-furtado.jpeg.asset.json";
 import leandroMagalhaesAsset from "@/assets/leandro-magalhaes.jpeg.asset.json";
 import carlosEduardoAsset from "@/assets/carlos-eduardo.png.asset.json";
 import gabrielSalgadoAsset from "@/assets/gabriel-salgado.jpeg.asset.json";
+import jaimeAsset from "@/assets/jaime-gama.jpg.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -60,6 +61,7 @@ const adhvanFurtadoUrl = assetUrl(adhvanFurtadoAsset.url);
 const leandroMagalhaesUrl = assetUrl(leandroMagalhaesAsset.url);
 const carlosEduardoUrl = assetUrl(carlosEduardoAsset.url);
 const gabrielSalgadoUrl = assetUrl(gabrielSalgadoAsset.url);
+const jaimeUrl = assetUrl(jaimeAsset.url);
 const igoviaUrl = assetUrl(igoviaAsset.url);
 const horusUrl = assetUrl(horusAsset.url);
 const excellenceUrl = assetUrl(excellenceAsset.url);
@@ -325,6 +327,12 @@ const speakers = [
     role: "Gerente Executivo do Hub de Inovação — Banco do Nordeste",
     img: gabrielSalgadoUrl,
     bio: "Formado em Comunicação Social com habilitação em Publicidade e Propaganda, com especialização em Gestão do Desenvolvimento Territorial (CIAGS/UFBA), MBA em Gestão Empresarial Internacional (FGV & Ohio University) e mestrado em Cultura e Desenvolvimento (IHAC/UFBA), com área de estudo em Políticas de Financiamento à Cultura e Economia Criativa. Trabalha no Banco do Nordeste desde 2002 e já atuou como Gestor de Agência do BNB, nas áreas de Marketing, Assessoria de Comunicação, Gestão da Cultura e de Políticas para o Desenvolvimento na mesma instituição financeira.",
+  },
+  {
+    name: "Jaime Gama",
+    role: "Consultor, conselheiro executivo, professor e palestrante — Ex-Executive Partner do Gartner",
+    img: jaimeUrl,
+    bio: "Consultor, conselheiro executivo, professor e palestrante, com mais de 40 anos de experiência em tecnologia e negócios. Ex-Executive Partner do Gartner, possui formação multidisciplinar e atuação nacional e internacional em diversos setores.",
   },
 ];
 
