@@ -61,6 +61,7 @@ const adhvanFurtadoUrl = assetUrl(adhvanFurtadoAsset.url);
 const leandroMagalhaesUrl = assetUrl(leandroMagalhaesAsset.url);
 const carlosEduardoUrl = assetUrl(carlosEduardoAsset.url);
 const gabrielSalgadoUrl = assetUrl(gabrielSalgadoAsset.url);
+const jaimeUrl = assetUrl(jaimeAsset.url);
 const igoviaUrl = assetUrl(igoviaAsset.url);
 const horusUrl = assetUrl(horusAsset.url);
 const excellenceUrl = assetUrl(excellenceAsset.url);
