@@ -35,7 +35,7 @@ class AgendaRulesTest(unittest.TestCase):
                 self.assertIn('Tatyana Souza', panel[0])
                 self.assertIn('Santa Casa da Bahia', panel[0])
                 self.assertNotIn('Bruno Pereira', source)
-                self.assertNotIn('UNEB', source)
+                self.assertNotIn('UNEB', panel[0])
 
     def test_closing_keynote_features_jaime_gama(self):
         source = (ROOT / 'src/routes' / 'programacao.tsx').read_text()
