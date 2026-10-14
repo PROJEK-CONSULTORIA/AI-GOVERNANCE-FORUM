@@ -674,7 +674,7 @@ function Index() {
                 <span className="h-10 w-10 rounded-full bg-primary/15 flex items-center justify-center text-primary">⏱</span>
                 <div>
                   <dt className="text-sm uppercase tracking-wider text-muted-foreground">Formato</dt>
-                  <dd className="font-semibold">Presencial · 08h00 às 17h40</dd>
+                  <dd className="font-semibold">Presencial · 08h00 às 17h10</dd>
                 </div>
               </div>
             </dl>
