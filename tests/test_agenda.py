@@ -10,21 +10,25 @@ class AgendaRulesTest(unittest.TestCase):
         source = source.replace(r'\u00a0', ' ')
         return re.findall(r'time: "([^"]+)", (?:type: "painel", )?title: "Painel (\d+) [—-] ([^"]+)"', source)
 
-    def test_tax_panel_occupies_previous_panel_five_slot(self):
+    def test_tax_panel_removed_and_panels_renumbered_in_order(self):
         for route in ('index.tsx', 'programacao.tsx'):
             with self.subTest(route=route):
+                source = (ROOT / 'src/routes' / route).read_text()
+                self.assertNotIn('Inteligência Tributária', source)
                 panels = self.panels(route)
-                tax = [panel for panel in panels if panel[2].startswith('Inteligência Tributária')]
-                self.assertEqual(len(tax), 1)
-                self.assertEqual(tax[0][:2], ('14h00', '5'))
+                self.assertEqual([int(panel[1]) for panel in panels], list(range(1, 10)))
+                self.assertEqual(panels[4][:2], ('14h00', '5'))
+                self.assertTrue(panels[4][2].startswith('IA no Digital e Entretenimento'))
+                self.assertEqual(panels[8][:2], ('16h00', '9'))
+                self.assertTrue(panels[8][2].startswith('A IA e o Futuro do Trabalho'))
 
-    def test_panels_are_renumbered_in_order_after_insertion(self):
+    def test_event_ends_at_17h10(self):
         for route in ('index.tsx', 'programacao.tsx'):
             with self.subTest(route=route):
-                panels = self.panels(route)
-                self.assertEqual([int(panel[1]) for panel in panels], list(range(1, 11)))
-                self.assertTrue(panels[5][2].startswith('IA no Digital e Entretenimento'))
-                self.assertTrue(panels[9][2].startswith('A IA e o Futuro do Trabalho'))
+                source = (ROOT / 'src/routes' / route).read_text()
+                self.assertRegex(source, r'time: "16h30",[^\n]*Keynote de Encerramento')
+                self.assertRegex(source, r'time: "17h10",[^\n]*Encerramento Oficial')
+                self.assertNotIn('17h40', source)
 
     def test_panel_four_lists_tatyana_souza_and_no_bruno_pereira(self):
         for route in ('index.tsx', 'programacao.tsx'):
