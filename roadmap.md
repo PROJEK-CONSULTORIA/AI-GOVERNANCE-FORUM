@@ -1,4 +1,4 @@
 - [x] Intercalar os Tech Talks nas duas páginas, preservando os horários fixos e evitando sobreposições.
 - [x] Testar os horários e conferir a programação exibida.
-- [ ] Mover ISO/IEC 42001 para 15h00 e avançar as sessões seguintes em 10 minutos nas duas páginas.
-- [ ] Atualizar testes e verificar os novos horários no site.
+- [x] Mover ISO/IEC 42001 para 15h00 e avançar as sessões seguintes em 10 minutos nas duas páginas.
+- [x] Atualizar testes e verificar os novos horários no site.

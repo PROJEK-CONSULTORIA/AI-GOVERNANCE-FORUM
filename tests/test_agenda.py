@@ -23,13 +23,11 @@ class AgendaRulesTest(unittest.TestCase):
         for route in ('index.tsx', 'programacao.tsx'):
             self.assertEqual([time for time, title in self.sessions(route) if title.startswith('Palestra: Governança')], ['15h10'])
 
-    def test_tech_talks_interleaved_with_panels(self):
+    def test_tech_talk_order_and_no_overlapping_sessions(self):
         for route in ('index.tsx', 'programacao.tsx'):
             sessions = self.sessions(route)
-            for i, (time, title) in enumerate(sessions):
-                if title.startswith('Tech Talk'):
-                    self.assertFalse(sessions[i - 1][1].startswith('Tech Talk'))
-                    self.assertFalse(sessions[i + 1][1].startswith('Tech Talk'))
+            tech_talks = [(time, title.split(' — ')[0]) for time, title in sessions if title.startswith('Tech Talk')]
+            self.assertEqual(tech_talks, [('10h30', 'Tech Talk PMI-BA'), ('14h30', 'Tech Talk MongoDB'), ('15h00', 'Tech Talk: Certificação ISO/IEC 42001')])
             self.assertEqual([time for time, title in sessions if title.startswith('Tech Talk PMI-BA')], ['10h30'])
             self.assertEqual([time for time, title in sessions if title.startswith('Tech Talk: Certificação')], ['15h00'])
             minutes = [int(time[:2]) * 60 + int(time[3:]) for time, title in sessions]
