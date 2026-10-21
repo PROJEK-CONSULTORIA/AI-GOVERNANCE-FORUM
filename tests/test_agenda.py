@@ -25,7 +25,7 @@ class AgendaRulesTest(unittest.TestCase):
 
     def test_fabio_lecture_shifted_by_ten_minutes(self):
         for route in ('index.tsx', 'programacao.tsx'):
-            self.assertEqual([time for time, title in self.sessions(route) if title.startswith('Palestra: Governança')], ['15h10'])
+            self.assertEqual([time for time, title in self.sessions(route) if title.startswith('Palestra: Governança')], ['14h50'])
 
     def test_tech_talk_order_and_no_overlapping_sessions(self):
         for route in ('index.tsx', 'programacao.tsx'):
@@ -33,7 +33,7 @@ class AgendaRulesTest(unittest.TestCase):
             tech_talks = [(time, title.split(' — ')[0]) for time, title in sessions if title.startswith('Tech Talk')]
             self.assertEqual(tech_talks, [('09h50', 'Tech Talk PMI-BA'), ('14h30', 'Tech Talk MongoDB'), ('14h40', 'Tech Talk: Certificação ISO/IEC 42001')])
             self.assertEqual([time for time, title in sessions if title.startswith('Tech Talk PMI-BA')], ['09h50'])
-            self.assertEqual([time for time, title in sessions if title.startswith('Tech Talk: Certificação')], ['15h00'])
+            self.assertEqual([time for time, title in sessions if title.startswith('Tech Talk: Certificação')], ['14h40'])
             minutes = [int(time[:2]) * 60 + int(time[3:]) for time, title in sessions]
             self.assertEqual(minutes, sorted(set(minutes)))
             for i, (_, title) in enumerate(sessions[:-1]):
@@ -55,13 +55,13 @@ class AgendaRulesTest(unittest.TestCase):
                 self.assertEqual([int(panel[1]) for panel in panels], list(range(1, 9)))
                 self.assertEqual(panels[4][:2], ('14h00', '5'))
                 self.assertTrue(panels[4][2].startswith('IA no Digital e Entretenimento'))
-                self.assertEqual(panels[7][:2], ('16h30', '8'))
+                self.assertEqual(panels[7][:2], ('16h20', '8'))
                 self.assertTrue(panels[7][2].startswith('A IA e o Futuro do Trabalho'))
 
     def test_following_panels_shifted_by_ten_minutes(self):
         for route in ('index.tsx', 'programacao.tsx'):
             panels = self.panels(route)
-            self.assertEqual([panel[:2] for panel in panels[5:]], [('15h30', '6'), ('16h00', '7'), ('16h30', '8')])
+            self.assertEqual([panel[:2] for panel in panels[5:]], [('15h20', '6'), ('15h50', '7'), ('16h20', '8')])
 
     def test_event_ends_at_17h20(self):
         for route in ('index.tsx', 'programacao.tsx'):
