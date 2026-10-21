@@ -67,7 +67,7 @@ class AgendaRulesTest(unittest.TestCase):
         for route in ('index.tsx', 'programacao.tsx'):
             with self.subTest(route=route):
                 source = (ROOT / 'src/routes' / route).read_text()
-                self.assertRegex(source, r'time: "17h00",[^\n]*Keynote de Encerramento')
+                self.assertRegex(source, r'time: "16h50",[^\n]*Keynote de Encerramento')
                 self.assertRegex(source, r'time: "17h20",[^\n]*Encerramento Oficial')
 
     def test_panel_four_lists_tatyana_souza_and_no_bruno_pereira(self):
