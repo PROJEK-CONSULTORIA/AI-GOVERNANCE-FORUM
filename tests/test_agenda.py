@@ -9,10 +9,14 @@ class AgendaRulesTest(unittest.TestCase):
         source = (ROOT / 'src/routes' / route).read_text()
         return re.findall(r'time: "([^"]+)", (?:type: "[^"]+", )?title: "([^"]+)"', source)
 
-    def test_opening_times_unchanged(self):
+    def test_opening_ceremony_at_08h30(self):
         for route in ('index.tsx', 'programacao.tsx'):
             sessions = self.sessions(route)
-            self.assertEqual([time for time, title in sessions if title == 'Cerimônia de Abertura'], ['09h00'])
+            self.assertEqual([time for time, title in sessions if title == 'Cerimônia de Abertura'], ['08h30'])
+
+    def test_magna_time_unchanged(self):
+        for route in ('index.tsx', 'programacao.tsx'):
+            sessions = self.sessions(route)
             self.assertEqual([time for time, title in sessions if title.startswith('Palestra Magna')], ['09h20'])
 
     def test_mongodb_time_unchanged(self):
