@@ -67,7 +67,7 @@ const tracks: Record<TrackKey, { label: string; tag: string; color: string; desc
 const agenda: Session[] = [
   { time: "08h00", type: "break", title: "Credenciamento & Welcome Coffee", desc: "Recepção dos participantes, networking e visita aos estandes dos patrocinadores.", speakers: [], track: "all" },
   { time: "09h00", type: "abertura", title: "Cerimônia de Abertura", desc: "Boas-vindas aos participantes, apresentação dos objetivos do AI Governance Forum e contextualização da importância estratégica da Governança de Inteligência Artificial para organizações públicas e privadas.", speakers: [{ name: "Fábio Martins", role: "Fundador e CEO do IGOV.IA" }], track: "all" },
-  { time: "09h20", type: "keynote", title: "Palestra Magna de Abertura — Semantix AI Enterprise Suite: Governança, Segurança e Inteligência Artificial em Escala Empresarial", desc: "Apresentação da plataforma Semantix AI Enterprise Suite, que integra dados, Inteligência Artificial, orquestração e segurança. Destaque para o Safetix, módulo voltado à governança de IA e à conformidade regulatória, incluindo a abordagem relacionada ao Selo ABRIA de Governança de IA. A palestra abordará como plataformas tecnológicas podem apoiar a adoção, o controle e a expansão responsável da Inteligência Artificial nas organizações.", speakers: [{ name: "Pierre", role: "Semantix" }], track: "estrategia" },
+  { time: "09h20", type: "keynote", title: "Palestra Magna — Semantix AI Enterprise: Governança, Segurança e Inteligência Artificial em Escala Empresarial", desc: "Como transformar a Governança de Inteligência Artificial em uma vantagem estratégica para os negócios, conectando tecnologia, gestão de riscos, conformidade regulatória e inovação responsável.", speakers: [{ name: "Pierre Muto", role: "Semantix" }], track: "estrategia" },
   { time: "10h00", type: "painel", title: "Painel 1 — Indústria Inteligente: Pessoas, Dados e Inteligência Artificial", desc: "Como estruturar a governança da Inteligência Artificial para aumentar a produtividade, otimizar operações, fortalecer a gestão de riscos e impulsionar a competitividade industrial com segurança e responsabilidade.", speakers: [{ name: "Murilo Plínio", role: "Gerente de Tecnologia, SENAI/CIMATEC" }, { name: "Adhvan Furtado", role: "BULL" }, { name: "Adilson Pize", role: "Excellence Consulting" }], track: "estrategia" },
   { time: "10h30", type: "painel", title: "Painel 2 — Justiça, Ética e Regulação da IA: Direitos Fundamentais, Responsabilidade e Segurança Jurídica", desc: "Como o sistema de Justiça, a Defensoria Pública e a advocacia podem enfrentar os desafios do marco regulatório da Inteligência Artificial, conciliando inovação, ética, transparência, proteção de dados, gestão de riscos e preservação dos direitos fundamentais. O painel discutirá a responsabilização pelo uso da IA, os desafios de conformidade e os impactos da regulação no acesso à Justiça e na proteção dos cidadãos.", speakers: [{ name: "Profa. Maria Clara Seixas", role: "4S Advogados" }, { name: "Dr. Franco Bahia", role: "Defensoria Pública do Estado da Bahia (DPE/BA)" }], track: "riscos" },
   { time: "11h00", type: "painel", title: "Painel 3 — Governança de IA para Cidades e Estados Inteligentes: Inovação com Responsabilidade", desc: "Como utilizar a Inteligência Artificial para tornar cidades e estados mais eficientes, sustentáveis e centrados no cidadão, com governança, transparência, segurança, gestão de dados e decisões orientadas por evidências.", speakers: [{ name: "Luis Henrique de Magalhães Gaban", role: "SEMIT/Prefeitura de Salvador" }, { name: "Ricardo Fontoura", role: "CIO, DETRAN-BA" }, { name: "André Cavalcante", role: "Secretário de Tecnologia do TRE-BA" }], track: "estrategia" },
@@ -160,11 +160,11 @@ function Programacao() {
             Programação · Edição 2026
           </p>
           <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] max-w-3xl">
-            Um dia. Dez painéis.{" "}
+            Um dia. Oito painéis.{" "}
             <span className="text-primary">Uma agenda densa</span> sobre Governança de IA.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-            12 de novembro de 2026, presencial no Hotel Quality Salvador. Palestra magna, dez
+            12 de novembro de 2026, presencial no Hotel Quality Salvador. Palestra magna, oito
             painéis setoriais e keynote de encerramento com líderes, conselheiros, reguladores
             e especialistas em Governança de Inteligência Artificial.
           </p>
@@ -246,7 +246,7 @@ function Programacao() {
                 Agenda do dia
               </p>
               <h2 className="mt-3 text-3xl lg:text-4xl font-bold">
-                Dez painéis setoriais, duas keynotes e networking executivo.
+                Oito painéis setoriais, duas keynotes e networking executivo.
               </h2>
             </div>
             <p className="text-xs text-muted-foreground hidden sm:block">
