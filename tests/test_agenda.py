@@ -63,12 +63,12 @@ class AgendaRulesTest(unittest.TestCase):
             panels = self.panels(route)
             self.assertEqual([panel[:2] for panel in panels[5:]], [('15h30', '6'), ('16h00', '7'), ('16h30', '8')])
 
-    def test_event_ends_at_17h40(self):
+    def test_event_ends_at_17h20(self):
         for route in ('index.tsx', 'programacao.tsx'):
             with self.subTest(route=route):
                 source = (ROOT / 'src/routes' / route).read_text()
                 self.assertRegex(source, r'time: "17h00",[^\n]*Keynote de Encerramento')
-                self.assertRegex(source, r'time: "17h40",[^\n]*Encerramento Oficial')
+                self.assertRegex(source, r'time: "17h20",[^\n]*Encerramento Oficial')
 
     def test_panel_four_lists_tatyana_souza_and_no_bruno_pereira(self):
         for route in ('index.tsx', 'programacao.tsx'):
