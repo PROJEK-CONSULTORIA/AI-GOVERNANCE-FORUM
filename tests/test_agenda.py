@@ -16,19 +16,19 @@ class AgendaRulesTest(unittest.TestCase):
                 source = (ROOT / 'src/routes' / route).read_text()
                 self.assertNotIn('Inteligência Tributária', source)
                 panels = self.panels(route)
-                self.assertEqual([int(panel[1]) for panel in panels], list(range(1, 10)))
+                self.assertEqual([int(panel[1]) for panel in panels], list(range(1, 9)))
                 self.assertEqual(panels[4][:2], ('14h00', '5'))
                 self.assertTrue(panels[4][2].startswith('IA no Digital e Entretenimento'))
-                self.assertEqual(panels[8][:2], ('16h00', '9'))
-                self.assertTrue(panels[8][2].startswith('A IA e o Futuro do Trabalho'))
+                self.assertEqual(panels[7][:2], ('16h20', '8'))
+                self.assertTrue(panels[7][2].startswith('A IA e o Futuro do Trabalho'))
 
-    def test_event_ends_at_17h10(self):
+    def test_event_ends_at_17h30(self):
         for route in ('index.tsx', 'programacao.tsx'):
             with self.subTest(route=route):
                 source = (ROOT / 'src/routes' / route).read_text()
-                self.assertRegex(source, r'time: "16h30",[^\n]*Keynote de Encerramento')
-                self.assertRegex(source, r'time: "17h10",[^\n]*Encerramento Oficial')
-                self.assertNotIn('17h40', source)
+                self.assertRegex(source, r'time: "16h50",[^\n]*Keynote de Encerramento')
+                self.assertRegex(source, r'time: "17h30",[^\n]*Encerramento Oficial')
+                self.assertNotIn('17h10', source)
 
     def test_panel_four_lists_tatyana_souza_and_no_bruno_pereira(self):
         for route in ('index.tsx', 'programacao.tsx'):
