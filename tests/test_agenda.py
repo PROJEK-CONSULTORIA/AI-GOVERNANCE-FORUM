@@ -31,7 +31,7 @@ class AgendaRulesTest(unittest.TestCase):
         for route in ('index.tsx', 'programacao.tsx'):
             sessions = self.sessions(route)
             tech_talks = [(time, title.split(' — ')[0]) for time, title in sessions if title.startswith('Tech Talk')]
-            self.assertEqual(tech_talks, [('09h50', 'Tech Talk PMI-BA'), ('14h30', 'Tech Talk MongoDB'), ('15h00', 'Tech Talk: Certificação ISO/IEC 42001')])
+            self.assertEqual(tech_talks, [('09h50', 'Tech Talk PMI-BA'), ('14h30', 'Tech Talk MongoDB'), ('14h40', 'Tech Talk: Certificação ISO/IEC 42001')])
             self.assertEqual([time for time, title in sessions if title.startswith('Tech Talk PMI-BA')], ['09h50'])
             self.assertEqual([time for time, title in sessions if title.startswith('Tech Talk: Certificação')], ['15h00'])
             minutes = [int(time[:2]) * 60 + int(time[3:]) for time, title in sessions]
