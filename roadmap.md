@@ -1,2 +1,2 @@
-- [ ] Intercalar os Tech Talks nas duas páginas, preservando os horários fixos e evitando sobreposições.
-- [ ] Testar os horários e conferir a programação exibida.
+- [x] Intercalar os Tech Talks nas duas páginas, preservando os horários fixos e evitando sobreposições.
+- [x] Testar os horários e conferir a programação exibida.
