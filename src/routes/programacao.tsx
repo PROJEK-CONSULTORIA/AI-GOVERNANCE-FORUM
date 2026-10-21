@@ -246,7 +246,7 @@ function Programacao() {
                 Agenda do dia
               </p>
               <h2 className="mt-3 text-3xl lg:text-4xl font-bold">
-                Dez painéis setoriais, duas keynotes e networking executivo.
+                Oito painéis setoriais, duas keynotes e networking executivo.
               </h2>
             </div>
             <p className="text-xs text-muted-foreground hidden sm:block">
