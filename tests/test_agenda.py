@@ -96,5 +96,18 @@ class AgendaRulesTest(unittest.TestCase):
         self.assertIn('mais de 40 anos de experiência em tecnologia e negócios', speakers)
         self.assertIn('img: jaimeUrl', speakers)
 
+class PanelChangesTest(unittest.TestCase):
+    def test_morning_after_10_min_tech_talk(self):
+        for r in ('index.tsx','programacao.tsx'):
+            src=(ROOT/'src/routes'/r).read_text()
+            for t,title in [('10h00','Painel 2'),('10h30','Painel 3'),('11h00','Painel 4'),('11h30','Almoço')]:
+                self.assertRegex(src, r'time: "%s",[^\n]*title: "%s' % (t,title))
+
+    def test_adilson_moved_to_panel_5_and_marcos_in_panel_1(self):
+        for r in ('index.tsx','programacao.tsx'):
+            lines=(ROOT/'src/routes'/r).read_text().splitlines()
+            p1=[l for l in lines if 'Painel 1 ' in l][0]; p5=[l for l in lines if 'Painel 5 ' in l][0]
+            self.assertNotIn('Adilson Pize',p1); self.assertIn('Marcos Rabelo',p1); self.assertIn('Adilson Pize',p5)
+
 if __name__ == '__main__':
     unittest.main()
