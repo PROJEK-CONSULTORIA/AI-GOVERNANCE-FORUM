@@ -3,11 +3,13 @@ import { useState } from "react";
 import logoAsset from "@/assets/logo-dark.png.asset.json";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
 import jaimeAsset from "@/assets/jaime-gama.jpg.asset.json";
+import pierreAsset from "@/assets/pierre-muto.png.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
 const fabioUrl = assetUrl(fabioAsset.url);
 const jaimeUrl = assetUrl(jaimeAsset.url);
+const pierreUrl = assetUrl(pierreAsset.url);
 
 export const Route = createFileRoute("/programacao")({
   head: () => ({
@@ -67,7 +69,7 @@ const tracks: Record<TrackKey, { label: string; tag: string; color: string; desc
 const agenda: Session[] = [
   { time: "08h00", type: "break", title: "Credenciamento", desc: "Recepção dos participantes, networking e visita aos estandes dos patrocinadores.", speakers: [], track: "all" },
   { time: "08h30", type: "abertura", title: "Cerimônia de Abertura", desc: "Boas-vindas aos participantes, apresentação dos objetivos do AI Governance Forum e contextualização da importância estratégica da Governança de Inteligência Artificial para organizações públicas e privadas.", speakers: [{ name: "Fábio Martins", role: "Fundador e CEO do IGOV.IA" }], track: "all" },
-  { time: "08h50", type: "keynote", title: "Palestra Magna — Semantix AI Enterprise: Governança, Segurança e Inteligência Artificial em Escala Empresarial", desc: "Como transformar a Governança de Inteligência Artificial em uma vantagem estratégica para os negócios, conectando tecnologia, gestão de riscos, conformidade regulatória e inovação responsável.", speakers: [{ name: "Pierre Muto", role: "Semantix" }], track: "estrategia" },
+  { time: "08h50", type: "keynote", title: "Palestra Magna — Semantix AI Enterprise: Governança, Segurança e Inteligência Artificial em Escala Empresarial", desc: "Como transformar a Governança de Inteligência Artificial em uma vantagem estratégica para os negócios, conectando tecnologia, gestão de riscos, conformidade regulatória e inovação responsável.", speakers: [], track: "estrategia", featured: { name: "Pierre Muto", role: "Diretor Comercial de Produtos da Semantix", img: pierreUrl, bio: "Trabalha há mais de 25 anos com vendas e go-to-market de tecnologia B2B enterprise e hoje é Diretor Comercial de Produtos da Semantix. Líder da estratégia de go-to-market da plataforma de agentes de IA e da integração comercial pós-aquisição. Une profundidade técnica em IA, dados, cloud e ERP à experiência em vendas complexas com C-level." } },
   { time: "09h20", type: "painel", title: "Painel 1 — Indústria Inteligente: Pessoas, Dados e Inteligência Artificial", desc: "Como estruturar a governança da Inteligência Artificial para aumentar a produtividade, otimizar operações, fortalecer a gestão de riscos e impulsionar a competitividade industrial com segurança e responsabilidade.", speakers: [{ name: "Murilo Plínio", role: "Gerente de Tecnologia, SENAI/CIMATEC" }, { name: "Adhvan Furtado", role: "BULL" }, { name: "Marcos Rabelo", role: "CHIP" }], track: "estrategia" },
   { time: "09h50", type: "keynote", title: "Tech Talk PMI-BA — PMI-CPMAI: Certificação Profissional em Gestão de Inteligência Artificial e Inovação", desc: "Apresentação da certificação PMI-CPMAI (Cognitive Project Management in AI), voltada à gestão de projetos de Inteligência Artificial e baseada na metodologia CPMAI, incorporada ao PMI a partir da aquisição da Cognilytica. A palestra abordará a importância de uma abordagem estruturada para planejar, desenvolver e implementar projetos de IA, conectando gestão de projetos, dados, objetivos de negócio e entrega de valor. (10 min)", speakers: [{ name: "José Carlos Prates", role: "PMI-BA" }], track: "estrategia" },
   { time: "10h00", type: "painel", title: "Painel 2 — Justiça, Ética e Regulação da IA: Direitos Fundamentais, Responsabilidade e Segurança Jurídica", desc: "Como o sistema de Justiça, a Defensoria Pública e a advocacia podem enfrentar os desafios do marco regulatório da Inteligência Artificial, conciliando inovação, ética, transparência, proteção de dados, gestão de riscos e preservação dos direitos fundamentais. O painel discutirá a responsabilização pelo uso da IA, os desafios de conformidade e os impactos da regulação no acesso à Justiça e na proteção dos cidadãos.", speakers: [{ name: "Profa. Maria Clara Seixas", role: "4S Advogados" }, { name: "Dr. Franco Bahia", role: "Defensoria Pública do Estado da Bahia (DPE/BA)" }], track: "riscos" },
