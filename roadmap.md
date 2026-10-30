@@ -5,3 +5,4 @@
 - [x] Alterar abertura para 08h30 e encurtar descrição do Tech Talk ISO/IEC 42001 nas duas páginas; testar e conferir.
 - [x] Incluir Pierre Muto (foto, cargo e descrição) na lista de Palestrantes e no cartão da Palestra Magna.
 - [x] Remover André Cavalcante (nome, foto e descrição) da lista de Palestrantes, mantendo-o no Painel 3.
+- [x] Remover André Cavalcante também do Painel 3 nas páginas Sobre e Programação; testar e conferir no navegador.
