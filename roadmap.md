@@ -6,3 +6,4 @@
 - [x] Incluir Pierre Muto (foto, cargo e descrição) na lista de Palestrantes e no cartão da Palestra Magna.
 - [x] Remover André Cavalcante (nome, foto e descrição) da lista de Palestrantes, mantendo-o no Painel 3.
 - [x] Remover André Cavalcante também do Painel 3 nas páginas Sobre e Programação; testar e conferir no navegador.
+- [x] Incluir Wildson Luz (foto, cargo e descrição) na lista de Palestrantes; testar e conferir no navegador.
