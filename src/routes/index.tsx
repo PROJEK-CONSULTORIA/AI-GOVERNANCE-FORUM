@@ -8,7 +8,6 @@ import darzeAsset from "@/assets/alexandre-darze.jpg.asset.json";
 import vitorAsset from "@/assets/vitor-igdal.jpg.asset.json";
 import daniloAsset from "@/assets/danilo-andrade.jpg.asset.json";
 import nelioAsset from "@/assets/nelio-castro.jpg.asset.json";
-import yuriAsset from "@/assets/yuri-araujo.png.asset.json";
 import andreaAsset from "@/assets/andrea-campelo.jpg.asset.json";
 import gabanAsset from "@/assets/luis-gaban.jpg.asset.json";
 import mariaAsset from "@/assets/maria-clara-seixas.png.asset.json";
@@ -43,7 +42,6 @@ const darzeUrl = assetUrl(darzeAsset.url);
 const vitorUrl = assetUrl(vitorAsset.url);
 const daniloUrl = assetUrl(daniloAsset.url);
 const nelioUrl = assetUrl(nelioAsset.url);
-const yuriUrl = assetUrl(yuriAsset.url);
 const andreaUrl = assetUrl(andreaAsset.url);
 const gabanUrl = assetUrl(gabanAsset.url);
 const mariaUrl = assetUrl(mariaAsset.url);
@@ -221,12 +219,6 @@ const speakers = [
     role: "Especialista em IA - Rede Bahia",
     img: nelioUrl,
     bio: "Especialista em IA na Rede Bahia. Com 30 anos de experiência em tecnologia e inovação e passagens por startups de destaque como JusBrasil e Agilize, Nélio lidera o desenvolvimento de produtos e projetos estratégicos que transformam ideias em soluções digitais de sucesso através de dados e IA.",
-  },
-  {
-    name: "Yuri Gonzalez Araujo",
-    role: "Diretor de TI do MP-BA e Presidente Executivo da SUCESU Nacional",
-    img: yuriUrl,
-    bio: "Atual Diretor de Tecnologia da Informação do Ministério Público do Estado da Bahia (MP-BA) e Presidente Executivo da SUCESU Nacional. Com mais de 20 anos de experiência no setor de Tecnologia da Informação e Comunicação (TIC), destaca-se nacionalmente como uma liderança voltada à transformação digital, governança de TI e inovação no setor público.",
   },
   {
     name: "Andréa Campelo",
