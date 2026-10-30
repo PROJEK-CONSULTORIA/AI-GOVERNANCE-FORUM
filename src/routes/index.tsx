@@ -21,7 +21,6 @@ import francoBahiaAsset from "@/assets/franco-bahia.jpg.asset.json";
 import muriloPlinioAsset from "@/assets/murilo-plinio.png.asset.json";
 import ricardoFontouraAsset from "@/assets/ricardo-fontoura.png.asset.json";
 import marcosRabeloAsset from "@/assets/marcos-rabelo.png.asset.json";
-import andreCavalcanteAsset from "@/assets/andre-cavalcante.png.asset.json";
 import adhvanFurtadoAsset from "@/assets/adhvan-furtado.jpeg.asset.json";
 import leandroMagalhaesAsset from "@/assets/leandro-magalhaes.jpeg.asset.json";
 import carlosEduardoAsset from "@/assets/carlos-eduardo.png.asset.json";
@@ -57,7 +56,6 @@ const francoBahiaUrl = assetUrl(francoBahiaAsset.url);
 const muriloPlinioUrl = assetUrl(muriloPlinioAsset.url);
 const ricardoFontouraUrl = assetUrl(ricardoFontouraAsset.url);
 const marcosRabeloUrl = assetUrl(marcosRabeloAsset.url);
-const andreCavalcanteUrl = assetUrl(andreCavalcanteAsset.url);
 const adhvanFurtadoUrl = assetUrl(adhvanFurtadoAsset.url);
 const leandroMagalhaesUrl = assetUrl(leandroMagalhaesAsset.url);
 const carlosEduardoUrl = assetUrl(carlosEduardoAsset.url);
@@ -301,12 +299,6 @@ const speakers = [
     role: "CEO — CHIP",
     img: marcosRabeloUrl,
     bio: "Executivo com mais de 20 anos de experiência no setor de tecnologia e gestão empresarial, atuando na liderança de organizações, transformação digital e desenvolvimento de negócios. Graduado em Sistemas de Informação, possui MBA em Gestão Empresarial, Mestrado em Administração de Empresas e formação complementar em diversas áreas de liderança e gestão. Atualmente é CEO da CHIP, empresa com quase três décadas de atuação no mercado de tecnologia, onde lidera a estratégia de crescimento sustentável, inovação e governança, promovendo a geração de valor para clientes, parceiros, colaboradores e acionistas, sempre pautado pelos princípios de ética, compliance e excelência na gestão.",
-  },
-  {
-    name: "André Cavalcante",
-    role: "Secretário de Tecnologia da Informação e Comunicação (CIO) — Tribunal Regional Eleitoral da Bahia",
-    img: andreCavalcanteUrl,
-    bio: "Secretário de Tecnologia da Informação e Comunicação (CIO) no Tribunal Regional Eleitoral da Bahia, com mais de 15 anos de experiência em gestão de projetos e 10 anos liderando equipes e estratégias em tecnologia da informação. Atua na interseção entre governança, inovação e transformação digital, com forte ênfase na modernização do setor público. Possui pós-graduação em Gestão Pública e em Gestão de TI, além de certificações PMP®, ITIL® 4 Managing Professional e Prince2® Agile Practitioner v2, dentre outras. Tem compromisso com a construção de soluções eficientes, éticas e sustentáveis, utilizando frameworks de gestão consolidados e o potencial da Inteligência Artificial para acelerar entregas e ampliar o impacto institucional.",
   },
   {
     name: "Adhvan Furtado",
