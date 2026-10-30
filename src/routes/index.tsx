@@ -11,7 +11,6 @@ import nelioAsset from "@/assets/nelio-castro.jpg.asset.json";
 import andreaAsset from "@/assets/andrea-campelo.jpg.asset.json";
 import gabanAsset from "@/assets/luis-gaban.jpg.asset.json";
 import mariaAsset from "@/assets/maria-clara-seixas.png.asset.json";
-import anaLuizaAsset from "@/assets/ana-luiza.png.asset.json";
 import adilsonAsset from "@/assets/adilson-pize.png.asset.json";
 import thalesAsset from "@/assets/thales-almeida.png.asset.json";
 import fredSoaresAsset from "@/assets/fred-soares.jpg.asset.json";
@@ -45,7 +44,6 @@ const nelioUrl = assetUrl(nelioAsset.url);
 const andreaUrl = assetUrl(andreaAsset.url);
 const gabanUrl = assetUrl(gabanAsset.url);
 const mariaUrl = assetUrl(mariaAsset.url);
-const anaLuizaUrl = assetUrl(anaLuizaAsset.url);
 const adilsonUrl = assetUrl(adilsonAsset.url);
 const thalesUrl = assetUrl(thalesAsset.url);
 const fredSoaresUrl = assetUrl(fredSoaresAsset.url);
@@ -184,7 +182,7 @@ const schedule = [
   { time: "14h50", title: "Palestra: Governança de Inteligência Artificial — As 10 Dimensões da Jornada de Adoção Tecnológica", desc: "Apresentação da metodologia IGOV.IA e de suas dez dimensões. A palestra demonstrará como organizar a adoção tecnológica de forma estruturada, conectando estratégia, pessoas, dados, riscos, tecnologia e resultados de negócio. (20 min) Fábio Martins - Fundador e CEO do IGOV.IA." },
   { time: "15h20", title: "Painel 6 — Inovação, Startups e o Futuro da IA", desc: "Como a Inteligência Artificial está redefinindo a inovação, impulsionando startups e criando novos modelos de negócio, com a governança como base para um crescimento sustentável, competitivo e responsável. O debate abordará a questão central: criar regras para a IA pode inibir a inovação ou a governança é o que permite às startups e empresas conquistar confiança, atrair investimentos e crescer de forma sustentável? Alexandre Darzé - LH Investimentos, Rodrigo Paolilo - CEO do Grupo Rede Mais, Gabriel Salgado - Executivo de Inovação do Banco do Nordeste, Fred Soares - CEO da Exponencial Consultoria." },
   { time: "15h50", title: "Painel 7 — IA Começa pelos Dados: Qualidade, Governança e Inovação", desc: "Como a qualidade e a Governança de Dados sustentam o desenvolvimento de soluções de Inteligência Artificial confiáveis, impulsionando inovação, decisões estratégicas e geração de valor com segurança e responsabilidade. O painel discutirá as diferenças e complementaridades entre Governança de Dados e Governança de IA e como ambas contribuem para a confiabilidade das soluções. Danilo Andrade - Fundador e CEO da Horus CDA, Thales Almeida - Superintendente de Inovação da SAEB, Ricardo Menezes - Gerente de TI da Bahiagás." },
-  { time: "16h20", title: "Painel 8 — A IA e o Futuro do Trabalho: Pessoas, Comunidades e Culturas", desc: "Como a Inteligência Artificial está transformando a gestão de pessoas, a cultura organizacional e as competências do futuro, exigindo uma governança que promova inovação, desenvolvimento humano e liderança responsável. Vitor Igdal - Presidente da ABRH-BA, Ana Luiza - Gerente Sênior de Pessoas & Organização, Região Nordeste, BRASKEM, Carlos Eduardo - Gerente Nacional do Jurídico de Direito do Trabalho da Petrobras." },
+  { time: "16h20", title: "Painel 8 — A IA e o Futuro do Trabalho: Pessoas, Comunidades e Culturas", desc: "Como a Inteligência Artificial está transformando a gestão de pessoas, a cultura organizacional e as competências do futuro, exigindo uma governança que promova inovação, desenvolvimento humano e liderança responsável. Vitor Igdal - Presidente da ABRH-BA, Carlos Eduardo - Gerente Nacional do Jurídico de Direito do Trabalho da Petrobras." },
   { time: "16h50", title: "Keynote de Encerramento — Liderando Organizações na Era da IA", desc: "Como executivos, conselheiros e gestores devem preparar suas organizações para um futuro orientado por Inteligência Artificial, inovação e governança, fortalecendo a capacidade de adaptação, a liderança estratégica e a geração sustentável de valor. (40 min) Jaime Gama - Consultor, conselheiro executivo, professor e palestrante, Ex-Executive Partner do Gartner." },
   { time: "17h20", title: "Encerramento Oficial", desc: "Síntese dos principais aprendizados, agradecimentos aos participantes, palestrantes e patrocinadores e convite para a próxima edição do AI Governance Forum." },
 ];
@@ -237,12 +235,6 @@ const speakers = [
     role: "Sócia do 4S Advogados — Compliance, Riscos, Proteção de Dados e Direito Digital",
     img: mariaUrl,
     bio: "Sócia do 4S Advogados, responsável pela atuação nas áreas de Compliance, Riscos, Proteção de Dados, Societária e M&A. Possui ampla experiência com direito corporativo e consultoria jurídica para projetos empresariais, adequações de LGPD, elaboração contratual e planejamentos societários, com uma atuação legal estratégica, em negociação e advocacia preventiva. Premiada nas últimas edições do anuário Análise-500 e Análise-Advogadas Mais Admiradas, em 4 diferentes categorias, entre elas nas categorias nacionais de Compliance e Direito Digital.",
-  },
-  {
-    name: "Ana Luiza",
-    role: "Braskem — Gerente SR de Pessoas & Organização | Região Nordeste",
-    img: anaLuizaUrl,
-    bio: "Líder com ampla experiência na área de Relações Humanas atuando na área de Gestão e Desenvolvimento de Pessoas em empresas de grande porte nos segmentos de bebidas e químico/petroquímico.",
   },
   {
     name: "Adilson Pize",
