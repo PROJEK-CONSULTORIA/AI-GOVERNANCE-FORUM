@@ -3,3 +3,4 @@
 - [x] Mover ISO/IEC 42001 para 15h00 e avançar as sessões seguintes em 10 minutos nas duas páginas.
 - [x] Atualizar testes e verificar os novos horários no site.
 - [x] Alterar abertura para 08h30 e encurtar descrição do Tech Talk ISO/IEC 42001 nas duas páginas; testar e conferir.
+- [x] Incluir Pierre Muto (foto, cargo e descrição) na lista de Palestrantes e no cartão da Palestra Magna.
