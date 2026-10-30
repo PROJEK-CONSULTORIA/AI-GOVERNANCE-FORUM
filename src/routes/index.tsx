@@ -27,6 +27,7 @@ import leandroMagalhaesAsset from "@/assets/leandro-magalhaes.jpeg.asset.json";
 import carlosEduardoAsset from "@/assets/carlos-eduardo.png.asset.json";
 import gabrielSalgadoAsset from "@/assets/gabriel-salgado.jpeg.asset.json";
 import jaimeAsset from "@/assets/jaime-gama.jpg.asset.json";
+import pierreAsset from "@/assets/pierre-muto.png.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -62,6 +63,7 @@ const leandroMagalhaesUrl = assetUrl(leandroMagalhaesAsset.url);
 const carlosEduardoUrl = assetUrl(carlosEduardoAsset.url);
 const gabrielSalgadoUrl = assetUrl(gabrielSalgadoAsset.url);
 const jaimeUrl = assetUrl(jaimeAsset.url);
+const pierreUrl = assetUrl(pierreAsset.url);
 const igoviaUrl = assetUrl(igoviaAsset.url);
 const horusUrl = assetUrl(horusAsset.url);
 const excellenceUrl = assetUrl(excellenceAsset.url);
@@ -335,6 +337,12 @@ const speakers = [
     role: "Consultor, conselheiro executivo, professor e palestrante — Ex-Executive Partner do Gartner",
     img: jaimeUrl,
     bio: "Consultor, conselheiro executivo, professor e palestrante, com mais de 40 anos de experiência em tecnologia e negócios. Ex-Executive Partner do Gartner, possui formação multidisciplinar e atuação nacional e internacional em diversos setores.",
+  },
+  {
+    name: "Pierre Muto",
+    role: "Diretor Comercial de Produtos da Semantix",
+    img: pierreUrl,
+    bio: "Trabalha há mais de 25 anos com vendas e go-to-market de tecnologia B2B enterprise e hoje é Diretor Comercial de Produtos da Semantix. Líder da estratégia de go-to-market da plataforma de agentes de IA e da integração comercial pós-aquisição. Une profundidade técnica em IA, dados, cloud e ERP à experiência em vendas complexas com C-level.",
   },
 ];
 
