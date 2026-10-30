@@ -109,5 +109,10 @@ class PanelChangesTest(unittest.TestCase):
             p1=[l for l in lines if 'Painel 1 ' in l][0]; p5=[l for l in lines if 'Painel 5 ' in l][0]
             self.assertNotIn('Adilson Pize',p1); self.assertIn('Marcos Rabelo',p1); self.assertIn('Adilson Pize',p5)
 
+    def test_andre_cavalcante_fully_removed(self):
+        for r in ('index.tsx','programacao.tsx'):
+            with self.subTest(route=r):
+                self.assertNotIn('Cavalcante', (ROOT/'src/routes'/r).read_text())
+
 if __name__ == '__main__':
     unittest.main()
