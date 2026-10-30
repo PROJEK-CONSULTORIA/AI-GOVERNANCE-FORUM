@@ -114,5 +114,12 @@ class PanelChangesTest(unittest.TestCase):
             with self.subTest(route=r):
                 self.assertNotIn('Cavalcante', (ROOT/'src/routes'/r).read_text())
 
+    def test_wildson_luz_in_speakers(self):
+        src=(ROOT/'src/routes'/'index.tsx').read_text()
+        self.assertIn('name: "Wildson Luz"',src)
+        self.assertIn('Senior Enterprise Account Executive na MongoDB',src)
+        self.assertIn('wildson-luz.jpg.asset.json',src)
+        self.assertIn('mais de 20 anos de experiência em soluções de TI e setor público',src)
+
 if __name__ == '__main__':
     unittest.main()
