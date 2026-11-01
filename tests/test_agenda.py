@@ -44,7 +44,7 @@ class AgendaRulesTest(unittest.TestCase):
     def panels(self, route):
         source = (ROOT / 'src/routes' / route).read_text()
         source = source.replace(r'\u00a0', ' ')
-        return re.findall(r'time: "([^"]+)", (?:type: "painel", )?title: "Painel (\d+) [—-] ([^"]+)"', source)
+        return re.findall(r'time: "([^"]+)", (?:type: "painel", )?title: "Painel ([^"]+?) [—-] ([^"]+)"', source)
 
     def test_tax_panel_removed_and_panels_renumbered_in_order(self):
         for route in ('index.tsx', 'programacao.tsx'):
@@ -52,7 +52,7 @@ class AgendaRulesTest(unittest.TestCase):
                 source = (ROOT / 'src/routes' / route).read_text()
                 self.assertNotIn('Inteligência Tributária', source)
                 panels = self.panels(route)
-                self.assertEqual([int(panel[1]) for panel in panels], list(range(1, 9)))
+                self.assertEqual([panel[1] for panel in panels], ['CHIP', '2', '3', '4', '5', '6', '7', '8'])
                 self.assertEqual(panels[4][:2], ('14h00', '5'))
                 self.assertTrue(panels[4][2].startswith('IA no Digital e Entretenimento'))
                 self.assertEqual(panels[7][:2], ('16h20', '8'))
@@ -106,7 +106,7 @@ class PanelChangesTest(unittest.TestCase):
     def test_adilson_moved_to_panel_5_and_marcos_in_panel_1(self):
         for r in ('index.tsx','programacao.tsx'):
             lines=(ROOT/'src/routes'/r).read_text().splitlines()
-            p1=[l for l in lines if 'Painel 1 ' in l][0]; p5=[l for l in lines if 'Painel 5 ' in l][0]
+            p1=[l for l in lines if 'Painel CHIP ' in l][0]; p5=[l for l in lines if 'Painel 5 ' in l][0]
             self.assertNotIn('Adilson Pize',p1); self.assertIn('Marcos Rabelo',p1); self.assertIn('Adilson Pize',p5)
 
     def test_andre_cavalcante_fully_removed(self):
