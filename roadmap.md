@@ -17,3 +17,4 @@
 - [x] Renomear "Painel 1" para "Painel CHIP" nas páginas Sobre e Programação; testar e conferir no navegador.
 - [x] Renomear "Painel 2" para "Painel Solutis" nas páginas Sobre e Programação; testar e conferir no navegador.
 - [x] Renomear "Painel 4" para "Painel Tecnoativa" nas páginas Sobre e Programação; testar e conferir no navegador.
+- [x] Renomear "Painel 7" para "Painel Horus CDA" nas páginas Sobre e Programação; testar e conferir no navegador.
