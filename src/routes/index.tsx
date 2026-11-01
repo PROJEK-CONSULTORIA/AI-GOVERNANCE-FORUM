@@ -367,18 +367,17 @@ const sponsorCategories = [
         alt: "CHIP",
         height: "h-48 lg:h-56",
       },
-    ],
-  },
-  {
-    title: "Prata",
-    logos: [
       {
         name: "Excellence",
         src: excellenceUrl,
         alt: "Excellence",
-        height: "h-24 lg:h-28",
+        height: "h-48 lg:h-56",
       },
     ],
+  },
+  {
+    title: "Prata",
+    logos: [] as { name: string; src: string; alt: string; height: string }[],
   },
   {
     title: "Bronze",
