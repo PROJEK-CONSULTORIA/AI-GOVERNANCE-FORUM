@@ -37,6 +37,7 @@ import pmibaAsset from "@/assets/pmiba.png.asset.json";
 import solutisAsset from "@/assets/solutis.jpg.asset.json";
 import agTaxTechAsset from "@/assets/ag-taxtech-white.png.asset.json";
 import mongodbAsset from "@/assets/mongodb-white.png.asset.json";
+import semantixAsset from "@/assets/semantix-white.png.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
@@ -74,6 +75,7 @@ const pmibaUrl = assetUrl(pmibaAsset.url);
 const solutisUrl = assetUrl(solutisAsset.url);
 const agTaxTechUrl = assetUrl(agTaxTechAsset.url);
 const mongodbUrl = assetUrl(mongodbAsset.url);
+const semantixUrl = assetUrl(semantixAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -351,7 +353,17 @@ const tickets = [
 ];
 
 const sponsorCategories = [
-  { title: "Diamante", logos: [] as { name: string; src: string; alt: string; height: string }[] },
+  {
+    title: "Diamante",
+    logos: [
+      {
+        name: "Semantix",
+        src: semantixUrl,
+        alt: "Semantix — Governança, Segurança e Inteligência Artificial em Escala Empresarial",
+        height: "h-40 lg:h-56",
+      },
+    ],
+  },
   {
     title: "Ouro",
     logos: [
@@ -822,7 +834,13 @@ function Index() {
                   {category.title}
                 </h3>
                 {category.logos.length > 0 ? (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div
+                    className={`grid gap-6 ${
+                      category.title === "Diamante"
+                        ? "grid-cols-1"
+                        : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+                    }`}
+                  >
                     {category.logos.map((logo) => (
                       <div
                         key={logo.name}

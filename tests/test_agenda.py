@@ -156,6 +156,13 @@ class PanelChangesTest(unittest.TestCase):
                 self.assertIn('Senior Enterprise Account Executive na MongoDB', talk[0])
                 self.assertNotIn('A confirmar', talk[0])
 
+    def test_semantix_is_diamond(self):
+        src = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        self.assertIn('name: "Semantix"', self.sponsor_block(src, 'title: "Diamante"'))
+        self.assertIn('semantix-white.png.asset.json', src)
+        for other in ('title: "Ouro"', 'title: "Prata"', 'title: "Bronze"', 'title: "Realização"', 'title: "Apoio"'):
+            self.assertNotIn('Semantix', self.sponsor_block(src, other))
+
     def test_excellence_is_gold_not_silver(self):
         src = (ROOT / 'src/routes' / 'index.tsx').read_text()
         gold = src[src.index('title: "Ouro"'):src.index('title: "Prata"')]
