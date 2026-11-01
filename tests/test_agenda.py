@@ -146,6 +146,16 @@ class PanelChangesTest(unittest.TestCase):
         for other in ('title: "Diamante"', 'title: "Prata"', 'title: "Bronze"', 'title: "Realização"', 'title: "Apoio"'):
             self.assertNotIn('MongoDB', self.sponsor_block(src, other))
 
+    def test_wildson_luz_is_mongodb_tech_talk_speaker(self):
+        for route in ('index.tsx', 'programacao.tsx'):
+            with self.subTest(route=route):
+                lines = (ROOT / 'src/routes' / route).read_text().splitlines()
+                talk = [l for l in lines if 'Tech Talk MongoDB' in l]
+                self.assertEqual(len(talk), 1)
+                self.assertIn('Wildson Luz', talk[0])
+                self.assertIn('Senior Enterprise Account Executive na MongoDB', talk[0])
+                self.assertNotIn('A confirmar', talk[0])
+
     def test_excellence_is_gold_not_silver(self):
         src = (ROOT / 'src/routes' / 'index.tsx').read_text()
         gold = src[src.index('title: "Ouro"'):src.index('title: "Prata"')]
