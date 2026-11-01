@@ -8,3 +8,4 @@
 - [x] Remover André Cavalcante também do Painel 3 nas páginas Sobre e Programação; testar e conferir no navegador.
 - [x] Incluir Wildson Luz (foto, cargo e descrição) na lista de Palestrantes; testar e conferir no navegador.
 - [x] Mover a logo da Excellence de Patrocinador Prata para Patrocinador Ouro, no mesmo tamanho das demais marcas Ouro; conferir no navegador.
+- [x] Incluir a Solutis como patrocinadora Ouro com a logo enviada; conferir no navegador.
