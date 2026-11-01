@@ -52,8 +52,8 @@ class AgendaRulesTest(unittest.TestCase):
                 source = (ROOT / 'src/routes' / route).read_text()
                 self.assertNotIn('Inteligência Tributária', source)
                 panels = self.panels(route)
-                self.assertEqual([panel[1] for panel in panels], ['CHIP', 'Solutis', '3', 'Tecnoativa', '5', '6', 'Horus CDA', '8'])
-                self.assertEqual(panels[4][:2], ('14h00', '5'))
+                self.assertEqual([panel[1] for panel in panels], ['CHIP', 'Solutis', '3', 'Tecnoativa', 'Excellence Consulting', '6', 'Horus CDA', '8'])
+                self.assertEqual(panels[4][:2], ('14h00', 'Excellence Consulting'))
                 self.assertTrue(panels[4][2].startswith('IA no Digital e Entretenimento'))
                 self.assertEqual(panels[7][:2], ('16h20', '8'))
                 self.assertTrue(panels[7][2].startswith('A IA e o Futuro do Trabalho'))
@@ -106,7 +106,7 @@ class PanelChangesTest(unittest.TestCase):
     def test_adilson_moved_to_panel_5_and_marcos_in_panel_1(self):
         for r in ('index.tsx','programacao.tsx'):
             lines=(ROOT/'src/routes'/r).read_text().splitlines()
-            p1=[l for l in lines if 'Painel CHIP ' in l][0]; p5=[l for l in lines if 'Painel 5 ' in l][0]
+            p1=[l for l in lines if 'Painel CHIP ' in l][0]; p5=[l for l in lines if 'Painel Excellence Consulting ' in l][0]
             self.assertNotIn('Adilson Pize',p1); self.assertIn('Marcos Rabelo',p1); self.assertIn('Adilson Pize',p5)
 
     def test_andre_cavalcante_fully_removed(self):
