@@ -127,6 +127,18 @@ class PanelChangesTest(unittest.TestCase):
         self.assertIn('name: "Solutis"', gold)
         self.assertIn('solutis.jpg.asset.json', src)
 
+    def sponsor_block(self, src, other):
+        start = src.index(other)
+        nxt = src.find('title: "', start + len(other))
+        return src[start:nxt if nxt != -1 else len(src)]
+
+    def test_ag_taxtech_is_silver(self):
+        src = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        self.assertIn('name: "AG TaxTech"', self.sponsor_block(src, 'title: "Prata"'))
+        self.assertIn('ag-taxtech-white.png.asset.json', src)
+        for other in ('title: "Ouro"', 'title: "Bronze"', 'title: "Realização"', 'title: "Apoio"'):
+            self.assertNotIn('AG TaxTech', self.sponsor_block(src, other))
+
     def test_excellence_is_gold_not_silver(self):
         src = (ROOT / 'src/routes' / 'index.tsx').read_text()
         gold = src[src.index('title: "Ouro"'):src.index('title: "Prata"')]
