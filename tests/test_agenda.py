@@ -19,9 +19,9 @@ class AgendaRulesTest(unittest.TestCase):
             sessions = self.sessions(route)
             self.assertEqual([time for time, title in sessions if title.startswith('Palestra Magna')], ['08h50'])
 
-    def test_mongodb_time_unchanged(self):
+    def test_mongodb_time_after_iso_swap(self):
         for route in ('index.tsx', 'programacao.tsx'):
-            self.assertEqual([time for time, title in self.sessions(route) if title.startswith('Tech Talk MongoDB')], ['14h30'])
+            self.assertEqual([time for time, title in self.sessions(route) if title.startswith('Tech Talk MongoDB')], ['14h40'])
 
     def test_fabio_lecture_shifted_by_ten_minutes(self):
         for route in ('index.tsx', 'programacao.tsx'):
@@ -31,9 +31,9 @@ class AgendaRulesTest(unittest.TestCase):
         for route in ('index.tsx', 'programacao.tsx'):
             sessions = self.sessions(route)
             tech_talks = [(time, title.split(' — ')[0]) for time, title in sessions if title.startswith('Tech Talk')]
-            self.assertEqual(tech_talks, [('09h50', 'Tech Talk PMI-BA'), ('14h30', 'Tech Talk MongoDB'), ('14h40', 'Tech Talk: Certificação ISO/IEC 42001')])
+            self.assertEqual(tech_talks, [('09h50', 'Tech Talk PMI-BA'), ('14h30', 'Tech Talk: Certificação ISO/IEC 42001'), ('14h40', 'Tech Talk MongoDB')])
             self.assertEqual([time for time, title in sessions if title.startswith('Tech Talk PMI-BA')], ['09h50'])
-            self.assertEqual([time for time, title in sessions if title.startswith('Tech Talk: Certificação')], ['14h40'])
+            self.assertEqual([time for time, title in sessions if title.startswith('Tech Talk: Certificação')], ['14h30'])
             minutes = [int(time[:2]) * 60 + int(time[3:]) for time, title in sessions]
             self.assertEqual(minutes, sorted(set(minutes)))
             for i, (_, title) in enumerate(sessions[:-1]):
