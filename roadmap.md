@@ -16,3 +16,4 @@
 - [x] Inverter as posições dos Tech Talks ISO/IEC 42001 (14h30) e MongoDB (14h40) nas páginas Sobre e Programação; testar e conferir no navegador.
 - [x] Renomear "Painel 1" para "Painel CHIP" nas páginas Sobre e Programação; testar e conferir no navegador.
 - [x] Renomear "Painel 2" para "Painel Solutis" nas páginas Sobre e Programação; testar e conferir no navegador.
+- [x] Renomear "Painel 4" para "Painel Tecnoativa" nas páginas Sobre e Programação; testar e conferir no navegador.

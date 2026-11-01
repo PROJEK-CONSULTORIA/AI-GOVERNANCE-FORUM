@@ -52,7 +52,7 @@ class AgendaRulesTest(unittest.TestCase):
                 source = (ROOT / 'src/routes' / route).read_text()
                 self.assertNotIn('Inteligência Tributária', source)
                 panels = self.panels(route)
-                self.assertEqual([panel[1] for panel in panels], ['CHIP', 'Solutis', '3', '4', '5', '6', '7', '8'])
+                self.assertEqual([panel[1] for panel in panels], ['CHIP', 'Solutis', '3', 'Tecnoativa', '5', '6', '7', '8'])
                 self.assertEqual(panels[4][:2], ('14h00', '5'))
                 self.assertTrue(panels[4][2].startswith('IA no Digital e Entretenimento'))
                 self.assertEqual(panels[7][:2], ('16h20', '8'))
@@ -74,7 +74,7 @@ class AgendaRulesTest(unittest.TestCase):
         for route in ('index.tsx', 'programacao.tsx'):
             with self.subTest(route=route):
                 source = (ROOT / 'src/routes' / route).read_text()
-                panel = [line for line in source.splitlines() if 'Painel 4' in line]
+                panel = [line for line in source.splitlines() if 'Painel Tecnoativa' in line]
                 self.assertEqual(len(panel), 1)
                 self.assertIn('Tatyana Souza', panel[0])
                 self.assertIn('Santa Casa da Bahia', panel[0])
@@ -100,7 +100,7 @@ class PanelChangesTest(unittest.TestCase):
     def test_morning_after_10_min_tech_talk(self):
         for r in ('index.tsx','programacao.tsx'):
             src=(ROOT/'src/routes'/r).read_text()
-            for t,title in [('10h00','Painel Solutis'),('10h30','Painel 3'),('11h00','Painel 4'),('11h30','Almoço')]:
+            for t,title in [('10h00','Painel Solutis'),('10h30','Painel 3'),('11h00','Painel Tecnoativa'),('11h30','Almoço')]:
                 self.assertRegex(src, r'time: "%s",[^\n]*title: "%s' % (t,title))
 
     def test_adilson_moved_to_panel_5_and_marcos_in_panel_1(self):
