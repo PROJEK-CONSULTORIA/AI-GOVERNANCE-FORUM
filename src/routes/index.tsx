@@ -375,6 +375,12 @@ const sponsorCategories = [
         alt: "Excellence",
         height: "h-48 lg:h-56",
       },
+      {
+        name: "Solutis",
+        src: solutisUrl,
+        alt: "Solutis",
+        height: "h-48 lg:h-56",
+      },
     ],
   },
   {
