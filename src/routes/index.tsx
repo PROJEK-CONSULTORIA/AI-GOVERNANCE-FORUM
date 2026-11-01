@@ -34,6 +34,7 @@ import chipAsset from "@/assets/chip.png.asset.json";
 import scgovAsset from "@/assets/scgov.png.asset.json";
 import exponencialAsset from "@/assets/exponencial.png.asset.json";
 import pmibaAsset from "@/assets/pmiba.png.asset.json";
+import solutisAsset from "@/assets/solutis.jpg.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
@@ -68,6 +69,7 @@ const chipUrl = assetUrl(chipAsset.url);
 const scgovUrl = assetUrl(scgovAsset.url);
 const exponencialUrl = assetUrl(exponencialAsset.url);
 const pmibaUrl = assetUrl(pmibaAsset.url);
+const solutisUrl = assetUrl(solutisAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
