@@ -11,4 +11,5 @@
 - [x] Incluir a Solutis como patrocinadora Ouro com a logo enviada; conferir no navegador.
 - [x] Incluir a AG TaxTech como patrocinadora Prata com a logo branca do manual de identidade; testar e conferir no navegador.
 - [x] Incluir a MongoDB como patrocinadora Ouro com a logo oficial branca sem fundo; testar e conferir no navegador.
-- [x] Colocar Wildson Luz como palestrante do Tech Talk MongoDB das 14h30 nas duas páginas; testar e conferir no navegador.- [x] Incluir a Semantix como patrocinadora Diamante com a logo branca sem fundo; testar e conferir no navegador.
+- [x] Colocar Wildson Luz como palestrante do Tech Talk MongoDB das 14h30 nas duas páginas; testar e conferir no navegador.
+- [x] Incluir a Semantix como patrocinadora Diamante com a logo branca sem fundo; testar e conferir no navegador.
