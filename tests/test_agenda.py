@@ -127,6 +127,15 @@ class PanelChangesTest(unittest.TestCase):
         self.assertIn('name: "Solutis"', gold)
         self.assertIn('solutis.jpg.asset.json', src)
 
+    def test_ag_taxtech_is_silver(self):
+        src = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        silver = src[src.index('title: "Prata"'):src.index('title: "Bronze"')]
+        self.assertIn('name: "AG TaxTech"', silver)
+        self.assertIn('ag-taxtech-white.png.asset.json', src)
+        for other in ('title: "Ouro"', 'title: "Bronze"', 'title: "Realização"', 'title: "Apoio"'):
+            block = src[src.index(other):src.index('title: "', src.index(other) + len(other))]
+            self.assertNotIn('AG TaxTech', block)
+
     def test_excellence_is_gold_not_silver(self):
         src = (ROOT / 'src/routes' / 'index.tsx').read_text()
         gold = src[src.index('title: "Ouro"'):src.index('title: "Prata"')]
