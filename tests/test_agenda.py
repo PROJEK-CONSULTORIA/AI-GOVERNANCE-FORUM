@@ -139,6 +139,13 @@ class PanelChangesTest(unittest.TestCase):
         for other in ('title: "Ouro"', 'title: "Bronze"', 'title: "Realização"', 'title: "Apoio"'):
             self.assertNotIn('AG TaxTech', self.sponsor_block(src, other))
 
+    def test_mongodb_is_gold(self):
+        src = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        self.assertIn('name: "MongoDB"', self.sponsor_block(src, 'title: "Ouro"'))
+        self.assertIn('mongodb-white.png.asset.json', src)
+        for other in ('title: "Diamante"', 'title: "Prata"', 'title: "Bronze"', 'title: "Realização"', 'title: "Apoio"'):
+            self.assertNotIn('MongoDB', self.sponsor_block(src, other))
+
     def test_excellence_is_gold_not_silver(self):
         src = (ROOT / 'src/routes' / 'index.tsx').read_text()
         gold = src[src.index('title: "Ouro"'):src.index('title: "Prata"')]

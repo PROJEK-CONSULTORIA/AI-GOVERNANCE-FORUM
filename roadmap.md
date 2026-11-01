@@ -10,3 +10,4 @@
 - [x] Mover a logo da Excellence de Patrocinador Prata para Patrocinador Ouro, no mesmo tamanho das demais marcas Ouro; conferir no navegador.
 - [x] Incluir a Solutis como patrocinadora Ouro com a logo enviada; conferir no navegador.
 - [x] Incluir a AG TaxTech como patrocinadora Prata com a logo branca do manual de identidade; testar e conferir no navegador.
+- [x] Incluir a MongoDB como patrocinadora Ouro com a logo oficial branca sem fundo; testar e conferir no navegador.
