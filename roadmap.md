@@ -14,3 +14,4 @@
 - [x] Colocar Wildson Luz como palestrante do Tech Talk MongoDB das 14h30 nas duas páginas; testar e conferir no navegador.
 - [x] Incluir a Semantix como patrocinadora Diamante com a logo branca sem fundo; testar e conferir no navegador.
 - [x] Inverter as posições dos Tech Talks ISO/IEC 42001 (14h30) e MongoDB (14h40) nas páginas Sobre e Programação; testar e conferir no navegador.
+- [x] Renomear "Painel 1" para "Painel CHIP" nas páginas Sobre e Programação; testar e conferir no navegador.
