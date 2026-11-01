@@ -121,6 +121,12 @@ class PanelChangesTest(unittest.TestCase):
         self.assertIn('wildson-luz.jpg.asset.json',src)
         self.assertIn('mais de 20 anos de experiência em soluções de TI e setor público',src)
 
+    def test_solutis_is_gold(self):
+        src = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        gold = src[src.index('title: "Ouro"'):src.index('title: "Prata"')]
+        self.assertIn('name: "Solutis"', gold)
+        self.assertIn('solutis.jpg.asset.json', src)
+
     def test_excellence_is_gold_not_silver(self):
         src = (ROOT / 'src/routes' / 'index.tsx').read_text()
         gold = src[src.index('title: "Ouro"'):src.index('title: "Prata"')]
