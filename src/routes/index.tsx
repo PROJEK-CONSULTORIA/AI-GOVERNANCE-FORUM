@@ -36,6 +36,7 @@ import exponencialAsset from "@/assets/exponencial.png.asset.json";
 import pmibaAsset from "@/assets/pmiba.png.asset.json";
 import solutisAsset from "@/assets/solutis.jpg.asset.json";
 import agTaxTechAsset from "@/assets/ag-taxtech-white.png.asset.json";
+import mongodbAsset from "@/assets/mongodb-white.png.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
@@ -72,6 +73,7 @@ const exponencialUrl = assetUrl(exponencialAsset.url);
 const pmibaUrl = assetUrl(pmibaAsset.url);
 const solutisUrl = assetUrl(solutisAsset.url);
 const agTaxTechUrl = assetUrl(agTaxTechAsset.url);
+const mongodbUrl = assetUrl(mongodbAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -381,6 +383,12 @@ const sponsorCategories = [
         name: "Solutis",
         src: solutisUrl,
         alt: "Solutis",
+        height: "h-48 lg:h-56",
+      },
+      {
+        name: "MongoDB",
+        src: mongodbUrl,
+        alt: "MongoDB",
         height: "h-48 lg:h-56",
       },
     ],
