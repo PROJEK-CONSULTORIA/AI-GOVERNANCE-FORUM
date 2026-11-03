@@ -20,3 +20,4 @@
 - [x] Renomear "Painel 7" para "Painel Horus CDA" nas páginas Sobre e Programação; testar e conferir no navegador.
 - [x] Renomear "Painel 5" para "Painel Excellence Consulting" nas páginas Sobre e Programação; testar e conferir no navegador.
 - [x] Alterar "Excellence Consulting" para "Excellence Consultants" nas páginas Sobre e Programação; testar e conferir no navegador.
+- [ ] Adicionar a foto da Liliane Moura Bender ao cartão do Painel Solutis nas duas páginas (aguardando o envio da imagem).
