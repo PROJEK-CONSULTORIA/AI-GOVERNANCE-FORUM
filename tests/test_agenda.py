@@ -178,13 +178,17 @@ class PanelChangesTest(unittest.TestCase):
                 self.assertEqual(len(panel), 1)
                 self.assertIn('Liliane Moura Bender', panel[0])
                 self.assertIn('Diretora de Public Sector da Solutis', panel[0])
-        for route in ('index.tsx', 'programacao.tsx'):
-            with self.subTest(route=route):
-                src = (ROOT / 'src/routes' / route).read_text()
-                self.assertIn('Bacharel em Ciências da Computação pela UFBA', src)
-                self.assertIn('Diretora de Operações da Vertical Telecom na UNITEC', src)
-                self.assertIn('import lilianeAsset from "@/assets/liliane-bender.jpg.asset.json"', src)
-                self.assertIn('img: lilianeUrl', src)
+        idx = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        prog = (ROOT / 'src/routes' / 'programacao.tsx').read_text()
+        # foto e descrição agora estão na lista de Palestrantes da página Sobre
+        self.assertIn('import lilianeAsset from "@/assets/liliane-bender.jpg.asset.json"', idx)
+        self.assertIn('img: lilianeUrl', idx)
+        self.assertIn('Bacharel em Ciências da Computação pela UFBA', idx)
+        self.assertIn('Diretora de Operações da Vertical Telecom na UNITEC', idx)
+        # a agenda não mostra mais a foto nem a descrição dela
+        self.assertNotIn('lilianeUrl', prog)
+        self.assertNotIn('Bacharel em Ciências da Computação pela UFBA', prog)
+        self.assertNotIn('featured', idx)
 
 if __name__ == '__main__':
     unittest.main()

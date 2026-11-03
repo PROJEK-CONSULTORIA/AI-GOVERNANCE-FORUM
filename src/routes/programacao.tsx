@@ -4,14 +4,12 @@ import logoAsset from "@/assets/logo-dark.png.asset.json";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
 import jaimeAsset from "@/assets/jaime-gama.jpg.asset.json";
 import pierreAsset from "@/assets/pierre-muto.png.asset.json";
-import lilianeAsset from "@/assets/liliane-bender.jpg.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
 const fabioUrl = assetUrl(fabioAsset.url);
 const jaimeUrl = assetUrl(jaimeAsset.url);
 const pierreUrl = assetUrl(pierreAsset.url);
-const lilianeUrl = assetUrl(lilianeAsset.url);
 
 export const Route = createFileRoute("/programacao")({
   head: () => ({
