@@ -22,3 +22,4 @@
 - [x] Alterar "Excellence Consulting" para "Excellence Consultants" nas páginas Sobre e Programação; testar e conferir no navegador.
 - [x] Adicionar a foto da Liliane Moura Bender ao cartão do Painel Solutis na página Programação; testar e conferir no navegador.
 - [x] Incluir a Liliane também na página Sobre, com foto, cargo e a mesma descrição do painel; testar e conferir no navegador.
+- [x] Tirar a foto e a descrição da Liliane da agenda e colocá-la na lista de Palestrantes; testar e conferir no navegador.
