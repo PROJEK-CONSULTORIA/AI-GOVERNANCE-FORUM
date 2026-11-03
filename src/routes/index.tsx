@@ -26,6 +26,7 @@ import gabrielSalgadoAsset from "@/assets/gabriel-salgado.jpeg.asset.json";
 import jaimeAsset from "@/assets/jaime-gama.jpg.asset.json";
 import pierreAsset from "@/assets/pierre-muto.png.asset.json";
 import wildsonAsset from "@/assets/wildson-luz.jpg.asset.json";
+import lilianeAsset from "@/assets/liliane-bender.jpg.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -76,6 +77,7 @@ const solutisUrl = assetUrl(solutisAsset.url);
 const agTaxTechUrl = assetUrl(agTaxTechAsset.url);
 const mongodbUrl = assetUrl(mongodbAsset.url);
 const semantixUrl = assetUrl(semantixAsset.url);
+const lilianeUrl = assetUrl(lilianeAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -176,13 +178,20 @@ const navLinks = [
   { href: "#contato", label: "Contato" },
 ];
 
-const schedule = [
+type ScheduleItem = {
+  time: string;
+  title: string;
+  desc: string;
+  featured?: { name: string; role: string; img: string; bio: string };
+};
+
+const schedule: ScheduleItem[] = [
   { time: "08h00", title: "Credenciamento", desc: "Recepção dos participantes, networking e visita aos estandes dos patrocinadores." },
   { time: "08h30", title: "Cerimônia de Abertura", desc: "Boas-vindas aos participantes, apresentação dos objetivos do AI Governance Forum e contextualização da importância estratégica da Governança de Inteligência Artificial para organizações públicas e privadas. Fábio Martins - Fundador e CEO do IGOV.IA." },
   { time: "08h50", title: "Palestra Magna — Semantix AI Enterprise: Governança, Segurança e Inteligência Artificial em Escala Empresarial", desc: "Como transformar a Governança de Inteligência Artificial em uma vantagem estratégica para os negócios, conectando tecnologia, gestão de riscos, conformidade regulatória e inovação responsável. Pierre Muto - Semantix." },
   { time: "09h20", title: "Painel CHIP — Indústria Inteligente: Pessoas, Dados e Inteligência Artificial", desc: "Como estruturar a governança da Inteligência Artificial para aumentar a produtividade, otimizar operações, fortalecer a gestão de riscos e impulsionar a competitividade industrial com segurança e responsabilidade. Murilo Plínio - Gerente de Tecnologia, SENAI/CIMATEC, Adhvan Furtado - BULL, Marcos Rabelo - CHIP." },
   { time: "09h50", title: "Tech Talk PMI-BA — PMI-CPMAI: Certificação Profissional em Gestão de Inteligência Artificial e Inovação", desc: "Apresentação da certificação PMI-CPMAI (Cognitive Project Management in AI), voltada à gestão de projetos de Inteligência Artificial e baseada na metodologia CPMAI, incorporada ao PMI a partir da aquisição da Cognilytica. A palestra abordará a importância de uma abordagem estruturada para planejar, desenvolver e implementar projetos de IA, conectando gestão de projetos, dados, objetivos de negócio e entrega de valor. (10 min) José Carlos Prates - PMI-BA." },
-  { time: "10h00", title: "Painel Solutis — Justiça, Ética e Regulação da IA: Direitos Fundamentais, Responsabilidade e Segurança Jurídica", desc: "Como o sistema de Justiça, a Defensoria Pública e a advocacia podem enfrentar os desafios do marco regulatório da Inteligência Artificial, conciliando inovação, ética, transparência, proteção de dados, gestão de riscos e preservação dos direitos fundamentais. O painel discutirá a responsabilização pelo uso da IA, os desafios de conformidade e os impactos da regulação no acesso à Justiça e na proteção dos cidadãos. Profa. Maria Clara Seixas - 4S Advogados, Dr. Franco Bahia - Defensoria Pública do Estado da Bahia (DPE/BA), Liliane Moura Bender - Diretora de Public Sector da Solutis." },
+  { time: "10h00", title: "Painel Solutis — Justiça, Ética e Regulação da IA: Direitos Fundamentais, Responsabilidade e Segurança Jurídica", desc: "Como o sistema de Justiça, a Defensoria Pública e a advocacia podem enfrentar os desafios do marco regulatório da Inteligência Artificial, conciliando inovação, ética, transparência, proteção de dados, gestão de riscos e preservação dos direitos fundamentais. O painel discutirá a responsabilização pelo uso da IA, os desafios de conformidade e os impactos da regulação no acesso à Justiça e na proteção dos cidadãos. Profa. Maria Clara Seixas - 4S Advogados, Dr. Franco Bahia - Defensoria Pública do Estado da Bahia (DPE/BA), Liliane Moura Bender - Diretora de Public Sector da Solutis.", featured: { name: "Liliane Moura Bender", role: "Diretora de Public Sector da Solutis", img: lilianeUrl, bio: "Bacharel em Ciências da Computação pela UFBA e especialista em Consultoria de TI pela Unifacs, possui ampla experiência em gestão executiva, estratégia e operações no setor de tecnologia. Atuou como Diretora de Operações da Vertical Telecom na UNITEC e na CPM Braxis, liderando grandes contratos, equipes e operações de serviços de TI. Foi Executiva de Clientes Sênior na CPM Braxis, com responsabilidade por resultados e vendas para grandes empresas de telecomunicações, como Brasil Telecom, Vivo e Claro. Atualmente, atua como Diretora de Public Sector na Solutis, contribuindo para o desenvolvimento de negócios e soluções tecnológicas para o setor público." } },
   { time: "10h30", title: "Painel 3 — Governança de IA para Cidades e Estados Inteligentes: Inovação com Responsabilidade", desc: "Como utilizar a Inteligência Artificial para tornar cidades e estados mais eficientes, sustentáveis e centrados no cidadão, com governança, transparência, segurança, gestão de dados e decisões orientadas por evidências. Luis Henrique de Magalhães Gaban - SEMIT/Prefeitura de Salvador, Ricardo Fontoura - CIO, DETRAN-BA." },
   { time: "11h00", title: "Painel Tecnoativa — Cibersegurança e Governança de IA: Desafios para Organizações Inteligentes", desc: "Como proteger dados, modelos e sistemas de IA por meio da governança, gestão de riscos, conformidade e cibersegurança, garantindo inovação com confiança e resiliência. Andréa Campelo - Fundadora e CEO da TecnoAtiva, Leandro Magalhães - Gerente de TI da EMBASA, Tatyana Souza - Gerente de TI da Santa Casa da Bahia." },
   { time: "11h30", title: "Almoço & Networking", desc: "Relacionamento entre participantes, palestrantes, patrocinadores e lideranças do ecossistema de inovação." },
@@ -628,6 +637,24 @@ function Index() {
                   <h3 className="text-lg font-semibold">{item.title}</h3>
                 </div>
                 <p className="mt-2 text-sm text-muted-foreground max-w-2xl">{item.desc}</p>
+                {item.featured && (
+                  <div className="mt-4 flex flex-col sm:flex-row items-start gap-5 rounded-2xl border border-primary/30 bg-primary/5 p-5 max-w-2xl">
+                    <img
+                      src={item.featured.img}
+                      alt={item.featured.name}
+                      className="h-28 w-28 shrink-0 rounded-2xl object-cover object-top ring-2 ring-primary/40"
+                    />
+                    <div>
+                      <p className="text-base font-bold">{item.featured.name}</p>
+                      <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-primary">
+                        {item.featured.role}
+                      </p>
+                      <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                        {item.featured.bio}
+                      </p>
+                    </div>
+                  </div>
+                )}
               </li>
             ))}
           </ol>

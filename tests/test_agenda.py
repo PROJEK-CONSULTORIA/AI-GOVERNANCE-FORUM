@@ -178,11 +178,13 @@ class PanelChangesTest(unittest.TestCase):
                 self.assertEqual(len(panel), 1)
                 self.assertIn('Liliane Moura Bender', panel[0])
                 self.assertIn('Diretora de Public Sector da Solutis', panel[0])
-        src = (ROOT / 'src/routes' / 'programacao.tsx').read_text()
-        self.assertIn('Bacharel em Ciências da Computação pela UFBA', src)
-        self.assertIn('Diretora de Operações da Vertical Telecom na UNITEC', src)
-        self.assertIn('import lilianeAsset from "@/assets/liliane-bender.jpg.asset.json"', src)
-        self.assertIn('img: lilianeUrl', src)
+        for route in ('index.tsx', 'programacao.tsx'):
+            with self.subTest(route=route):
+                src = (ROOT / 'src/routes' / route).read_text()
+                self.assertIn('Bacharel em Ciências da Computação pela UFBA', src)
+                self.assertIn('Diretora de Operações da Vertical Telecom na UNITEC', src)
+                self.assertIn('import lilianeAsset from "@/assets/liliane-bender.jpg.asset.json"', src)
+                self.assertIn('img: lilianeUrl', src)
 
 if __name__ == '__main__':
     unittest.main()
