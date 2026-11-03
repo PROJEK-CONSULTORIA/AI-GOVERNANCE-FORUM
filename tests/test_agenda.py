@@ -181,6 +181,8 @@ class PanelChangesTest(unittest.TestCase):
         src = (ROOT / 'src/routes' / 'programacao.tsx').read_text()
         self.assertIn('Bacharel em Ciências da Computação pela UFBA', src)
         self.assertIn('Diretora de Operações da Vertical Telecom na UNITEC', src)
+        self.assertIn('import lilianeAsset from "@/assets/liliane-bender.jpg.asset.json"', src)
+        self.assertIn('img: lilianeUrl', src)
 
 if __name__ == '__main__':
     unittest.main()
