@@ -215,12 +215,6 @@ const speakers = [
     bio: "Founder do IGOV.IA - Instituto de Governança em Inteligência Artificial, Head de IA, executivo, escritor, consultor, professor e palestrante, autor dos livros Governança em Inteligência Artificial: as 10 dimensões da jornada de adoção tecnológica e Inteligência Artificial: Os Desafios do Mundo Exponencial. Graduado em Ciência da Computação e Ciências Contábeis, especialista em Gestão de Projetos, Mestre em Administração Estratégica e Doutorando em Modelagem Computacional e Tecnologia Industrial. Possui mais de 30 anos de experiência em projetos de alta complexidade nos setores público e privado, liderando equipes de alta performance.",
   },
   {
-    name: "Alexandre Darzé",
-    role: "Sócio-Diretor da LightHouse (LH Invest)",
-    img: darzeUrl,
-    bio: "Engenheiro civil pela UFBA e mestre em Finanças pelo COPPEAD/UFRJ, com mais de 25 anos de experiência em investimentos, finanças estruturadas e desenvolvimento de empresas. Ex-executivo da IFC (Grupo Banco Mundial), liderou investimentos em Itaú, Nubank, Mercado Livre e Creditas. Hoje é investidor em cerca de 30 empresas e conselheiro de organizações de tecnologia, engenharia e inovação — referência em venture capital, private equity e mercados de capitais na América Latina.",
-  },
-  {
     name: "Vitor Igdal",
     role: "Co-Fundador da Philos e Presidente da ABRH Bahia",
     img: vitorUrl,
