@@ -34,6 +34,7 @@ import tecnoativaAsset from "@/assets/tecnoativa.png.asset.json";
 import chipAsset from "@/assets/chip.png.asset.json";
 import scgovAsset from "@/assets/scgov.png.asset.json";
 import exponencialAsset from "@/assets/exponencial.png.asset.json";
+import xtrqAsset from "@/assets/xtrq-white.png.asset.json";
 import pmibaAsset from "@/assets/pmiba.png.asset.json";
 import solutisAsset from "@/assets/solutis.jpg.asset.json";
 import agTaxTechAsset from "@/assets/ag-taxtech-white.png.asset.json";
@@ -72,6 +73,7 @@ const tecnoativaUrl = assetUrl(tecnoativaAsset.url);
 const chipUrl = assetUrl(chipAsset.url);
 const scgovUrl = assetUrl(scgovAsset.url);
 const exponencialUrl = assetUrl(exponencialAsset.url);
+const xtrqUrl = assetUrl(xtrqAsset.url);
 const pmibaUrl = assetUrl(pmibaAsset.url);
 const solutisUrl = assetUrl(solutisAsset.url);
 const agTaxTechUrl = assetUrl(agTaxTechAsset.url);
@@ -443,6 +445,12 @@ const sponsorCategories = [
         name: "Exponencial",
         src: exponencialUrl,
         alt: "Exponencial Consultoria",
+        height: "h-24 lg:h-28",
+      },
+      {
+        name: "XTRQ",
+        src: xtrqUrl,
+        alt: "XTRQ",
         height: "h-24 lg:h-28",
       },
     ],

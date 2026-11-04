@@ -146,6 +146,13 @@ class PanelChangesTest(unittest.TestCase):
         for other in ('title: "Diamante"', 'title: "Prata"', 'title: "Bronze"', 'title: "Realização"', 'title: "Apoio"'):
             self.assertNotIn('MongoDB', self.sponsor_block(src, other))
 
+    def test_xtrq_is_bronze(self):
+        src = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        self.assertIn('name: "XTRQ"', self.sponsor_block(src, 'title: "Bronze"'))
+        self.assertIn('xtrq-white.png.asset.json', src)
+        for other in ('title: "Diamante"', 'title: "Ouro"', 'title: "Prata"', 'title: "Realização"', 'title: "Apoio"'):
+            self.assertNotIn('XTRQ', self.sponsor_block(src, other))
+
     def test_wildson_luz_is_mongodb_tech_talk_speaker(self):
         for route in ('index.tsx', 'programacao.tsx'):
             with self.subTest(route=route):
