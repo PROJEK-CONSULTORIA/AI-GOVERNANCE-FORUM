@@ -25,3 +25,4 @@
 - [x] Tirar a foto e a descrição da Liliane da agenda e colocá-la na lista de Palestrantes; testar e conferir no navegador.
 - [x] Incluir a XTRQ como patrocinadora Bronze com a logo de fundo preto removido; testar e conferir no navegador.
 - [x] Inverter os horários do Painel 8 (14h00) e do Painel Excellence Consultants (16h20) nas páginas Sobre e Programação; testar e conferir no navegador.
+- [x] Trocar o palestrante do Tech Talk ISO/IEC 42001 de Leandro Pfeifer para Fábio Martins nas páginas Sobre e Programação; testar e conferir no navegador.
