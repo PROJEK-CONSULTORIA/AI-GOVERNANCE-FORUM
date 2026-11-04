@@ -27,6 +27,7 @@ import jaimeAsset from "@/assets/jaime-gama.jpg.asset.json";
 import pierreAsset from "@/assets/pierre-muto.png.asset.json";
 import wildsonAsset from "@/assets/wildson-luz.jpg.asset.json";
 import lilianeAsset from "@/assets/liliane-bender.jpg.asset.json";
+import tatyanaAsset from "@/assets/tatyana-souza.jpg.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -80,6 +81,7 @@ const agTaxTechUrl = assetUrl(agTaxTechAsset.url);
 const mongodbUrl = assetUrl(mongodbAsset.url);
 const semantixUrl = assetUrl(semantixAsset.url);
 const lilianeUrl = assetUrl(lilianeAsset.url);
+const tatyanaUrl = assetUrl(tatyanaAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -351,6 +353,12 @@ const speakers = [
     role: "Diretora de Public Sector da Solutis",
     img: lilianeUrl,
     bio: "Bacharel em Ciências da Computação pela UFBA e especialista em Consultoria de TI pela Unifacs, possui ampla experiência em gestão executiva, estratégia e operações no setor de tecnologia. Atuou como Diretora de Operações da Vertical Telecom na UNITEC e na CPM Braxis, liderando grandes contratos, equipes e operações de serviços de TI. Foi Executiva de Clientes Sênior na CPM Braxis, com responsabilidade por resultados e vendas para grandes empresas de telecomunicações, como Brasil Telecom, Vivo e Claro. Atualmente, atua como Diretora de Public Sector na Solutis, contribuindo para o desenvolvimento de negócios e soluções tecnológicas para o setor público."
+  },
+  {
+    name: "Tatyana Souza",
+    role: "Gerente de TI da Santa Casa da Bahia",
+    img: tatyanaUrl,
+    bio: "Executiva de tecnologia com mais de 30 anos de experiência nos setores público e privado, une visão técnica e financeira para posicionar a TI como parceira estratégica do negócio. Gerente de TI da Santa Casa da Bahia e Diretora de Conteúdo e Desenvolvimento Profissional da SUCESU BA, lidera pessoas e iniciativas de transformação digital, cibersegurança, modernização tecnológica, governança de dados e inteligência artificial, gerando eficiência, resiliência e valor sustentável. Reconhecida como Líder de Segurança da Informação da Bahia 2025 pelo Security Leaders. MBA em Liderança, Gestão 4.0 e Inovação (PUCRS), formação executiva pela Fundação Dom Cabral, MBA em TI (UNIFACS), pós-graduação em Redes de Computadores (UNIRUY), graduação em Ciências Contábeis (Cairu) e formação em Eletrônica (ETFBA).",
   },
 ];
 
