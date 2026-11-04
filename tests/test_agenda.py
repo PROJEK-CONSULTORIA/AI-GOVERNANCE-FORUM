@@ -172,6 +172,16 @@ class PanelChangesTest(unittest.TestCase):
                 self.assertIn('Senior Enterprise Account Executive na MongoDB', talk[0])
                 self.assertNotIn('A confirmar', talk[0])
 
+    def test_tatyana_souza_in_speakers(self):
+        src=(ROOT/'src/routes'/'index.tsx').read_text()
+        self.assertIn('name: "Tatyana Souza"',src)
+        self.assertIn('Gerente de TI da Santa Casa da Bahia',src)
+        self.assertIn('tatyana-souza.jpg.asset.json',src)
+        self.assertIn('img: tatyanaUrl',src)
+        self.assertIn('Diretora de Conteúdo e Desenvolvimento Profissional da SUCESU BA',src)
+        self.assertIn('Líder de Segurança da Informação da Bahia 2025 pelo Security Leaders',src)
+        self.assertIn('MBA em Liderança, Gestão 4.0 e Inovação (PUCRS)',src)
+
     def test_semantix_is_diamond(self):
         src = (ROOT / 'src/routes' / 'index.tsx').read_text()
         self.assertIn('name: "Semantix"', self.sponsor_block(src, 'title: "Diamante"'))
