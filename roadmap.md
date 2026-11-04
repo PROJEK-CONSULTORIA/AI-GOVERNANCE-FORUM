@@ -27,3 +27,4 @@
 - [x] Inverter os horários do Painel 8 (14h00) e do Painel Excellence Consultants (16h20) nas páginas Sobre e Programação; testar e conferir no navegador.
 - [x] Trocar o palestrante do Tech Talk ISO/IEC 42001 de Leandro Pfeifer para Fábio Martins nas páginas Sobre e Programação; testar e conferir no navegador.
 - [x] Incluir Tatyana Souza (foto, cargo e descrição) na lista de Palestrantes; testar e conferir no navegador.
+- [x] Renomear "Painel 6" para "Painel Rede +" nas páginas Sobre e Programação; testar e conferir no navegador.

@@ -52,7 +52,7 @@ class AgendaRulesTest(unittest.TestCase):
                 source = (ROOT / 'src/routes' / route).read_text()
                 self.assertNotIn('Inteligência Tributária', source)
                 panels = self.panels(route)
-                self.assertEqual([panel[1] for panel in panels], ['CHIP', 'Solutis', '3', 'Tecnoativa', '8', '6', 'Horus CDA', 'Excellence Consultants'])
+                self.assertEqual([panel[1] for panel in panels], ['CHIP', 'Solutis', '3', 'Tecnoativa', '8', 'Rede +', 'Horus CDA', 'Excellence Consultants'])
                 self.assertEqual(panels[4][:2], ('14h00', '8'))
                 self.assertTrue(panels[4][2].startswith('A IA e o Futuro do Trabalho'))
                 self.assertEqual(panels[7][:2], ('16h20', 'Excellence Consultants'))
@@ -61,7 +61,7 @@ class AgendaRulesTest(unittest.TestCase):
     def test_following_panels_shifted_by_ten_minutes(self):
         for route in ('index.tsx', 'programacao.tsx'):
             panels = self.panels(route)
-            self.assertEqual([panel[:2] for panel in panels[5:]], [('15h20', '6'), ('15h50', 'Horus CDA'), ('16h20', 'Excellence Consultants')])
+            self.assertEqual([panel[:2] for panel in panels[5:]], [('15h20', 'Rede +'), ('15h50', 'Horus CDA'), ('16h20', 'Excellence Consultants')])
 
     def test_event_ends_at_17h20(self):
         for route in ('index.tsx', 'programacao.tsx'):
