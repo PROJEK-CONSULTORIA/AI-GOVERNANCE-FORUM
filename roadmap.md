@@ -29,3 +29,4 @@
 - [x] Incluir Tatyana Souza (foto, cargo e descrição) na lista de Palestrantes; testar e conferir no navegador.
 - [x] Renomear "Painel 6" para "Painel Rede +" nas páginas Sobre e Programação; testar e conferir no navegador.
 - [x] Remover Alexandre Darzé (nome, foto, descrição e menção no Painel Rede +) de todas as páginas; testar e conferir no navegador.
+- [x] Renomear "Painel 3" para "Painel Exponencial" nas páginas Sobre e Programação; testar e conferir no navegador.
