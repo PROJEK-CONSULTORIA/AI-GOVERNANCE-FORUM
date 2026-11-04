@@ -114,6 +114,16 @@ class PanelChangesTest(unittest.TestCase):
             with self.subTest(route=r):
                 self.assertNotIn('Cavalcante', (ROOT/'src/routes'/r).read_text())
 
+    def test_alexandre_darze_fully_removed(self):
+        for r in ('index.tsx','programacao.tsx'):
+            with self.subTest(route=r):
+                source = (ROOT/'src/routes'/r).read_text()
+                self.assertNotIn('Darzé', source)
+                self.assertNotIn('darze', source)
+                self.assertNotIn('LH Investimentos', source)
+                self.assertNotIn('LightHouse', source)
+        self.assertFalse((ROOT/'src/assets'/'alexandre-darze.jpg.asset.json').exists())
+
     def test_wildson_luz_in_speakers(self):
         src=(ROOT/'src/routes'/'index.tsx').read_text()
         self.assertIn('name: "Wildson Luz"',src)
