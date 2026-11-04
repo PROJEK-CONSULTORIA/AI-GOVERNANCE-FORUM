@@ -146,6 +146,15 @@ class PanelChangesTest(unittest.TestCase):
         for other in ('title: "Diamante"', 'title: "Prata"', 'title: "Bronze"', 'title: "Realização"', 'title: "Apoio"'):
             self.assertNotIn('MongoDB', self.sponsor_block(src, other))
 
+    def test_iso_tech_talk_speaker_is_fabio_martins(self):
+        for route in ('index.tsx', 'programacao.tsx'):
+            with self.subTest(route=route):
+                lines = (ROOT / 'src/routes' / route).read_text().splitlines()
+                talk = [l for l in lines if 'Tech Talk: Certificação ISO/IEC 42001' in l]
+                self.assertEqual(len(talk), 1)
+                self.assertIn('Fábio Martins', talk[0])
+                self.assertNotIn('Leandro Pfeifer', talk[0])
+
     def test_xtrq_is_bronze(self):
         src = (ROOT / 'src/routes' / 'index.tsx').read_text()
         self.assertIn('name: "XTRQ"', self.sponsor_block(src, 'title: "Bronze"'))
