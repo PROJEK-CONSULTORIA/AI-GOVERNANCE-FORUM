@@ -124,6 +124,18 @@ class PanelChangesTest(unittest.TestCase):
                 self.assertNotIn('LightHouse', source)
         self.assertFalse((ROOT/'src/assets'/'alexandre-darze.jpg.asset.json').exists())
 
+    def test_fred_soares_moved_to_painel_exponencial(self):
+        for r in ('index.tsx','programacao.tsx'):
+            with self.subTest(route=r):
+                lines = (ROOT/'src/routes'/r).read_text().splitlines()
+                expo = [l for l in lines if 'Painel Exponencial' in l]
+                rede = [l for l in lines if 'Painel Rede +' in l]
+                self.assertEqual(len(expo), 1)
+                self.assertEqual(len(rede), 1)
+                self.assertIn('Fred Soares', expo[0])
+                self.assertIn('CEO da Exponencial Consultoria', expo[0])
+                self.assertNotIn('Fred Soares', rede[0])
+
     def test_wildson_luz_in_speakers(self):
         src=(ROOT/'src/routes'/'index.tsx').read_text()
         self.assertIn('name: "Wildson Luz"',src)
