@@ -40,6 +40,8 @@ import solutisAsset from "@/assets/solutis.jpg.asset.json";
 import agTaxTechAsset from "@/assets/ag-taxtech-white.png.asset.json";
 import mongodbAsset from "@/assets/mongodb-white.png.asset.json";
 import semantixAsset from "@/assets/semantix-white.png.asset.json";
+import grupoRedeAsset from "@/assets/grupo-rede-white.png.asset.json";
+import philosAsset from "@/assets/philos-white.png.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
 const logoUrl = assetUrl(logoAsset.url);
@@ -80,6 +82,8 @@ const mongodbUrl = assetUrl(mongodbAsset.url);
 const semantixUrl = assetUrl(semantixAsset.url);
 const lilianeUrl = assetUrl(lilianeAsset.url);
 const tatyanaUrl = assetUrl(tatyanaAsset.url);
+const grupoRedeUrl = assetUrl(grupoRedeAsset.url);
+const philosUrl = assetUrl(philosAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -417,6 +421,18 @@ const sponsorCategories = [
         name: "MongoDB",
         src: mongodbUrl,
         alt: "MongoDB",
+        height: "h-48 lg:h-56",
+      },
+      {
+        name: "Grupo Rede+",
+        src: grupoRedeUrl,
+        alt: "Grupo Rede+",
+        height: "h-48 lg:h-56",
+      },
+      {
+        name: "Philos",
+        src: philosUrl,
+        alt: "Philos — Cultura, gestão e marketing de comunidade",
         height: "h-48 lg:h-56",
       },
     ],
