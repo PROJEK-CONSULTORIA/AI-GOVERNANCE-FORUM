@@ -34,3 +34,4 @@
 - [x] Incluir a Philos como patrocinadora Ouro com a logo branca sem fundo; testar e conferir no navegador.
 - [x] Incluir o Grupo Rede+ como patrocinador Ouro com a logo branca sem fundo; testar e conferir no navegador.
 - [x] Mover a Exponencial de Patrocinadora Bronze para Patrocinadora Ouro, no mesmo tamanho das demais marcas Ouro; testar e conferir no navegador.
+- [x] Renomear "Painel 8" para "Painel Philos" nas páginas Sobre e Programação; testar e conferir no navegador.
