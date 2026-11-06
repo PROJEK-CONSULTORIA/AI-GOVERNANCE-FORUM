@@ -33,3 +33,4 @@
 - [x] Transferir Fred Soares do Painel Rede + para o Painel Exponencial nas duas páginas; testar e conferir no navegador.
 - [x] Incluir a Philos como patrocinadora Ouro com a logo branca sem fundo; testar e conferir no navegador.
 - [x] Incluir o Grupo Rede+ como patrocinador Ouro com a logo branca sem fundo; testar e conferir no navegador.
+- [x] Mover a Exponencial de Patrocinadora Bronze para Patrocinadora Ouro, no mesmo tamanho das demais marcas Ouro; testar e conferir no navegador.

@@ -204,6 +204,13 @@ class PanelChangesTest(unittest.TestCase):
         self.assertIn('Líder de Segurança da Informação da Bahia 2025 pelo Security Leaders',src)
         self.assertIn('MBA em Liderança, Gestão 4.0 e Inovação (PUCRS)',src)
 
+    def test_exponencial_is_gold_not_bronze(self):
+        src = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        self.assertIn('name: "Exponencial"', self.sponsor_block(src, 'title: "Ouro"'))
+        self.assertIn('height: "h-48 lg:h-56"', self.sponsor_block(src, 'title: "Ouro"').split('name: "Exponencial"')[1][:200])
+        for other in ('title: "Diamante"', 'title: "Prata"', 'title: "Bronze"', 'title: "Realização"', 'title: "Apoio"'):
+            self.assertNotIn('Exponencial', self.sponsor_block(src, other))
+
     def test_grupo_rede_is_gold(self):
         src = (ROOT / 'src/routes' / 'index.tsx').read_text()
         self.assertIn('name: "Grupo Rede+"', self.sponsor_block(src, 'title: "Ouro"'))

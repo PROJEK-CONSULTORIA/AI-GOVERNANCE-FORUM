@@ -435,6 +435,12 @@ const sponsorCategories = [
         alt: "Philos — Cultura, gestão e marketing de comunidade",
         height: "h-48 lg:h-56",
       },
+      {
+        name: "Exponencial",
+        src: exponencialUrl,
+        alt: "Exponencial Consultoria",
+        height: "h-48 lg:h-56",
+      },
     ],
   },
   {
@@ -455,12 +461,6 @@ const sponsorCategories = [
         name: "SCGOV",
         src: scgovUrl,
         alt: "SCGOV — Sistema Integrado de Contratações Públicas",
-        height: "h-24 lg:h-28",
-      },
-      {
-        name: "Exponencial",
-        src: exponencialUrl,
-        alt: "Exponencial Consultoria",
         height: "h-24 lg:h-28",
       },
       {
