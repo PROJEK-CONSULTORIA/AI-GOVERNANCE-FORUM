@@ -204,6 +204,20 @@ class PanelChangesTest(unittest.TestCase):
         self.assertIn('Líder de Segurança da Informação da Bahia 2025 pelo Security Leaders',src)
         self.assertIn('MBA em Liderança, Gestão 4.0 e Inovação (PUCRS)',src)
 
+    def test_grupo_rede_is_gold(self):
+        src = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        self.assertIn('name: "Grupo Rede+"', self.sponsor_block(src, 'title: "Ouro"'))
+        self.assertIn('grupo-rede-white.png.asset.json', src)
+        for other in ('title: "Diamante"', 'title: "Prata"', 'title: "Bronze"', 'title: "Realização"', 'title: "Apoio"'):
+            self.assertNotIn('Grupo Rede+', self.sponsor_block(src, other))
+
+    def test_philos_is_gold(self):
+        src = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        self.assertIn('name: "Philos"', self.sponsor_block(src, 'title: "Ouro"'))
+        self.assertIn('philos-white.png.asset.json', src)
+        for other in ('title: "Diamante"', 'title: "Prata"', 'title: "Bronze"', 'title: "Realização"', 'title: "Apoio"'):
+            self.assertNotIn('Philos', self.sponsor_block(src, other))
+
     def test_semantix_is_diamond(self):
         src = (ROOT / 'src/routes' / 'index.tsx').read_text()
         self.assertIn('name: "Semantix"', self.sponsor_block(src, 'title: "Diamante"'))
