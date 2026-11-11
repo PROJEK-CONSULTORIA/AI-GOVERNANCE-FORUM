@@ -29,6 +29,7 @@ import lilianeAsset from "@/assets/liliane-bender.jpg.asset.json";
 import tatyanaAsset from "@/assets/tatyana-souza.jpg.asset.json";
 import vicenteAsset from "@/assets/vicente-aguiar.jpg.asset.json";
 import edmilsonAsset from "@/assets/edmilson-puridade.jpg.asset.json";
+import manuelaAsset from "@/assets/manuela-rocha.jpg.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -86,6 +87,7 @@ const lilianeUrl = assetUrl(lilianeAsset.url);
 const tatyanaUrl = assetUrl(tatyanaAsset.url);
 const vicenteUrl = assetUrl(vicenteAsset.url);
 const edmilsonUrl = assetUrl(edmilsonAsset.url);
+const manuelaUrl = assetUrl(manuelaAsset.url);
 const grupoRedeUrl = assetUrl(grupoRedeAsset.url);
 const philosUrl = assetUrl(philosAsset.url);
 
@@ -204,7 +206,7 @@ const schedule: ScheduleItem[] = [
   { time: "10h30", title: "Painel Exponencial — Governança de IA para Cidades e Estados Inteligentes: Inovação com Responsabilidade", desc: "Como utilizar a Inteligência Artificial para tornar cidades e estados mais eficientes, sustentáveis e centrados no cidadão, com governança, transparência, segurança, gestão de dados e decisões orientadas por evidências. Luis Henrique de Magalhães Gaban - SEMIT/Prefeitura de Salvador, Ricardo Fontoura - CIO, DETRAN-BA, Fred Soares - CEO da Exponencial Consultoria." },
   { time: "11h00", title: "Painel Tecnoativa — Cibersegurança e Governança de IA: Desafios para Organizações Inteligentes", desc: "Como proteger dados, modelos e sistemas de IA por meio da governança, gestão de riscos, conformidade e cibersegurança, garantindo inovação com confiança e resiliência. Andréa Campelo - Fundadora e CEO da TecnoAtiva, Leandro Magalhães - Gerente de TI da EMBASA, Tatyana Souza - Gerente de TI da Santa Casa da Bahia." },
   { time: "11h30", title: "Almoço & Networking", desc: "Relacionamento entre participantes, palestrantes, patrocinadores e lideranças do ecossistema de inovação." },
-  { time: "14h00", title: "Painel Philos — A IA e o Futuro do Trabalho: Pessoas, Comunidades e Culturas", desc: "Como a Inteligência Artificial está transformando a gestão de pessoas, a cultura organizacional e as competências do futuro, exigindo uma governança que promova inovação, desenvolvimento humano e liderança responsável. Vitor Igdal - Presidente da ABRH-BA, Carlos Eduardo - Gerente Nacional do Jurídico de Direito do Trabalho da Petrobras." },
+  { time: "14h00", title: "Painel Philos — A IA e o Futuro do Trabalho: Pessoas, Comunidades e Culturas", desc: "Como a Inteligência Artificial está transformando a gestão de pessoas, a cultura organizacional e as competências do futuro, exigindo uma governança que promova inovação, desenvolvimento humano e liderança responsável. Vitor Igdal - Presidente da ABRH-BA, Carlos Eduardo - Gerente Nacional do Jurídico de Direito do Trabalho da Petrobras, Manuela Rocha - Gerente de Recursos Humanos da Petrobahia." },
   { time: "14h30", title: "Tech Talk: Certificação ISO/IEC 42001 — Como Estruturar um Sistema de Gestão de Inteligência Artificial nas Organizações", desc: "Apresentação da norma internacional ISO/IEC 42001, que estabelece requisitos para sistemas de gestão de Inteligência Artificial. Instituto de Governança em Inteligência Artificial - (10 min) Fábio Martins - Palestrante." },
   { time: "14h40", title: "Tech Talk MongoDB — Ferramentas Tecnológicas para a Governança de Inteligência Artificial", desc: "Ferramentas e recursos tecnológicos para apoiar a construção de aplicações de IA confiáveis, com destaque para dados, arquitetura, integração, segurança e escalabilidade. (10 min) Wildson Luz - Senior Enterprise Account Executive na MongoDB" },
   { time: "14h50", title: "Palestra: Governança de Inteligência Artificial — As 10 Dimensões da Jornada de Adoção Tecnológica", desc: "Apresentação da metodologia IGOV.IA e de suas dez dimensões. A palestra demonstrará como organizar a adoção tecnológica de forma estruturada, conectando estratégia, pessoas, dados, riscos, tecnologia e resultados de negócio. (20 min) Fábio Martins - Fundador e CEO do IGOV.IA." },
@@ -371,6 +373,12 @@ const speakers = [
     role: "COO e cofundador da Ekoa",
     img: edmilsonUrl,
     bio: "A Ekoa é uma edtech de EHS que une tecnologia e educação para ajudar empresas a manter a conformidade em Saúde, Segurança e Meio Ambiente, salvando vidas e gerando resultados. Engenheiro Ambiental de formação, lidera os times de Produto e Tecnologia e há mais de uma década desenvolve soluções de capacitação e gestão de treinamentos obrigatórios.",
+  },
+  {
+    name: "Manuela Rocha",
+    role: "Gerente de Recursos Humanos da Petrobahia",
+    img: manuelaUrl,
+    bio: "Há mais de 15 anos atuando na área de Recursos Humanos em empresas nacionais e multinacionais, tanto na área Comercial como na área Industrial. Experiência no formato de atendimento de Business Partner com perfil generalista, suportando todos os subsistemas do RH e com liderança de equipes em excelência operacional.",
   },
 ];
 
