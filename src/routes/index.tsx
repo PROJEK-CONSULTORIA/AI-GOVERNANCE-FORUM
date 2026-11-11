@@ -27,6 +27,7 @@ import pierreAsset from "@/assets/pierre-muto.png.asset.json";
 import wildsonAsset from "@/assets/wildson-luz.jpg.asset.json";
 import lilianeAsset from "@/assets/liliane-bender.jpg.asset.json";
 import tatyanaAsset from "@/assets/tatyana-souza.jpg.asset.json";
+import vicenteAsset from "@/assets/vicente-aguiar.jpg.asset.json";
 import igoviaAsset from "@/assets/igovia.png.asset.json";
 import horusAsset from "@/assets/horus.png.asset.json";
 import excellenceAsset from "@/assets/excellence.png.asset.json";
@@ -82,6 +83,7 @@ const mongodbUrl = assetUrl(mongodbAsset.url);
 const semantixUrl = assetUrl(semantixAsset.url);
 const lilianeUrl = assetUrl(lilianeAsset.url);
 const tatyanaUrl = assetUrl(tatyanaAsset.url);
+const vicenteUrl = assetUrl(vicenteAsset.url);
 const grupoRedeUrl = assetUrl(grupoRedeAsset.url);
 const philosUrl = assetUrl(philosAsset.url);
 
@@ -204,7 +206,7 @@ const schedule: ScheduleItem[] = [
   { time: "14h30", title: "Tech Talk: Certificação ISO/IEC 42001 — Como Estruturar um Sistema de Gestão de Inteligência Artificial nas Organizações", desc: "Apresentação da norma internacional ISO/IEC 42001, que estabelece requisitos para sistemas de gestão de Inteligência Artificial. Instituto de Governança em Inteligência Artificial - (10 min) Fábio Martins - Palestrante." },
   { time: "14h40", title: "Tech Talk MongoDB — Ferramentas Tecnológicas para a Governança de Inteligência Artificial", desc: "Ferramentas e recursos tecnológicos para apoiar a construção de aplicações de IA confiáveis, com destaque para dados, arquitetura, integração, segurança e escalabilidade. (10 min) Wildson Luz - Senior Enterprise Account Executive na MongoDB" },
   { time: "14h50", title: "Palestra: Governança de Inteligência Artificial — As 10 Dimensões da Jornada de Adoção Tecnológica", desc: "Apresentação da metodologia IGOV.IA e de suas dez dimensões. A palestra demonstrará como organizar a adoção tecnológica de forma estruturada, conectando estratégia, pessoas, dados, riscos, tecnologia e resultados de negócio. (20 min) Fábio Martins - Fundador e CEO do IGOV.IA." },
-  { time: "15h20", title: "Painel Rede + — Inovação, Startups e o Futuro da IA", desc: "Como a Inteligência Artificial está redefinindo a inovação, impulsionando startups e criando novos modelos de negócio, com a governança como base para um crescimento sustentável, competitivo e responsável. O debate abordará a questão central: criar regras para a IA pode inibir a inovação ou a governança é o que permite às startups e empresas conquistar confiança, atrair investimentos e crescer de forma sustentável? Rodrigo Paolilo - CEO do Grupo Rede Mais, Gabriel Salgado - Executivo de Inovação do Banco do Nordeste." },
+  { time: "15h20", title: "Painel Rede + — Inovação, Startups e o Futuro da IA", desc: "Como a Inteligência Artificial está redefinindo a inovação, impulsionando startups e criando novos modelos de negócio, com a governança como base para um crescimento sustentável, competitivo e responsável. O debate abordará a questão central: criar regras para a IA pode inibir a inovação ou a governança é o que permite às startups e empresas conquistar confiança, atrair investimentos e crescer de forma sustentável? Rodrigo Paolilo - CEO do Grupo Rede Mais, Gabriel Salgado - Executivo de Inovação do Banco do Nordeste, Vicente Aguiar - Consultor de Tecnologia e IA do PNUD." },
   { time: "15h50", title: "Painel Horus CDA — IA Começa pelos Dados: Qualidade, Governança e Inovação", desc: "Como a qualidade e a Governança de Dados sustentam o desenvolvimento de soluções de Inteligência Artificial confiáveis, impulsionando inovação, decisões estratégicas e geração de valor com segurança e responsabilidade. O painel discutirá as diferenças e complementaridades entre Governança de Dados e Governança de IA e como ambas contribuem para a confiabilidade das soluções. Danilo Andrade - Fundador e CEO da Horus CDA, Thales Almeida - Superintendente de Inovação da SAEB, Ricardo Menezes - Gerente de TI da Bahiagás." },
   { time: "16h20", title: "Painel Excellence Consultants — IA no Digital e Entretenimento: Criatividade, Inovação e Governança", desc: "Como a Inteligência Artificial está redefinindo a criação de conteúdo, a experiência do público e os modelos de negócio, exigindo uma governança que equilibre inovação, ética, proteção da propriedade intelectual e confiança no ecossistema digital. Nélio Castro - Especialista em IA, Rede Bahia, Adilson Pize - Excellence Consultants." },
   { time: "16h50", title: "Keynote de Encerramento — Liderando Organizações na Era da IA", desc: "Como executivos, conselheiros e gestores devem preparar suas organizações para um futuro orientado por Inteligência Artificial, inovação e governança, fortalecendo a capacidade de adaptação, a liderança estratégica e a geração sustentável de valor. (40 min) Jaime Gama - Consultor, conselheiro executivo, professor e palestrante, Ex-Executive Partner do Gartner." },
@@ -355,6 +357,12 @@ const speakers = [
     role: "Gerente de TI da Santa Casa da Bahia",
     img: tatyanaUrl,
     bio: "Executiva de tecnologia com mais de 30 anos de experiência nos setores público e privado, une visão técnica e financeira para posicionar a TI como parceira estratégica do negócio. Gerente de TI da Santa Casa da Bahia e Diretora de Conteúdo e Desenvolvimento Profissional da SUCESU BA, lidera pessoas e iniciativas de transformação digital, cibersegurança, modernização tecnológica, governança de dados e inteligência artificial, gerando eficiência, resiliência e valor sustentável. Reconhecida como Líder de Segurança da Informação da Bahia 2025 pelo Security Leaders. MBA em Liderança, Gestão 4.0 e Inovação (PUCRS), formação executiva pela Fundação Dom Cabral, MBA em TI (UNIFACS), pós-graduação em Redes de Computadores (UNIRUY), graduação em Ciências Contábeis (Cairu) e formação em Eletrônica (ETFBA).",
+  },
+  {
+    name: "Vicente Aguiar",
+    role: "Consultor de Tecnologia e IA do PNUD - Programa das Nações Unidas",
+    img: vicenteUrl,
+    bio: "Doutor, Mestre e Bacharel em Administração pela Universidade Federal da Bahia (UFBA). Autor e organizador do livro \"Software Livre, Cultura Hacker e Ecossistema da Colaboração\" pela Editora Momento (SP). Tem mais de 20 anos de experiência em projetos de inovação e tecnologia no Brasil, Argentina, Suíça e Comunidades Globais. Faz parte da comunidade de especialistas do IEL-BA e da Rede +; Consultor de Tecnologia e IA do PNUD, do IBGE e de diversas empresas no Brasil.",
   },
 ];
 
