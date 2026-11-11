@@ -304,5 +304,26 @@ class PanelChangesTest(unittest.TestCase):
         self.assertNotIn('Bacharel em Ciências da Computação pela UFBA', prog)
         self.assertNotIn('featured', idx)
 
+    def test_manuela_rocha_in_speakers(self):
+        src = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        self.assertIn('name: "Manuela Rocha"', src)
+        self.assertIn('Gerente de Recursos Humanos da Petrobahia', src)
+        self.assertIn('img: manuelaUrl', src)
+        self.assertIn('manuela-rocha.jpg.asset.json', src)
+        self.assertIn('Há mais de 15 anos atuando na área de Recursos Humanos em empresas nacionais e multinacionais', src)
+        self.assertIn('Business Partner com perfil generalista', src)
+        self.assertIn('liderança de equipes em excelência operacional', src)
+
+    def test_manuela_rocha_in_painel_philos(self):
+        for route in ('index.tsx', 'programacao.tsx'):
+            with self.subTest(route=route):
+                lines = (ROOT / 'src/routes' / route).read_text().splitlines()
+                panel = [l for l in lines if 'Painel Philos' in l]
+                self.assertEqual(len(panel), 1)
+                self.assertIn('Manuela Rocha', panel[0])
+                self.assertIn('Gerente de Recursos Humanos da Petrobahia', panel[0])
+                self.assertIn('Vitor Igdal', panel[0])
+                self.assertIn('Carlos Eduardo', panel[0])
+
 if __name__ == '__main__':
     unittest.main()
