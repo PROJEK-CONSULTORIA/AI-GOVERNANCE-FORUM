@@ -228,6 +228,27 @@ class PanelChangesTest(unittest.TestCase):
                 self.assertIn('Rodrigo Paolilo', panel[0])
                 self.assertIn('Gabriel Salgado', panel[0])
 
+    def test_edmilson_puridade_in_speakers(self):
+        src = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        self.assertIn('name: "Edmilson Puridade Jr"', src)
+        self.assertIn('COO e cofundador da Ekoa', src)
+        self.assertIn('img: edmilsonUrl', src)
+        self.assertIn('edmilson-puridade.jpg.asset.json', src)
+        self.assertIn('edtech de EHS que une tecnologia e educação', src)
+        self.assertIn('Engenheiro Ambiental de formação, lidera os times de Produto e Tecnologia', src)
+
+    def test_edmilson_puridade_in_painel_rede(self):
+        for route in ('index.tsx', 'programacao.tsx'):
+            with self.subTest(route=route):
+                lines = (ROOT / 'src/routes' / route).read_text().splitlines()
+                panel = [l for l in lines if 'Painel Rede +' in l]
+                self.assertEqual(len(panel), 1)
+                self.assertIn('Edmilson Puridade Jr', panel[0])
+                self.assertIn('COO e cofundador da Ekoa', panel[0])
+                self.assertIn('Vicente Aguiar', panel[0])
+                self.assertIn('Rodrigo Paolilo', panel[0])
+                self.assertIn('Gabriel Salgado', panel[0])
+
     def test_exponencial_is_gold_not_bronze(self):
         src = (ROOT / 'src/routes' / 'index.tsx').read_text()
         self.assertIn('name: "Exponencial"', self.sponsor_block(src, 'title: "Ouro"'))

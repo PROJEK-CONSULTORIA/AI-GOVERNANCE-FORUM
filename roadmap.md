@@ -36,3 +36,4 @@
 - [x] Mover a Exponencial de Patrocinadora Bronze para Patrocinadora Ouro, no mesmo tamanho das demais marcas Ouro; testar e conferir no navegador.
 - [x] Renomear "Painel 8" para "Painel Philos" nas páginas Sobre e Programação; testar e conferir no navegador.
 - [x] Incluir Vicente Aguiar (foto, cargo e descrição) na lista de Palestrantes e no Painel Rede + das duas páginas; testar e conferir no navegador.
+- [x] Incluir Edmilson Puridade Jr (foto, cargo e descrição) na lista de Palestrantes e no Painel Rede + das duas páginas; testar e conferir no navegador.
