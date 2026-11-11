@@ -204,6 +204,30 @@ class PanelChangesTest(unittest.TestCase):
         self.assertIn('Líder de Segurança da Informação da Bahia 2025 pelo Security Leaders',src)
         self.assertIn('MBA em Liderança, Gestão 4.0 e Inovação (PUCRS)',src)
 
+    def test_vicente_aguiar_in_speakers(self):
+        src = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        self.assertIn('name: "Vicente Aguiar"', src)
+        self.assertIn('Consultor de Tecnologia e IA do PNUD - Programa das Nações Unidas', src)
+        self.assertIn('img: vicenteUrl', src)
+        self.assertIn('vicente-aguiar.jpg.asset.json', src)
+        self.assertIn('Doutor, Mestre e Bacharel em Administração pela Universidade Federal da Bahia (UFBA)', src)
+        self.assertIn('Software Livre, Cultura Hacker e Ecossistema da Colaboração', src)
+        self.assertIn('Editora Momento (SP)', src)
+        self.assertIn('mais de 20 anos de experiência em projetos de inovação e tecnologia no Brasil, Argentina', src)
+        self.assertIn('comunidade de especialistas do IEL-BA', src)
+        self.assertIn('Consultor de Tecnologia e IA do PNUD, do IBGE', src)
+
+    def test_vicente_aguiar_in_painel_rede(self):
+        for route in ('index.tsx', 'programacao.tsx'):
+            with self.subTest(route=route):
+                lines = (ROOT / 'src/routes' / route).read_text().splitlines()
+                panel = [l for l in lines if 'Painel Rede +' in l]
+                self.assertEqual(len(panel), 1)
+                self.assertIn('Vicente Aguiar', panel[0])
+                self.assertIn('Consultor de Tecnologia e IA do PNUD', panel[0])
+                self.assertIn('Rodrigo Paolilo', panel[0])
+                self.assertIn('Gabriel Salgado', panel[0])
+
     def test_exponencial_is_gold_not_bronze(self):
         src = (ROOT / 'src/routes' / 'index.tsx').read_text()
         self.assertIn('name: "Exponencial"', self.sponsor_block(src, 'title: "Ouro"'))
