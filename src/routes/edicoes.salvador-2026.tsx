@@ -3,6 +3,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
 import { EdicaoSalvador } from "@/components/EdicaoSalvador";
+import { SiteHeader } from "@/components/site-chrome";
 import logoAsset from "@/assets/logo-dark.png.asset.json";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
 import vitorAsset from "@/assets/vitor-igdal.jpg.asset.json";
@@ -182,14 +183,6 @@ function ContactForm() {
     </form>
   );
 }
-
-const navLinks = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#palestrantes", label: "Palestrantes" },
-  { href: "#local", label: "Local" },
-  { href: "#patrocinadores", label: "Patrocinadores" },
-  { href: "#contato", label: "Contato" },
-];
 
 type ScheduleItem = {
   time: string;
@@ -523,44 +516,10 @@ const sponsorCategories = [
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Top Nav */}
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/60">
-        <div className="mx-auto max-w-7xl px-6 h-44 flex items-center justify-between gap-6">
-          <a href="#top" className="flex items-center gap-3 shrink-0">
-            <img
-              src={logoUrl}
-              alt="AI Governance Forum"
-              className="h-56 w-auto rounded-md"
-            />
-          </a>
-          <nav className="hidden lg:flex items-center gap-8 text-sm">
-            <Link
-              to="/programacao"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Programação
-            </Link>
-            {navLinks.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                {l.label}
-              </a>
-            ))}
-          </nav>
-          <a
-            href="#edicao-salvador"
-            className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition"
-          >
-            Ver como foi
-          </a>
-        </div>
-      </header>
+      <SiteHeader variant="dark" active="edicoes" />
 
       {/* Hero */}
-      <section id="top" className="relative min-h-screen flex items-end lg:items-center pt-44 overflow-hidden">
+      <section id="top" className="relative min-h-screen flex items-end lg:items-center pt-24 overflow-hidden">
         {/* background photo */}
         <div className="absolute inset-0 -z-10">
           <img

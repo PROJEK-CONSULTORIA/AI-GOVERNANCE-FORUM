@@ -1,12 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import logoAsset from "@/assets/logo-dark.png.asset.json";
+import { SiteHeader } from "@/components/site-chrome";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
 import jaimeAsset from "@/assets/jaime-gama.jpg.asset.json";
 import pierreAsset from "@/assets/pierre-muto.png.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 
-const logoUrl = assetUrl(logoAsset.url);
 const fabioUrl = assetUrl(fabioAsset.url);
 const jaimeUrl = assetUrl(jaimeAsset.url);
 const pierreUrl = assetUrl(pierreAsset.url);
@@ -27,8 +26,10 @@ export const Route = createFileRoute("/programacao")({
           "Um dia de imersão executiva em governança de IA, com painéis sobre estratégia, riscos, compliance, ética e inovação.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://ethical-ai-forum.lovable.app/programacao" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://ethical-ai-forum.lovable.app/programacao" }],
   }),
   component: Programacao,
 });
@@ -104,45 +105,10 @@ function Programacao() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Header */}
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/60">
-        <div className="mx-auto max-w-7xl px-6 h-44 flex items-center justify-between gap-6">
-          <Link to="/" className="flex items-center gap-3 shrink-0">
-            <img
-              src={logoUrl}
-              alt="AI Governance Forum"
-              className="h-56 w-auto rounded-md"
-            />
-          </Link>
-          <nav className="hidden lg:flex items-center gap-8 text-sm">
-            <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
-              Início
-            </Link>
-            <Link to="/programacao" className="text-primary font-semibold">
-              Programação
-            </Link>
-            <Link to="/" hash="palestrantes" className="text-muted-foreground hover:text-primary transition-colors">
-              Palestrantes
-            </Link>
-            <Link to="/" hash="local" className="text-muted-foreground hover:text-primary transition-colors">
-              Local
-            </Link>
-            <Link to="/" hash="ingressos" className="text-muted-foreground hover:text-primary transition-colors">
-              Ingressos
-            </Link>
-          </nav>
-          <Link
-            to="/"
-            hash="edicao-salvador"
-            className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition"
-          >
-            Ver como foi
-          </Link>
-        </div>
-      </header>
+      <SiteHeader variant="dark" active="edicoes" />
 
       {/* Hero */}
-      <section className="relative pt-44 pb-16 lg:pb-20 overflow-hidden border-b border-border">
+      <section className="relative pt-24 pb-16 lg:pb-20 overflow-hidden border-b border-border">
         <div className="absolute inset-0 -z-10">
           <img
             src={fabioUrl}
@@ -197,7 +163,7 @@ function Programacao() {
       </section>
 
       {/* Controls */}
-      <section className="sticky top-44 z-40 backdrop-blur-xl bg-background/85 border-b border-border">
+      <section className="sticky top-24 z-40 backdrop-blur-xl bg-background/85 border-b border-border">
         <div className="mx-auto max-w-6xl px-6 py-5 flex flex-wrap items-center justify-between gap-4">
           <div className="inline-flex items-center gap-3 rounded-full border border-border bg-card px-5 py-2">
             <span className="h-2 w-2 rounded-full bg-primary" />
