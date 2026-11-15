@@ -12,9 +12,9 @@ type SiteChromeProps = {
 };
 
 const navItems = [
-  { to: "/", label: "Sobre", section: "sobre" },
-  { to: "/salvador-2027", label: "Salvador 2027", section: "salvador-2027" },
-  { to: "/edicoes/salvador-2026", label: "Edições Anteriores", section: "edicoes" },
+  { to: "/", label: "Sobre", section: "sobre", hash: undefined },
+  { to: "/salvador-2027", label: "Salvador 2027", section: "salvador-2027", hash: undefined },
+  { to: "/edicoes/salvador-2026", label: "Edições Anteriores", section: "edicoes", hash: undefined },
   { to: "/", hash: "contato", label: "Contato", section: "contato" },
 ] as const;
 

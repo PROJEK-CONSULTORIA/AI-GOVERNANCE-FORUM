@@ -96,21 +96,23 @@ const philosUrl = assetUrl(philosAsset.url);
 export const Route = createFileRoute("/edicoes/salvador-2026")({
   head: () => ({
     meta: [
-      { title: "AI Governance Forum — Governança em Inteligência Artificial" },
+      { title: "AI Governance Forum Salvador 2026 — Edições Anteriores" },
       {
         name: "description",
         content:
-          "O AI Governance Forum 2026 aconteceu em 12 de novembro de 2026, em Salvador: encontro executivo sobre Governança de IA — estratégia, riscos, compliance, ética e regulamentação para líderes que conduzem a transformação digital.",
+          "Reveja o AI Governance Forum Salvador 2026: fotos, vídeos, palestrantes, patrocinadores e a programação realizada em 12 de novembro de 2026.",
       },
-      { property: "og:title", content: "AI Governance Forum" },
+      { property: "og:title", content: "AI Governance Forum Salvador 2026 — Edições Anteriores" },
       {
         property: "og:description",
         content:
-          "A edição 2026 do AI Governance Forum reuniu líderes e tomadores de decisão para discutir Governança de Inteligência Artificial. Veja como foi.",
+          "A primeira edição reuniu lideranças e especialistas para discutir Governança de Inteligência Artificial em Salvador. Veja como foi.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://ethical-ai-forum.lovable.app/edicoes/salvador-2026" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://ethical-ai-forum.lovable.app/edicoes/salvador-2026" }],
   }),
   component: Index,
 });
