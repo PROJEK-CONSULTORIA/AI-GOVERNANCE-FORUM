@@ -227,6 +227,9 @@ function SobrePage() {
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Próxima edição</p>
               <h2 className="mt-4 text-4xl font-semibold tracking-[-0.025em] lg:text-5xl">AI Governance Forum Salvador 2027</h2>
+              <p className="mt-3 text-sm font-semibold uppercase tracking-[0.16em] text-primary">
+                23 e 24 de setembro de 2027 · Quality Hotel &amp; Suítes São Salvador, Stiep
+              </p>
               <p className="mt-5 max-w-2xl text-lg leading-relaxed text-background/70">
                 Uma nova oportunidade para aproximar lideranças e avançar na construção de um futuro com IA responsável.
               </p>
