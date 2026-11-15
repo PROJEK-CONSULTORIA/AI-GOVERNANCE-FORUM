@@ -9,55 +9,48 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgramacaoRouteImport } from './routes/programacao'
+import { Route as EdicoesSalvador2026RouteImport } from './routes/edicoes.salvador-2026'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ProgramacaoRoute = ProgramacaoRouteImport.update({
   id: '/programacao',
   path: '/programacao',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EdicoesSalvador2026Route = EdicoesSalvador2026RouteImport.update({
+  id: '/edicoes/salvador-2026',
+  path: '/edicoes/salvador-2026',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
   '/programacao': typeof ProgramacaoRoute
+  '/edicoes/salvador-2026': typeof EdicoesSalvador2026Route
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
   '/programacao': typeof ProgramacaoRoute
+  '/edicoes/salvador-2026': typeof EdicoesSalvador2026Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
   '/programacao': typeof ProgramacaoRoute
+  '/edicoes/salvador-2026': typeof EdicoesSalvador2026Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/programacao'
+  fullPaths: '/programacao' | '/edicoes/salvador-2026'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/programacao'
-  id: '__root__' | '/' | '/programacao'
+  to: '/programacao' | '/edicoes/salvador-2026'
+  id: '__root__' | '/programacao' | '/edicoes/salvador-2026'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
   ProgramacaoRoute: typeof ProgramacaoRoute
+  EdicoesSalvador2026Route: typeof EdicoesSalvador2026Route
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/programacao': {
       id: '/programacao'
       path: '/programacao'
@@ -65,12 +58,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProgramacaoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/edicoes/salvador-2026': {
+      id: '/edicoes/salvador-2026'
+      path: '/edicoes/salvador-2026'
+      fullPath: '/edicoes/salvador-2026'
+      preLoaderRoute: typeof EdicoesSalvador2026RouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
   ProgramacaoRoute: ProgramacaoRoute,
+  EdicoesSalvador2026Route: EdicoesSalvador2026Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

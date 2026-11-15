@@ -92,7 +92,7 @@ const manuelaUrl = assetUrl(manuelaAsset.url);
 const grupoRedeUrl = assetUrl(grupoRedeAsset.url);
 const philosUrl = assetUrl(philosAsset.url);
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/edicoes/salvador-2026")({
   head: () => ({
     meta: [
       { title: "AI Governance Forum — Governança em Inteligência Artificial" },
