@@ -745,7 +745,7 @@ function Index() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Local & Data</p>
             <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Um ambiente colaborativo.</h2>
             <p className="mt-6 text-muted-foreground">
-              O fórum acontece em espaço executivo selecionado, com infraestrutura completa para
+              O fórum aconteceu em espaço executivo selecionado, com infraestrutura completa para
               painéis, networking estratégico e reuniões privativas entre lideranças.
             </p>
             <dl className="mt-8 space-y-5">
@@ -799,9 +799,10 @@ function Index() {
         <div className="relative mx-auto max-w-6xl px-6">
           <div className="text-center max-w-2xl mx-auto">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Ingressos</p>
-            <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Garanta seu lugar.</h2>
+            <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Inscrições encerradas.</h2>
             <p className="mt-4 text-muted-foreground">
-              Vagas limitadas para preservar o caráter executivo do encontro.
+              A edição de 12 de novembro de 2026 teve vagas limitadas para preservar o caráter
+              executivo do encontro.
             </p>
           </div>
 
@@ -830,7 +831,7 @@ function Index() {
                     <span className="text-lg font-medium text-muted-foreground">R$</span>
                     <span className="text-5xl font-extrabold tracking-tighter text-foreground">{t.price}</span>
                   </div>
-                  <p className="mt-1 text-[11px] text-muted-foreground">Pagamento único com acesso imediato</p>
+                  <p className="mt-1 text-[11px] text-muted-foreground">Pagamento único, com acesso à edição</p>
                 </div>
 
                 {/* features */}
@@ -860,7 +861,7 @@ function Index() {
                   rel="noopener noreferrer"
                   className="mt-10 flex w-full items-center justify-center rounded-2xl bg-primary px-6 py-4 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition hover:opacity-90 active:scale-[0.98]"
                 >
-                  Garantir minha vaga
+                  Ver a página do evento no Sympla
                 </a>
 
                 {/* visual accent */}
@@ -874,7 +875,7 @@ function Index() {
           </div>
 
           <p className="mt-8 text-center text-[10px] uppercase tracking-wide text-muted-foreground/70">
-            Vagas limitadas • Ambiente seguro • 12 de novembro de 2026
+            Edição realizada • 12 de novembro de 2026 • Hotel Quality Salvador
           </p>
         </div>
       </section>
@@ -883,10 +884,10 @@ function Index() {
       <section id="patrocinadores" className="py-24 lg:py-32 bg-card/40 border-y border-border">
         <div className="mx-auto max-w-6xl px-6">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Patrocinadores</p>
-          <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Marcas que apoiam a discussão.</h2>
+          <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Marcas que apoiaram a discussão.</h2>
           <p className="mt-4 text-muted-foreground max-w-2xl">
-            Conecte sua marca a um público de decisores qualificados em governança, riscos e
-            inovação.
+            O fórum conectou a marca dos patrocinadores a um público de decisores qualificados em
+            governança, riscos e inovação.
           </p>
 
           <div className="mt-14 space-y-12">
@@ -927,9 +928,10 @@ function Index() {
 
           <div className="mt-12 rounded-3xl border border-primary/40 bg-primary/5 p-8 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div>
-              <h3 className="text-2xl font-bold">Seja patrocinador do AI Governance Forum</h3>
+              <h3 className="text-2xl font-bold">Seja patrocinador da próxima edição</h3>
               <p className="mt-2 text-muted-foreground max-w-xl">
-                Cotas de patrocínio com diferentes níveis de exposição e ativação.
+                Cotas de patrocínio com diferentes níveis de exposição e ativação para o próximo
+                AI Governance Forum.
               </p>
             </div>
             <a
@@ -950,8 +952,8 @@ function Index() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Contato</p>
               <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Fale com a organização.</h2>
               <p className="mt-6 text-muted-foreground">
-                Tire dúvidas sobre inscrições, lotes corporativos, palestras ou oportunidades de
-                patrocínio.
+                Fale com a organização sobre a edição realizada, conteúdos, palestras ou
+                patrocínio para a próxima edição.
               </p>
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
