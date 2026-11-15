@@ -44,3 +44,7 @@
 - [x] Criar a página “AI Governance Forum Salvador 2027” e incluí-la no menu principal.
 - [x] Mover o conteúdo da edição 2026 para “Edições Anteriores”, atualizar a navegação e preservar a programação.
 - [x] Atualizar metadados e testes das novas rotas; 42 testes, compilação e navegação no computador e celular verificados.
+- [ ] Adicionar ao menu principal o botão “AI GOVERNANCE FORUM SALVADOR 2026”.
+- [ ] Criar o banner “Save the Date” com 23 e 24 de setembro de 2027 na página inicial.
+- [ ] Adicionar contagem regressiva em dias, horas e minutos até 23/09/2027 e atualizar a página Salvador 2027.
+- [ ] Testar as datas, os links e a contagem regressiva no computador e no celular.
