@@ -523,7 +523,7 @@ function Index() {
       {/* Hero */}
       <section id="top" className="relative min-h-screen flex items-end lg:items-center pt-24 overflow-hidden">
         {/* background photo */}
-        <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 z-0">
           <img
             src={fabioUrl}
             alt="Fábio Martins, palestrante"
@@ -537,7 +537,7 @@ function Index() {
           />
         </div>
 
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:py-32 w-full">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:py-32 w-full">
           <div className="max-w-2xl">
             <span
               className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-primary"

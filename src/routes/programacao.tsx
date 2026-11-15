@@ -109,7 +109,7 @@ function Programacao() {
 
       {/* Hero */}
       <section className="relative pt-24 pb-16 lg:pb-20 overflow-hidden border-b border-border">
-        <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 z-0">
           <img
             src={fabioUrl}
             alt=""
@@ -122,7 +122,7 @@ function Programacao() {
             style={{ background: "#7AC143" }}
           />
         </div>
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="relative z-10 mx-auto max-w-6xl px-6">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
             Programação · Edição 2026 · Realizada
           </p>
