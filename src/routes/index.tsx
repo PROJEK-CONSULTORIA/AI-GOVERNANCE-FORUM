@@ -1,991 +1,297 @@
-import { createFileRoute, Link, ClientOnly } from "@tanstack/react-router";
-import { useState } from "react";
-import { toast } from "sonner";
-import { z } from "zod";
-import { EdicaoSalvador } from "@/components/EdicaoSalvador";
-import logoAsset from "@/assets/logo-dark.png.asset.json";
-import fabioAsset from "@/assets/fabio-martins.png.asset.json";
-import vitorAsset from "@/assets/vitor-igdal.jpg.asset.json";
-import daniloAsset from "@/assets/danilo-andrade.jpg.asset.json";
-import nelioAsset from "@/assets/nelio-castro.jpg.asset.json";
-import andreaAsset from "@/assets/andrea-campelo.jpg.asset.json";
-import gabanAsset from "@/assets/luis-gaban.jpg.asset.json";
-import mariaAsset from "@/assets/maria-clara-seixas.png.asset.json";
-import adilsonAsset from "@/assets/adilson-pize.png.asset.json";
-import thalesAsset from "@/assets/thales-almeida.png.asset.json";
-import fredSoaresAsset from "@/assets/fred-soares.jpg.asset.json";
-import rodrigoPaoliloAsset from "@/assets/rodrigo-paolilo.jpg.asset.json";
-import francoBahiaAsset from "@/assets/franco-bahia.jpg.asset.json";
-import muriloPlinioAsset from "@/assets/murilo-plinio.png.asset.json";
-import ricardoFontouraAsset from "@/assets/ricardo-fontoura.png.asset.json";
-import marcosRabeloAsset from "@/assets/marcos-rabelo.png.asset.json";
-import adhvanFurtadoAsset from "@/assets/adhvan-furtado.jpeg.asset.json";
-import leandroMagalhaesAsset from "@/assets/leandro-magalhaes.jpeg.asset.json";
-import carlosEduardoAsset from "@/assets/carlos-eduardo.png.asset.json";
-import gabrielSalgadoAsset from "@/assets/gabriel-salgado.jpeg.asset.json";
-import jaimeAsset from "@/assets/jaime-gama.jpg.asset.json";
-import pierreAsset from "@/assets/pierre-muto.png.asset.json";
-import wildsonAsset from "@/assets/wildson-luz.jpg.asset.json";
-import lilianeAsset from "@/assets/liliane-bender.jpg.asset.json";
-import tatyanaAsset from "@/assets/tatyana-souza.jpg.asset.json";
-import vicenteAsset from "@/assets/vicente-aguiar.jpg.asset.json";
-import edmilsonAsset from "@/assets/edmilson-puridade.jpg.asset.json";
-import manuelaAsset from "@/assets/manuela-rocha.jpg.asset.json";
-import igoviaAsset from "@/assets/igovia.png.asset.json";
-import horusAsset from "@/assets/horus.png.asset.json";
-import excellenceAsset from "@/assets/excellence.png.asset.json";
-import tecnoativaAsset from "@/assets/tecnoativa.png.asset.json";
-import chipAsset from "@/assets/chip.png.asset.json";
-import scgovAsset from "@/assets/scgov.png.asset.json";
-import exponencialAsset from "@/assets/exponencial.png.asset.json";
-import xtrqAsset from "@/assets/xtrq-white.png.asset.json";
-import pmibaAsset from "@/assets/pmiba.png.asset.json";
-import solutisAsset from "@/assets/solutis.jpg.asset.json";
-import agTaxTechAsset from "@/assets/ag-taxtech-white.png.asset.json";
-import mongodbAsset from "@/assets/mongodb-white.png.asset.json";
-import semantixAsset from "@/assets/semantix-white.png.asset.json";
-import grupoRedeAsset from "@/assets/grupo-rede-white.png.asset.json";
-import philosAsset from "@/assets/philos-white.png.asset.json";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  BrainCircuit,
+  Mail,
+  Network,
+  PanelsTopLeft,
+  Phone,
+  Rocket,
+  Scale,
+  UsersRound,
+} from "lucide-react";
+import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+import publicoAsset from "@/assets/salvador-2026-publico.jpg.asset.json";
+import logoLight from "@/assets/logo-horizontal-light.png";
 import { assetUrl } from "@/lib/asset-url";
 
-const logoUrl = assetUrl(logoAsset.url);
-const fabioUrl = assetUrl(fabioAsset.url);
-const vitorUrl = assetUrl(vitorAsset.url);
-const daniloUrl = assetUrl(daniloAsset.url);
-const nelioUrl = assetUrl(nelioAsset.url);
-const andreaUrl = assetUrl(andreaAsset.url);
-const gabanUrl = assetUrl(gabanAsset.url);
-const mariaUrl = assetUrl(mariaAsset.url);
-const adilsonUrl = assetUrl(adilsonAsset.url);
-const thalesUrl = assetUrl(thalesAsset.url);
-const fredSoaresUrl = assetUrl(fredSoaresAsset.url);
-const rodrigoPaoliloUrl = assetUrl(rodrigoPaoliloAsset.url);
-const francoBahiaUrl = assetUrl(francoBahiaAsset.url);
-const muriloPlinioUrl = assetUrl(muriloPlinioAsset.url);
-const ricardoFontouraUrl = assetUrl(ricardoFontouraAsset.url);
-const marcosRabeloUrl = assetUrl(marcosRabeloAsset.url);
-const adhvanFurtadoUrl = assetUrl(adhvanFurtadoAsset.url);
-const leandroMagalhaesUrl = assetUrl(leandroMagalhaesAsset.url);
-const carlosEduardoUrl = assetUrl(carlosEduardoAsset.url);
-const gabrielSalgadoUrl = assetUrl(gabrielSalgadoAsset.url);
-const jaimeUrl = assetUrl(jaimeAsset.url);
-const pierreUrl = assetUrl(pierreAsset.url);
-const wildsonUrl = assetUrl(wildsonAsset.url);
-const igoviaUrl = assetUrl(igoviaAsset.url);
-const horusUrl = assetUrl(horusAsset.url);
-const excellenceUrl = assetUrl(excellenceAsset.url);
-const tecnoativaUrl = assetUrl(tecnoativaAsset.url);
-const chipUrl = assetUrl(chipAsset.url);
-const scgovUrl = assetUrl(scgovAsset.url);
-const exponencialUrl = assetUrl(exponencialAsset.url);
-const xtrqUrl = assetUrl(xtrqAsset.url);
-const pmibaUrl = assetUrl(pmibaAsset.url);
-const solutisUrl = assetUrl(solutisAsset.url);
-const agTaxTechUrl = assetUrl(agTaxTechAsset.url);
-const mongodbUrl = assetUrl(mongodbAsset.url);
-const semantixUrl = assetUrl(semantixAsset.url);
-const lilianeUrl = assetUrl(lilianeAsset.url);
-const tatyanaUrl = assetUrl(tatyanaAsset.url);
-const vicenteUrl = assetUrl(vicenteAsset.url);
-const edmilsonUrl = assetUrl(edmilsonAsset.url);
-const manuelaUrl = assetUrl(manuelaAsset.url);
-const grupoRedeUrl = assetUrl(grupoRedeAsset.url);
-const philosUrl = assetUrl(philosAsset.url);
+const publicoUrl = assetUrl(publicoAsset.url);
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AI Governance Forum — Governança em Inteligência Artificial" },
+      { title: "Sobre — AI Governance Forum" },
       {
         name: "description",
         content:
-          "O AI Governance Forum 2026 aconteceu em 12 de novembro de 2026, em Salvador: encontro executivo sobre Governança de IA — estratégia, riscos, compliance, ética e regulamentação para líderes que conduzem a transformação digital.",
+          "Conheça o AI Governance Forum: um fórum que conecta lideranças para discutir estratégia, responsabilidade, inovação e o futuro da Inteligência Artificial.",
       },
-      { property: "og:title", content: "AI Governance Forum" },
+      { property: "og:title", content: "Sobre — AI Governance Forum" },
       {
         property: "og:description",
         content:
-          "A edição 2026 do AI Governance Forum reuniu líderes e tomadores de decisão para discutir Governança de Inteligência Artificial. Veja como foi.",
+          "Governança, inteligência, conexão e futuro: conheça o propósito do AI Governance Forum e suas edições em Salvador.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://ethical-ai-forum.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://ethical-ai-forum.lovable.app/" }],
   }),
-  component: Index,
+  component: SobrePage,
 });
 
-const BRAND_GREEN = "#7AC143";
+const pillars = [
+  {
+    icon: Scale,
+    title: "Governança",
+    text: "Responsabilidade, direção, controle e tomada de decisão no uso da Inteligência Artificial.",
+  },
+  {
+    icon: BrainCircuit,
+    title: "Inteligência",
+    text: "Conhecimento, análise, tecnologia e capacidade de antecipação para orientar escolhas organizacionais.",
+  },
+  {
+    icon: Network,
+    title: "Conexão",
+    text: "O encontro entre empresas, instituições públicas, especialistas, reguladores e lideranças.",
+  },
+  {
+    icon: Rocket,
+    title: "Futuro",
+    text: "Preparação para uma economia cada vez mais impactada pela Inteligência Artificial.",
+  },
+];
 
-const contactSchema = z.object({
-  name: z.string().trim().min(1, "Informe seu nome").max(100),
-  email: z.string().trim().email("E-mail inválido").max(255),
-  subject: z.string().trim().min(1, "Informe o assunto").max(150),
-  message: z.string().trim().min(1, "Escreva sua mensagem").max(1000),
-});
+const audiences = [
+  "Presidentes, conselheiros e executivos",
+  "Gestores públicos e privados",
+  "Profissionais de tecnologia, dados e inovação",
+  "Especialistas em riscos, compliance e direito",
+  "Reguladores, pesquisadores e instituições",
+  "Empreendedores e líderes de transformação digital",
+];
 
-function ContactForm() {
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
-  const [submitting, setSubmitting] = useState(false);
-
-  function update<K extends keyof typeof form>(key: K, value: string) {
-    setForm((f) => ({ ...f, [key]: value }));
-  }
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    const result = contactSchema.safeParse(form);
-    if (!result.success) {
-      toast.error(result.error.issues[0]?.message ?? "Verifique os campos");
-      return;
-    }
-    setSubmitting(true);
-    const { name, email, subject, message } = result.data;
-    const body = `Nome: ${name}%0AE-mail: ${email}%0A%0A${encodeURIComponent(message)}`;
-    window.location.href = `mailto:fabio.martins@igovia.com.br?subject=${encodeURIComponent(
-      subject,
-    )}&body=${body}`;
-    toast.success("Abrindo seu cliente de e-mail…");
-    setForm({ name: "", email: "", subject: "", message: "" });
-    setSubmitting(false);
-  }
-
-  const inputCls =
-    "mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 outline-none focus:border-primary";
-
+function SobrePage() {
   return (
-    <form onSubmit={handleSubmit} className="rounded-3xl border border-border bg-card p-6 lg:p-8 space-y-4">
-      <div>
-        <label htmlFor="cf-name" className="text-xs uppercase tracking-wider text-muted-foreground">Nome</label>
-        <input id="cf-name" className={inputCls} placeholder="Seu nome" maxLength={100}
-          value={form.name} onChange={(e) => update("name", e.target.value)} />
-      </div>
-      <div>
-        <label htmlFor="cf-email" className="text-xs uppercase tracking-wider text-muted-foreground">E-mail</label>
-        <input id="cf-email" type="email" className={inputCls} placeholder="voce@empresa.com" maxLength={255}
-          value={form.email} onChange={(e) => update("email", e.target.value)} />
-      </div>
-      <div>
-        <label htmlFor="cf-subject" className="text-xs uppercase tracking-wider text-muted-foreground">Assunto</label>
-        <input id="cf-subject" className={inputCls} placeholder="Qual o tema do seu contato?" maxLength={150}
-          value={form.subject} onChange={(e) => update("subject", e.target.value)} />
-      </div>
-      <div>
-        <label htmlFor="cf-message" className="text-xs uppercase tracking-wider text-muted-foreground">Mensagem</label>
-        <textarea id="cf-message" rows={4} maxLength={1000}
-          className={`${inputCls} resize-none`} placeholder="Como podemos ajudar?"
-          value={form.message} onChange={(e) => update("message", e.target.value)} />
-      </div>
-      <button type="submit" disabled={submitting}
-        className="w-full rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold hover:opacity-90 transition disabled:opacity-60">
-        {submitting ? "Enviando…" : "Enviar mensagem"}
-      </button>
-    </form>
-  );
-}
+    <div className="light-theme min-h-screen bg-background text-foreground">
+      <SiteHeader variant="light" active="sobre" />
 
-const navLinks = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#palestrantes", label: "Palestrantes" },
-  { href: "#local", label: "Local" },
-  { href: "#patrocinadores", label: "Patrocinadores" },
-  { href: "#contato", label: "Contato" },
-];
-
-type ScheduleItem = {
-  time: string;
-  title: string;
-  desc: string;
-};
-
-const schedule: ScheduleItem[] = [
-  { time: "08h00", title: "Credenciamento", desc: "Recepção dos participantes, networking e visita aos estandes dos patrocinadores." },
-  { time: "08h30", title: "Cerimônia de Abertura", desc: "Boas-vindas aos participantes, apresentação dos objetivos do AI Governance Forum e contextualização da importância estratégica da Governança de Inteligência Artificial para organizações públicas e privadas. Fábio Martins - Fundador e CEO do IGOV.IA." },
-  { time: "08h50", title: "Palestra Magna — Semantix AI Enterprise: Governança, Segurança e Inteligência Artificial em Escala Empresarial", desc: "Como transformar a Governança de Inteligência Artificial em uma vantagem estratégica para os negócios, conectando tecnologia, gestão de riscos, conformidade regulatória e inovação responsável. Pierre Muto - Semantix." },
-  { time: "09h20", title: "Painel CHIP — Indústria Inteligente: Pessoas, Dados e Inteligência Artificial", desc: "Como estruturar a governança da Inteligência Artificial para aumentar a produtividade, otimizar operações, fortalecer a gestão de riscos e impulsionar a competitividade industrial com segurança e responsabilidade. Murilo Plínio - Gerente de Tecnologia, SENAI/CIMATEC, Adhvan Furtado - BULL, Marcos Rabelo - CHIP." },
-  { time: "09h50", title: "Tech Talk PMI-BA — PMI-CPMAI: Certificação Profissional em Gestão de Inteligência Artificial e Inovação", desc: "Apresentação da certificação PMI-CPMAI (Cognitive Project Management in AI), voltada à gestão de projetos de Inteligência Artificial e baseada na metodologia CPMAI, incorporada ao PMI a partir da aquisição da Cognilytica. A palestra abordou a importância de uma abordagem estruturada para planejar, desenvolver e implementar projetos de IA, conectando gestão de projetos, dados, objetivos de negócio e entrega de valor. (10 min) José Carlos Prates - PMI-BA." },
-  { time: "10h00", title: "Painel Solutis — Justiça, Ética e Regulação da IA: Direitos Fundamentais, Responsabilidade e Segurança Jurídica", desc: "Como o sistema de Justiça, a Defensoria Pública e a advocacia podem enfrentar os desafios do marco regulatório da Inteligência Artificial, conciliando inovação, ética, transparência, proteção de dados, gestão de riscos e preservação dos direitos fundamentais. O painel discutiu a responsabilização pelo uso da IA, os desafios de conformidade e os impactos da regulação no acesso à Justiça e na proteção dos cidadãos. Profa. Maria Clara Seixas - 4S Advogados, Dr. Franco Bahia - Defensoria Pública do Estado da Bahia (DPE/BA), Liliane Moura Bender - Diretora de Public Sector da Solutis." },
-  { time: "10h30", title: "Painel Exponencial — Governança de IA para Cidades e Estados Inteligentes: Inovação com Responsabilidade", desc: "Como utilizar a Inteligência Artificial para tornar cidades e estados mais eficientes, sustentáveis e centrados no cidadão, com governança, transparência, segurança, gestão de dados e decisões orientadas por evidências. Luis Henrique de Magalhães Gaban - SEMIT/Prefeitura de Salvador, Ricardo Fontoura - CIO, DETRAN-BA, Fred Soares - CEO da Exponencial Consultoria." },
-  { time: "11h00", title: "Painel Tecnoativa — Cibersegurança e Governança de IA: Desafios para Organizações Inteligentes", desc: "Como proteger dados, modelos e sistemas de IA por meio da governança, gestão de riscos, conformidade e cibersegurança, garantindo inovação com confiança e resiliência. Andréa Campelo - Fundadora e CEO da TecnoAtiva, Leandro Magalhães - Gerente de TI da EMBASA, Tatyana Souza - Gerente de TI da Santa Casa da Bahia." },
-  { time: "11h30", title: "Almoço & Networking", desc: "Relacionamento entre participantes, palestrantes, patrocinadores e lideranças do ecossistema de inovação." },
-  { time: "14h00", title: "Painel Philos — A IA e o Futuro do Trabalho: Pessoas, Comunidades e Culturas", desc: "O painel discutiu como a Inteligência Artificial transforma a gestão de pessoas, a cultura organizacional e as competências do futuro, e a governança necessária para promover inovação, desenvolvimento humano e liderança responsável. Vitor Igdal - Presidente da ABRH-BA, Carlos Eduardo - Gerente Nacional do Jurídico de Direito do Trabalho da Petrobras, Manuela Rocha - Gerente de Recursos Humanos da Petrobahia." },
-  { time: "14h30", title: "Tech Talk: Certificação ISO/IEC 42001 — Como Estruturar um Sistema de Gestão de Inteligência Artificial nas Organizações", desc: "Apresentação da norma internacional ISO/IEC 42001, que estabelece requisitos para sistemas de gestão de Inteligência Artificial. Instituto de Governança em Inteligência Artificial - (10 min) Fábio Martins - Palestrante." },
-  { time: "14h40", title: "Tech Talk MongoDB — Ferramentas Tecnológicas para a Governança de Inteligência Artificial", desc: "Ferramentas e recursos tecnológicos para apoiar a construção de aplicações de IA confiáveis, com destaque para dados, arquitetura, integração, segurança e escalabilidade. (10 min) Wildson Luz - Senior Enterprise Account Executive na MongoDB" },
-  { time: "14h50", title: "Palestra: Governança de Inteligência Artificial — As 10 Dimensões da Jornada de Adoção Tecnológica", desc: "Apresentação da metodologia IGOV.IA e de suas dez dimensões. A palestra demonstrou como organizar a adoção tecnológica de forma estruturada, conectando estratégia, pessoas, dados, riscos, tecnologia e resultados de negócio. (20 min) Fábio Martins - Fundador e CEO do IGOV.IA." },
-  { time: "15h20", title: "Painel Rede + — Inovação, Startups e o Futuro da IA", desc: "Como a Inteligência Artificial redefine a inovação, impulsiona startups e cria novos modelos de negócio, com a governança como base para um crescimento sustentável, competitivo e responsável. O debate abordou a questão central: criar regras para a IA pode inibir a inovação ou a governança é o que permite às startups e empresas conquistar confiança, atrair investimentos e crescer de forma sustentável? Rodrigo Paolilo - CEO do Grupo Rede Mais, Gabriel Salgado - Executivo de Inovação do Banco do Nordeste, Vicente Aguiar - Consultor de Tecnologia e IA do PNUD, Edmilson Puridade Jr - COO e cofundador da Ekoa." },
-  { time: "15h50", title: "Painel Horus CDA — IA Começa pelos Dados: Qualidade, Governança e Inovação", desc: "Como a qualidade e a Governança de Dados sustentam o desenvolvimento de soluções de Inteligência Artificial confiáveis, impulsionando inovação, decisões estratégicas e geração de valor com segurança e responsabilidade. O painel discutiu as diferenças e complementaridades entre Governança de Dados e Governança de IA e como ambas contribuem para a confiabilidade das soluções. Danilo Andrade - Fundador e CEO da Horus CDA, Thales Almeida - Superintendente de Inovação da SAEB, Ricardo Menezes - Gerente de TI da Bahiagás." },
-  { time: "16h20", title: "Painel Excellence Consultants — IA no Digital e Entretenimento: Criatividade, Inovação e Governança", desc: "Como a Inteligência Artificial redefine a criação de conteúdo, a experiência do público e os modelos de negócio, e a governança necessária para equilibrar inovação, ética, proteção da propriedade intelectual e confiança no ecossistema digital. Nélio Castro - Especialista em IA, Rede Bahia, Adilson Pize - Excellence Consultants." },
-  { time: "16h50", title: "Keynote de Encerramento — Liderando Organizações na Era da IA", desc: "Como executivos, conselheiros e gestores devem preparar suas organizações para um futuro orientado por Inteligência Artificial, inovação e governança, fortalecendo a capacidade de adaptação, a liderança estratégica e a geração sustentável de valor. (40 min) Jaime Gama - Consultor, conselheiro executivo, professor e palestrante, Ex-Executive Partner do Gartner." },
-  { time: "17h20", title: "Encerramento Oficial", desc: "Síntese dos principais aprendizados, agradecimentos aos participantes, palestrantes e patrocinadores e convite para a próxima edição do AI Governance Forum." },
-];
-
-const speakers = [
-  {
-    name: "Fábio Martins",
-    role: "Keynote Speaker — Founder do IGOV.IA - Instituto de Governança em Inteligência Artificial",
-    img: fabioUrl,
-    bio: "Founder do IGOV.IA - Instituto de Governança em Inteligência Artificial, Head de IA, executivo, escritor, consultor, professor e palestrante, autor dos livros Governança em Inteligência Artificial: as 10 dimensões da jornada de adoção tecnológica e Inteligência Artificial: Os Desafios do Mundo Exponencial. Graduado em Ciência da Computação e Ciências Contábeis, especialista em Gestão de Projetos, Mestre em Administração Estratégica e Doutorando em Modelagem Computacional e Tecnologia Industrial. Possui mais de 30 anos de experiência em projetos de alta complexidade nos setores público e privado, liderando equipes de alta performance.",
-  },
-  {
-    name: "Vitor Igdal",
-    role: "Co-Fundador da Philos e Presidente da ABRH Bahia",
-    img: vitorUrl,
-    bio: "Especialista em Cultura Organizacional, Gestão de Comunidades e Conexões Estratégicas, Vitor Igdal é cofundador da Philos e Presidente da ABRH Bahia. Atua no desenvolvimento de lideranças, fortalecimento da cultura organizacional, engajamento de pessoas e construção de ecossistemas colaborativos que impulsionam inovação e resultados. É TEDx Speaker, palestrante e referência em estratégias para conectar pessoas, organizações e comunidades por meio de relações de confiança e propósito.",
-  },
-  {
-    name: "Danilo Andrade",
-    role: "Fundador e CEO da Horus CDA",
-    img: daniloUrl,
-    bio: "Fundador e CEO da Horus CDA e especialista em tecnologia, inovação e ciência de dados, com atuação voltada à transformação digital e ao uso estratégico de dados para tomada de decisão. Integra a liderança da Horus CDA, contribuindo para soluções em analytics, inteligência artificial e modernização de processos em organizações públicas e privadas. Formado em Ciência da Computação, com especializações em gestão empresarial e estatística, atua também na disseminação de conhecimento e no fortalecimento do ecossistema de tecnologia na Bahia.",
-  },
-  {
-    name: "Nélio Castro",
-    role: "Especialista em IA - Rede Bahia",
-    img: nelioUrl,
-    bio: "Especialista em IA na Rede Bahia. Com 30 anos de experiência em tecnologia e inovação e passagens por startups de destaque como JusBrasil e Agilize, Nélio lidera o desenvolvimento de produtos e projetos estratégicos que transformam ideias em soluções digitais de sucesso através de dados e IA.",
-  },
-  {
-    name: "Andréa Campelo",
-    role: "Fundadora e CEO da TecnoAtiva",
-    img: andreaUrl,
-    bio: "Fundadora e CEO da TecnoAtiva, conceituada empresa especializada em segurança cibernética e resiliência digital sediada em Salvador, Bahia. Com mais de 25 anos de atuação consolidada no mercado, é uma das principais lideranças e referências técnicas em segurança da informação na região Nordeste.",
-  },
-  {
-    name: "Luis Henrique de Magalhães Gaban",
-    role: "Diretor de Inovação de TIC da SEMIT — Prefeitura de Salvador",
-    img: gabanUrl,
-    bio: "Diretor de Inovação de TIC da Secretaria Municipal de Inovação e Tecnologia (SEMIT) da Prefeitura de Salvador, onde lidera iniciativas de transformação digital, cidades inteligentes e modernização dos serviços públicos. Formado em Direito, é membro da Câmara de Inovação e Tecnologia da Fecomércio Bahia e possui formação executiva em Liderança em Inovação pela Universidade de Tel Aviv, Governança e Inovação Pública para Líderes da América Latina e Caribe pela FGV e Master em Digital Manager e Metaverso pelo Ibmec. Destaca-se por sua atuação no fortalecimento do ecossistema de inovação, promovendo projetos de inclusão digital, desburocratização de serviços públicos e capacitação tecnológica.",
-  },
-  {
-    name: "Maria Clara Seixas",
-    role: "Sócia do 4S Advogados — Compliance, Riscos, Proteção de Dados e Direito Digital",
-    img: mariaUrl,
-    bio: "Sócia do 4S Advogados, responsável pela atuação nas áreas de Compliance, Riscos, Proteção de Dados, Societária e M&A. Possui ampla experiência com direito corporativo e consultoria jurídica para projetos empresariais, adequações de LGPD, elaboração contratual e planejamentos societários, com uma atuação legal estratégica, em negociação e advocacia preventiva. Premiada nas últimas edições do anuário Análise-500 e Análise-Advogadas Mais Admiradas, em 4 diferentes categorias, entre elas nas categorias nacionais de Compliance e Direito Digital.",
-  },
-  {
-    name: "Adilson Pize",
-    role: "CEO e consultor da Excellence Consultants",
-    img: adilsonUrl,
-    bio: "CEO da Excellence Consultants, professor, escritor e palestrante, com mais de 30 anos de experiência em governança, gestão e tecnologia da informação. Especialista em PMOs, planejamento estratégico, governança corporativa, inovação e IA. Autor de livros sobre gestão e possui certificações internacionais.",
-  },
-  {
-    name: "Fred Soares",
-    role: "Fundador e CEO da Exponencial Consultoria e Tecnologia",
-    img: fredSoaresUrl,
-    bio: "É CEO e fundador da Exponencial Consultoria e Tecnologia, empresa especializada em Inteligência Artificial aplicada ao setor público. Mestre em Administração, especialista em Planejamento e Gestão Estratégica e em Tecnologia da Informação, além de graduado em Processamento de Dados. Possui mais de 23 anos de experiência na administração pública, com atuação em instituições como Ministério Público da Bahia (MPBA), PRODEB, Secretaria da Fazenda da Bahia (SEFAZ) e Secretaria do Planejamento da Bahia (SEPLAN), liderando iniciativas de transformação digital, inovação e modernização da gestão pública. Atualmente, conduz projetos de IA para órgãos de governo e do sistema de Justiça, desenvolvendo soluções que tornam processos mais inteligentes, ágeis e eficientes. É palestrante e empreendedor, com atuação destacada em tecnologia, inteligência artificial, governança e inovação.",
-  },
-  {
-    name: "Rodrigo Paolilo",
-    role: "Co-fundador e CEO do Grupo Rede+",
-    img: rodrigoPaoliloUrl,
-    bio: "Referência no ecossistema de empreendedorismo e inovação brasileiro com atuação há mais de 20 anos, Rodrigo Paolilo é Co-fundador e CEO do Grupo Rede+ e Presidente do Instituto Inova+. Foi líder do Founder Institute no Nordeste, da Anjos do Brasil na Bahia e Coordenador da Câmara de Inovação e da Fecomércio-BA. Atuou como Presidente da Confederação Nacional de Jovens Empresários (CONAJE) e da Junior Achievement Bahia (JABAHIA), foi co-fundador e líder na Brasil Júnior e de vários outros movimentos de empreendedorismo jovem. Mentor, Consultor e Palestrante, possui atuação global e empreende e investe em startups.",
-  },
-  {
-    name: "Franco Bahia",
-    role: "Diretor-Geral e membro da Comissão Permanente de Tecnologia e Inovação da DPE/BA",
-    img: francoBahiaUrl,
-    bio: "Atual Diretor-Geral da Defensoria Pública do Estado da Bahia (DPE-BA). Formado pela Universidade Federal da Bahia (UFBA), sua carreira no serviço público inclui passagens de destaque como Secretário-Geral da Presidência e Diretor Geral do Tribunal de Justiça do Estado da Bahia (TJBA).",
-  },
-  {
-    name: "Murilo Plínio",
-    role: "Gerente de Tecnologia - SENAI/CIMATEC",
-    img: muriloPlinioUrl,
-    bio: "Gerente de Tecnologia liderando iniciativas de PD&I e a formação de competências em Inteligência Artificial e Engenharia de Software. Engenheiro de Automação, mestre em Mecatrônica e doutorando em IA, atua na criação de soluções que conectam educação, ciência, tecnologia, inovação e negócios para impulsionar a competitividade da indústria e gerar impacto para a sociedade.",
-  },
-  {
-    name: "Thales Almeida",
-    role: "Superintendente de Gestão e Inovação da SAEB — Secretaria de Administração do Estado da Bahia",
-    img: thalesUrl,
-    bio: "Lidera iniciativas de modernização da gestão pública e transformação digital. Possui ampla experiência em gestão de tecnologia da informação, governança de TIC, gestão de pessoas e contratos de tecnologia, atuando na implementação de modelos inovadores de gestão, segurança da informação, automação com Inteligência Artificial (IA) e RPA. Sua atuação é voltada ao alinhamento entre tecnologia, estratégia e inovação, promovendo maior eficiência, governança e geração de valor para a administração pública.",
-  },
-  {
-    name: "Ricardo Fontoura",
-    role: "CIO do DETRAN-BA",
-    img: ricardoFontouraUrl,
-    bio: "Especialista em Governança de TI, Transformação Digital e Gestão de Projetos Estratégicos e Mestre em Ciência da Informação. Com sólida trajetória na liderança de iniciativas de modernização tecnológica no setor público, possui ampla experiência em computação em nuvem, segurança da informação, governança de dados, inteligência artificial, LGPD e governo digital. Ao longo de sua carreira, tem conduzido projetos de inovação, integração de plataformas e melhoria dos serviços públicos, consolidando-se como uma das principais referências em tecnologia e transformação digital na administração pública baiana.",
-  },
-  {
-    name: "Marcos Rabelo",
-    role: "CEO — CHIP",
-    img: marcosRabeloUrl,
-    bio: "Executivo com mais de 20 anos de experiência no setor de tecnologia e gestão empresarial, atuando na liderança de organizações, transformação digital e desenvolvimento de negócios. Graduado em Sistemas de Informação, possui MBA em Gestão Empresarial, Mestrado em Administração de Empresas e formação complementar em diversas áreas de liderança e gestão. Atualmente é CEO da CHIP, empresa com quase três décadas de atuação no mercado de tecnologia, onde lidera a estratégia de crescimento sustentável, inovação e governança, promovendo a geração de valor para clientes, parceiros, colaboradores e acionistas, sempre pautado pelos princípios de ética, compliance e excelência na gestão.",
-  },
-  {
-    name: "Adhvan Furtado",
-    role: "Diretor Comercial para América do Sul — BULL",
-    img: adhvanFurtadoUrl,
-    bio: "Responsável por implementar estratégias de vendas para as soluções de Inteligência Artificial, HPC e Computação Avançada. Possui doutorado em modelagem computacional e tecnologias industriais pelo SENAI CIMATEC e mestrado em arquitetura de computadores e computação de alto desempenho pela Universidad Autonoma de Barcelona. Foi diretor superintendente do Sebrae Bahia e responsável pela implantação do Centro de Supercomputação e Inovação Industrial do Senai Cimatec.",
-  },
-  {
-    name: "Leandro Magalhães",
-    role: "Gerente de TI — EMBASA",
-    img: leandroMagalhaesUrl,
-    bio: "Graduado em Análise de Sistemas pela UNEB, pós-graduado em Gestão Pública pela UNIVASF e possui MBA Executivo em Gestão Empresarial pela FGV. Atua há mais de 20 anos na área de Tecnologia da Informação, com ampla experiência em gestão de tecnologia, transformação digital, governança de TI e administração pública. Na Embasa desde 2010, ocupa atualmente a Gerência de Tecnologia da Informação e Comunicação, após liderar áreas estratégicas como ERP Corporativo e Sistemas Corporativos. Sua atuação é marcada pela condução de iniciativas de inovação, modernização tecnológica e geração de valor para as organizações. Acredita que a tecnologia deve estar a serviço da transformação dos negócios, do desenvolvimento humano, da sustentabilidade e da inclusão.",
-  },
-  {
-    name: "Carlos Eduardo",
-    role: "Gerente Nacional do Jurídico de Direito do Trabalho da Petrobras",
-    img: carlosEduardoUrl,
-    bio: "Com 28 anos de experiência na advocacia empresarial nos setores de energia e corporativo. É especialista na gestão de grandes carteiras processuais e na condução de demandas de alta complexidade e relevância econômica e estratégica.",
-  },
-  {
-    name: "Gabriel Salgado",
-    role: "Gerente Executivo do Hub de Inovação — Banco do Nordeste",
-    img: gabrielSalgadoUrl,
-    bio: "Formado em Comunicação Social com habilitação em Publicidade e Propaganda, com especialização em Gestão do Desenvolvimento Territorial (CIAGS/UFBA), MBA em Gestão Empresarial Internacional (FGV & Ohio University) e mestrado em Cultura e Desenvolvimento (IHAC/UFBA), com área de estudo em Políticas de Financiamento à Cultura e Economia Criativa. Trabalha no Banco do Nordeste desde 2002 e já atuou como Gestor de Agência do BNB, nas áreas de Marketing, Assessoria de Comunicação, Gestão da Cultura e de Políticas para o Desenvolvimento na mesma instituição financeira.",
-  },
-  {
-    name: "Jaime Gama",
-    role: "Consultor, conselheiro executivo, professor e palestrante — Ex-Executive Partner do Gartner",
-    img: jaimeUrl,
-    bio: "Consultor, conselheiro executivo, professor e palestrante, com mais de 40 anos de experiência em tecnologia e negócios. Ex-Executive Partner do Gartner, possui formação multidisciplinar e atuação nacional e internacional em diversos setores.",
-  },
-  {
-    name: "Pierre Muto",
-    role: "Diretor Comercial de Produtos da Semantix",
-    img: pierreUrl,
-    bio: "Trabalha há mais de 25 anos com vendas e go-to-market de tecnologia B2B enterprise e hoje é Diretor Comercial de Produtos da Semantix. Líder da estratégia de go-to-market da plataforma de agentes de IA e da integração comercial pós-aquisição. Une profundidade técnica em IA, dados, cloud e ERP à experiência em vendas complexas com C-level.",
-  },
-  {
-    name: "Wildson Luz",
-    role: "Senior Enterprise Account Executive na MongoDB",
-    img: wildsonUrl,
-    bio: "Senior Enterprise Account Executive na MongoDB, atuando no desenvolvimento de negócios para o setor público no Brasil. Com mais de 20 anos de experiência em soluções de TI e setor público, apoia organizações no entendimento e resolução de seus desafios, e na expansão de seus negócios por meio da tecnologia.",
-  },
-  {
-    name: "Liliane Moura Bender",
-    role: "Diretora de Public Sector da Solutis",
-    img: lilianeUrl,
-    bio: "Bacharel em Ciências da Computação pela UFBA e especialista em Consultoria de TI pela Unifacs, possui ampla experiência em gestão executiva, estratégia e operações no setor de tecnologia. Atuou como Diretora de Operações da Vertical Telecom na UNITEC e na CPM Braxis, liderando grandes contratos, equipes e operações de serviços de TI. Foi Executiva de Clientes Sênior na CPM Braxis, com responsabilidade por resultados e vendas para grandes empresas de telecomunicações, como Brasil Telecom, Vivo e Claro. Atualmente, atua como Diretora de Public Sector na Solutis, contribuindo para o desenvolvimento de negócios e soluções tecnológicas para o setor público."
-  },
-  {
-    name: "Tatyana Souza",
-    role: "Gerente de TI da Santa Casa da Bahia",
-    img: tatyanaUrl,
-    bio: "Executiva de tecnologia com mais de 30 anos de experiência nos setores público e privado, une visão técnica e financeira para posicionar a TI como parceira estratégica do negócio. Gerente de TI da Santa Casa da Bahia e Diretora de Conteúdo e Desenvolvimento Profissional da SUCESU BA, lidera pessoas e iniciativas de transformação digital, cibersegurança, modernização tecnológica, governança de dados e inteligência artificial, gerando eficiência, resiliência e valor sustentável. Reconhecida como Líder de Segurança da Informação da Bahia 2025 pelo Security Leaders. MBA em Liderança, Gestão 4.0 e Inovação (PUCRS), formação executiva pela Fundação Dom Cabral, MBA em TI (UNIFACS), pós-graduação em Redes de Computadores (UNIRUY), graduação em Ciências Contábeis (Cairu) e formação em Eletrônica (ETFBA).",
-  },
-  {
-    name: "Vicente Aguiar",
-    role: "Consultor de Tecnologia e IA do PNUD - Programa das Nações Unidas",
-    img: vicenteUrl,
-    bio: "Doutor, Mestre e Bacharel em Administração pela Universidade Federal da Bahia (UFBA). Autor e organizador do livro \"Software Livre, Cultura Hacker e Ecossistema da Colaboração\" pela Editora Momento (SP). Tem mais de 20 anos de experiência em projetos de inovação e tecnologia no Brasil, Argentina, Suíça e Comunidades Globais. Faz parte da comunidade de especialistas do IEL-BA e da Rede +; Consultor de Tecnologia e IA do PNUD, do IBGE e de diversas empresas no Brasil.",
-  },
-  {
-    name: "Edmilson Puridade Jr",
-    role: "COO e cofundador da Ekoa",
-    img: edmilsonUrl,
-    bio: "A Ekoa é uma edtech de EHS que une tecnologia e educação para ajudar empresas a manter a conformidade em Saúde, Segurança e Meio Ambiente, salvando vidas e gerando resultados. Engenheiro Ambiental de formação, lidera os times de Produto e Tecnologia e há mais de uma década desenvolve soluções de capacitação e gestão de treinamentos obrigatórios.",
-  },
-  {
-    name: "Manuela Rocha",
-    role: "Gerente de Recursos Humanos da Petrobahia",
-    img: manuelaUrl,
-    bio: "Há mais de 15 anos atuando na área de Recursos Humanos em empresas nacionais e multinacionais, tanto na área Comercial como na área Industrial. Experiência no formato de atendimento de Business Partner com perfil generalista, suportando todos os subsistemas do RH e com liderança de equipes em excelência operacional.",
-  },
-];
-
-const tickets = [
-  {
-    name: "Profissional",
-    price: "490,00",
-    perks: [
-      "Acesso integral ao fórum",
-      "Coffee breaks e almoço executivo",
-      "Certificado de participação",
-      "Material digital exclusivo",
-    ],
-    highlight: false,
-  },
-];
-
-const sponsorCategories = [
-  {
-    title: "Diamante",
-    logos: [
-      {
-        name: "Semantix",
-        src: semantixUrl,
-        alt: "Semantix — Governança, Segurança e Inteligência Artificial em Escala Empresarial",
-        height: "h-40 lg:h-56",
-      },
-    ],
-  },
-  {
-    title: "Ouro",
-    logos: [
-      {
-        name: "Horus",
-        src: horusUrl,
-        alt: "Horus CDA — Decisões mais conscientes",
-        height: "h-48 lg:h-56",
-      },
-      {
-        name: "Tecnoativa",
-        src: tecnoativaUrl,
-        alt: "Tecnoativa — Segurança cibernética e resiliência digital",
-        height: "h-48 lg:h-56",
-      },
-      {
-        name: "CHIP",
-        src: chipUrl,
-        alt: "CHIP",
-        height: "h-48 lg:h-56",
-      },
-      {
-        name: "Excellence",
-        src: excellenceUrl,
-        alt: "Excellence",
-        height: "h-48 lg:h-56",
-      },
-      {
-        name: "Solutis",
-        src: solutisUrl,
-        alt: "Solutis",
-        height: "h-48 lg:h-56",
-      },
-      {
-        name: "MongoDB",
-        src: mongodbUrl,
-        alt: "MongoDB",
-        height: "h-48 lg:h-56",
-      },
-      {
-        name: "Grupo Rede+",
-        src: grupoRedeUrl,
-        alt: "Grupo Rede+",
-        height: "h-48 lg:h-56",
-      },
-      {
-        name: "Philos",
-        src: philosUrl,
-        alt: "Philos — Cultura, gestão e marketing de comunidade",
-        height: "h-48 lg:h-56",
-      },
-      {
-        name: "Exponencial",
-        src: exponencialUrl,
-        alt: "Exponencial Consultoria",
-        height: "h-48 lg:h-56",
-      },
-    ],
-  },
-  {
-    title: "Prata",
-    logos: [
-      {
-        name: "AG TaxTech",
-        src: agTaxTechUrl,
-        alt: "AG TaxTech — Clareza tributária para decisões seguras",
-        height: "h-36 lg:h-44",
-      },
-    ],
-  },
-  {
-    title: "Bronze",
-    logos: [
-      {
-        name: "SCGOV",
-        src: scgovUrl,
-        alt: "SCGOV — Sistema Integrado de Contratações Públicas",
-        height: "h-24 lg:h-28",
-      },
-      {
-        name: "XTRQ",
-        src: xtrqUrl,
-        alt: "XTRQ",
-        height: "h-24 lg:h-28",
-      },
-    ],
-  },
-  {
-    title: "Realização",
-    logos: [
-      {
-        name: "IGOV.IA",
-        src: igoviaUrl,
-        alt: "IGOV.IA — Instituto de Governança em Inteligência Artificial",
-        height: "h-24 lg:h-28",
-      },
-    ],
-  },
-  {
-    title: "Apoio",
-    logos: [
-      {
-        name: "PMIBA",
-        src: pmibaUrl,
-        alt: "PMIBA — Project Management Institute Bahia",
-        height: "h-24 lg:h-28",
-      },
-    ],
-  },
-];
-
-function Index() {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
-      {/* Top Nav */}
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/60">
-        <div className="mx-auto max-w-7xl px-6 h-44 flex items-center justify-between gap-6">
-          <a href="#top" className="flex items-center gap-3 shrink-0">
-            <img
-              src={logoUrl}
-              alt="AI Governance Forum"
-              className="h-56 w-auto rounded-md"
-            />
-          </a>
-          <nav className="hidden lg:flex items-center gap-8 text-sm">
-            <Link
-              to="/programacao"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Programação
-            </Link>
-            {navLinks.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                {l.label}
-              </a>
-            ))}
-          </nav>
-          <a
-            href="#edicao-salvador"
-            className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition"
-          >
-            Ver como foi
-          </a>
-        </div>
-      </header>
-
-      {/* Hero */}
-      <section id="top" className="relative min-h-screen flex items-end lg:items-center pt-44 overflow-hidden">
-        {/* background photo */}
-        <div className="absolute inset-0 -z-10">
-          <img
-            src={fabioUrl}
-            alt="Fábio Martins, palestrante"
-            className="absolute right-0 bottom-0 h-[95%] lg:h-[110%] w-auto object-contain object-bottom opacity-90"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-          <div
-            className="absolute -left-40 top-1/3 h-[500px] w-[500px] rounded-full blur-3xl opacity-30"
-            style={{ background: BRAND_GREEN }}
-          />
-        </div>
-
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:py-32 w-full">
-          <div className="max-w-2xl">
-            <span
-              className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-primary"
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-              Edição 2026 · Realizada em 12/11/2026
-            </span>
-            <h1 className="mt-6 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05]">
-              AI Governance Forum <span className="text-primary">2026</span>
-            </h1>
-            <p className="mt-6 text-xl text-foreground/90 max-w-xl font-medium">
-              Governança de Inteligência Artificial: Liderança, Estratégia e Transformação dos Negócios.
-            </p>
-            <p className="mt-4 text-base text-muted-foreground max-w-xl">
-              O AI Governance Forum 2026 aconteceu em 12 de novembro de 2026, presencialmente, no
-              Hotel Quality Salvador. Foi um encontro executivo que reuniu presidentes, diretores,
-              conselheiros, gestores públicos e privados e especialistas em inovação, tecnologia,
-              riscos, compliance e transformação digital.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="#edicao-salvador"
-                className="rounded-full bg-primary text-primary-foreground px-7 py-3.5 text-sm font-semibold hover:opacity-90 transition"
-              >
-                Ver como foi a edição
-              </a>
-              <Link
-                to="/programacao"
-                className="rounded-full border border-border bg-background/60 px-7 py-3.5 text-sm font-semibold hover:border-primary hover:text-primary transition"
-              >
-                Ver programação
-              </Link>
-            </div>
-            <dl className="mt-12 grid grid-cols-3 gap-6 max-w-lg">
-              {[
-                ["09", "painéis"],
-                ["20+", "palestrantes"],
-                ["1 dia", "imersivo"],
-              ].map(([k, v]) => (
-                <div key={v}>
-                  <dt className="text-3xl font-bold text-primary">{k}</dt>
-                  <dd className="text-xs uppercase tracking-wider text-muted-foreground mt-1">{v}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </div>
-      </section>
-
-      <EdicaoSalvador />
-
-      {/* Sobre */}
-      <section id="sobre" className="py-24 lg:py-32">
-        <div className="mx-auto max-w-5xl px-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Sobre o fórum</p>
-          <h2 className="mt-4 text-4xl lg:text-5xl font-bold">
-            Mais do que tecnologia, um espaço estratégico de decisão.
-          </h2>
-          <div className="mt-8 grid lg:grid-cols-2 gap-8 text-muted-foreground leading-relaxed">
-            <p>
-              O AI Governance Forum 2026 foi um encontro executivo que reuniu líderes, executivos,
-              gestores, conselheiros, especialistas e tomadores de decisão que conduzem a
-              transformação digital em suas organizações. Mais do que um evento sobre tecnologia,
-              foi um espaço para discutir como a Inteligência Artificial pode ser adotada de forma
-              segura, ética, responsável e alinhada aos objetivos institucionais.
-            </p>
-            <p>
-              Especialistas nacionais e convidados compartilharam experiências, tendências e casos
-              práticos, abordando estratégia, gestão de riscos, compliance, ética, segurança da
-              informação, qualidade de dados, regulamentação, impacto organizacional, inovação e o
-              futuro do trabalho na era da IA — preparando lideranças para decisões mais
-              conscientes.
-            </p>
-          </div>
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              "Estratégia & Liderança",
-              "Riscos & Compliance",
-              "Ética & Regulação",
-              "Segurança & Dados",
-            ].map((tag) => (
-              <div
-                key={tag}
-                className="rounded-2xl border border-border bg-card p-5 hover:border-primary/60 transition"
-              >
-                <div className="h-1 w-8 rounded-full bg-primary" />
-                <p className="mt-4 font-semibold">{tag}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Programação */}
-      <section id="programacao" className="py-24 lg:py-32 bg-card/40 border-y border-border">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="flex items-end justify-between flex-wrap gap-4">
+      <main>
+        <section className="relative overflow-hidden border-b border-border pt-24">
+          <div className="brand-grid pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 opacity-45 lg:block" />
+          <div className="relative mx-auto grid max-w-7xl gap-16 px-6 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:py-28">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Programação</p>
-              <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Um dia intenso, com conteúdo de alto nível.</h2>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Sobre o AI Governance Forum</p>
+              <h1 className="mt-6 max-w-4xl text-5xl font-bold leading-[1.04] tracking-[-0.035em] sm:text-6xl lg:text-7xl">
+                Governando o futuro da <span className="text-primary">Inteligência Artificial.</span>
+              </h1>
+              <p className="mt-8 max-w-2xl text-xl leading-relaxed text-muted-foreground">
+                Um espaço de diálogo e decisão para quem conduz a adoção da Inteligência Artificial nas organizações.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-3">
+                <Link
+                  to="/salvador-2027"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+                >
+                  Conheça Salvador 2027
+                  <ArrowRight className="h-4 w-4" strokeWidth={1.8} />
+                </Link>
+                <Link
+                  to="/edicoes/salvador-2026"
+                  className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-7 py-3.5 text-sm font-semibold transition hover:border-primary hover:text-primary"
+                >
+                  Reveja a edição 2026
+                </Link>
+              </div>
             </div>
-            <p className="text-sm text-muted-foreground">Programação realizada · 12 de novembro de 2026.</p>
+
+            <div className="relative">
+              <div className="absolute -left-5 -top-5 h-full w-full border border-primary" aria-hidden />
+              <div className="relative flex min-h-80 flex-col justify-between border border-border bg-background p-8 sm:p-10">
+                <img src={logoLight} alt="AI Governance Forum" className="w-full" />
+                <div className="mt-12 border-t border-border pt-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">Nosso compromisso</p>
+                  <p className="mt-3 text-2xl font-semibold leading-snug">
+                    Menos elementos.<br />Mais autoridade.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-24 lg:py-32">
+          <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">O que é</p>
+              <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-[-0.025em] lg:text-5xl">
+                Um fórum sobre decisões, não apenas sobre tecnologia.
+              </h2>
+            </div>
+            <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
+              <p>
+                O AI Governance Forum conecta líderes, executivos, especialistas, empresas, instituições públicas,
+                reguladores e profissionais responsáveis pelas decisões que moldam o uso da Inteligência Artificial.
+              </p>
+              <p>
+                O encontro aproxima visões de negócio, governo, tecnologia e sociedade para discutir como inovar com
+                responsabilidade, segurança, ética e propósito. A programação combina experiência prática, debates
+                setoriais e conexões que ajudam organizações a transformar princípios em ação.
+              </p>
+            </div>
           </div>
 
-          <ol className="mt-12 relative border-l border-border/70 ml-3">
-            {schedule.map((item) => (
-              <li key={item.time} className="pl-8 pb-10 last:pb-0 relative">
-                <span className="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-primary ring-4 ring-background" />
-                <div className="flex flex-wrap items-baseline gap-4">
-                  <span className="font-mono text-primary text-sm font-semibold">{item.time}</span>
-                  <h3 className="text-lg font-semibold">{item.title}</h3>
+          <div className="mx-auto mt-16 grid max-w-7xl border-y border-border px-6 sm:grid-cols-2 lg:grid-cols-4">
+            {pillars.map((pillar, index) => (
+              <article key={pillar.title} className="border-b border-border py-8 sm:border-b-0 sm:px-8 sm:first:pl-0 lg:border-r lg:last:border-r-0">
+                <div className="flex items-center justify-between">
+                  <pillar.icon className="h-7 w-7 text-primary" strokeWidth={1.4} />
+                  <span className="text-xs font-semibold tracking-widest text-muted-foreground">0{index + 1}</span>
                 </div>
-                <p className="mt-2 text-sm text-muted-foreground max-w-2xl">{item.desc}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* Palestrantes */}
-      <section id="palestrantes" className="py-24 lg:py-32">
-        <div className="mx-auto max-w-6xl px-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">PAINELISTAS</p>
-          <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Quem conduziu a conversa.</h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl">
-            Especialistas e executivos que participaram do fórum e apresentaram como a governança
-            de IA é implementada em organizações públicas e privadas.
-          </p>
-
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {speakers.map((s, i) => (
-              <article
-                key={i}
-                className="group rounded-3xl overflow-hidden border border-border bg-card hover:border-primary/60 transition"
-              >
-                <div className="aspect-[4/5] bg-secondary relative overflow-hidden">
-                  {s.img ? (
-                    <img
-                      src={s.img}
-                      alt={s.name}
-                      className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center text-6xl text-muted-foreground/40 font-bold">
-                      ?
-                    </div>
-                  )}
-                </div>
-                <div className="p-5">
-                  <h3 className="font-semibold">{s.name}</h3>
-                  <p className="text-xs text-muted-foreground mt-1">{s.role}</p>
-                  {s.bio && (
-                    <p className="text-xs text-muted-foreground/90 mt-3 leading-relaxed">{s.bio}</p>
-                  )}
-                </div>
+                <h3 className="mt-8 text-2xl font-semibold">{pillar.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{pillar.text}</p>
               </article>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Local */}
-      <section id="local" className="py-24 lg:py-32 bg-card/40 border-y border-border">
-        <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Local & Data</p>
-            <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Um ambiente colaborativo.</h2>
-            <p className="mt-6 text-muted-foreground">
-              O fórum aconteceu em espaço executivo selecionado, com infraestrutura completa para
-              painéis, networking estratégico e reuniões privativas entre lideranças.
-            </p>
-            <dl className="mt-8 space-y-5">
-              <div className="flex gap-4">
-                <span className="h-10 w-10 rounded-full bg-primary/15 flex items-center justify-center text-primary">📍</span>
-                <div>
-                  <dt className="text-sm uppercase tracking-wider text-muted-foreground">Endereço</dt>
-                  <dd className="font-semibold">Hotel Quality Salvador · Salvador — BA</dd>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <span className="h-10 w-10 rounded-full bg-primary/15 flex items-center justify-center text-primary">📅</span>
-                <div>
-                  <dt className="text-sm uppercase tracking-wider text-muted-foreground">Data</dt>
-                  <dd className="font-semibold">12 de novembro de 2026</dd>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <span className="h-10 w-10 rounded-full bg-primary/15 flex items-center justify-center text-primary">⏱</span>
-                <div>
-                  <dt className="text-sm uppercase tracking-wider text-muted-foreground">Formato</dt>
-                  <dd className="font-semibold">Presencial · 08h00 às 17h20</dd>
-                </div>
-              </div>
-            </dl>
-          </div>
-          <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-border">
-            <iframe
-              title="Mapa"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-38.49%2C-12.99%2C-38.45%2C-12.97&layer=mapnik&marker=-12.98%2C-38.47"
-              className="w-full h-full grayscale contrast-125"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-primary/10" />
-          </div>
-        </div>
-      </section>
-
-      {/* Ingressos */}
-      <section id="ingressos" className="py-24 lg:py-32 relative overflow-hidden">
-        {/* ambient glow */}
-        <div
-          className="absolute -top-32 left-1/4 h-72 w-72 rounded-full blur-[120px] opacity-20 pointer-events-none"
-          style={{ background: BRAND_GREEN }}
-        />
-        <div
-          className="absolute -bottom-32 right-1/4 h-72 w-72 rounded-full blur-[120px] opacity-10 pointer-events-none"
-          style={{ background: BRAND_GREEN }}
-        />
-
-        <div className="relative mx-auto max-w-6xl px-6">
-          <div className="text-center max-w-2xl mx-auto">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Ingressos</p>
-            <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Inscrições encerradas.</h2>
-            <p className="mt-4 text-muted-foreground">
-              A edição de 12 de novembro de 2026 teve vagas limitadas para preservar o caráter
-              executivo do encontro.
-            </p>
-          </div>
-
-          <div className="mt-14 flex justify-center">
-            {tickets.map((t) => (
-              <div
-                key={t.name}
-                className="relative w-full max-w-md overflow-hidden rounded-[32px] border border-foreground/10 bg-card/40 p-8 backdrop-blur-xl shadow-2xl"
-              >
-                {/* badge */}
-                <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 mb-6">
-                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-primary">
-                    PRIMEIRO LOTE - ATÉ 30/07
-                  </span>
-                </div>
-
-                {/* header */}
-                <h3 className="text-3xl font-bold leading-tight">
-                  Passaporte <span className="text-primary">{t.name}</span>
-                </h3>
-                <p className="mt-2 text-sm text-muted-foreground italic">AI Governance Forum 2026</p>
-
-                {/* price */}
-                <div className="mt-8">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-lg font-medium text-muted-foreground">R$</span>
-                    <span className="text-5xl font-extrabold tracking-tighter text-foreground">{t.price}</span>
-                  </div>
-                  <p className="mt-1 text-[11px] text-muted-foreground">Pagamento único, com acesso à edição</p>
-                </div>
-
-                {/* features */}
-                <ul className="mt-8 space-y-4">
-                  {t.perks.map((p) => (
-                    <li key={p} className="flex items-start gap-3">
-                      <span className="mt-0.5 shrink-0 text-primary">
-                        <svg
-                          className="h-5 w-5"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          strokeWidth={2.5}
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </span>
-                      <span className="text-sm leading-snug text-foreground/80">{p}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* cta */}
-                <a
-                  href="https://www.sympla.com.br/evento/ai-governance-forum/3469406"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-10 flex w-full items-center justify-center rounded-2xl bg-primary px-6 py-4 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition hover:opacity-90 active:scale-[0.98]"
-                >
-                  Ver a página do evento no Sympla
-                </a>
-
-                {/* visual accent */}
-                <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
-                  <svg className="h-24 w-24" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z" />
-                  </svg>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-8 text-center text-[10px] uppercase tracking-wide text-muted-foreground/70">
-            Edição realizada • 12 de novembro de 2026 • Hotel Quality Salvador
-          </p>
-        </div>
-      </section>
-
-      {/* Patrocinadores */}
-      <section id="patrocinadores" className="py-24 lg:py-32 bg-card/40 border-y border-border">
-        <div className="mx-auto max-w-6xl px-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Patrocinadores</p>
-          <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Marcas que apoiaram a discussão.</h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl">
-            O fórum conectou a marca dos patrocinadores a um público de decisores qualificados em
-            governança, riscos e inovação.
-          </p>
-
-          <div className="mt-14 space-y-12">
-            {sponsorCategories.map((category) => (
-              <div key={category.title}>
-                <h3 className="text-lg font-semibold uppercase tracking-wider text-foreground/80 mb-4">
-                  {category.title}
-                </h3>
-                {category.logos.length > 0 ? (
-                  <div
-                    className={`grid gap-6 ${
-                      category.title === "Diamante"
-                        ? "grid-cols-1"
-                        : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-                    }`}
-                  >
-                    {category.logos.map((logo) => (
-                      <div
-                        key={logo.name}
-                        className="rounded-xl border border-border bg-black flex items-center justify-center p-8"
-                      >
-                        <img
-                          src={logo.src}
-                          alt={logo.alt}
-                          className={`${logo.height} w-auto object-contain`}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <p className="text-sm text-muted-foreground italic">
-                    Vagas abertas para patrocinadores.
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 rounded-3xl border border-primary/40 bg-primary/5 p-8 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-            <div>
-              <h3 className="text-2xl font-bold">Seja patrocinador da próxima edição</h3>
-              <p className="mt-2 text-muted-foreground max-w-xl">
-                Cotas de patrocínio com diferentes níveis de exposição e ativação para o próximo
-                AI Governance Forum.
+        <section className="border-y border-border bg-muted/55 py-24 lg:py-28">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Como acontece</p>
+              <h2 className="mt-5 text-4xl font-semibold tracking-[-0.025em]">Conhecimento, debate e conexão.</h2>
+              <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+                Diferentes formatos aproximam referências e tornam a governança de IA uma conversa aplicável à realidade das organizações.
               </p>
             </div>
-            <a
-              href="#contato"
-              className="rounded-full bg-primary text-primary-foreground px-7 py-3.5 text-sm font-semibold hover:opacity-90"
+            <div className="mt-12 grid gap-5 md:grid-cols-3">
+              {[
+                {
+                  icon: PanelsTopLeft,
+                  title: "Palestras e keynotes",
+                  text: "Visões estratégicas e experiências de especialistas sobre os desafios que definem a era da IA.",
+                },
+                {
+                  icon: UsersRound,
+                  title: "Painéis setoriais",
+                  text: "Diferentes perspectivas sobre regulação, dados, segurança, pessoas, inovação e transformação.",
+                },
+                {
+                  icon: Network,
+                  title: "Networking executivo",
+                  text: "Encontros e conversas que fortalecem o ecossistema e criam novas oportunidades de colaboração.",
+                },
+              ].map((item) => (
+                <article key={item.title} className="border border-border bg-background p-8">
+                  <item.icon className="h-8 w-8 text-primary" strokeWidth={1.4} />
+                  <h3 className="mt-8 text-2xl font-semibold">{item.title}</h3>
+                  <p className="mt-4 leading-relaxed text-muted-foreground">{item.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-24 lg:py-32">
+          <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-start">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Para quem</p>
+              <h2 className="mt-5 max-w-xl text-4xl font-semibold leading-tight tracking-[-0.025em] lg:text-5xl">
+                Quem decide precisa participar da conversa.
+              </h2>
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+                O fórum reúne os diferentes papéis envolvidos na construção de uma Inteligência Artificial útil, confiável e responsável.
+              </p>
+            </div>
+            <ul className="border-t border-border">
+              {audiences.map((audience, index) => (
+                <li key={audience} className="flex items-center gap-5 border-b border-border py-5">
+                  <span className="w-8 text-xs font-semibold text-primary">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="font-medium">{audience}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="bg-foreground py-20 text-background lg:py-24">
+          <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Próxima edição</p>
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.025em] lg:text-5xl">AI Governance Forum Salvador 2027</h2>
+              <p className="mt-5 max-w-2xl text-lg leading-relaxed text-background/70">
+                Uma nova oportunidade para aproximar lideranças e avançar na construção de um futuro com IA responsável.
+              </p>
+            </div>
+            <Link
+              to="/salvador-2027"
+              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
             >
-              Solicitar cotas
-            </a>
+              Conhecer a próxima edição
+              <ArrowUpRight className="h-4 w-4" strokeWidth={1.8} />
+            </Link>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Contato */}
-      <section id="contato" className="py-24 lg:py-32">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Contato</p>
-              <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Fale com a organização.</h2>
-              <p className="mt-6 text-muted-foreground">
-                Fale com a organização sobre a edição realizada, conteúdos, palestras ou
-                patrocínio para a próxima edição.
-              </p>
-              <ul className="mt-8 space-y-4 text-sm">
-                <li>
-                  <span className="block text-muted-foreground text-xs uppercase tracking-wider">E-mail</span>
-                  <a href="mailto:fabio.martins@igovia.com.br" className="font-semibold text-foreground hover:text-primary">
-                    fabio.martins@igovia.com.br
-                  </a>
-                </li>
-                <li>
-                  <span className="block text-muted-foreground text-xs uppercase tracking-wider">WhatsApp</span>
-                  <span className="font-semibold">+55 (71) 9.8841.9093</span>
-                </li>
-              </ul>
+        <section className="py-24 lg:py-32">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Edições anteriores</p>
+                <h2 className="mt-4 text-4xl font-semibold tracking-[-0.025em]">A história já começou.</h2>
+              </div>
+              <Link to="/edicoes/salvador-2026" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
+                Ver a edição completa <ArrowRight className="h-4 w-4" strokeWidth={1.8} />
+              </Link>
             </div>
-            <ClientOnly fallback={<div className="rounded-3xl border border-border bg-card p-6 lg:p-8 h-48 animate-pulse" aria-hidden />}>
-              <ContactForm />
-            </ClientOnly>
+            <Link to="/edicoes/salvador-2026" className="group grid overflow-hidden border border-border bg-background lg:grid-cols-2">
+              <div className="overflow-hidden">
+                <img
+                  src={publicoUrl}
+                  alt="Público do AI Governance Forum Salvador 2026"
+                  className="h-full min-h-72 w-full object-cover transition duration-500 group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex flex-col justify-center p-8 lg:p-14">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Salvador · 12 de novembro de 2026</p>
+                <h3 className="mt-5 text-3xl font-semibold leading-tight">AI Governance Forum Salvador 2026</h3>
+                <p className="mt-5 leading-relaxed text-muted-foreground">
+                  A primeira edição reuniu tribunais, governo, indústria e empresas de tecnologia para discutir governança de IA.
+                </p>
+                <span className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                  Rever fotos, vídeos e programação <ArrowUpRight className="h-4 w-4" strokeWidth={1.8} />
+                </span>
+              </div>
+            </Link>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-10">
-        <div className="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <img src={logoUrl} alt="AI Governance Forum" className="h-16 w-auto rounded" />
+        <section id="contato" className="border-t border-border bg-muted/55 py-20">
+          <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Contato</p>
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.025em]">Converse com a organização.</h2>
+              <p className="mt-4 max-w-2xl text-muted-foreground">
+                Para informações sobre as próximas edições, participação, imprensa ou patrocínio.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <a href="mailto:fabio.martins@igovia.com.br" className="flex items-center gap-4 font-semibold hover:text-primary">
+                <Mail className="h-5 w-5 text-primary" strokeWidth={1.4} /> fabio.martins@igovia.com.br
+              </a>
+              <a href="https://wa.me/5571988419093" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 font-semibold hover:text-primary">
+                <Phone className="h-5 w-5 text-primary" strokeWidth={1.4} /> +55 (71) 9.8841.9093
+              </a>
+            </div>
           </div>
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} AI Governance Forum. Todos os direitos reservados.
-          </p>
-        </div>
-      </footer>
+        </section>
+      </main>
+
+      <SiteFooter variant="light" />
     </div>
   );
 }

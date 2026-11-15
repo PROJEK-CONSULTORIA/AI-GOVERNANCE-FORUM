@@ -78,35 +78,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AI Governance Forum 2026 — Governança de Inteligência Artificial" },
+      { title: "AI Governance Forum — Governança em Inteligência Artificial" },
       {
         name: "description",
         content:
-          "O AI Governance Forum 2026 aconteceu em 12 de novembro de 2026, em Salvador: encontro executivo presencial sobre Governança de Inteligência Artificial, liderança, estratégia, riscos, compliance, ética e transformação dos negócios.",
+          "O AI Governance Forum conecta lideranças para discutir governança, estratégia, ética, inovação e o futuro da Inteligência Artificial.",
       },
       { name: "author", content: "AI Governance Forum" },
-      {
-        property: "og:title",
-        content: "AI Governance Forum 2026 — Governança de Inteligência Artificial",
-      },
+      { property: "og:title", content: "AI Governance Forum — Governança em Inteligência Artificial" },
       {
         property: "og:description",
         content:
-          "A edição 2026 do AI Governance Forum foi um encontro executivo presencial em Salvador sobre Governança de IA, estratégia, riscos, compliance, ética e transformação dos negócios.",
+          "Governança, inteligência, conexão e futuro. Conheça o fórum e suas edições em Salvador.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "AI Governance Forum" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@AIGovernanceForum" },
-      { property: "og:title", content: "AI Governance Forum 2026 — Governança de Inteligência Artificial" },
-      { name: "twitter:title", content: "AI Governance Forum 2026 — Governança de Inteligência Artificial" },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd063125-b058-4869-9365-4ab20759e83d/id-preview-bbf07dd3--6fcedb66-336b-4416-af01-f9c1a5f8a27e.lovable.app-1782744495386.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd063125-b058-4869-9365-4ab20759e83d/id-preview-bbf07dd3--6fcedb66-336b-4416-af01-f9c1a5f8a27e.lovable.app-1782744495386.png" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
