@@ -39,3 +39,4 @@
 - [x] Incluir Edmilson Puridade Jr (foto, cargo e descrição) na lista de Palestrantes e no Painel Rede + das duas páginas; testar e conferir no navegador.
 - [x] Incluir Manuela Rocha (foto, cargo e descrição) na lista de Palestrantes e no Painel Philos das duas páginas; testar e conferir no navegador.
 - [x] Seção "Edição Salvador" na página principal: vídeo enviado, 2 vídeos do YouTube, carrossel de fotos (3 visíveis) e "O que falam sobre nós" (TI Bahia).
+- [x] Colocar todo o texto do site no passado (evento ocorreu em 12/11/2026): páginas Sobre e Programação, botões de ingresso, textos de busca e idioma pt-BR; testar e conferir no navegador.
