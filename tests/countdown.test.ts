@@ -6,13 +6,13 @@ describe("contagem regressiva Salvador 2027", () => {
     expect(COUNTDOWN_TARGET_ISO).toBe("2027-09-23T00:00:00-03:00");
   });
 
-  it("calcula dias, horas e minutos até o início", () => {
-    const now = Date.parse("2027-09-20T22:30:00-03:00");
-    expect(getCountdownParts(now)).toEqual({ days: 2, hours: 1, minutes: 30 });
+  it("calcula dias, horas, minutos e segundos até o início", () => {
+    const now = Date.parse("2027-09-20T22:30:45-03:00");
+    expect(getCountdownParts(now)).toEqual({ days: 2, hours: 1, minutes: 29, seconds: 15 });
   });
 
   it("mantém a contagem em zero depois do início", () => {
     const now = Date.parse("2027-09-24T12:00:00-03:00");
-    expect(getCountdownParts(now)).toEqual({ days: 0, hours: 0, minutes: 0 });
+    expect(getCountdownParts(now)).toEqual({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   });
 });
