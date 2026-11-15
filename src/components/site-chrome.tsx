@@ -23,8 +23,10 @@ export function SaveTheDateBanner() {
   return (
     <Link
       to="/salvador-2027"
-      className="fixed inset-x-0 top-0 z-[60] flex h-12 items-center justify-center gap-2 bg-primary px-4 text-center text-[10px] font-bold uppercase tracking-[0.12em] text-primary-foreground transition hover:opacity-95 sm:gap-3 sm:text-xs sm:tracking-[0.18em]"
+      className="fixed inset-x-0 top-0 z-[60] flex h-12 items-center justify-center gap-1.5 whitespace-nowrap bg-primary px-3 text-center text-[9px] font-bold uppercase tracking-[0.05em] text-primary-foreground transition hover:opacity-95 sm:gap-3 sm:px-4 sm:text-xs sm:tracking-[0.18em]"
     >
+      <span>AI Governance Forum</span>
+      <span aria-hidden>·</span>
       <span>Save the Date</span>
       <span aria-hidden>·</span>
       <span>23 e 24 de setembro de 2027</span>
@@ -129,7 +131,7 @@ export function SiteFooter({ variant }: Pick<SiteChromeProps, "variant">) {
             <img src={logo} alt="AI Governance Forum" className="h-12 w-auto" loading="lazy" />
           </Link>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
-            Governando o futuro da Inteligência Artificial.
+            O Futuro da IA começa pela Governança.
           </p>
         </div>
         <div className="text-sm text-muted-foreground md:text-right">

@@ -88,7 +88,7 @@ function SobrePage() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Sobre o AI Governance Forum</p>
               <h1 className="mt-6 max-w-4xl text-5xl font-bold leading-[1.04] tracking-[-0.035em] sm:text-6xl lg:text-7xl">
-                Governando o futuro da <span className="text-primary">Inteligência Artificial.</span>
+                O Futuro da IA começa pela <span className="text-primary">Governança.</span>
               </h1>
               <p className="mt-8 max-w-2xl text-xl leading-relaxed text-muted-foreground">
                 Um espaço de diálogo e decisão para quem conduz a adoção da Inteligência Artificial nas organizações.
