@@ -392,6 +392,26 @@ class Salvador2027AnnouncementTest(unittest.TestCase):
         self.assertIn('Save the Date', header)
         self.assertIn('23 e 24 de setembro de 2027', header)
 
+    def test_save_the_date_banner_is_complete(self):
+        header = (ROOT / 'src/components' / 'site-chrome.tsx').read_text()
+        parts = (
+            '<span>AI Governance Forum</span>',
+            '<span>Save the Date</span>',
+            '<span>23 e 24 de setembro de 2027</span>',
+        )
+        for part in parts:
+            self.assertIn(part, header)
+        positions = [header.index(part) for part in parts]
+        self.assertEqual(positions, sorted(positions))
+
+    def test_official_slogan_is_used_in_home_and_footer(self):
+        home = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        footer = (ROOT / 'src/components' / 'site-chrome.tsx').read_text()
+        self.assertIn('O Futuro da IA começa pela ', home)
+        self.assertIn('Governança.</span>', home)
+        self.assertIn('O Futuro da IA começa pela Governança.', footer)
+        self.assertNotIn('Governando o futuro da Inteligência Artificial', footer)
+
     def test_countdown_targets_opening_day_and_shows_requested_units(self):
         countdown = (ROOT / 'src/lib' / 'countdown.ts').read_text()
         component = (ROOT / 'src/components' / 'countdown-2027.tsx').read_text()

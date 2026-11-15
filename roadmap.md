@@ -49,3 +49,5 @@
 - [x] Adicionar contagem regressiva em dias, horas e minutos até 23/09/2027 e atualizar a página Salvador 2027.
 - [x] Testar as datas, os links e a contagem regressiva no computador e no celular; 48 testes e compilação verificados.
 - [x] Remover a foto de Fábio Martins do fundo do banner principal da edição Salvador 2026; conferir no navegador.
+- [x] Alterar o slogan oficial para “O Futuro da IA começa pela Governança” na página inicial e no rodapé.
+- [x] Completar o banner Save the Date com “AI Governance Forum · Save the Date · 23 e 24 de setembro de 2027”; testar e conferir no computador e no celular.
