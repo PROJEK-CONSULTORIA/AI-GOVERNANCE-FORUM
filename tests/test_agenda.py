@@ -416,7 +416,7 @@ class Salvador2027AnnouncementTest(unittest.TestCase):
         countdown = (ROOT / 'src/lib' / 'countdown.ts').read_text()
         component = (ROOT / 'src/components' / 'countdown-2027.tsx').read_text()
         self.assertIn('2027-09-23T00:00:00-03:00', countdown)
-        for unit in ('dias', 'horas', 'minutos'):
+        for unit in ('dias', 'horas', 'minutos', 'segundos'):
             self.assertIn(f'label: "{unit}"', component)
 
 
