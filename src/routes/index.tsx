@@ -2,6 +2,7 @@ import { createFileRoute, Link, ClientOnly } from "@tanstack/react-router";
 import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
+import { EdicaoSalvador } from "@/components/EdicaoSalvador";
 import logoAsset from "@/assets/logo-dark.png.asset.json";
 import fabioAsset from "@/assets/fabio-martins.png.asset.json";
 import vitorAsset from "@/assets/vitor-igdal.jpg.asset.json";
@@ -627,6 +628,8 @@ function Index() {
           </div>
         </div>
       </section>
+
+      <EdicaoSalvador />
 
       {/* Sobre */}
       <section id="sobre" className="py-24 lg:py-32">
