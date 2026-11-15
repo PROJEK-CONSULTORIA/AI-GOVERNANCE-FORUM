@@ -99,13 +99,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Encontro executivo sobre Governança de IA: estratégia, riscos, compliance, ética e regulamentação para líderes que conduzem a transformação digital.",
+          "O AI Governance Forum 2026 aconteceu em 12 de novembro de 2026, em Salvador: encontro executivo sobre Governança de IA — estratégia, riscos, compliance, ética e regulamentação para líderes que conduzem a transformação digital.",
       },
       { property: "og:title", content: "AI Governance Forum" },
       {
         property: "og:description",
         content:
-          "Encontro executivo sobre Governança de Inteligência Artificial para líderes e tomadores de decisão.",
+          "A edição 2026 do AI Governance Forum reuniu líderes e tomadores de decisão para discutir Governança de Inteligência Artificial. Veja como foi.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -202,18 +202,18 @@ const schedule: ScheduleItem[] = [
   { time: "08h30", title: "Cerimônia de Abertura", desc: "Boas-vindas aos participantes, apresentação dos objetivos do AI Governance Forum e contextualização da importância estratégica da Governança de Inteligência Artificial para organizações públicas e privadas. Fábio Martins - Fundador e CEO do IGOV.IA." },
   { time: "08h50", title: "Palestra Magna — Semantix AI Enterprise: Governança, Segurança e Inteligência Artificial em Escala Empresarial", desc: "Como transformar a Governança de Inteligência Artificial em uma vantagem estratégica para os negócios, conectando tecnologia, gestão de riscos, conformidade regulatória e inovação responsável. Pierre Muto - Semantix." },
   { time: "09h20", title: "Painel CHIP — Indústria Inteligente: Pessoas, Dados e Inteligência Artificial", desc: "Como estruturar a governança da Inteligência Artificial para aumentar a produtividade, otimizar operações, fortalecer a gestão de riscos e impulsionar a competitividade industrial com segurança e responsabilidade. Murilo Plínio - Gerente de Tecnologia, SENAI/CIMATEC, Adhvan Furtado - BULL, Marcos Rabelo - CHIP." },
-  { time: "09h50", title: "Tech Talk PMI-BA — PMI-CPMAI: Certificação Profissional em Gestão de Inteligência Artificial e Inovação", desc: "Apresentação da certificação PMI-CPMAI (Cognitive Project Management in AI), voltada à gestão de projetos de Inteligência Artificial e baseada na metodologia CPMAI, incorporada ao PMI a partir da aquisição da Cognilytica. A palestra abordará a importância de uma abordagem estruturada para planejar, desenvolver e implementar projetos de IA, conectando gestão de projetos, dados, objetivos de negócio e entrega de valor. (10 min) José Carlos Prates - PMI-BA." },
-  { time: "10h00", title: "Painel Solutis — Justiça, Ética e Regulação da IA: Direitos Fundamentais, Responsabilidade e Segurança Jurídica", desc: "Como o sistema de Justiça, a Defensoria Pública e a advocacia podem enfrentar os desafios do marco regulatório da Inteligência Artificial, conciliando inovação, ética, transparência, proteção de dados, gestão de riscos e preservação dos direitos fundamentais. O painel discutirá a responsabilização pelo uso da IA, os desafios de conformidade e os impactos da regulação no acesso à Justiça e na proteção dos cidadãos. Profa. Maria Clara Seixas - 4S Advogados, Dr. Franco Bahia - Defensoria Pública do Estado da Bahia (DPE/BA), Liliane Moura Bender - Diretora de Public Sector da Solutis." },
+  { time: "09h50", title: "Tech Talk PMI-BA — PMI-CPMAI: Certificação Profissional em Gestão de Inteligência Artificial e Inovação", desc: "Apresentação da certificação PMI-CPMAI (Cognitive Project Management in AI), voltada à gestão de projetos de Inteligência Artificial e baseada na metodologia CPMAI, incorporada ao PMI a partir da aquisição da Cognilytica. A palestra abordou a importância de uma abordagem estruturada para planejar, desenvolver e implementar projetos de IA, conectando gestão de projetos, dados, objetivos de negócio e entrega de valor. (10 min) José Carlos Prates - PMI-BA." },
+  { time: "10h00", title: "Painel Solutis — Justiça, Ética e Regulação da IA: Direitos Fundamentais, Responsabilidade e Segurança Jurídica", desc: "Como o sistema de Justiça, a Defensoria Pública e a advocacia podem enfrentar os desafios do marco regulatório da Inteligência Artificial, conciliando inovação, ética, transparência, proteção de dados, gestão de riscos e preservação dos direitos fundamentais. O painel discutiu a responsabilização pelo uso da IA, os desafios de conformidade e os impactos da regulação no acesso à Justiça e na proteção dos cidadãos. Profa. Maria Clara Seixas - 4S Advogados, Dr. Franco Bahia - Defensoria Pública do Estado da Bahia (DPE/BA), Liliane Moura Bender - Diretora de Public Sector da Solutis." },
   { time: "10h30", title: "Painel Exponencial — Governança de IA para Cidades e Estados Inteligentes: Inovação com Responsabilidade", desc: "Como utilizar a Inteligência Artificial para tornar cidades e estados mais eficientes, sustentáveis e centrados no cidadão, com governança, transparência, segurança, gestão de dados e decisões orientadas por evidências. Luis Henrique de Magalhães Gaban - SEMIT/Prefeitura de Salvador, Ricardo Fontoura - CIO, DETRAN-BA, Fred Soares - CEO da Exponencial Consultoria." },
   { time: "11h00", title: "Painel Tecnoativa — Cibersegurança e Governança de IA: Desafios para Organizações Inteligentes", desc: "Como proteger dados, modelos e sistemas de IA por meio da governança, gestão de riscos, conformidade e cibersegurança, garantindo inovação com confiança e resiliência. Andréa Campelo - Fundadora e CEO da TecnoAtiva, Leandro Magalhães - Gerente de TI da EMBASA, Tatyana Souza - Gerente de TI da Santa Casa da Bahia." },
   { time: "11h30", title: "Almoço & Networking", desc: "Relacionamento entre participantes, palestrantes, patrocinadores e lideranças do ecossistema de inovação." },
-  { time: "14h00", title: "Painel Philos — A IA e o Futuro do Trabalho: Pessoas, Comunidades e Culturas", desc: "Como a Inteligência Artificial está transformando a gestão de pessoas, a cultura organizacional e as competências do futuro, exigindo uma governança que promova inovação, desenvolvimento humano e liderança responsável. Vitor Igdal - Presidente da ABRH-BA, Carlos Eduardo - Gerente Nacional do Jurídico de Direito do Trabalho da Petrobras, Manuela Rocha - Gerente de Recursos Humanos da Petrobahia." },
+  { time: "14h00", title: "Painel Philos — A IA e o Futuro do Trabalho: Pessoas, Comunidades e Culturas", desc: "O painel discutiu como a Inteligência Artificial transforma a gestão de pessoas, a cultura organizacional e as competências do futuro, e a governança necessária para promover inovação, desenvolvimento humano e liderança responsável. Vitor Igdal - Presidente da ABRH-BA, Carlos Eduardo - Gerente Nacional do Jurídico de Direito do Trabalho da Petrobras, Manuela Rocha - Gerente de Recursos Humanos da Petrobahia." },
   { time: "14h30", title: "Tech Talk: Certificação ISO/IEC 42001 — Como Estruturar um Sistema de Gestão de Inteligência Artificial nas Organizações", desc: "Apresentação da norma internacional ISO/IEC 42001, que estabelece requisitos para sistemas de gestão de Inteligência Artificial. Instituto de Governança em Inteligência Artificial - (10 min) Fábio Martins - Palestrante." },
   { time: "14h40", title: "Tech Talk MongoDB — Ferramentas Tecnológicas para a Governança de Inteligência Artificial", desc: "Ferramentas e recursos tecnológicos para apoiar a construção de aplicações de IA confiáveis, com destaque para dados, arquitetura, integração, segurança e escalabilidade. (10 min) Wildson Luz - Senior Enterprise Account Executive na MongoDB" },
-  { time: "14h50", title: "Palestra: Governança de Inteligência Artificial — As 10 Dimensões da Jornada de Adoção Tecnológica", desc: "Apresentação da metodologia IGOV.IA e de suas dez dimensões. A palestra demonstrará como organizar a adoção tecnológica de forma estruturada, conectando estratégia, pessoas, dados, riscos, tecnologia e resultados de negócio. (20 min) Fábio Martins - Fundador e CEO do IGOV.IA." },
-  { time: "15h20", title: "Painel Rede + — Inovação, Startups e o Futuro da IA", desc: "Como a Inteligência Artificial está redefinindo a inovação, impulsionando startups e criando novos modelos de negócio, com a governança como base para um crescimento sustentável, competitivo e responsável. O debate abordará a questão central: criar regras para a IA pode inibir a inovação ou a governança é o que permite às startups e empresas conquistar confiança, atrair investimentos e crescer de forma sustentável? Rodrigo Paolilo - CEO do Grupo Rede Mais, Gabriel Salgado - Executivo de Inovação do Banco do Nordeste, Vicente Aguiar - Consultor de Tecnologia e IA do PNUD, Edmilson Puridade Jr - COO e cofundador da Ekoa." },
-  { time: "15h50", title: "Painel Horus CDA — IA Começa pelos Dados: Qualidade, Governança e Inovação", desc: "Como a qualidade e a Governança de Dados sustentam o desenvolvimento de soluções de Inteligência Artificial confiáveis, impulsionando inovação, decisões estratégicas e geração de valor com segurança e responsabilidade. O painel discutirá as diferenças e complementaridades entre Governança de Dados e Governança de IA e como ambas contribuem para a confiabilidade das soluções. Danilo Andrade - Fundador e CEO da Horus CDA, Thales Almeida - Superintendente de Inovação da SAEB, Ricardo Menezes - Gerente de TI da Bahiagás." },
-  { time: "16h20", title: "Painel Excellence Consultants — IA no Digital e Entretenimento: Criatividade, Inovação e Governança", desc: "Como a Inteligência Artificial está redefinindo a criação de conteúdo, a experiência do público e os modelos de negócio, exigindo uma governança que equilibre inovação, ética, proteção da propriedade intelectual e confiança no ecossistema digital. Nélio Castro - Especialista em IA, Rede Bahia, Adilson Pize - Excellence Consultants." },
+  { time: "14h50", title: "Palestra: Governança de Inteligência Artificial — As 10 Dimensões da Jornada de Adoção Tecnológica", desc: "Apresentação da metodologia IGOV.IA e de suas dez dimensões. A palestra demonstrou como organizar a adoção tecnológica de forma estruturada, conectando estratégia, pessoas, dados, riscos, tecnologia e resultados de negócio. (20 min) Fábio Martins - Fundador e CEO do IGOV.IA." },
+  { time: "15h20", title: "Painel Rede + — Inovação, Startups e o Futuro da IA", desc: "Como a Inteligência Artificial redefine a inovação, impulsiona startups e cria novos modelos de negócio, com a governança como base para um crescimento sustentável, competitivo e responsável. O debate abordou a questão central: criar regras para a IA pode inibir a inovação ou a governança é o que permite às startups e empresas conquistar confiança, atrair investimentos e crescer de forma sustentável? Rodrigo Paolilo - CEO do Grupo Rede Mais, Gabriel Salgado - Executivo de Inovação do Banco do Nordeste, Vicente Aguiar - Consultor de Tecnologia e IA do PNUD, Edmilson Puridade Jr - COO e cofundador da Ekoa." },
+  { time: "15h50", title: "Painel Horus CDA — IA Começa pelos Dados: Qualidade, Governança e Inovação", desc: "Como a qualidade e a Governança de Dados sustentam o desenvolvimento de soluções de Inteligência Artificial confiáveis, impulsionando inovação, decisões estratégicas e geração de valor com segurança e responsabilidade. O painel discutiu as diferenças e complementaridades entre Governança de Dados e Governança de IA e como ambas contribuem para a confiabilidade das soluções. Danilo Andrade - Fundador e CEO da Horus CDA, Thales Almeida - Superintendente de Inovação da SAEB, Ricardo Menezes - Gerente de TI da Bahiagás." },
+  { time: "16h20", title: "Painel Excellence Consultants — IA no Digital e Entretenimento: Criatividade, Inovação e Governança", desc: "Como a Inteligência Artificial redefine a criação de conteúdo, a experiência do público e os modelos de negócio, e a governança necessária para equilibrar inovação, ética, proteção da propriedade intelectual e confiança no ecossistema digital. Nélio Castro - Especialista em IA, Rede Bahia, Adilson Pize - Excellence Consultants." },
   { time: "16h50", title: "Keynote de Encerramento — Liderando Organizações na Era da IA", desc: "Como executivos, conselheiros e gestores devem preparar suas organizações para um futuro orientado por Inteligência Artificial, inovação e governança, fortalecendo a capacidade de adaptação, a liderança estratégica e a geração sustentável de valor. (40 min) Jaime Gama - Consultor, conselheiro executivo, professor e palestrante, Ex-Executive Partner do Gartner." },
   { time: "17h20", title: "Encerramento Oficial", desc: "Síntese dos principais aprendizados, agradecimentos aos participantes, palestrantes e patrocinadores e convite para a próxima edição do AI Governance Forum." },
 ];
@@ -551,12 +551,10 @@ function Index() {
             ))}
           </nav>
           <a
-            href="https://www.sympla.com.br/evento/ai-governance-forum/3469406"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#edicao-salvador"
             className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition"
           >
-            Garantir ingresso
+            Ver como foi
           </a>
         </div>
       </header>
@@ -584,7 +582,7 @@ function Index() {
               className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-primary"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-              Encontro Executivo · 2026
+              Edição 2026 · Realizada em 12/11/2026
             </span>
             <h1 className="mt-6 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05]">
               AI Governance Forum <span className="text-primary">2026</span>
@@ -593,18 +591,17 @@ function Index() {
               Governança de Inteligência Artificial: Liderança, Estratégia e Transformação dos Negócios.
             </p>
             <p className="mt-4 text-base text-muted-foreground max-w-xl">
-              12 de novembro de 2026 · Presencial · Hotel Quality Salvador. Encontro executivo para
-              presidentes, diretores, conselheiros, gestores públicos e privados e especialistas em
-              inovação, tecnologia, riscos, compliance e transformação digital.
+              O AI Governance Forum 2026 aconteceu em 12 de novembro de 2026, presencialmente, no
+              Hotel Quality Salvador. Foi um encontro executivo que reuniu presidentes, diretores,
+              conselheiros, gestores públicos e privados e especialistas em inovação, tecnologia,
+              riscos, compliance e transformação digital.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="https://www.sympla.com.br/evento/ai-governance-forum/3469406"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#edicao-salvador"
                 className="rounded-full bg-primary text-primary-foreground px-7 py-3.5 text-sm font-semibold hover:opacity-90 transition"
               >
-                Garantir meu ingresso
+                Ver como foi a edição
               </a>
               <Link
                 to="/programacao"
@@ -640,15 +637,15 @@ function Index() {
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-8 text-muted-foreground leading-relaxed">
             <p>
-              O AI Governance Forum é um encontro executivo criado para reunir líderes, executivos,
-              gestores, conselheiros, especialistas e tomadores de decisão que estão conduzindo a
-              transformação digital em suas organizações. Mais do que um evento sobre tecnologia, é
-              um espaço para discutir como a Inteligência Artificial pode ser adotada de forma
+              O AI Governance Forum 2026 foi um encontro executivo que reuniu líderes, executivos,
+              gestores, conselheiros, especialistas e tomadores de decisão que conduzem a
+              transformação digital em suas organizações. Mais do que um evento sobre tecnologia,
+              foi um espaço para discutir como a Inteligência Artificial pode ser adotada de forma
               segura, ética, responsável e alinhada aos objetivos institucionais.
             </p>
             <p>
-              Especialistas nacionais e convidados compartilham experiências, tendências e casos
-              práticos abordando estratégia, gestão de riscos, compliance, ética, segurança da
+              Especialistas nacionais e convidados compartilharam experiências, tendências e casos
+              práticos, abordando estratégia, gestão de riscos, compliance, ética, segurança da
               informação, qualidade de dados, regulamentação, impacto organizacional, inovação e o
               futuro do trabalho na era da IA — preparando lideranças para decisões mais
               conscientes.
@@ -681,7 +678,7 @@ function Index() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Programação</p>
               <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Um dia intenso, com conteúdo de alto nível.</h2>
             </div>
-            <p className="text-sm text-muted-foreground">Programação preliminar · sujeita a ajustes.</p>
+            <p className="text-sm text-muted-foreground">Programação realizada · 12 de novembro de 2026.</p>
           </div>
 
           <ol className="mt-12 relative border-l border-border/70 ml-3">
@@ -703,10 +700,10 @@ function Index() {
       <section id="palestrantes" className="py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">PAINELISTAS</p>
-          <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Quem conduz a conversa.</h2>
+          <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Quem conduziu a conversa.</h2>
           <p className="mt-4 text-muted-foreground max-w-2xl">
-            Especialistas e executivos que já implementam governança de IA em organizações públicas
-            e privadas.
+            Especialistas e executivos que participaram do fórum e apresentaram como a governança
+            de IA é implementada em organizações públicas e privadas.
           </p>
 
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -748,7 +745,7 @@ function Index() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Local & Data</p>
             <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Um ambiente colaborativo.</h2>
             <p className="mt-6 text-muted-foreground">
-              O fórum acontece em espaço executivo selecionado, com infraestrutura completa para
+              O fórum aconteceu em espaço executivo selecionado, com infraestrutura completa para
               painéis, networking estratégico e reuniões privativas entre lideranças.
             </p>
             <dl className="mt-8 space-y-5">
@@ -802,9 +799,10 @@ function Index() {
         <div className="relative mx-auto max-w-6xl px-6">
           <div className="text-center max-w-2xl mx-auto">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Ingressos</p>
-            <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Garanta seu lugar.</h2>
+            <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Inscrições encerradas.</h2>
             <p className="mt-4 text-muted-foreground">
-              Vagas limitadas para preservar o caráter executivo do encontro.
+              A edição de 12 de novembro de 2026 teve vagas limitadas para preservar o caráter
+              executivo do encontro.
             </p>
           </div>
 
@@ -833,7 +831,7 @@ function Index() {
                     <span className="text-lg font-medium text-muted-foreground">R$</span>
                     <span className="text-5xl font-extrabold tracking-tighter text-foreground">{t.price}</span>
                   </div>
-                  <p className="mt-1 text-[11px] text-muted-foreground">Pagamento único com acesso imediato</p>
+                  <p className="mt-1 text-[11px] text-muted-foreground">Pagamento único, com acesso à edição</p>
                 </div>
 
                 {/* features */}
@@ -863,7 +861,7 @@ function Index() {
                   rel="noopener noreferrer"
                   className="mt-10 flex w-full items-center justify-center rounded-2xl bg-primary px-6 py-4 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition hover:opacity-90 active:scale-[0.98]"
                 >
-                  Garantir minha vaga
+                  Ver a página do evento no Sympla
                 </a>
 
                 {/* visual accent */}
@@ -877,7 +875,7 @@ function Index() {
           </div>
 
           <p className="mt-8 text-center text-[10px] uppercase tracking-wide text-muted-foreground/70">
-            Vagas limitadas • Ambiente seguro • 12 de novembro de 2026
+            Edição realizada • 12 de novembro de 2026 • Hotel Quality Salvador
           </p>
         </div>
       </section>
@@ -886,10 +884,10 @@ function Index() {
       <section id="patrocinadores" className="py-24 lg:py-32 bg-card/40 border-y border-border">
         <div className="mx-auto max-w-6xl px-6">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Patrocinadores</p>
-          <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Marcas que apoiam a discussão.</h2>
+          <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Marcas que apoiaram a discussão.</h2>
           <p className="mt-4 text-muted-foreground max-w-2xl">
-            Conecte sua marca a um público de decisores qualificados em governança, riscos e
-            inovação.
+            O fórum conectou a marca dos patrocinadores a um público de decisores qualificados em
+            governança, riscos e inovação.
           </p>
 
           <div className="mt-14 space-y-12">
@@ -930,9 +928,10 @@ function Index() {
 
           <div className="mt-12 rounded-3xl border border-primary/40 bg-primary/5 p-8 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div>
-              <h3 className="text-2xl font-bold">Seja patrocinador do AI Governance Forum</h3>
+              <h3 className="text-2xl font-bold">Seja patrocinador da próxima edição</h3>
               <p className="mt-2 text-muted-foreground max-w-xl">
-                Cotas de patrocínio com diferentes níveis de exposição e ativação.
+                Cotas de patrocínio com diferentes níveis de exposição e ativação para o próximo
+                AI Governance Forum.
               </p>
             </div>
             <a
@@ -953,8 +952,8 @@ function Index() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Contato</p>
               <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Fale com a organização.</h2>
               <p className="mt-6 text-muted-foreground">
-                Tire dúvidas sobre inscrições, lotes corporativos, palestras ou oportunidades de
-                patrocínio.
+                Fale com a organização sobre a edição realizada, conteúdos, palestras ou
+                patrocínio para a próxima edição.
               </p>
               <ul className="mt-8 space-y-4 text-sm">
                 <li>

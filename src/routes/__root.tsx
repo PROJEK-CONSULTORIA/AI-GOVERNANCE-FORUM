@@ -82,7 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "AI Governance Forum 2026: encontro executivo presencial em Salvador sobre Governança de Inteligência Artificial, liderança, estratégia, riscos, compliance, ética e transformação dos negócios.",
+          "O AI Governance Forum 2026 aconteceu em 12 de novembro de 2026, em Salvador: encontro executivo presencial sobre Governança de Inteligência Artificial, liderança, estratégia, riscos, compliance, ética e transformação dos negócios.",
       },
       { name: "author", content: "AI Governance Forum" },
       {
@@ -92,16 +92,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "Encontro executivo presencial em Salvador sobre Governança de IA, estratégia, riscos, compliance, ética e transformação dos negócios.",
+          "A edição 2026 do AI Governance Forum foi um encontro executivo presencial em Salvador sobre Governança de IA, estratégia, riscos, compliance, ética e transformação dos negócios.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@AIGovernanceForum" },
       { property: "og:title", content: "AI Governance Forum 2026 — Governança de Inteligência Artificial" },
       { name: "twitter:title", content: "AI Governance Forum 2026 — Governança de Inteligência Artificial" },
-      { name: "description", content: "AI Governance Hub is a website for the AI Governance Forum, detailing its program, speakers, and registration." },
-      { property: "og:description", content: "AI Governance Hub is a website for the AI Governance Forum, detailing its program, speakers, and registration." },
-      { name: "twitter:description", content: "AI Governance Hub is a website for the AI Governance Forum, detailing its program, speakers, and registration." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd063125-b058-4869-9365-4ab20759e83d/id-preview-bbf07dd3--6fcedb66-336b-4416-af01-f9c1a5f8a27e.lovable.app-1782744495386.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd063125-b058-4869-9365-4ab20759e83d/id-preview-bbf07dd3--6fcedb66-336b-4416-af01-f9c1a5f8a27e.lovable.app-1782744495386.png" },
     ],
@@ -126,7 +123,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>

@@ -325,5 +325,40 @@ class PanelChangesTest(unittest.TestCase):
                 self.assertIn('Vitor Igdal', panel[0])
                 self.assertIn('Carlos Eduardo', panel[0])
 
+class SiteLanguagePastTenseTest(unittest.TestCase):
+    """O evento ocorreu em 12/11/2026: o site deve falar no passado."""
+
+    def test_no_future_tense_phrases_remain(self):
+        for r in ('index.tsx', 'programacao.tsx'):
+            with self.subTest(route=r):
+                src = (ROOT / 'src/routes' / r).read_text()
+                for phrase in ('abordará', 'discutirá', 'demonstrará', 'está transformando a gestão',
+                               'está redefinindo a inovação', 'está redefinindo a criação',
+                               'Programação preliminar', 'sujeita a ajustes', 'Garanta seu lugar',
+                               'Vagas limitadas para preservar', 'Pronto para construir'):
+                    self.assertNotIn(phrase, src)
+
+    def test_past_tense_phrases_are_present(self):
+        idx = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        prog = (ROOT / 'src/routes' / 'programacao.tsx').read_text()
+        self.assertIn('O AI Governance Forum 2026 aconteceu em 12 de novembro de 2026', idx)
+        self.assertIn('A palestra abordou a importância', idx)
+        self.assertIn('O painel discutiu a responsabilização', idx)
+        self.assertIn('A palestra demonstrou como organizar', idx)
+        self.assertIn('O debate abordou a questão central', idx)
+        self.assertIn('Quem conduziu a conversa', idx)
+        self.assertIn('Marcas que apoiaram a discussão', idx)
+        self.assertIn('Inscrições encerradas', idx)
+        self.assertIn('edição realizada', prog)
+        self.assertIn('A edição de 12 de novembro de 2026 foi presencial', prog)
+
+    def test_no_ticket_cta_promises_a_seat(self):
+        for r in ('index.tsx', 'programacao.tsx'):
+            with self.subTest(route=r):
+                src = (ROOT / 'src/routes' / r).read_text()
+                for cta in ('Garantir ingresso', 'Garantir meu ingresso', 'Garantir minha vaga'):
+                    self.assertNotIn(cta, src)
+
+
 if __name__ == '__main__':
     unittest.main()
