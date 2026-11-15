@@ -551,12 +551,10 @@ function Index() {
             ))}
           </nav>
           <a
-            href="https://www.sympla.com.br/evento/ai-governance-forum/3469406"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#edicao-salvador"
             className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition"
           >
-            Garantir ingresso
+            Ver como foi
           </a>
         </div>
       </header>
@@ -584,7 +582,7 @@ function Index() {
               className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-primary"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-              Encontro Executivo · 2026
+              Edição 2026 · Realizada em 12/11/2026
             </span>
             <h1 className="mt-6 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05]">
               AI Governance Forum <span className="text-primary">2026</span>
@@ -593,18 +591,17 @@ function Index() {
               Governança de Inteligência Artificial: Liderança, Estratégia e Transformação dos Negócios.
             </p>
             <p className="mt-4 text-base text-muted-foreground max-w-xl">
-              12 de novembro de 2026 · Presencial · Hotel Quality Salvador. Encontro executivo para
-              presidentes, diretores, conselheiros, gestores públicos e privados e especialistas em
-              inovação, tecnologia, riscos, compliance e transformação digital.
+              O AI Governance Forum 2026 aconteceu em 12 de novembro de 2026, presencialmente, no
+              Hotel Quality Salvador. Foi um encontro executivo que reuniu presidentes, diretores,
+              conselheiros, gestores públicos e privados e especialistas em inovação, tecnologia,
+              riscos, compliance e transformação digital.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="https://www.sympla.com.br/evento/ai-governance-forum/3469406"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#edicao-salvador"
                 className="rounded-full bg-primary text-primary-foreground px-7 py-3.5 text-sm font-semibold hover:opacity-90 transition"
               >
-                Garantir meu ingresso
+                Ver como foi a edição
               </a>
               <Link
                 to="/programacao"
@@ -640,15 +637,15 @@ function Index() {
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-8 text-muted-foreground leading-relaxed">
             <p>
-              O AI Governance Forum é um encontro executivo criado para reunir líderes, executivos,
-              gestores, conselheiros, especialistas e tomadores de decisão que estão conduzindo a
-              transformação digital em suas organizações. Mais do que um evento sobre tecnologia, é
-              um espaço para discutir como a Inteligência Artificial pode ser adotada de forma
+              O AI Governance Forum 2026 foi um encontro executivo que reuniu líderes, executivos,
+              gestores, conselheiros, especialistas e tomadores de decisão que conduzem a
+              transformação digital em suas organizações. Mais do que um evento sobre tecnologia,
+              foi um espaço para discutir como a Inteligência Artificial pode ser adotada de forma
               segura, ética, responsável e alinhada aos objetivos institucionais.
             </p>
             <p>
-              Especialistas nacionais e convidados compartilham experiências, tendências e casos
-              práticos abordando estratégia, gestão de riscos, compliance, ética, segurança da
+              Especialistas nacionais e convidados compartilharam experiências, tendências e casos
+              práticos, abordando estratégia, gestão de riscos, compliance, ética, segurança da
               informação, qualidade de dados, regulamentação, impacto organizacional, inovação e o
               futuro do trabalho na era da IA — preparando lideranças para decisões mais
               conscientes.
@@ -681,7 +678,7 @@ function Index() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Programação</p>
               <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Um dia intenso, com conteúdo de alto nível.</h2>
             </div>
-            <p className="text-sm text-muted-foreground">Programação preliminar · sujeita a ajustes.</p>
+            <p className="text-sm text-muted-foreground">Programação realizada · 12 de novembro de 2026.</p>
           </div>
 
           <ol className="mt-12 relative border-l border-border/70 ml-3">
@@ -703,10 +700,10 @@ function Index() {
       <section id="palestrantes" className="py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">PAINELISTAS</p>
-          <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Quem conduz a conversa.</h2>
+          <h2 className="mt-4 text-4xl lg:text-5xl font-bold">Quem conduziu a conversa.</h2>
           <p className="mt-4 text-muted-foreground max-w-2xl">
-            Especialistas e executivos que já implementam governança de IA em organizações públicas
-            e privadas.
+            Especialistas e executivos que participaram do fórum e apresentaram como a governança
+            de IA é implementada em organizações públicas e privadas.
           </p>
 
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
