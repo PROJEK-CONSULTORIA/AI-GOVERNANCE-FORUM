@@ -420,5 +420,24 @@ class Salvador2027AnnouncementTest(unittest.TestCase):
             self.assertIn(f'label: "{unit}"', component)
 
 
+class Salvador2027VenueTest(unittest.TestCase):
+    def test_official_address_is_used_as_the_2027_event_address(self):
+        page = (ROOT / 'src/routes' / 'salvador-2027.tsx').read_text()
+        for part in (
+            'Quality Hotel &amp; Suítes São Salvador',
+            'Rua Dr. José Peroba, 244 – Stiep',
+            'Salvador – BA · CEP 41770-235',
+        ):
+            self.assertIn(part, page)
+
+    def test_2027_page_no_longer_says_location_is_undecided(self):
+        page = (ROOT / 'src/routes' / 'salvador-2027.tsx').read_text()
+        self.assertNotIn('detalhes em breve', page)
+
+    def test_home_page_announces_the_2027_venue(self):
+        home = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        self.assertIn('Quality Hotel &amp; Suítes São Salvador, Stiep', home)
+
+
 if __name__ == '__main__':
     unittest.main()

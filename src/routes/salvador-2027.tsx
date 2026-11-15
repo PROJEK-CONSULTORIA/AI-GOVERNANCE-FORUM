@@ -11,7 +11,7 @@ export const Route = createFileRoute("/salvador-2027")({
       {
         name: "description",
         content:
-          "AI Governance Forum Salvador 2027 acontecerá em 23 e 24 de setembro de 2027. Acompanhe a contagem regressiva e fale com a organização.",
+          "AI Governance Forum Salvador 2027: 23 e 24 de setembro de 2027 no Quality Hotel & Suítes São Salvador (Stiep), Salvador – BA. Acompanhe a contagem regressiva e fale com a organização.",
       },
       { property: "og:title", content: "AI Governance Forum Salvador 2027" },
       {
@@ -29,6 +29,14 @@ export const Route = createFileRoute("/salvador-2027")({
 });
 
 const contactLink = "mailto:fabio.martins@igovia.com.br?subject=AI%20Governance%20Forum%20Salvador%202027";
+
+const venueName = "Quality Hotel & Suítes São Salvador";
+const venueStreet = "Rua Dr. José Peroba, 244 – Stiep";
+const venueCity = "Salvador – BA · CEP 41770-235";
+const venueMapsUrl =
+  "https://www.google.com/maps/search/?api=1&query=Quality%20Hotel%20%26%20Su%C3%ADtes%20S%C3%A3o%20Salvador%2C%20Rua%20Dr.%20Jos%C3%A9%20Peroba%2C%20244%20-%20Stiep%2C%20Salvador%20-%20BA%2C%20CEP%2041770-235";
+const venueEmbedUrl =
+  "https://www.google.com/maps?q=Rua%20Dr.%20Jos%C3%A9%20Peroba%2C%20244%20-%20Stiep%2C%20Salvador%20-%20BA%2C%2041770-235&output=embed";
 
 const themes = [
   {
@@ -97,6 +105,8 @@ function Salvador2027Page() {
                 <p className="mt-2 text-7xl font-bold tracking-[-0.06em] text-background sm:text-8xl">2027</p>
                 <p className="mt-6 max-w-sm text-sm font-semibold leading-relaxed text-background/75">
                   23 e 24 de setembro de 2027
+                  <br />
+                  Quality Hotel &amp; Suítes São Salvador · Stiep
                 </p>
               </div>
             </div>
@@ -115,9 +125,49 @@ function Salvador2027Page() {
             <div className="flex items-center gap-4">
               <MapPin className="h-6 w-6 shrink-0 text-primary" strokeWidth={1.4} />
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Cidade e local</p>
-                <p className="mt-1 font-semibold">Salvador — BA · detalhes em breve</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Local</p>
+                <p className="mt-1 font-semibold">Quality Hotel &amp; Suítes São Salvador · Stiep, Salvador – BA</p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="local-2027" className="border-b border-border py-24 lg:py-28">
+          <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Local da edição</p>
+              <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-[-0.025em] lg:text-5xl">{venueName}</h2>
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+                O AI Governance Forum Salvador 2027 será realizado no Quality Hotel &amp; Suítes São Salvador, no Stiep, em Salvador.
+              </p>
+              <address className="mt-9 border border-border bg-muted/40 p-7 not-italic">
+                <div className="flex items-start gap-4">
+                  <MapPin className="mt-0.5 h-6 w-6 shrink-0 text-primary" strokeWidth={1.4} />
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Endereço</p>
+                    <p className="mt-2 text-lg font-semibold leading-snug">{venueStreet}</p>
+                    <p className="mt-1 leading-relaxed text-muted-foreground">{venueCity}</p>
+                  </div>
+                </div>
+              </address>
+              <a
+                href={venueMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+              >
+                Ver no Google Maps
+                <ArrowUpRight className="h-4 w-4" strokeWidth={1.8} />
+              </a>
+            </div>
+            <div className="min-h-[340px] border border-border bg-muted/40 lg:min-h-full">
+              <iframe
+                title={"Mapa — " + venueName}
+                src={venueEmbedUrl}
+                className="h-full min-h-[340px] w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </section>
