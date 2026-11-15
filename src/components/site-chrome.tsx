@@ -9,6 +9,7 @@ export type SiteSection = "sobre" | "salvador-2027" | "edicoes" | "programacao";
 type SiteChromeProps = {
   variant: "light" | "dark";
   active?: SiteSection;
+  withSaveTheDate?: boolean;
 };
 
 const navItems = [
@@ -18,12 +19,26 @@ const navItems = [
   { to: "/", hash: "contato", label: "Contato", section: "contato" },
 ] as const;
 
-export function SiteHeader({ variant, active }: SiteChromeProps) {
+export function SaveTheDateBanner() {
+  return (
+    <Link
+      to="/salvador-2027"
+      className="fixed inset-x-0 top-0 z-[60] flex h-12 items-center justify-center gap-2 bg-primary px-4 text-center text-[10px] font-bold uppercase tracking-[0.12em] text-primary-foreground transition hover:opacity-95 sm:gap-3 sm:text-xs sm:tracking-[0.18em]"
+    >
+      <span>Save the Date</span>
+      <span aria-hidden>·</span>
+      <span>23 e 24 de setembro de 2027</span>
+      <ArrowUpRight className="hidden h-4 w-4 sm:block" strokeWidth={1.8} />
+    </Link>
+  );
+}
+
+export function SiteHeader({ variant, active, withSaveTheDate = false }: SiteChromeProps) {
   const [open, setOpen] = useState(false);
   const logo = variant === "light" ? logoLight : logoDark;
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/80 bg-background/90 backdrop-blur-xl">
+    <header className={`fixed inset-x-0 z-50 border-b border-border/80 bg-background/90 backdrop-blur-xl ${withSaveTheDate ? "top-12" : "top-0"}`}>
       <div className="mx-auto flex h-24 max-w-7xl items-center justify-between gap-6 px-6">
         <Link
           to="/"
@@ -34,7 +49,7 @@ export function SiteHeader({ variant, active }: SiteChromeProps) {
           <img src={logo} alt="AI Governance Forum" className="h-12 w-auto sm:h-14" />
         </Link>
 
-        <nav aria-label="Menu principal" className="hidden items-center gap-7 lg:flex">
+        <nav aria-label="Menu principal" className="hidden items-center gap-7 xl:flex">
           {navItems.map((item) => (
             <Link
               key={item.label}
@@ -52,10 +67,10 @@ export function SiteHeader({ variant, active }: SiteChromeProps) {
         </nav>
 
         <Link
-          to="/salvador-2027"
-          className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:opacity-90 sm:inline-flex"
+          to="/edicoes/salvador-2026"
+          className="hidden items-center gap-2 whitespace-nowrap rounded-full bg-primary px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-primary-foreground transition hover:opacity-90 sm:inline-flex"
         >
-          Edição 2027
+          AI Governance Forum Salvador 2026
           <ArrowUpRight className="h-4 w-4" strokeWidth={1.8} />
         </Link>
 
@@ -64,14 +79,14 @@ export function SiteHeader({ variant, active }: SiteChromeProps) {
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
           onClick={() => setOpen((value) => !value)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-foreground lg:hidden"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-border text-foreground xl:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {open && (
-        <nav aria-label="Menu principal móvel" className="border-t border-border bg-background px-6 py-5 lg:hidden">
+        <nav aria-label="Menu principal móvel" className="border-t border-border bg-background px-6 py-5 xl:hidden">
           <div className="mx-auto flex max-w-7xl flex-col gap-1">
             {navItems.map((item) => (
               <Link
@@ -88,6 +103,14 @@ export function SiteHeader({ variant, active }: SiteChromeProps) {
                 {item.label}
               </Link>
             ))}
+            <Link
+              to="/edicoes/salvador-2026"
+              onClick={() => setOpen(false)}
+              className="mt-3 flex items-center justify-between gap-3 rounded-lg bg-primary px-4 py-3 text-xs font-bold uppercase tracking-wide text-primary-foreground"
+            >
+              AI Governance Forum Salvador 2026
+              <ArrowUpRight className="h-4 w-4 shrink-0" strokeWidth={1.8} />
+            </Link>
           </div>
         </nav>
       )}
@@ -116,7 +139,7 @@ export function SiteFooter({ variant }: Pick<SiteChromeProps, "variant">) {
           <a className="mt-2 block hover:text-primary" href="https://wa.me/5571988419093" target="_blank" rel="noopener noreferrer">
             +55 (71) 9.8841.9093
           </a>
-          <p className="mt-4 text-xs">© {new Date().getFullYear()} AI Governance Forum.</p>
+          <p className="mt-4 text-xs">© AI Governance Forum.</p>
         </div>
       </div>
     </footer>
