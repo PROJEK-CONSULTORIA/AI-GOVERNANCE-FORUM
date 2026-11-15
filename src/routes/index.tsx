@@ -11,7 +11,8 @@ import {
   Scale,
   UsersRound,
 } from "lucide-react";
-import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+import { SaveTheDateBanner, SiteFooter, SiteHeader } from "@/components/site-chrome";
+import { Countdown2027 } from "@/components/countdown-2027";
 import publicoAsset from "@/assets/salvador-2026-publico.jpg.asset.json";
 import logoLight from "@/assets/logo-horizontal-light.png";
 import { assetUrl } from "@/lib/asset-url";
@@ -25,7 +26,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Conheça o AI Governance Forum: um fórum que conecta lideranças para discutir estratégia, responsabilidade, inovação e o futuro da Inteligência Artificial.",
+          "Conheça o AI Governance Forum e reserve as datas de Salvador 2027: 23 e 24 de setembro de 2027, com contagem regressiva para a nova edição.",
       },
       { property: "og:title", content: "Sobre — AI Governance Forum" },
       {
@@ -77,10 +78,11 @@ const audiences = [
 function SobrePage() {
   return (
     <div className="light-theme min-h-screen bg-background text-foreground">
-      <SiteHeader variant="light" active="sobre" />
+      <SaveTheDateBanner />
+      <SiteHeader variant="light" active="sobre" withSaveTheDate />
 
       <main>
-        <section className="relative overflow-hidden border-b border-border pt-24">
+        <section className="relative overflow-hidden border-b border-border pt-36">
           <div className="brand-grid pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 opacity-45 lg:block" />
           <div className="relative mx-auto grid max-w-7xl gap-16 px-6 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:py-28">
             <div>
@@ -105,6 +107,9 @@ function SobrePage() {
                 >
                   Reveja a edição 2026
                 </Link>
+              </div>
+              <div className="mt-10">
+                <Countdown2027 />
               </div>
             </div>
 

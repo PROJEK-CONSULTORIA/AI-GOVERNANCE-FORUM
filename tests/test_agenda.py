@@ -379,5 +379,26 @@ class InstitutionalPagesTest(unittest.TestCase):
         self.assertIn('{ to: "/edicoes/salvador-2026", label: "Edições Anteriores"', header)
 
 
+class Salvador2027AnnouncementTest(unittest.TestCase):
+    def test_main_menu_has_salvador_2026_button(self):
+        header = (ROOT / 'src/components' / 'site-chrome.tsx').read_text()
+        self.assertIn('to="/edicoes/salvador-2026"', header)
+        self.assertIn('AI Governance Forum Salvador 2026', header)
+
+    def test_save_the_date_banner_has_both_official_dates(self):
+        home = (ROOT / 'src/routes' / 'index.tsx').read_text()
+        header = (ROOT / 'src/components' / 'site-chrome.tsx').read_text()
+        self.assertIn('<SaveTheDateBanner />', home)
+        self.assertIn('Save the Date', header)
+        self.assertIn('23 e 24 de setembro de 2027', header)
+
+    def test_countdown_targets_opening_day_and_shows_requested_units(self):
+        countdown = (ROOT / 'src/lib' / 'countdown.ts').read_text()
+        component = (ROOT / 'src/components' / 'countdown-2027.tsx').read_text()
+        self.assertIn('2027-09-23T00:00:00-03:00', countdown)
+        for unit in ('dias', 'horas', 'minutos'):
+            self.assertIn(f'label: "{unit}"', component)
+
+
 if __name__ == '__main__':
     unittest.main()

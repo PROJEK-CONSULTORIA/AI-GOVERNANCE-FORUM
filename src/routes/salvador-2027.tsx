@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight, CalendarDays, Mail, MapPin, PanelsTopLeft, Phone } from "lucide-react";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+import { Countdown2027 } from "@/components/countdown-2027";
 import logoDark from "@/assets/logo-horizontal-dark.png";
 
 export const Route = createFileRoute("/salvador-2027")({
@@ -10,13 +11,13 @@ export const Route = createFileRoute("/salvador-2027")({
       {
         name: "description",
         content:
-          "Conheça a próxima edição do AI Governance Forum em Salvador e fale com a organização sobre participação, palestras e patrocínio em 2027.",
+          "AI Governance Forum Salvador 2027 acontecerá em 23 e 24 de setembro de 2027. Acompanhe a contagem regressiva e fale com a organização.",
       },
       { property: "og:title", content: "AI Governance Forum Salvador 2027" },
       {
         property: "og:description",
         content:
-          "A próxima edição do encontro que conecta lideranças para discutir governança, estratégia, ética e inovação em Inteligência Artificial.",
+          "Save the Date: 23 e 24 de setembro de 2027. A próxima edição conectará lideranças para discutir governança, estratégia, ética e inovação em IA.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://ethical-ai-forum.lovable.app/salvador-2027" },
@@ -58,7 +59,7 @@ function Salvador2027Page() {
           <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-28">
             <div>
               <div className="inline-flex items-center gap-3 border border-primary/40 bg-accent px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent-foreground">
-                <span className="h-2 w-2 rounded-full bg-primary" /> Próxima edição · Salvador
+                <span className="h-2 w-2 rounded-full bg-primary" /> Save the Date · Salvador
               </div>
               <h1 className="mt-7 max-w-3xl text-5xl font-bold leading-[1.04] tracking-[-0.035em] sm:text-6xl lg:text-7xl">
                 AI Governance Forum <span className="text-primary">Salvador 2027</span>
@@ -83,6 +84,9 @@ function Salvador2027Page() {
                   Falar com a organização
                 </a>
               </div>
+              <div className="mt-10">
+                <Countdown2027 />
+              </div>
             </div>
 
             <div className="relative overflow-hidden bg-foreground p-8 text-background sm:p-12">
@@ -91,8 +95,8 @@ function Salvador2027Page() {
               <div className="mt-16 border-t border-background/20 pt-8">
                 <p className="text-sm font-medium uppercase tracking-[0.28em] text-primary">Salvador</p>
                 <p className="mt-2 text-7xl font-bold tracking-[-0.06em] text-background sm:text-8xl">2027</p>
-                <p className="mt-6 max-w-sm text-sm leading-relaxed text-background/65">
-                  Governança · Inteligência · Conexão · Futuro
+                <p className="mt-6 max-w-sm text-sm font-semibold leading-relaxed text-background/75">
+                  23 e 24 de setembro de 2027
                 </p>
               </div>
             </div>
@@ -105,7 +109,7 @@ function Salvador2027Page() {
               <CalendarDays className="h-6 w-6 shrink-0 text-primary" strokeWidth={1.4} />
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Data</p>
-                <p className="mt-1 font-semibold">Informações em breve</p>
+                <p className="mt-1 font-semibold">23 e 24 de setembro de 2027</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
