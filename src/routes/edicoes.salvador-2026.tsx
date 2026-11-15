@@ -943,7 +943,7 @@ function Index() {
             <img src={logoUrl} alt="AI Governance Forum" className="h-16 w-auto rounded" />
           </div>
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} AI Governance Forum. Todos os direitos reservados.
+            © AI Governance Forum. Todos os direitos reservados.
           </p>
         </div>
       </footer>

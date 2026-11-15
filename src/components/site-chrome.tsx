@@ -139,7 +139,7 @@ export function SiteFooter({ variant }: Pick<SiteChromeProps, "variant">) {
           <a className="mt-2 block hover:text-primary" href="https://wa.me/5571988419093" target="_blank" rel="noopener noreferrer">
             +55 (71) 9.8841.9093
           </a>
-          <p className="mt-4 text-xs">© {new Date().getFullYear()} AI Governance Forum.</p>
+          <p className="mt-4 text-xs">© AI Governance Forum.</p>
         </div>
       </div>
     </footer>
