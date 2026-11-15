@@ -40,3 +40,7 @@
 - [x] Incluir Manuela Rocha (foto, cargo e descrição) na lista de Palestrantes e no Painel Philos das duas páginas; testar e conferir no navegador.
 - [x] Seção "Edição Salvador" na página principal: vídeo enviado, 2 vídeos do YouTube, carrossel de fotos (3 visíveis) e "O que falam sobre nós" (TI Bahia).
 - [x] Colocar todo o texto do site no passado (evento ocorreu em 12/11/2026): páginas Sobre e Programação, botões de ingresso, textos de busca e idioma pt-BR; testar e conferir no navegador.
+- [ ] Criar a nova página inicial “Sobre”, em fundo branco, seguindo o manual oficial de identidade visual.
+- [ ] Criar a página “AI Governance Forum Salvador 2027” e incluí-la no menu principal.
+- [ ] Mover o conteúdo da edição 2026 para “Edições Anteriores”, atualizar a navegação e preservar a programação.
+- [ ] Atualizar metadados e testes das novas rotas; testar e conferir as páginas no navegador.
