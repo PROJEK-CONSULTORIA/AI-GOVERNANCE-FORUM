@@ -524,12 +524,6 @@ function Index() {
       <section id="top" className="relative min-h-screen flex items-end lg:items-center pt-24 overflow-hidden">
         {/* background photo */}
         <div className="absolute inset-0 z-0">
-          <img
-            src={fabioUrl}
-            alt="Fábio Martins, palestrante"
-            className="absolute right-0 bottom-0 h-[95%] lg:h-[110%] w-auto object-contain object-bottom opacity-90"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/30" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
           <div
             className="absolute -left-40 top-1/3 h-[500px] w-[500px] rounded-full blur-3xl opacity-30"

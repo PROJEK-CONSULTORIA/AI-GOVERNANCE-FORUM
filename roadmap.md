@@ -48,3 +48,4 @@
 - [x] Criar o banner “Save the Date” com 23 e 24 de setembro de 2027 na página inicial.
 - [x] Adicionar contagem regressiva em dias, horas e minutos até 23/09/2027 e atualizar a página Salvador 2027.
 - [x] Testar as datas, os links e a contagem regressiva no computador e no celular; 48 testes e compilação verificados.
+- [x] Remover a foto de Fábio Martins do fundo do banner principal da edição Salvador 2026; conferir no navegador.
