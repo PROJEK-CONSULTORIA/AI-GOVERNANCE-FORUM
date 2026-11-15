@@ -23,7 +23,7 @@ export function SaveTheDateBanner() {
   return (
     <Link
       to="/salvador-2027"
-      className="fixed inset-x-0 top-0 z-[60] flex h-12 items-center justify-center gap-1.5 whitespace-nowrap bg-primary px-3 text-center text-[9px] font-bold uppercase tracking-[0.05em] text-primary-foreground transition hover:opacity-95 sm:gap-3 sm:px-4 sm:text-xs sm:tracking-[0.18em]"
+      className="fixed inset-x-0 top-0 z-[60] flex h-12 items-center justify-center gap-1.5 whitespace-nowrap bg-primary px-3 text-center text-[9px] font-bold uppercase tracking-[0.05em] text-primary-foreground transition hover:opacity-95 max-[359px]:gap-1 max-[359px]:text-[8px] max-[359px]:tracking-[0.02em] sm:gap-3 sm:px-4 sm:text-xs sm:tracking-[0.18em]"
     >
       <span>AI Governance Forum</span>
       <span aria-hidden>·</span>
